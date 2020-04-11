@@ -1,0 +1,203 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  :global nav {
+    text-align: left;
+
+    .navbar-brand {
+      display: none;
+    }
+
+    @media (max-width: 1023px) {
+      position: fixed !important;
+
+      .navbar-brand {
+        display: flex;
+      }
+
+      .navbar-menu a:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+
+  :global header {
+    padding: 0 7.5vw 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      width: 75vw;
+      margin: 1.5em 0 1.5vw;
+    }
+
+    .ava-btn {
+      position: relative;
+      margin: 1.5em 0 2.5em;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        background-image: url("/assets/images/header-channels.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 25vw;
+        width: 95vw;
+        transform: translate(-50%, -80%);
+        z-index: -1;
+      }
+    }
+
+    .bg-header {
+      background-image: url("/assets/images/header.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 27.5vw;
+      width: 100%;
+    }
+
+    @media (max-width: 576px) {
+      padding-top: 2.5em;
+    }
+  }
+
+  :global main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    section {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 5vw 7.5vw;
+
+      &:nth-child(even) {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 5em;
+          right: 0;
+          height: 10vw;
+          width: 5vw;
+          background-color: #42c552;
+          border-radius: 10vw 0 0 10vw;
+          z-index: -1;
+        }
+      }
+
+      &:not(:last-child):nth-child(odd) {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 5em;
+          left: -3.75%;
+          height: 7vw;
+          width: 7vw;
+          background-color: #3078ea;
+          border-radius: 1.5vw 1.25vw 1.5vw 0;
+          transform: rotate(45deg) translateX(3.75%);
+          z-index: -1;
+        }
+      }
+
+      &.feature {
+        padding: 0.5vw 7.5vw;
+
+        div {
+          &.description {
+            min-width: 250px;
+
+            ul {
+              margin-bottom: 1.5em;
+
+              li {
+                list-style: none;
+                margin: 0.75em 0;
+                font-weight: 700;
+
+                &::before {
+                  font-family: "Material Icons";
+                  content: "\e5c8";
+                  margin: 0 1em 0 0;
+                  vertical-align: middle;
+                }
+
+                &.active {
+                  color: #3078ea;
+                }
+              }
+            }
+          }
+
+          img {
+            margin: 1.75em 1em 0;
+          }
+        }
+      }
+
+      &#support {
+        background-color: #f4f7f9;
+        margin-top: 5vw;
+        z-index: 0;
+
+        img {
+          width: 30vw;
+          min-width: 300px;
+        }
+
+        > div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin: 1.5em 0;
+
+          .border {
+            height: 20vw;
+            width: 0;
+            margin: 0 2.5em;
+            border-right: 0.25vw dashed rgba(0, 0, 0, 0.2);
+          }
+
+          @media (max-width: 768px) {
+            flex-direction: column;
+
+            .border {
+              height: 0;
+              width: 20vw;
+              min-width: 250px;
+              margin: 2.5em 0;
+              border-right: none;
+              border-bottom: 0.175em dashed rgba(0, 0, 0, 0.2);
+            }
+          }
+        }
+      }
+
+      &#testimonial {
+        q {
+          width: 45vw;
+          min-width: 300px;
+        }
+      }
+
+      &#trial {
+        background-color: #f4f7f9;
+      }
+    }
+  }
+}
