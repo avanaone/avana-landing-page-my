@@ -1,0 +1,105 @@
+{
+  "id": {
+    "packages": [
+      {
+        "code": "yearly_advance_plan_id",
+        "name": "Advance",
+        "period": "yearly",
+        "currency": "IDR",
+        "price": 3000000,
+        "discounted_price": 2499000,
+        "description": "Advance",
+        "marketing_text": false,
+        "is_popular": false
+      },
+      {
+        "code": "semi-annually_advance_plan_id",
+        "name": "Advance",
+        "period": "semi-annually",
+        "currency": "IDR",
+        "price": 1500000,
+        "discounted_price": 1500000,
+        "description": "Advance",
+        "marketing_text": false,
+        "is_popular": false
+      },
+      {
+        "code": "quarterly_advance_plan_id",
+        "name": "Advance",
+        "period": "quarterly",
+        "currency": "IDR",
+        "price": 750000,
+        "discounted_price": 750000,
+        "description": "Advance",
+        "marketing_text": false,
+        "is_popular": false
+      },
+      {
+        "code": "monthly_advance_plan_id",
+        "name": "Advance",
+        "period": "monthly",
+        "currency": "IDR",
+        "price": 250000,
+        "discounted_price": 250000,
+        "description": "Advance",
+        "marketing_text": false,
+        "is_popular": false
+      },
+      {
+        "code": "yearly_business",
+        "name": "Business",
+        "period": "yearly",
+        "currency": "IDR",
+        "price": 6000000,
+        "discounted_price": 4999000,
+        "description": "Plan for the business",
+        "marketing_text": false,
+        "is_popular": true
+      },
+      {
+        "code": "semi-annually_business",
+        "name": "Business",
+        "period": "semi-annually",
+        "currency": "IDR",
+        "price": 3000000,
+        "discounted_price": 3000000,
+        "description": "Plan for the business",
+        "marketing_text": false,
+        "is_popular": true
+      },
+      {
+        "code": "quarterly_business",
+        "name": "Business",
+        "period": "quarterly",
+        "currency": "IDR",
+        "price": 1500000,
+        "discounted_price": 1500000,
+        "description": "Plan for the business",
+        "marketing_text": false,
+        "is_popular": true
+      },
+      {
+        "code": "monthly_business",
+        "name": "Business",
+        "period": "monthly",
+        "currency": "IDR",
+        "price": 500000,
+        "discounted_price": 500000,
+        "description": "Plan for the business",
+        "marketing_text": false,
+        "is_popular": true
+      },
+      {
+        "code": "yearly_vip",
+        "name": "VIP",
+        "period": "yearly",
+        "currency": "IDR",
+        "price": 12999000,
+        "discounted_price": 12999000,
+        "description": "Plan for the VIP",
+        "marketing_text": false,
+        "is_popular": false
+      }
+    ]
+  }
+}

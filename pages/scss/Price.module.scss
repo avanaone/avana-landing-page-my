@@ -1,0 +1,129 @@
+.Price {
+  background-color: #f4f7f9;
+
+  :global header {
+    padding: 0 15vw;
+
+    h2 {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        background-image: url("/assets/images/price/header.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 5em;
+        width: 50vw;
+        transform: translate(0, -50%);
+
+        @media (max-width: 786px) {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      padding: 0 7.5vw;
+    }
+  }
+
+  :global main {
+    padding: 0 7.5vw 2.5vw;
+
+    section {
+      > ul {
+        margin: 5em 0 1em;
+        text-align: center;
+        font-size: 0.85rem;
+
+        li {
+          display: inline-block;
+          margin: 0 0.5em;
+          font-weight: 700;
+
+          padding: 0.25em 0.5em;
+          cursor: pointer;
+
+          &.active {
+            border-bottom: 1.5px solid #fdb816;
+          }
+        }
+      }
+
+      .packages {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+
+        .package {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          width: 17.5vw;
+          min-width: 250px;
+          height: fit-content;
+          background-color: #ffffff;
+          padding: 2vw 1.5vw;
+          margin: 1em 1.5em;
+          border: 1px solid #d7d7d7;
+          border-radius: 10px;
+
+          &.popular {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #fdb816;
+            height: 24em;
+
+            &::after {
+              content: "POPULAR";
+              position: absolute;
+              top: 25px;
+              right: -50px;
+              background-color: #fdb816;
+              padding: 0.5em 5em;
+              font-size: 0.75rem;
+              font-weight: 700;
+              transform: rotate(45deg);
+            }
+          }
+
+          .name {
+            font-weight: 700;
+          }
+
+          .price {
+            color: #45df8f;
+            font-weight: 700;
+            margin: 0.25em 0;
+          }
+
+          ul {
+            list-style: unset;
+            margin: 0 2em 1em;
+            text-align: left;
+
+            li {
+              margin: 0.5em 0;
+            }
+          }
+        }
+      }
+
+      a {
+        display: block;
+        margin: 2.5em 0;
+        font-weight: 700;
+        text-decoration: underline;
+        text-align: center;
+      }
+    }
+  }
+}
