@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 
 import Navbar from "./Navbar";
+import Header from "./Header";
 import Footer from "./Footer";
 
 const Features = import("../json/features.json");
@@ -10,7 +11,7 @@ export default function Feature(props) {
   const { id, title, className } = props;
   const [feature, setFeature] = useState([]);
 
-  Features.then((res) => setFeature(res[id]));
+  Features.then((res) => setFeature(res.default[id]));
 
   return (
     <div className="features">
@@ -19,9 +20,7 @@ export default function Feature(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <header>
-        <h2 className="is-size-3">{title}</h2>
-      </header>
+      <Header title={title} />
       <main>
         {feature.map((feature, idx) => (
           <section
