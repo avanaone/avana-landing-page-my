@@ -51,6 +51,7 @@
         background-position: center;
         background-repeat: no-repeat;
         height: 25vw;
+
         width: 95vw;
         transform: translate(-50%, -80%);
         z-index: -1;
@@ -196,7 +197,12 @@
       }
 
       &#trial {
+        padding: 5vw 7.5vw;
         background-color: #f4f7f9;
+
+        h2 {
+          margin: 0 0 1em;
+        }
       }
     }
   }

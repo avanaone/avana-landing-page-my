@@ -85,10 +85,10 @@ const Home = () => (
         media
       </h1>
       <p>Chat Multichannel • Auto Reply • Reseller Management • Toko Online</p>
-      <button type="button" className="ava-btn btn-primary">
+      <a href="https://store.avana.asia/" className="ava-btn btn-primary">
         Coba Gratis
-      </button>
-      <div className="bg-header"></div>
+      </a>
+      <div className="bg-header" />
     </header>
     <main>
       <section className="feature">
@@ -107,9 +107,9 @@ const Home = () => (
             <li>Auto Reply Chat & Comment</li>
           </ul>
           <div className="ava-btn-group">
-            <button type="button" className="ava-btn btn-primary">
-              <a href="price">Saya Tertarik</a>
-            </button>
+            <a href="https://store.avana.asia/" className="ava-btn btn-primary">
+              Saya Tertarik
+            </a>
             <a href="/dashboard" className="ava-btn">
               Lihat Selengkapnya
             </a>
@@ -135,9 +135,9 @@ const Home = () => (
             <li>Send Shipping Info</li>
           </ul>
           <div className="ava-btn-group">
-            <button type="button" className="ava-btn btn-primary">
-              <a href="price">Saya Tertarik</a>
-            </button>
+            <a href="https://store.avana.asia/" className="ava-btn btn-primary">
+              Saya Tertarik
+            </a>
             <a href="/avachat" className="ava-btn">
               Lihat Selengkapnya
             </a>
@@ -163,9 +163,9 @@ const Home = () => (
             <li>Atur Komisi & Buat Level Reseller</li>
           </ul>
           <div className="ava-btn-group">
-            <button type="button" className="ava-btn btn-primary">
-              <a href="price">Saya Tertarik</a>
-            </button>
+            <a href="https://store.avana.asia/" className="ava-btn btn-primary">
+              Saya Tertarik
+            </a>
             <a href="/reseller" className="ava-btn">
               Lihat Selengkapnya
             </a>
@@ -191,9 +191,9 @@ const Home = () => (
             <li>Order Via Whatsapp</li>
           </ul>
           <div className="ava-btn-group">
-            <button type="button" className="ava-btn btn-primary">
-              <a href="price">Saya Tertarik</a>
-            </button>
+            <a href="https://store.avana.asia/" className="ava-btn btn-primary">
+              Saya Tertarik
+            </a>
 
             <a href="/webstore" className="ava-btn">
               Lihat Selengkapnya
@@ -226,9 +226,9 @@ const Home = () => (
       </section>
       <section id="trial">
         <h2 className="is-size-4">Mulai uji coba gratis 14 hari Anda</h2>
-        <button type="button" className="ava-btn btn-primary">
+        <a href="https://store.avana.asia/" className="ava-btn btn-primary">
           Coba Gratis
-        </button>
+        </a>
       </section>
     </main>
 
