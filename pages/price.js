@@ -11,7 +11,7 @@ const Price = () => {
   const [period, setPeriod] = useState("yearly");
   const [packages, setPackages] = useState([]);
 
-  getPackages.then((res) => setPackages(res.id.packages));
+  getPackages.then((res) => setPackages(res.default.id.packages));
 
   const packagesUI = packages
     .filter((pck) => pck.period === period)
