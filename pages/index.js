@@ -71,7 +71,11 @@ const Home = () => (
         </div>
         <div className="navbar-end">
           <div className="navbar-item">
-            <a href="/" className="ava-btn btn-secondary" title="Login">
+            <a
+              href="https://store.avana.asia/"
+              className="ava-btn btn-secondary"
+              title="Login"
+            >
               Login
             </a>
           </div>
