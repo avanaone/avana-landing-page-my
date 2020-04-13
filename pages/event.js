@@ -49,7 +49,7 @@ const Event = () => {
                       75
                     )}${event.location.length > 75 ? " ..." : ""}`}</span>
                   </div>
-                  <Link href="event/[id]" as={`/event/${event.id}`}>
+                  <Link href="/event/[id]" as={`/event/${event.id}`}>
                     <a className="ava-btn btn-primary">Lihat Detail</a>
                   </Link>
                 </div>

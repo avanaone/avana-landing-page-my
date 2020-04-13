@@ -67,7 +67,7 @@ export default function Promo({ data }) {
                               "DD MMM YYYY"
                             )}`}
                       </span>
-                      <Link href="[code]" as={`/promo/${promo.code}`}>
+                      <Link href="/promo/[code]" as={`/promo/${promo.code}`}>
                         <a className="ava-btn btn-primary">Lihat Detail</a>
                       </Link>
                     </div>

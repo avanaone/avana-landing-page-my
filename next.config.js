@@ -21,7 +21,7 @@ module.exports = {
 
     getPromo.map((promo) => {
       paths[`promo/${promo.code}`] = {
-        page: "/promo/[code]",
+        page: "/[code]",
         query: { code: promo.code },
       };
     });

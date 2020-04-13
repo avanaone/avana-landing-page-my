@@ -49,7 +49,7 @@ export default function Event({ data }) {
                         <br />
                         {event.date}
                       </span>
-                      <Link href="[code]" as={`/promo/${event.code}`}>
+                      <Link href="/event/[id]" as={`/event/${event.code}`}>
                         <a className="ava-btn btn-primary">Lihat Detail</a>
                       </Link>
                     </div>
