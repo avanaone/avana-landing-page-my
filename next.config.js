@@ -21,14 +21,14 @@ module.exports = {
 
     getPromo.map((promo) => {
       paths[`promo/${promo.code}`] = {
-        page: "/[code]",
+        page: "promo/[code]",
         query: { code: promo.code },
       };
     });
 
     getEvents.map((event) => {
       paths[`event/${event.id}`] = {
-        page: "/event/[id]",
+        page: "event/[id]",
         query: { id: event.id },
       };
     });
