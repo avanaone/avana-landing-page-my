@@ -1,0 +1,44 @@
+{
+  "id": {
+    "features": {
+      "Manajemen Produk": {
+        "yearly": {
+          "advance": true,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": true,
+          "business": true
+        },
+        "quarterly": {
+          "advance": true,
+          "business": true
+        },
+        "monthly": {
+          "advance": true,
+          "business": true
+        }
+      },
+      "Manajemen Order": {
+        "yearly": {
+          "advance": false,
+          "business": false,
+          "vip": false
+        },
+        "semi-annually": {
+          "advance": true,
+          "business": true
+        },
+        "quarterly": {
+          "advance": true,
+          "business": true
+        },
+        "monthly": {
+          "advance": true,
+          "business": true
+        }
+      }
+    }
+  }
+}

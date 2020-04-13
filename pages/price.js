@@ -74,7 +74,7 @@ const Price = () => {
             </li>
           </ul>
           <div className="packages">{packagesUI}</div>
-          <a href="/packages-comparison">See full comparison</a>
+          <a href="/packages-detail">See full comparison</a>
         </section>
       </main>
       <Footer />

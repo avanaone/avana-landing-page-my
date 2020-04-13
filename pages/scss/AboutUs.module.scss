@@ -1,0 +1,35 @@
+.AboutUs {
+  :global main {
+    section {
+      position: relative;
+
+      &:first-child {
+        padding: 5vw 10vw;
+        > div {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap-reverse;
+
+          > div {
+            flex: 1;
+            // min-width: ;
+          }
+        }
+
+        img {
+          width: 30vw;
+          min-width: 300px;
+          margin: 1em;
+        }
+
+        .channels {
+          position: relative;
+          bottom: 0;
+          width: 75vw;
+        }
+      }
+    }
+  }
+}
