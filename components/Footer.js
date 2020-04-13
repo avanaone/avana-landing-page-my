@@ -13,50 +13,24 @@ export default function Footer() {
       <div>
         <span>Our Company</span>
         <div>
-          <Link href="/about-us">
-            <a>About Us</a>
-          </Link>
-          <Link href="/academy">
-            <a>Academy</a>
-          </Link>
-          <Link href="/blog">
-            <a>Blog</a>
-          </Link>
-          <Link href="/careers">
-            <a>Careers</a>
-          </Link>
-          <Link href="/media">
-            <a>Media</a>
-          </Link>
-          <Link href="/contact-us">
-            <a>Contact us</a>
-          </Link>
-          <Link href="/privacy-policy">
-            <a>Privacy Policy</a>
-          </Link>
+          <a href="/about-us">About Us</a>
+          <a>Academy</a>
+          <a>Blog</a>
+          <a>Careers</a>
+          <a>Media</a>
+          <a>Contact us</a>
+          <a>Privacy Policy</a>
         </div>
       </div>
       <div>
         <span>Sell Online Easily</span>
         <div>
-          <Link href="/facebook-store">
-            <a>Facebook Store</a>
-          </Link>
-          <Link href="/facebook-auto-reply">
-            <a>Facebook Autor Reply</a>
-          </Link>
-          <Link href="/messenger-store">
-            <a>Messenger Store</a>
-          </Link>
-          <Link href="/webstore">
-            <a>Webstore</a>
-          </Link>
-          <Link href="/reporting-tools">
-            <a>Reporting Tools</a>
-          </Link>
-          <Link href="/facebook-ads">
-            <a>Facebook Ads</a>
-          </Link>
+          <a>Facebook Store</a>
+          <a>Facebook Autor Reply</a>
+          <a>Messenger Store</a>
+          <a>Webstore</a>
+          <a>Reporting Tools</a>
+          <a>Facebook Ads</a>
         </div>
       </div>
     </footer>
