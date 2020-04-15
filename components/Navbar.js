@@ -45,8 +45,8 @@ export default function Navbar() {
                 <a href="/dashboard" className="navbar-item" title="Dashboard">
                   Dashboard
                 </a>
-                <a href="/avachat" className="navbar-item" title="Avachat">
-                  Avachat
+                <a href="/avachat" className="navbar-item" title="AVAChat">
+                  AVAChat
                 </a>
                 <a
                   href="/reseller"
