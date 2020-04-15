@@ -124,7 +124,7 @@ const Price = () => {
             >
               Close
             </button>
-            <h2>Additional Service</h2>
+            <h2>Layanan Tambahan</h2>
             <table>
               <tbody>
                 {additionalService.map((service, idx) => (
