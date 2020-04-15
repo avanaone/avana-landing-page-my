@@ -14,9 +14,9 @@ const getPromo = import("../json/promo.json");
 const Promo = () => {
   const [promo, setPromo] = useState([]);
 
-  // getPromo.then((res) => {
-  //   return setPromo(res.default);
-  // });
+  getPromo.then((res) => {
+    return setPromo(res.default);
+  });
 
   return (
     <div className={styles.Promo}>

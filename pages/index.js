@@ -59,7 +59,7 @@ const Home = () => {
         />
         <meta
           name="description"
-          content="AVANA dapat mengubah medsos  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+          content="AVANA dapat mengubah sosial media  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
         />
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
@@ -70,7 +70,7 @@ const Home = () => {
         />
         <meta
           property="og:description"
-          content="AVANA dapat mengubah medsos  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+          content="AVANA dapat mengubah sosial media  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
         />
         <meta property="og:image" content="/assets/images/meta-image.png" />
         {/* Twitter */}
@@ -82,7 +82,7 @@ const Home = () => {
         />
         <meta
           property="twitter:description"
-          content="AVANA dapat mengubah medsos  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+          content="AVANA dapat mengubah sosial media  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
         />
         <meta
           property="twitter:image"
@@ -94,7 +94,8 @@ const Home = () => {
 
       <header>
         <h1 className="is-size-3">
-          Satu dashboard untuk mengelola semua aktivitas penjualanmu di medsos
+          Satu dashboard untuk mengelola semua aktivitas penjualanmu di sosial
+          media
         </h1>
         <p>Chat Multichannel • Auto Reply • Manajemen Reseller • Toko Online</p>
         <a
@@ -111,7 +112,7 @@ const Home = () => {
           <div className="description">
             <h2 className="is-size-4">
               <span className="hl">Dashboard</span> pintar untuk mengelola
-              aktivitas jualanmu di medsos
+              aktivitas jualanmu di sosial media
             </h2>
             <p>
               Selain membuat Anda lebih produktif dashboard ini juga banyak
@@ -172,11 +173,11 @@ const Home = () => {
           <div className="description">
             <h2 className="is-size-4">
               <span className="hl">AVAChat</span> menghubungkan semua chat
-              medsos menjadi 1 dashboard
+              sosial media menjadi 1 dashboard
             </h2>
             <p>
               AVAChat juga mempunyai banyak fitur yang meningkatkan
-              produktifitas Anda di berbagai saluran medsos.
+              produktifitas Anda di berbagai saluran sosial media.
             </p>
             <ul>
               <li

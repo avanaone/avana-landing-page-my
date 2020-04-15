@@ -81,9 +81,9 @@ export default function Navbar() {
                 >
                   Tutorial
                 </a>
-                <a href="/FAQ" className="navbar-item" title="FAQ">
+                {/* <a href="/FAQ" className="navbar-item" title="FAQ">
                   FAQ
-                </a>
+                </a> */}
                 <a
                   href="https://blog.avana.id/"
                   className="navbar-item"

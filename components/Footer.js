@@ -12,6 +12,44 @@ export default function Footer() {
           +62 22 2050 9731
         </span>
         <span>Indonesia • Singapore • Malaysia</span>
+        <div className="footer-icons">
+          <div>
+            <a href="https://web.facebook.com/avanaindonesia/" target="_blank">
+              {" "}
+              <img
+                src={require("public/assets/images/footer/facebook-f-brands.svg")}
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <a href="https://twitter.com/avana_id" target="_blank">
+              <img
+                src={require("public/assets/images/footer/twitter-brands.svg")}
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/avana.id/" target="_blank">
+              <img
+                src={require("public/assets/images/footer/instagram-brands.svg")}
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://www.youtube.com/channel/UCHsdeDF8cJl7C4GzoxPRk0A"
+              target="_blank"
+            >
+              <img
+                src={require("public/assets/images/footer/youtube-brands.svg")}
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
       </div>
       <div>
         <span>Avana</span>

@@ -13,6 +13,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       padding: 2.5em 5vw 5em;
+      // height: fit-content;
 
       > div {
         margin: 1em;
@@ -23,7 +24,7 @@
           max-width: 1000px;
           background-color: #ffffff;
           padding: 2.5em;
-
+          // height: fit-content;
           img {
             width: 100%;
           }
