@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:url" content="https://avana.id" />
         <meta
           property="og:title"
-          content="Social Commerce AVANA Terpercaya di Indonesia	"
+          content="Social Commerce AVANA Terpercaya di Indonesia"
         />
         <meta
           property="og:description"
@@ -36,7 +36,7 @@ export default function App({ Component, pageProps }) {
         <meta property="twitter:url" content="https://avana.id" />
         <meta
           property="twitter:title"
-          content="Social Commerce AVANA Terpercaya di Indonesia	"
+          content="Social Commerce AVANA Terpercaya di Indonesia"
         />
         <meta
           property="twitter:description"
