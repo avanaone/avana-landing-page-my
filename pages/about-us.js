@@ -1,15 +1,21 @@
+import Head from "next/head";
+
 import styles from "./scss/AboutUs.module.scss";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const AboutUs = () => (
   <div className={styles.AboutUs}>
+    <Head>
+      <title>Tentang Kami • AVANA</title>
+    </Head>
     <Navbar />
     <main>
-      <section>
+      <section id="section-1">
         <div>
           <div>
-            <h2 className="is-size-3">
+            <h2 className="is-size-4">
               Kami membantu Anda untuk meningkatkan bisnis Anda
             </h2>
             <p>
@@ -19,16 +25,21 @@ const AboutUs = () => (
               Anda.
             </p>
           </div>
-          <img src="/assets/images/about-us/thumbnail.png" alt="" />
+          <iframe
+            src="https://www.youtube.com/embed/vM4i-LC_8Hw"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
         <img
-          src="/assets/images/about-us/channels.png"
+          src={require("public/assets/images/about-us/channels.png")}
           alt=""
           className="channels"
         />
       </section>
-      <section>
-        <img src="/assets/images/about-us/team.png" alt="" />
+      <section id="section-2">
+        <img src={require("public/assets/images/about-us/team.png")} alt="" />
       </section>
     </main>
     <Footer />

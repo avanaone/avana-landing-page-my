@@ -1,34 +1,38 @@
 .AboutUs {
   :global main {
     section {
-      position: relative;
+      &#section-1 {
+        padding: 2.5vw 10vw;
 
-      &:first-child {
-        padding: 5vw 10vw;
         > div {
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
           flex-wrap: wrap-reverse;
 
-          > div {
+          div {
             flex: 1;
-            // min-width: ;
+            max-width: 700px;
+            min-width: 250px;
+            margin: 2.5em;
+          }
+
+          iframe {
+            flex: 1;
+            max-width: 450px;
+            height: 300px;
           }
         }
 
         img {
-          width: 30vw;
-          min-width: 300px;
-          margin: 1em;
+          display: block;
+          margin: auto;
         }
+      }
 
-        .channels {
-          position: relative;
-          bottom: 0;
-          width: 75vw;
-        }
+      &#section-2 {
+        text-align: center;
       }
     }
   }

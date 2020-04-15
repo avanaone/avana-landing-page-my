@@ -1,243 +1,424 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 
 import styles from "./scss/Home.module.scss";
 
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ScriptNavbar from "../modules/ScriptNavbar";
 
-const Home = () => (
-  <div className={styles.Home}>
-    <Head>
-      <title>AVANA</title>
-      <link rel="icon" href="/favicon.ico" />
-      {/* <script type="text/javascript" src="/static/navbar.js"></script> */}
-      <ScriptNavbar />
-    </Head>
+const Home = () => {
+  const [data, setData] = useState({
+    dashboard: {
+      current: 1,
+    },
+    avachat: {
+      current: 1,
+    },
+    reseller: {
+      current: 1,
+    },
+    webstore: {
+      current: 1,
+    },
+  });
 
-    <nav
-      className="navbar is-white is-fixed-top"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div className="navbar-brand">
-        <a href="/" className="navbar-item" title="BERANDA &middot; Avana">
-          <img src="/assets/images/logo.png" alt="Avana Logo" width="100" />
-        </a>
+  useEffect(() => {
+    const id = setInterval(() => {
+      setData({
+        dashboard: {
+          current: data.dashboard.current < 3 ? data.dashboard.current + 1 : 1,
+        },
+        avachat: {
+          current: data.avachat.current < 3 ? data.avachat.current + 1 : 1,
+        },
+        reseller: {
+          current: data.reseller.current < 3 ? data.reseller.current + 1 : 1,
+        },
+        webstore: {
+          current: data.webstore.current < 3 ? data.webstore.current + 1 : 1,
+        },
+      });
+    }, 5000);
+
+    return () => {
+      clearInterval(id);
+    };
+  }, [data]);
+
+  const handleSlider = (id, step) =>
+    setData({ ...data, [id]: { ...data[id], current: step } });
+
+  return (
+    <div className={styles.Home}>
+      <Head>
+        {/* Primary Meta Tags */}
+        <title>AVANA | Social Commerce AVANA Terpercaya di Indonesia</title>
+        <meta
+          name="title"
+          content="Social Commerce AVANA Terpercaya di Indonesia"
+        />
+        <meta
+          name="description"
+          content="AVANA dapat mengubah medsos  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+        />
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://avana.id/" />
+        <meta
+          property="og:title"
+          content="Social Commerce AVANA Terpercaya di Indonesia"
+        />
+        <meta
+          property="og:description"
+          content="AVANA dapat mengubah medsos  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+        />
+        <meta property="og:image" content="/assets/images/meta-image.png" />
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://avana.id/" />
+        <meta
+          property="twitter:title"
+          content="Social Commerce AVANA Terpercaya di Indonesia"
+        />
+        <meta
+          property="twitter:description"
+          content="AVANA dapat mengubah medsos  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+        />
+        <meta
+          property="twitter:image"
+          content="/assets/images/meta-image.png"
+        />
+      </Head>
+
+      <Navbar />
+
+      <header>
+        <h1 className="is-size-3">
+          Satu dashboard untuk mengelola semua aktivitas penjualanmu di medsos
+        </h1>
+        <p>Chat Multichannel • Auto Reply • Manajemen Reseller • Toko Online</p>
         <a
-          role="button"
-          className="navbar-burger"
-          data-target="navMenu"
-          aria-label="menu"
-          aria-expanded="false"
+          href="https://store.avana.asia/"
+          target="__blank"
+          className="ava-btn btn-primary"
         >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+          Coba Gratis
         </a>
-      </div>
-      <div className="navbar-menu" id="navMenu">
-        <div className="navbar-start">
-          <a href="/about-us" className="navbar-item" title="Tentang Kami">
-            Tentang Kami
-          </a>
-          <a href="/event" className="navbar-item" title="Event">
-            Event
-          </a>
-          <a href="/promo" className="navbar-item" title="Promo">
-            Promo
-          </a>
-          <a href="/" className="navbar-item" title="BERANDA &middot; Avana">
-            <img src="/assets/images/logo.png" alt="Avana Logo" width="125" />
-          </a>
-          <a href="/price" className="navbar-item" title="Harga">
-            Harga
-          </a>
-          <div className="navbar-item has-dropdown is-hoverable">
-            <a href="#" className="navbar-link" title="Pelajari">
-              Pelajari
-            </a>
-            <div className="navbar-dropdown">
-              <a href="/tutorial" className="navbar-item" title="Tutorial">
-                Tutorial
+        <div className="bg-hero" />
+      </header>
+      <main>
+        <section className="feature">
+          <div className="description">
+            <h2 className="is-size-4">
+              <span className="hl">Dashboard</span> pintar untuk mengelola
+              aktivitas jualanmu di medsos
+            </h2>
+            <p>
+              Selain membuat Anda lebih produktif dashboard ini juga banyak
+              fitur yang membantu Anda meningkatkan penjualan.
+            </p>
+            <ul>
+              <li
+                className={data.dashboard.current === 1 ? "active" : ""}
+                onClick={() => handleSlider("dashboard", 1)}
+              >
+                Manajemen Order
+              </li>
+              <li
+                className={data.dashboard.current === 2 ? "active" : ""}
+                onClick={() => handleSlider("dashboard", 2)}
+              >
+                Manajemen Produk
+              </li>
+              <li
+                className={data.dashboard.current === 3 ? "active" : ""}
+                onClick={() => handleSlider("dashboard", 3)}
+              >
+                Otomatis Membalas Pesan & Komentar Pelanggan Anda
+              </li>
+            </ul>
+            <div className="ava-btn-group">
+              <a
+                href="https://store.avana.asia/"
+                target="__blank"
+                className="ava-btn btn-primary"
+              >
+                Saya Tertarik
               </a>
-              <a href="/FAQ" className="navbar-item" title="FAQ">
-                FAQ
-              </a>
-              <a href="/Blog" className="navbar-item" title="Blog">
-                Blog
+              <a href="/dashboard" className="ava-btn btn-secondary">
+                Lihat Selengkapnya
               </a>
             </div>
           </div>
-        </div>
-        <div className="navbar-end">
-          <div className="navbar-item">
-            <a
-              href="https://store.avana.asia/"
-              className="ava-btn btn-secondary"
-              title="Login"
-            >
-              Login
-            </a>
+          <div className="feature-img">
+            <img
+              className={data.dashboard.current === 1 ? "active" : ""}
+              src={require("public/assets/images/dashboard/manajemen-order.png")}
+              alt=""
+            />
+            <img
+              className={data.dashboard.current === 2 ? "active" : ""}
+              src={require("public/assets/images/dashboard/manajemen-produk.png")}
+              alt=""
+            />
+            <img
+              className={data.dashboard.current === 3 ? "active" : ""}
+              src={require("public/assets/images/dashboard/auto-reply.png")}
+              alt=""
+            />
           </div>
-        </div>
-      </div>
-    </nav>
+        </section>
+        <section className="feature">
+          <div className="description">
+            <h2 className="is-size-4">
+              <span className="hl">AVAChat</span> menghubungkan semua chat
+              medsos menjadi 1 dashboard
+            </h2>
+            <p>
+              AVAChat juga mempunyai banyak fitur yang meningkatkan
+              produktifitas Anda di berbagai saluran medsos.
+            </p>
+            <ul>
+              <li
+                className={data.avachat.current === 1 ? "active" : ""}
+                onClick={() => handleSlider("avachat", 1)}
+              >
+                Mengirim Informasi Produk & Invoice
+              </li>
+              <li
+                className={data.avachat.current === 2 ? "active" : ""}
+                onClick={() => handleSlider("avachat", 2)}
+              >
+                Quick Reply Untuk Membalas Pesan Lebih Cepat
+              </li>
+              <li
+                className={data.avachat.current === 3 ? "active" : ""}
+                onClick={() => handleSlider("avachat", 3)}
+              >
+                Mengirim Informasi & Status Terbaru Paket Pelanggan Anda
+              </li>
+            </ul>
+            <div className="ava-btn-group">
+              <a
+                href="https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+                target="__blank"
+                className="ava-btn btn-primary"
+              >
+                Saya Tertarik
+              </a>
+              <a href="/avachat" className="ava-btn btn-secondary">
+                Lihat Selengkapnya
+              </a>
+            </div>
+          </div>
+          <div className="feature-img">
+            <img
+              className={data.avachat.current === 1 ? "active" : ""}
+              src={require("public/assets/images/avachat/send-product-info.png")}
+              alt=""
+            />
+            <img
+              className={data.avachat.current === 2 ? "active" : ""}
+              src={require("public/assets/images/avachat/quick-reply.png")}
+              alt=""
+            />
+            <img
+              className={data.avachat.current === 3 ? "active" : ""}
+              src={require("public/assets/images/avachat/send-shipping-info.png")}
+              alt=""
+            />
+          </div>
+        </section>
+        <section className="feature">
+          <div className="description">
+            <h2 className="is-size-4">
+              Manajemen resellermu dengan fitur&nbsp;
+              <span className="hl">Manajemen Reseller</span>
+            </h2>
+            <p>
+              Manajemen Reseller salah satu fitur yang membantu Anda mengamati
+              performa reseller secara realtime.
+            </p>
+            <ul>
+              <li
+                className={data.reseller.current === 1 ? "active" : ""}
+                onClick={() => handleSlider("reseller", 1)}
+              >
+                Manajemen Database Reseller
+              </li>
+              <li
+                className={data.reseller.current === 2 ? "active" : ""}
+                onClick={() => handleSlider("reseller", 2)}
+              >
+                Lihat Performa Reseller
+              </li>
+              <li
+                className={data.reseller.current === 3 ? "active" : ""}
+                onClick={() => handleSlider("reseller", 3)}
+              >
+                Atur Komisi & Buat Level Reseller
+              </li>
+            </ul>
+            <div className="ava-btn-group">
+              <a
+                href="https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk Manajemen Reseller"
+                target="__blank"
+                className="ava-btn btn-primary"
+              >
+                Saya Tertarik
+              </a>
+              <a href="/reseller" className="ava-btn btn-secondary">
+                Lihat Selengkapnya
+              </a>
+            </div>
+          </div>
+          <div className="feature-img">
+            <img
+              className={data.reseller.current === 1 ? "active" : ""}
+              src={require("public/assets/images/reseller/manajemen-database-reseller.png")}
+              alt=""
+            />
+            <img
+              className={data.reseller.current === 2 ? "active" : ""}
+              src={require("public/assets/images/reseller/lihat-performa-reseller.png")}
+              alt=""
+            />
+            <img
+              className={data.reseller.current === 3 ? "active" : ""}
+              src={require("public/assets/images/reseller/atur-komisi-reseller.png")}
+              alt=""
+            />
+          </div>
+        </section>
+        <section className="feature">
+          <div className="description">
+            <h2 className="is-size-4">
+              Miliki <span className="hl">Webstore</span> (toko online gratis)
+              dan custom domain .com
+            </h2>
+            <p>
+              Webstore (website toko online) kami mempunyai banyak fitur yang
+              sangat membantu calon customermu melakukan transaksi.
+            </p>
+            <ul>
+              <li
+                className={data.webstore.current === 1 ? "active" : ""}
+                onClick={() => handleSlider("webstore", 1)}
+              >
+                Mendukung Berbagai Metode Pembayaran
+              </li>
+              <li
+                className={data.webstore.current === 2 ? "active" : ""}
+                onClick={() => handleSlider("webstore", 2)}
+              >
+                Tema (Pembaruan Gratis)
+              </li>
+              <li
+                className={data.webstore.current === 3 ? "active" : ""}
+                onClick={() => handleSlider("webstore", 3)}
+              >
+                Order Melalui Whatsapp
+              </li>
+            </ul>
+            <div className="ava-btn-group">
+              <a
+                href="https://store.avana.asia/"
+                target="__blank"
+                className="ava-btn btn-primary"
+              >
+                Saya Tertarik
+              </a>
+              <a href="/webstore" className="ava-btn btn-secondary">
+                Lihat Selengkapnya
+              </a>
+            </div>
+          </div>
+          <div className="feature-img">
+            <img
+              className={data.webstore.current === 1 ? "active" : ""}
+              src={require("public/assets/images/webstore/payment-gateway.png")}
+              alt=""
+            />
+            <img
+              className={data.webstore.current === 2 ? "active" : ""}
+              src={require("public/assets/images/webstore/theme.png")}
+              alt=""
+            />
+            <img
+              className={data.webstore.current === 3 ? "active" : ""}
+              src={require("public/assets/images/webstore/order-via-whatsapp.png")}
+              alt=""
+            />
+          </div>
+        </section>
+        <section className="feature">
+          <div className="description">
+            <h2 className="is-size-4">
+              Miliki <span className="hl">Facebook Store</span> hebat
+            </h2>
+            <p>
+              Ubah teman jadi pelanggan. Pelanggan bisa belanja sampai bayar
+              langsung di Facebook Page Anda tanpa keluar dari laman ini.
+            </p>
+            <ul />
+            <div className="ava-btn-group">
+              <a
+                href="https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk Facebook Store"
+                target="__blank"
+                className="ava-btn btn-primary"
+              >
+                Saya Tertarik
+              </a>
+            </div>
+          </div>
+          <div className="feature-img">
+            <img
+              src={require("public/assets/images/facebook-store.png")}
+              className="active"
+              alt=""
+            />
+          </div>
+        </section>
+        <section id="support">
+          <h2 className="is-size-4">
+            Didukung oleh berbagai macam metode pengiriman & pembayaran
+          </h2>
+          <div>
+            <img src={require("public/assets/images/courier.png")} alt="" />
+            <div className="border" />
+            <img src={require("public/assets/images/bank.png")} alt="" />
+          </div>
+        </section>
+        <section id="testimonial">
+          <h2 className="is-size-4">
+            Apa kata mereka yang sudah bergabung dengan AVANA?
+          </h2>
+          <q>
+            Toko online itu bukan hanya sekedar wadah untuk memasarkan barang
+            tapi sebagai alat untuk membangun brand juga. Bersama AVANA, saya
+            bisa memperkenalkan dan membesarkan nama Amity.
+          </q>
+          <span className="name">Amity Indonesia</span>
+          <img
+            src={require("public/assets/images/testimonial/amity.png")}
+            alt=""
+          />
+        </section>
+        <section id="trial">
+          <h2 className="is-size-4">Mulai uji coba gratis 14 hari Anda</h2>
+          <a
+            href="https://store.avana.asia/"
+            target="__blank"
+            className="ava-btn btn-primary"
+          >
+            Coba Gratis
+          </a>
+        </section>
+      </main>
 
-    <header>
-      <h1 className="is-size-3">
-        Satu dashboard untuk mengelola semua aktivitas penjualanmu di sosial
-        media
-      </h1>
-      <p>Chat Multichannel • Auto Reply • Reseller Management • Toko Online</p>
-      <a href="https://store.avana.asia/" className="ava-btn btn-primary">
-        Coba Gratis
-      </a>
-      <div className="bg-header" />
-    </header>
-    <main>
-      <section className="feature">
-        <div className="description">
-          <h2 className="is-size-4">
-            <span className="hl">Dashboard</span> pintar untuk mengelola
-            Aktivitas jualanmu di sosmed
-          </h2>
-          <p>
-            Selain membuatmu lebih produktif dashboard ini juga kaya akan fitur
-            yang membantu kamu meningkatkan penjualan.
-          </p>
-          <ul>
-            <li>Management Order</li>
-            <li className="active">Manajemen Produk</li>
-            <li>Auto Reply Chat & Comment</li>
-          </ul>
-          <div className="ava-btn-group">
-            <a href="https://store.avana.asia/" className="ava-btn btn-primary">
-              Saya Tertarik
-            </a>
-            <a href="/dashboard" className="ava-btn">
-              Lihat Selengkapnya
-            </a>
-          </div>
-        </div>
-        <div>
-          <img src="/assets/images/dashboard.png" alt="" />
-        </div>
-      </section>
-      <section className="feature">
-        <div className="description">
-          <h2 className="is-size-4">
-            <span className="hl">AVAchat</span> Menghubungkan semua chat social
-            media menjadi 1 dashboard
-          </h2>
-          <p>
-            AVAChat juga mempunyai banyak fitur yang meningkatkan
-            produktifitasmu di berbagai channel sosmed.
-          </p>
-          <ul>
-            <li>Send Product & Invoice</li>
-            <li className="active">Quick Reply</li>
-            <li>Send Shipping Info</li>
-          </ul>
-          <div className="ava-btn-group">
-            <a href="https://store.avana.asia/" className="ava-btn btn-primary">
-              Saya Tertarik
-            </a>
-            <a href="/avachat" className="ava-btn">
-              Lihat Selengkapnya
-            </a>
-          </div>
-        </div>
-        <div>
-          <img src="/assets/images/avachat.png" alt="" />
-        </div>
-      </section>
-      <section className="feature">
-        <div className="description">
-          <h2 className="is-size-4">
-            Manajement resellermu dengen fitur{" "}
-            <span className="hl">Reseller Management</span>
-          </h2>
-          <p>
-            Reseller management salah satu fitur yang membantu kamu mengamati
-            performa reseller secara realtime.
-          </p>
-          <ul>
-            <li>Management Database Reseller</li>
-            <li className="active">Lihat Performa Reseller</li>
-            <li>Atur Komisi & Buat Level Reseller</li>
-          </ul>
-          <div className="ava-btn-group">
-            <a href="https://store.avana.asia/" className="ava-btn btn-primary">
-              Saya Tertarik
-            </a>
-            <a href="/reseller" className="ava-btn">
-              Lihat Selengkapnya
-            </a>
-          </div>
-        </div>
-        <div>
-          <img src="/assets/images/reseller-management.png" alt="" />
-        </div>
-      </section>
-      <section className="feature">
-        <div className="description">
-          <h2 className="is-size-4">
-            Miliki <span className="hl">Webstore</span> (toko online gratis) dan
-            custom domain (.com, co.id, id).
-          </h2>
-          <p>
-            Webstore (website toko online) kami mempunyai banyak fitur yang
-            sangat membantu calon customermu melakukan transaksi.
-          </p>
-          <ul>
-            <li>Support Payment Gateway</li>
-            <li className="active">Theme (Free Update)</li>
-            <li>Order Via Whatsapp</li>
-          </ul>
-          <div className="ava-btn-group">
-            <a href="https://store.avana.asia/" className="ava-btn btn-primary">
-              Saya Tertarik
-            </a>
-
-            <a href="/webstore" className="ava-btn">
-              Lihat Selengkapnya
-            </a>
-          </div>
-        </div>
-        <div>
-          <img src="/assets/images/webstore.png" alt="" />
-        </div>
-      </section>
-      <section id="support">
-        <h2 className="is-size-4">
-          Didukung oleh berbagai macam metode pengiriman & pembayaran
-        </h2>
-        <div>
-          <img src="/assets/images/courier.png" alt="" />
-          <div className="border" />
-          <img src="/assets/images/bank.png" alt="" />
-        </div>
-      </section>
-      <section id="testimonial">
-        <h2 className="is-size-4">
-          Apa kata mereka yang sudah bergabung dengan AVANA?
-        </h2>
-        <q>
-          Toko online itu bukan hanya sekedar wadah untuk memasarkan barang tapi
-          sebagai alat untuk membangun brand juga. Bersama AVANA, saya bisa
-          memperkenalkan dan membesarkan nama Amity.
-        </q>
-      </section>
-      <section id="trial">
-        <h2 className="is-size-4">Mulai uji coba gratis 14 hari Anda</h2>
-        <a href="https://store.avana.asia/" className="ava-btn btn-primary">
-          Coba Gratis
-        </a>
-      </section>
-    </main>
-
-    <Footer />
-  </div>
-);
+      <Footer />
+    </div>
+  );
+};
 
 export default Home;

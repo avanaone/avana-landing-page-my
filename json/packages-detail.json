@@ -1,7 +1,235 @@
 {
   "id": {
     "features": {
-      "Manajemen Produk": {
+      "Pelatihan Digital Marketing": {
+        "yearly": {
+          "advance": false,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": false,
+          "business": true
+        },
+        "quarterly": {
+          "advance": false,
+          "business": true
+        },
+        "monthly": {
+          "advance": false,
+          "business": true
+        }
+      },
+      "Pelatihan Facebook Ads (Level Basic) gratis": {
+        "yearly": {
+          "advance": false,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": false,
+          "business": true
+        },
+        "quarterly": {
+          "advance": false,
+          "business": true
+        },
+        "monthly": {
+          "advance": false,
+          "business": true
+        }
+      },
+      "Atur Agen dan Reseller": {
+        "yearly": {
+          "advance": false,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": false,
+          "business": true
+        },
+        "quarterly": {
+          "advance": false,
+          "business": true
+        },
+        "monthly": {
+          "advance": false,
+          "business": true
+        }
+      },
+      "Facebook Advertising Training": {
+        "yearly": {
+          "advance": false,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": false,
+          "business": true
+        },
+        "quarterly": {
+          "advance": false,
+          "business": true
+        },
+        "monthly": {
+          "advance": false,
+          "business": true
+        }
+      },
+      "Gratis Domain .com": {
+        "yearly": {
+          "advance": false,
+          "business": false,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": false,
+          "business": false
+        },
+        "quarterly": {
+          "advance": false,
+          "business": false
+        },
+        "monthly": {
+          "advance": false,
+          "business": true
+        }
+      },
+      "Toko Facebook": {
+        "yearly": {
+          "advance": true,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": true,
+          "business": true
+        },
+        "quarterly": {
+          "advance": true,
+          "business": true
+        },
+        "monthly": {
+          "advance": true,
+          "business": true
+        }
+      },
+      "Webstore": {
+        "yearly": {
+          "advance": true,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": true,
+          "business": true
+        },
+        "quarterly": {
+          "advance": true,
+          "business": true
+        },
+        "monthly": {
+          "advance": true,
+          "business": true
+        }
+      },
+      "Auto Reply Comment Facebook": {
+        "yearly": {
+          "advance": true,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": true,
+          "business": true
+        },
+        "quarterly": {
+          "advance": true,
+          "business": true
+        },
+        "monthly": {
+          "advance": true,
+          "business": true
+        }
+      },
+      "Auto Chat Facebook Messenger": {
+        "yearly": {
+          "advance": true,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": true,
+          "business": true
+        },
+        "quarterly": {
+          "advance": true,
+          "business": true
+        },
+        "monthly": {
+          "advance": true,
+          "business": true
+        }
+      },
+      "Messenger Blast": {
+        "yearly": {
+          "advance": true,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": true,
+          "business": true
+        },
+        "quarterly": {
+          "advance": true,
+          "business": true
+        },
+        "monthly": {
+          "advance": true,
+          "business": true
+        }
+      },
+      "Messenger Store": {
+        "yearly": {
+          "advance": true,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": true,
+          "business": true
+        },
+        "quarterly": {
+          "advance": true,
+          "business": true
+        },
+        "monthly": {
+          "advance": true,
+          "business": true
+        }
+      },
+      "Unlimited Upload Produk": {
+        "yearly": {
+          "advance": true,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": true,
+          "business": true
+        },
+        "quarterly": {
+          "advance": true,
+          "business": true
+        },
+        "monthly": {
+          "advance": true,
+          "business": true
+        }
+      },
+      "Integrasi Payment Gateway": {
         "yearly": {
           "advance": true,
           "business": true,
@@ -22,9 +250,85 @@
       },
       "Manajemen Order": {
         "yearly": {
-          "advance": false,
-          "business": false,
-          "vip": false
+          "advance": true,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": true,
+          "business": true
+        },
+        "quarterly": {
+          "advance": true,
+          "business": true
+        },
+        "monthly": {
+          "advance": true,
+          "business": true
+        }
+      },
+      "Manajemen Order": {
+        "yearly": {
+          "advance": true,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": true,
+          "business": true
+        },
+        "quarterly": {
+          "advance": true,
+          "business": true
+        },
+        "monthly": {
+          "advance": true,
+          "business": true
+        }
+      },
+      "Manajemen Database Pelanggan": {
+        "yearly": {
+          "advance": true,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": true,
+          "business": true
+        },
+        "quarterly": {
+          "advance": true,
+          "business": true
+        },
+        "monthly": {
+          "advance": true,
+          "business": true
+        }
+      },
+      "Manajemen Kode Promosi": {
+        "yearly": {
+          "advance": true,
+          "business": true,
+          "vip": true
+        },
+        "semi-annually": {
+          "advance": true,
+          "business": true
+        },
+        "quarterly": {
+          "advance": true,
+          "business": true
+        },
+        "monthly": {
+          "advance": true,
+          "business": true
+        }
+      },
+      "Manager Toko": {
+        "yearly": {
+          "advance": true,
+          "business": true,
+          "vip": true
         },
         "semi-annually": {
           "advance": true,

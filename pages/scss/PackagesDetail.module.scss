@@ -1,157 +1,103 @@
 .PackagesDetail {
   background-color: #f4f7f9;
 
-  :global header {
-    padding: 0 15vw;
-
-    h2 {
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: 0;
-        background-image: url("/assets/images/price/header.png");
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 5em;
-        width: 50vw;
-        transform: translate(0, -50%);
-
-        @media (max-width: 786px) {
-          display: none;
-        }
-      }
-    }
-
-    @media (max-width: 992px) {
-      padding: 0 7.5vw;
-    }
-  }
-
   :global main {
-    padding: 0 7.5vw 2.5vw;
-
     section {
-      > ul {
-        margin: 5em 0 1em;
-        text-align: center;
-        font-size: 0.85rem;
+      padding: 2.5vw 10vw;
 
-        li {
-          display: inline-block;
-          margin: 0 0.5em;
-          font-weight: 700;
+      .tabs-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 1.25vw;
 
-          padding: 0.25em 0.5em;
-          cursor: pointer;
-
-          &.active {
-            border-bottom: 1.5px solid #fdb816;
-          }
+        .ava-btn {
+          margin: 1em;
         }
       }
 
       .packages-detail {
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
-
-        width: 100%;
-        padding: 2.5vw;
-        // margin: 2.5em 0;
-        // overflow: hidden;
-        background-color: #ffffff;
+        margin: 2.5em 0;
+        overflow-x: auto;
+        overflow-y: hidden;
 
         table {
           width: 100%;
-        }
 
-        thead {
-          th {
-            height: 75px;
-            vertical-align: middle;
-            width: 250px;
-          }
-        }
-        tbody {
-          tr {
-            padding: 1em;
-            border-bottom: 1px solid #eee;
+          thead {
+            text-align: center;
 
-            td {
-              height: 75px;
+            th {
+              position: relative;
+              height: 10em;
+              width: 12.5vw;
               vertical-align: middle;
+
               &:first-child {
                 position: sticky;
                 left: 0;
-                background-color: #ffffff;
+                background-color: #f4f7f9;
+                z-index: 1;
               }
+
               &:not(:first-child) {
+                min-width: 150px;
+                max-width: 150px;
+              }
+
+              img {
+                width: 250px;
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+              }
+
+              .package {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%;
+                padding: 1em;
                 text-align: center;
+
+                strike {
+                  font-weight: 400;
+                }
               }
             }
           }
-        }
 
-        .package {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          text-align: center;
+          tbody {
+            position: relative;
 
-          //     width: 17.5vw;
-          //     min-width: 250px;
-          //     height: fit-content;
-          //     background-color: #ffffff;
-          //     padding: 2em 1.5vw;
-          //     margin: 1em 1.5em;
-          //     border: 1px solid #d7d7d7;
-          //     border-radius: 10px;
+            tr {
+              border-bottom: 2.5px solid #eee;
 
-          //     &.popular {
-          //       position: relative;
-          //       overflow: hidden;
-          //       border: 1px solid #fdb816;
-          //       height: 27.5em;
-          //       min-width: 265px;
+              td {
+                height: 55px;
+                padding: 1vw 0;
+                vertical-align: middle;
 
-          //       &::after {
-          //         content: "POPULAR";
-          //         position: absolute;
-          //         top: 25px;
-          //         right: -50px;
-          //         background-color: #fdb816;
-          //         padding: 0.5em 5em;
-          //         font-size: 0.75rem;
-          //         font-weight: 700;
-          //         transform: rotate(45deg);
-          //         box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.125);
-          //       }
-          //     }
+                &:first-child {
+                  position: sticky;
+                  left: 0;
+                  min-width: 100px;
+                  background-color: #f4f7f9;
+                }
 
-          //     .name {
-          //       font-weight: 700;
-          //     }
+                &:not(:first-child) {
+                  text-align: center;
+                }
+              }
 
-          //     .price {
-          //       color: #45df8f;
-          //       font-weight: 700;
-          //       margin: 0.25em 0;
-          //     }
-
-          //     ul {
-          //       list-style: unset;
-          //       margin: 1em 2em 1.5em;
-          //       text-align: left;
-
-          //       li {
-          //         margin: 0.5em 0;
-          //       }
-          //     }
+              &:last-child {
+                height: 75px;
+                border: none;
+              }
+            }
+          }
         }
       }
     }

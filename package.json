@@ -9,9 +9,14 @@
     "export": "next export"
   },
   "dependencies": {
+    "@webdeb/next-styles": "^1.0.8",
     "html-react-parser": "^0.10.3",
+    "imagemin-optipng": "^7.1.0",
     "moment": "^2.24.0",
     "next": "^9.3.4",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.5.7",
+    "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "sass": "^1.26.3"

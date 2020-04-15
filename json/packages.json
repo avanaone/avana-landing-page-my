@@ -3,6 +3,7 @@
     "packages": [
       {
         "code": "yearly_advance_plan_id",
+        "slug": "advance_id",
         "name": "Advance",
         "period": "yearly",
         "currency": "IDR",
@@ -12,6 +13,7 @@
       },
       {
         "code": "semi-annually_advance_plan_id",
+        "slug": "advance_id",
         "name": "Advance",
         "period": "semi-annually",
         "currency": "IDR",
@@ -21,6 +23,7 @@
       },
       {
         "code": "quarterly_advance_plan_id",
+        "slug": "advance_id",
         "name": "Advance",
         "period": "quarterly",
         "currency": "IDR",
@@ -30,6 +33,7 @@
       },
       {
         "code": "monthly_advance_plan_id",
+        "slug": "advance_id",
         "name": "Advance",
         "period": "monthly",
         "currency": "IDR",
@@ -39,6 +43,7 @@
       },
       {
         "code": "yearly_business",
+        "slug": "business",
         "name": "Business",
         "period": "yearly",
         "currency": "IDR",
@@ -48,6 +53,7 @@
       },
       {
         "code": "semi-annually_business",
+        "slug": "business",
         "name": "Business",
         "period": "semi-annually",
         "currency": "IDR",
@@ -57,6 +63,7 @@
       },
       {
         "code": "quarterly_business",
+        "slug": "business",
         "name": "Business",
         "period": "quarterly",
         "currency": "IDR",
@@ -66,6 +73,7 @@
       },
       {
         "code": "monthly_business",
+        "slug": "business",
         "name": "Business",
         "period": "monthly",
         "currency": "IDR",
@@ -75,12 +83,99 @@
       },
       {
         "code": "yearly_vip",
+        "slug": "agent",
         "name": "VIP",
         "period": "yearly",
         "currency": "IDR",
         "price": 12999000,
         "discounted_price": 12999000,
         "is_popular": false
+      }
+    ],
+    "additional_services": [
+      {
+        "name": "First setup",
+        "services": [
+          "Complete Shop Information",
+          "Add Payment & Shipping method",
+          "Upload first product",
+          "Facebook Integration",
+          "Publish Webstore & Facebook Store",
+          "Auto Reply"
+        ],
+        "price": "Free"
+      },
+      {
+        "name": "Upload product",
+        "services": [
+          "Price count per product",
+          "Max 5 photos",
+          " Setup Categories, Variant, Pricing ",
+          "Collection, Stock, and Auto Reply"
+        ],
+        "price": "IDR 25,000"
+      },
+      {
+        "name": "Photo product",
+        "services": [
+          "Price count per product",
+          "Max 4 angle photos",
+          "Size 1×1 Square"
+        ],
+        "price": "IDR 100,000"
+      },
+      {
+        "name": "Running ads",
+        "services": [
+          "10% from budget allocated to operational fee",
+          "Output will reported by end of the month",
+          "Suggest for next month Budgeting to merchant",
+          "Include setup target audience & metrics"
+        ],
+        "price": "10%"
+      },
+      {
+        "name": "Custom template",
+        "services": [
+          "Price will increase based on customer needs",
+          "Max 10 Page",
+          "Include order & payment system",
+          "3x minor revision allowed"
+        ],
+        "price": "IDR 5,000,000"
+      },
+      {
+        "name": "Landing page",
+        "services": [
+          "Price count per page",
+          "Only design, no wording",
+          "1x minor revision allowed"
+        ],
+        "price": "IDR 100,000"
+      },
+      {
+        "name": "Promo content (copywriting)",
+        "services": ["Max 250 Words", "1x minor revision allowed"],
+        "price": "IDR 100,000"
+      },
+      {
+        "name": "Design logo",
+        "services": [
+          "Include concept of brand identity",
+          "1 Color + 1 B&W",
+          "3x minor revision allowed"
+        ],
+        "price": "IDR 1,000,000"
+      },
+      {
+        "name": "Design poster",
+        "services": [
+          "Include concept of brand identity",
+          "Only design, no wording",
+          "Size poster for IG & FB",
+          "2x minor revision allowed"
+        ],
+        "price": "IDR 200,000"
       }
     ]
   }

@@ -1,6 +1,11 @@
 require("next/dynamic");
+const withPlugins = require("next-compose-plugins");
+const withStyles = require("@webdeb/next-styles");
+const optimizedImages = require("next-optimized-images");
+const path = require("path");
 
-module.exports = {
+const nextConfig = {
+  optimizeImagesInDev: true,
   exportTrailingSlash: true,
   exportPathMap: async function () {
     const paths = {
@@ -35,4 +40,23 @@ module.exports = {
 
     return paths;
   },
+  webpack: (config, options) => {
+    config.resolve.alias["public"] = path.join(__dirname, "public");
+
+    return config;
+  },
 };
+
+module.exports = withPlugins(
+  [
+    [optimizedImages],
+    [
+      withStyles,
+      {
+        sass: true,
+        modules: true,
+      },
+    ],
+  ],
+  nextConfig
+);

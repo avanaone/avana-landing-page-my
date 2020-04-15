@@ -1,23 +1,23 @@
 import { useRouter } from "next/router";
-import Link from "next/link";
 import parser from "html-react-parser";
-import moment from "moment";
 
-import styles from "./PromoDetail.module.scss";
+import styles from "./EventDetail.module.scss";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+
+import EventCard from "../../components/EventCard";
 
 export default function Event({ data }) {
   const router = useRouter();
 
   const event = data.find((x) => x.id === router.query.id);
-  const otherEvents = data.slice(0, 2);
+  const otherEvents = data.filter((x) => x.id !== router.query.id).slice(0, 2);
 
   return (
-    <div className={styles.PromoDetail}>
+    <div className={styles.EventDetail}>
       <Navbar />
-      <Header title="Promo" />
+      <Header title="Event" />
       <main>
         <section>
           <div>
@@ -26,35 +26,10 @@ export default function Event({ data }) {
             {parser(event.description)}
           </div>
           <div>
-            <h3 className="is-size-5">Promo Lainnya</h3>
+            <h3 className="is-size-5">Event Lainnya</h3>
             <div>
               {otherEvents.map((event) => (
-                <div key={event.id} className="promo">
-                  <div
-                    className="image"
-                    style={{ backgroundImage: `url(${event.image})` }}
-                  />
-                  <div className="detail">
-                    <div>
-                      <h3
-                        className="name is-size-6"
-                        title={event.title}
-                      >{`${event.title.slice(0, 75)}${
-                        event.title.length > 75 ? " ..." : ""
-                      }`}</h3>
-                    </div>
-                    <hr />
-                    <div>
-                      <span>
-                        <br />
-                        {event.date}
-                      </span>
-                      <Link href="/event/[id]" as={`/event/${event.code}`}>
-                        <a className="ava-btn btn-primary">Lihat Detail</a>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                <EventCard key={event.id} event={event} />
               ))}
             </div>
           </div>

@@ -30,9 +30,19 @@ export default function Feature(props) {
             <div className="description">
               <h2 className="is-size-4">{feature.title}</h2>
               <p>{feature.description}</p>
+              <a
+                href={feature.slug}
+                target="__blank"
+                className="ava-btn btn-primary"
+              >
+                Saya Tertarik
+              </a>
             </div>
-            <div>
-              <img src={feature.image} alt="" />
+            <div className="feature-img">
+              <img
+                src={require(`public/assets/images/${feature.image}`)}
+                alt=""
+              />
             </div>
           </section>
         ))}

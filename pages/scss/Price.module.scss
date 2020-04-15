@@ -2,55 +2,29 @@
   background-color: #f4f7f9;
 
   :global header {
-    padding: 0 15vw;
-
     h2 {
-      position: relative;
-
       &::after {
-        content: "";
-        position: absolute;
         top: 50%;
         right: 0;
         background-image: url("/assets/images/price/header.png");
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 5em;
-        width: 50vw;
         transform: translate(0, -50%);
-
-        @media (max-width: 786px) {
-          display: none;
-        }
       }
-    }
-
-    @media (max-width: 992px) {
-      padding: 0 7.5vw;
     }
   }
 
   :global main {
-    padding: 0 7.5vw 2.5vw;
-
     section {
-      > ul {
-        margin: 5em 0 1em;
-        text-align: center;
-        font-size: 0.85rem;
+      padding: 2.5em 0;
 
-        li {
-          display: inline-block;
-          margin: 0 0.5em;
-          font-weight: 700;
+      .tabs-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 1.25vw;
 
-          padding: 0.25em 0.5em;
-          cursor: pointer;
-
-          &.active {
-            border-bottom: 1.5px solid #fdb816;
-          }
+        .ava-btn {
+          margin: 1em;
         }
       }
 
@@ -65,34 +39,28 @@
         .package {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-
-          width: 17.5vw;
-          min-width: 250px;
-          height: fit-content;
           background-color: #ffffff;
-          padding: 2em 1.5vw;
+          padding: 2em 1.25em;
           margin: 1em 1.5em;
-          border: 1px solid #d7d7d7;
-          border-radius: 10px;
+          border: 0.125em solid #d7d7d7;
+          border-radius: 0.75em;
 
           &.popular {
             position: relative;
+            padding: 2.75em 1.25em;
+            border: 0.125em solid #fdb816;
             overflow: hidden;
-            border: 1px solid #fdb816;
-            height: 27.5em;
-            min-width: 265px;
 
             &::after {
-              content: "POPULAR";
+              content: "POPULER";
               position: absolute;
-              top: 25px;
-              right: -50px;
+              top: 0;
+              right: -15%;
               background-color: #fdb816;
               padding: 0.5em 5em;
               font-size: 0.75rem;
               font-weight: 700;
-              transform: rotate(45deg);
+              transform: rotate(45deg) translate(15%, 0%);
               box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.125);
             }
           }
@@ -109,7 +77,7 @@
 
           ul {
             list-style: unset;
-            margin: 1em 2em 1.5em;
+            margin: 0.5em 2.5em 1.5em;
             text-align: left;
 
             li {
@@ -119,12 +87,12 @@
         }
       }
 
-      a {
+      > a {
         display: block;
         margin: 1em 0;
         font-weight: 700;
-        text-decoration: underline;
         text-align: center;
+        text-decoration: underline;
       }
     }
   }

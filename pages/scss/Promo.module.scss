@@ -4,7 +4,7 @@
   :global main {
     section {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
       grid-gap: 1.5em;
       padding: 2.5vw 7.5vw 5vw;
     }

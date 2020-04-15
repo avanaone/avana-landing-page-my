@@ -1,74 +1,62 @@
 .Home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 
   :global nav {
     text-align: left;
-
-    .navbar-brand {
-      display: none;
-    }
-
-    @media (max-width: 1023px) {
-      position: fixed !important;
-
-      .navbar-brand {
-        display: flex;
-      }
-
-      .navbar-menu a:nth-child(4) {
-        display: none;
-      }
-    }
   }
 
   :global header {
-    padding: 0 7.5vw 5vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding: 1.5em 0 2.5em;
 
     h1 {
-      width: 75vw;
-      margin: 1.5em 0 1.5vw;
+      width: 25em;
+      min-width: 300px;
+      max-width: 80vw;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      min-width: 275px;
     }
 
     .ava-btn {
       position: relative;
-      margin: 1.5em 0 2.5em;
+      margin: 2.5em;
+      font-size: 0.9rem;
 
       &::before {
         content: "";
         position: absolute;
-        top: 80%;
+        top: 75%;
         left: 50%;
         background-image: url("/assets/images/header-channels.png");
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         height: 25vw;
-
-        width: 95vw;
-        transform: translate(-50%, -80%);
+        min-height: 150px;
+        max-height: 250px;
+        width: 100vw;
+        min-width: 350px;
+        max-width: 1000px;
+        transform: translate(-50%, -75%);
         z-index: -1;
       }
     }
 
-    .bg-header {
-      background-image: url("/assets/images/header.png");
-      background-size: cover;
+    .bg-hero {
+      background-image: url("/assets/images/hero.png");
+      background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      height: 27.5vw;
-      width: 100%;
-    }
-
-    @media (max-width: 576px) {
-      padding-top: 2.5em;
+      height: 25vw;
+      min-height: 150px;
+      max-height: 500px;
+      width: 75%;
+      min-width: 350px;
     }
   }
 
@@ -77,6 +65,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     section {
       position: relative;
@@ -84,8 +73,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 5em 0;
       width: 100%;
-      padding: 5vw 7.5vw;
 
       &:nth-child(even) {
         &::after {
@@ -97,7 +86,6 @@
           width: 5vw;
           background-color: #42c552;
           border-radius: 10vw 0 0 10vw;
-          z-index: -1;
         }
       }
 
@@ -112,41 +100,65 @@
           background-color: #3078ea;
           border-radius: 1.5vw 1.25vw 1.5vw 0;
           transform: rotate(45deg) translateX(3.75%);
-          z-index: -1;
+          z-index: 1;
         }
       }
 
       &.feature {
-        padding: 0.5vw 7.5vw;
+        padding: 2vw 7.5vw;
 
-        div {
-          &.description {
-            min-width: 250px;
+        .description {
+          min-width: 250px;
 
-            ul {
-              margin-bottom: 1.5em;
+          .ava-btn {
+            margin: 1em;
+          }
 
-              li {
-                list-style: none;
-                margin: 0.75em 0;
-                font-weight: 700;
+          ul {
+            margin: 1.5vw 0 0 1.5em;
 
-                &::before {
-                  font-family: "Material Icons";
-                  content: "\e5c8";
-                  margin: 0 1em 0 0;
-                  vertical-align: middle;
-                }
+            li {
+              position: relative;
+              list-style: none;
+              margin: 0.75em 0;
+              font-weight: 700;
+              cursor: pointer;
 
-                &.active {
-                  color: #3078ea;
-                }
+              &::before {
+                font-family: "Material Icons";
+                content: "\e5c8";
+                position: absolute;
+                left: -25px;
+              }
+
+              &.active {
+                color: #3078ea;
               }
             }
           }
+        }
+
+        .feature-img {
+          position: relative;
+          height: 25em;
+          min-height: 200px;
+          max-height: 50vw;
+          min-width: 300px;
+          margin: 7.5vw 0 2.5vw;
 
           img {
-            margin: 1.75em 1em 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            max-height: 500px;
+            margin: 0;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            transition: opacity 1.5s ease;
+
+            &.active {
+              opacity: 1;
+            }
           }
         }
       }
@@ -154,10 +166,9 @@
       &#support {
         background-color: #f4f7f9;
         margin-top: 5vw;
-        z-index: 0;
 
-        img {
-          width: 30vw;
+        h2 {
+          width: 75vw;
           min-width: 300px;
         }
 
@@ -167,11 +178,18 @@
           align-items: center;
           margin: 1.5em 0;
 
+          img {
+            width: 30vw;
+            min-width: 250px;
+            max-width: 400px;
+          }
+
           .border {
-            height: 20vw;
+            height: 15vw;
+            max-height: 200px;
             width: 0;
             margin: 0 2.5em;
-            border-right: 0.25vw dashed rgba(0, 0, 0, 0.2);
+            border-right: 0.125em dashed rgba(0, 0, 0, 0.2);
           }
 
           @media (max-width: 768px) {
@@ -190,18 +208,33 @@
       }
 
       &#testimonial {
-        q {
-          width: 45vw;
+        h2 {
+          width: 50vw;
           min-width: 300px;
+        }
+
+        q {
+          width: 55vw;
+          min-width: 300px;
+          margin: 1.5em;
+        }
+
+        .name {
+          font-weight: 700;
+        }
+
+        img {
+          width: 50px;
+          margin: 1em;
         }
       }
 
       &#trial {
-        padding: 5vw 7.5vw;
         background-color: #f4f7f9;
+        padding: 2.5em 2.5vw;
 
         h2 {
-          margin: 0 0 1em;
+          margin-bottom: 1em;
         }
       }
     }
