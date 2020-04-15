@@ -14,9 +14,9 @@ const getEvents = import("../json/event.json");
 const Event = () => {
   const [events, setEvents] = useState([]);
 
-  getEvents.then((res) => {
-    return setEvents(res.default);
-  });
+  // getEvents.then((res) => {
+  //   return setEvents(res.default);
+  // });
 
   return (
     <div className={styles.Event}>
