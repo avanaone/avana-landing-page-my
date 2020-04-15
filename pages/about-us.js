@@ -34,12 +34,15 @@ const AboutUs = () => (
         </div>
         <img
           src={require("public/assets/images/about-us/channels.png")}
-          alt=""
+          alt="Channels"
           className="channels"
         />
       </section>
       <section id="section-2">
-        <img src={require("public/assets/images/about-us/team.png")} alt="" />
+        <img
+          src={require("public/assets/images/about-us/team.png")}
+          alt="AVANA Team"
+        />
       </section>
     </main>
     <Footer />
