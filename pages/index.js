@@ -384,9 +384,12 @@ const Home = () => {
             Didukung oleh berbagai macam metode pengiriman & pembayaran
           </h2>
           <div>
-            <img src={require("public/assets/images/courier.png")} alt="" />
+            <img
+              src={require("public/assets/images/courier.png")}
+              alt="Kurir"
+            />
             <div className="border" />
-            <img src={require("public/assets/images/bank.png")} alt="" />
+            <img src={require("public/assets/images/bank.png")} alt="Banks" />
           </div>
         </section>
         <section id="testimonial">

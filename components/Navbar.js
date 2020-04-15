@@ -19,7 +19,7 @@ export default function Navbar() {
           <a href="/" className="navbar-item" title="BERANDA &middot; Avana">
             <img
               src={require("public/assets/images/logo.png")}
-              alt="Avana Logo"
+              alt="AVANA Logo"
               width="100"
             />
           </a>

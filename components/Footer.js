@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer>
       <div>
-        <img src={require("public/assets/images/logo.png")} alt="" />
+        <img src={require("public/assets/images/logo.png")} alt="AVANA logo" />
         <p>
           Avana adalah Platform Social Commerce pertama di Indonesia yang
           membantu pebisnis berjualan online

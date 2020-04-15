@@ -10,6 +10,7 @@ export default function App({ Component, pageProps }) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         {/* Primary Meta Tags */}
         <title>AVANA | Social Commerce AVANA Terpercaya di Indonesia </title>
+        <link rel="canonical" href="https://avana.id" />
         <meta
           name="title"
           content="Social Commerce AVANA Terpercaya di Indonesia"
@@ -77,6 +78,7 @@ export default function App({ Component, pageProps }) {
         <meta httpEquiv="cache-control" content="no-cache" />
         <meta httpEquiv="expires" content="0" />
         <meta httpEquiv="pragma" content="no-cache" />
+        <meta httpEquiv="refresh" />
       </Head>
       <Component {...pageProps} />
     </>
