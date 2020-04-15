@@ -79,8 +79,8 @@
       },
       "Gratis Domain .com": {
         "yearly": {
-          "advance": false,
-          "business": false,
+          "advance": true,
+          "business": true,
           "vip": true
         },
         "semi-annually": {
@@ -93,7 +93,7 @@
         },
         "monthly": {
           "advance": false,
-          "business": true
+          "business": false
         }
       },
       "Toko Facebook": {

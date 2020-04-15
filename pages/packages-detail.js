@@ -153,7 +153,7 @@ const Price = () => {
                     .map((pkg) => (
                       <td key={pkg.code}>
                         <a
-                          href="/"
+                          href={`https://payment.avana.asia/pay?plan=${pkg.slug}`}
                           className="ava-btn btn-primary"
                         >{`Pilih ${pkg.name}`}</a>
                       </td>
