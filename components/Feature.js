@@ -30,22 +30,32 @@ export default function Feature(props) {
             <div className="description">
               <h2 className="is-size-4">{feature.title}</h2>
               <p>{feature.description}</p>
-              <a
+              {/* <a
                 href={feature.slug}
                 target="__blank"
                 className="ava-btn btn-primary"
               >
                 Saya Tertarik
-              </a>
+              </a> */}
             </div>
             <div className="feature-img">
               <img
-                src={require(`public/assets/images/${feature.image}`)}
+                src={require(`../public/assets/images/${feature.image}`)}
                 alt=""
               />
             </div>
           </section>
         ))}
+        <section id="trial">
+          <h2 className="is-size-4">Mulai uji coba gratis 14 hari Anda</h2>
+          <a
+            href="https://store.avana.asia/"
+            target="__blank"
+            className="ava-btn btn-primary"
+          >
+            Coba Gratis
+          </a>
+        </section>
       </main>
       <Footer />
     </div>

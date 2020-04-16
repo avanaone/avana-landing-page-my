@@ -16,13 +16,12 @@ const AboutUs = () => (
         <div>
           <div>
             <h2 className="is-size-4">
-              Kami membantu Anda untuk meningkatkan bisnis Anda
+              AVANA membantu untuk meningkatkan bisnis Anda
             </h2>
             <p>
-              Kami memulai dari bawah dengan tujuan untuk memberdayakan bisnis
-              dengan teknologi inovatif. Kami akan terus menjaga tujuan ini
-              sebagai fokus kami karena kami ingin terus berkembang bersama
-              Anda.
+              Dengan menggunakan inovasi teknologi, AVANA bertujuan untuk
+              memberdayakan bisnis. Kami akan berfokus kepada inovasi teknologi
+              karena kami ingin terus berkembang bersama Anda.
             </p>
           </div>
           <iframe
@@ -34,7 +33,7 @@ const AboutUs = () => (
         </div>
 
         <img
-          src={require("public/assets/images/about-us/channels.png")}
+          src={require("../public/assets/images/about-us/channels.png")}
           alt="Channels"
           className="channels"
         />
@@ -56,7 +55,7 @@ const AboutUs = () => (
           </a>
         </div>
         <img
-          src={require("public/assets/images/about-us/team.png")}
+          src={require("../public/assets/images/about-us/team.png")}
           alt="AVANA Team"
         />
       </section>

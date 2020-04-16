@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+
 import Head from "next/head";
 
 import styles from "./scss/Home.module.scss";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+
+import Testimonial from "../json/testimonal.json";
 
 const Home = () => {
   const [data, setData] = useState({
@@ -111,12 +114,11 @@ const Home = () => {
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
-              <span className="hl">Dashboard</span> pintar untuk mengelola
-              aktivitas jualanmu di sosial media
+              <span className="hl">Dashboard</span> ppintar untuk mengelola
+              seluruh aktivitas jualanmu
             </h2>
             <p>
-              Selain membuat Anda lebih produktif dashboard ini juga banyak
-              fitur yang membantu Anda meningkatkan penjualan.
+              Ada banyak fitur yang dapat membantu meningkatkan penjualan anda!
             </p>
             <ul>
               <li
@@ -154,17 +156,17 @@ const Home = () => {
           <div className="feature-img">
             <img
               className={data.dashboard.current === 1 ? "active" : ""}
-              src={require("public/assets/images/dashboard/manajemen-order.png")}
+              src={require("../public/assets/images/dashboard/manajemen-order.png")}
               alt=""
             />
             <img
               className={data.dashboard.current === 2 ? "active" : ""}
-              src={require("public/assets/images/dashboard/manajemen-produk.png")}
+              src={require("../public/assets/images/dashboard/manajemen-produk.png")}
               alt=""
             />
             <img
               className={data.dashboard.current === 3 ? "active" : ""}
-              src={require("public/assets/images/dashboard/auto-reply.png")}
+              src={require("../public/assets/images/dashboard/auto-reply.png")}
               alt=""
             />
           </div>
@@ -172,31 +174,31 @@ const Home = () => {
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
-              <span className="hl">AVAChat</span> menghubungkan semua chat
-              sosial media menjadi 1 dashboard
+              <span className="hl">AVAChat</span> menghubungkan semua pesan
+              sosial media dalam satu dashboard
             </h2>
             <p>
-              AVAChat juga mempunyai banyak fitur yang meningkatkan
-              produktifitas Anda di berbagai saluran sosial media.
+              Avachat memiliki banyak fitur yang meningkatkan produktifitas Anda
+              di berbagai saluran media sosial.
             </p>
             <ul>
               <li
                 className={data.avachat.current === 1 ? "active" : ""}
                 onClick={() => handleSlider("avachat", 1)}
               >
-                Mengirim Informasi Produk & Invoice
+                Kirim Produk & Invois
               </li>
               <li
                 className={data.avachat.current === 2 ? "active" : ""}
                 onClick={() => handleSlider("avachat", 2)}
               >
-                Quick Reply Untuk Membalas Pesan Lebih Cepat
+                Quick Reply
               </li>
               <li
                 className={data.avachat.current === 3 ? "active" : ""}
                 onClick={() => handleSlider("avachat", 3)}
               >
-                Mengirim Informasi & Status Terbaru Paket Pelanggan Anda
+                Info Pengiriman Barang
               </li>
             </ul>
             <div className="ava-btn-group">
@@ -215,17 +217,17 @@ const Home = () => {
           <div className="feature-img">
             <img
               className={data.avachat.current === 1 ? "active" : ""}
-              src={require("public/assets/images/avachat/send-product-info.png")}
+              src={require("../public/assets/images/avachat/send-product-info.png")}
               alt=""
             />
             <img
               className={data.avachat.current === 2 ? "active" : ""}
-              src={require("public/assets/images/avachat/quick-reply.png")}
+              src={require("../public/assets/images/avachat/quick-reply.png")}
               alt=""
             />
             <img
               className={data.avachat.current === 3 ? "active" : ""}
-              src={require("public/assets/images/avachat/send-shipping-info.png")}
+              src={require("../public/assets/images/avachat/send-shipping-info.png")}
               alt=""
             />
           </div>
@@ -233,12 +235,12 @@ const Home = () => {
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
-              Manajemen resellermu dengan fitur&nbsp;
+              Dilengkapi dengan fitur
               <span className="hl">Manajemen Reseller</span>
             </h2>
             <p>
-              Manajemen Reseller salah satu fitur yang membantu Anda mengamati
-              performa reseller secara realtime.
+              Dengan fitur ini, Anda bisa mengamati performa resellermu secara
+              langsung.
             </p>
             <ul>
               <li
@@ -276,17 +278,17 @@ const Home = () => {
           <div className="feature-img">
             <img
               className={data.reseller.current === 1 ? "active" : ""}
-              src={require("public/assets/images/reseller/manajemen-database-reseller.png")}
+              src={require("../public/assets/images/reseller/manajemen-database-reseller.png")}
               alt=""
             />
             <img
               className={data.reseller.current === 2 ? "active" : ""}
-              src={require("public/assets/images/reseller/lihat-performa-reseller.png")}
+              src={require("../public/assets/images/reseller/lihat-performa-reseller.png")}
               alt=""
             />
             <img
               className={data.reseller.current === 3 ? "active" : ""}
-              src={require("public/assets/images/reseller/atur-komisi-reseller.png")}
+              src={require("../public/assets/images/reseller/atur-komisi-reseller.png")}
               alt=""
             />
           </div>
@@ -294,25 +296,25 @@ const Home = () => {
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
-              Miliki <span className="hl">Webstore</span> (toko online gratis)
-              dan custom domain .com
+              <span className="hl">Buat Website</span> untuk tokomu dan tentukan
+              sendiri domain.com pilihanmu
             </h2>
             <p>
-              Webstore (website toko online) kami mempunyai banyak fitur yang
-              sangat membantu calon customermu melakukan transaksi.
+              Website yang kami sediakan untuk Anda memiliki banyak fitur yang
+              membantu calon pelanggan untuk bertransaksi.
             </p>
             <ul>
               <li
                 className={data.webstore.current === 1 ? "active" : ""}
                 onClick={() => handleSlider("webstore", 1)}
               >
-                Mendukung Berbagai Metode Pembayaran
+                Dukungan Payment Gateway
               </li>
               <li
                 className={data.webstore.current === 2 ? "active" : ""}
                 onClick={() => handleSlider("webstore", 2)}
               >
-                Tema (Pembaruan Gratis)
+                Berbagai Macam Pilihan Tema
               </li>
               <li
                 className={data.webstore.current === 3 ? "active" : ""}
@@ -337,17 +339,17 @@ const Home = () => {
           <div className="feature-img">
             <img
               className={data.webstore.current === 1 ? "active" : ""}
-              src={require("public/assets/images/webstore/payment-gateway.png")}
+              src={require("../public/assets/images/webstore/payment-gateway.png")}
               alt=""
             />
             <img
               className={data.webstore.current === 2 ? "active" : ""}
-              src={require("public/assets/images/webstore/theme.png")}
+              src={require("../public/assets/images/webstore/theme.png")}
               alt=""
             />
             <img
               className={data.webstore.current === 3 ? "active" : ""}
-              src={require("public/assets/images/webstore/order-via-whatsapp.png")}
+              src={require("../public/assets/images/webstore/order-via-whatsapp.png")}
               alt=""
             />
           </div>
@@ -374,7 +376,7 @@ const Home = () => {
           </div>
           <div className="feature-img">
             <img
-              src={require("public/assets/images/facebook-store.png")}
+              src={require("../public/assets/images/facebook-store.png")}
               className="active"
               alt=""
             />
@@ -386,25 +388,30 @@ const Home = () => {
           </h2>
           <div>
             <img
-              src={require("public/assets/images/courier.png")}
+              src={require("../public/assets/images/courier.png")}
               alt="Kurir"
             />
             <div className="border" />
-            <img src={require("public/assets/images/bank.png")} alt="Banks" />
+            <img
+              src={require("../public/assets/images/bank.png")}
+              alt="Banks"
+            />
           </div>
         </section>
         <section id="testimonial">
           <h2 className="is-size-4">
             Apa kata mereka yang sudah bergabung dengan AVANA?
           </h2>
+
           <q>
             Toko online itu bukan hanya sekedar wadah untuk memasarkan barang
             tapi sebagai alat untuk membangun brand juga. Bersama AVANA, saya
             bisa memperkenalkan dan membesarkan nama Amity.
           </q>
           <span className="name">Amity Indonesia</span>
+
           <img
-            src={require("public/assets/images/testimonial/amity.png")}
+            src={require("../public/assets/images/testimonial/amity.png")}
             alt=""
           />
         </section>

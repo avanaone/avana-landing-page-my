@@ -1,0 +1,28 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.SliderFrame {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+
+  .SliderContent {
+    flex: 0 0 auto;
+    width: 500px;
+  }
+}
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .card {
+    flex: 0 0 auto;
+    width: 300px;
+  }
+}

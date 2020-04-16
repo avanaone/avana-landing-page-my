@@ -16,13 +16,14 @@ export default function Navbar() {
         aria-label="main navigation"
       >
         <div className="navbar-brand">
-          <a href="/" className="navbar-item" title="BERANDA &middot; Avana">
+          <a className="navbar-item" href="/" title="BERANDA &middot; Avana">
             <img
-              src={require("public/assets/images/logo.png")}
+              src={require("../public/assets/images/logo.png")}
               alt="AVANA Logo"
               width="100"
             />
           </a>
+
           <a
             role="button"
             className="navbar-burger"
@@ -38,39 +39,46 @@ export default function Navbar() {
         <div className="navbar-menu" id="navMenu">
           <div className="navbar-end">
             <div className="navbar-item has-dropdown is-hoverable">
-              <a href="#" className="navbar-link" title="Produk">
+              <a className="navbar-link" title="Produk">
                 Produk
               </a>
               <div className="navbar-dropdown">
-                <a href="/dashboard" className="navbar-item" title="Dashboard">
+                <a className="navbar-item" href="/dashboard" title="Dashboard">
                   Dashboard
                 </a>
-                <a href="/avachat" className="navbar-item" title="AVAChat">
+
+                <a className="navbar-item" href="/avachat" title="AVAChat">
                   AVAChat
                 </a>
+
                 <a
-                  href="/reseller"
                   className="navbar-item"
+                  href="/reseller"
                   title="Manajemen Reseller"
                 >
                   Manajemen Reseller
                 </a>
-                <a href="/webstore" className="navbar-item" title="Webstore">
+
+                <a className="navbar-item" href="/webstore" title="Webstore">
                   Webstore
                 </a>
               </div>
             </div>
-            <a href="/price" className="navbar-item" title="Harga">
+
+            <a className="navbar-item" href="/price" title="Harga">
               Harga
             </a>
+
             <a href="/promo" className="navbar-item" title="Promo">
               <span className="dot">Promo</span>
             </a>
+
             <a href="/event" className="navbar-item" title="Event">
               Event
             </a>
+
             <div className="navbar-item has-dropdown is-hoverable">
-              <a href="#" className="navbar-link" title="Pelajari">
+              <a className="navbar-link" title="Pelajari">
                 Pelajari
               </a>
               <div className="navbar-dropdown">
@@ -93,9 +101,11 @@ export default function Navbar() {
                 </a>
               </div>
             </div>
+
             <a href="/about-us" className="navbar-item" title="Tentang Kami">
               Tentang Kami
             </a>
+
             <div className="navbar-item">
               <a
                 href="https://store.avana.asia/"
@@ -127,7 +137,7 @@ export default function Navbar() {
           >
             Close
           </button>
-          <img src={require("public/assets/images/download.png")} alt="" />
+          <img src={require("../public/assets/images/download.png")} alt="" />
           <div>
             <h3 className="is-size-5">Download e-Book Gratis</h3>
             <p>

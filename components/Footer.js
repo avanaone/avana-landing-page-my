@@ -2,7 +2,10 @@ export default function Footer() {
   return (
     <footer>
       <div>
-        <img src={require("public/assets/images/logo.png")} alt="AVANA logo" />
+        <img
+          src={require("../public/assets/images/logo.png")}
+          alt="AVANA logo"
+        />
         <p>
           Avana adalah Platform Social Commerce pertama di Indonesia yang
           membantu pebisnis berjualan online
@@ -17,7 +20,7 @@ export default function Footer() {
             <a href="https://web.facebook.com/avanaindonesia/" target="_blank">
               {" "}
               <img
-                src={require("public/assets/images/footer/facebook-f-brands.svg")}
+                src={require("../public/assets/images/footer/facebook-f-brands.svg")}
                 alt=""
               />
             </a>
@@ -25,7 +28,7 @@ export default function Footer() {
           <div>
             <a href="https://twitter.com/avana_id" target="_blank">
               <img
-                src={require("public/assets/images/footer/twitter-brands.svg")}
+                src={require("../public/assets/images/footer/twitter-brands.svg")}
                 alt=""
               />
             </a>
@@ -33,7 +36,7 @@ export default function Footer() {
           <div>
             <a href="https://www.instagram.com/avana.id/" target="_blank">
               <img
-                src={require("public/assets/images/footer/instagram-brands.svg")}
+                src={require("../public/assets/images/footer/instagram-brands.svg")}
                 alt=""
               />
             </a>
@@ -44,7 +47,7 @@ export default function Footer() {
               target="_blank"
             >
               <img
-                src={require("public/assets/images/footer/youtube-brands.svg")}
+                src={require("../public/assets/images/footer/youtube-brands.svg")}
                 alt=""
               />
             </a>
@@ -55,7 +58,7 @@ export default function Footer() {
         <span>Avana</span>
         <div>
           <a href="/about-us">Tentang Kami</a>
-          <a href="/https://academy.avana.id/">Akademi</a>
+          <a href="https://academy.avana.id/">Akademi</a>
           <a href="https://blog.avana.id/">Blog</a>
           <a href="https://avana.id/career/">Karir</a>
           <a>Media</a>
