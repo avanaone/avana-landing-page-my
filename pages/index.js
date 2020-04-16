@@ -124,7 +124,7 @@ const Home = () => {
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
-              <span className="hl">Dashboard</span> ppintar untuk mengelola
+              <span className="hl">Dashboard</span> pintar untuk mengelola
               seluruh aktivitas jualanmu
             </h2>
             <p>
@@ -245,7 +245,7 @@ const Home = () => {
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
-              Dilengkapi dengan fitur
+              Dilengkapi dengan fitur&nbsp;
               <span className="hl">Manajemen Reseller</span>
             </h2>
             <p>
