@@ -3,6 +3,7 @@
 
   :global nav {
     text-align: left;
+    background-color: #f4f7f9;
   }
 
   :global header {
@@ -20,7 +21,7 @@
       width: 25em;
       min-width: 300px;
       max-width: 80vw;
-      margin: 1em 0 0.5em;
+      margin-bottom: 0.5em;
     }
 
     p {
