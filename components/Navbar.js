@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 
-export default function Navbar() {
+export default function Navbar({ style }) {
   const [isModal, setIsModal] = useState(false);
   const toggleModal = () => setIsModal(!isModal);
 
@@ -14,6 +14,7 @@ export default function Navbar() {
         className="navbar is-white is-fixed-top"
         role="navigation"
         aria-label="main navigation"
+        style={style}
       >
         <div className="navbar-brand">
           <a className="navbar-item" href="/" title="BERANDA &middot; Avana">

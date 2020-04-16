@@ -25,6 +25,8 @@ const Home = () => {
     },
   });
 
+  const [navbarBg, setNavbarBg] = useState("#f4f7f9");
+
   useEffect(() => {
     const id = setInterval(() => {
       setData({
@@ -43,16 +45,23 @@ const Home = () => {
       });
     }, 5000);
 
+    window.addEventListener("scroll", handleNavbar);
+
     return () => {
       clearInterval(id);
+      window.removeEventListener("scroll", handleNavbar);
     };
   }, [data]);
 
   const handleSlider = (id, step) =>
     setData({ ...data, [id]: { ...data[id], current: step } });
 
+  const handleNavbar = (e) => {
+    e.path[1].scrollY > 0 ? setNavbarBg("#fff") : setNavbarBg("#f4f7f9");
+  };
+
   return (
-    <div className={styles.Home}>
+    <div className={styles.Home} onScroll={handleNavbar}>
       <Head>
         {/* Primary Meta Tags */}
         <title>AVANA | Social Commerce AVANA Terpercaya di Indonesia</title>
@@ -93,7 +102,7 @@ const Home = () => {
         />
       </Head>
 
-      <Navbar />
+      <Navbar style={{ backgroundColor: navbarBg }} />
 
       <header>
         <h1 className="is-size-3">
