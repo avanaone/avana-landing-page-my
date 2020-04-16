@@ -32,6 +32,7 @@ const AboutUs = () => (
             allowFullScreen
           ></iframe>
         </div>
+
         <img
           src={require("public/assets/images/about-us/channels.png")}
           alt="Channels"
@@ -39,6 +40,21 @@ const AboutUs = () => (
         />
       </section>
       <section id="section-2">
+        <div className="about-us-Text">
+          <h2 className="is-size-4">Jadilah bagian dari kami</h2>
+          <p>
+            Sekarang saatnya untuk bergabung bersama kami dan tunjukkan
+            kemampuan Anda.
+          </p>
+          <a
+            href="https://avana.id/available-roles/?lang=id"
+            target="__blank"
+            className="ava-btn btn-primary"
+            title="Daftar"
+          >
+            Lowongan Kerja
+          </a>
+        </div>
         <img
           src={require("public/assets/images/about-us/team.png")}
           alt="AVANA Team"

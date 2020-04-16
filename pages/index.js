@@ -135,7 +135,7 @@ const Home = () => {
                 className={data.dashboard.current === 3 ? "active" : ""}
                 onClick={() => handleSlider("dashboard", 3)}
               >
-                Otomatis Membalas Pesan & Komentar Pelanggan Anda
+                Otomatis membalas pesan & komentar
               </li>
             </ul>
             <div className="ava-btn-group">

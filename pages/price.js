@@ -66,7 +66,7 @@ const Price = () => {
               className="ava-btn btn-primary"
               onClick={toggleModal}
             >
-              Additional Service
+              Layanan Tambahan
             </button>
           </div>
           <div className="packages">

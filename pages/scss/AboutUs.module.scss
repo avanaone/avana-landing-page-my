@@ -33,6 +33,16 @@
 
       &#section-2 {
         text-align: center;
+
+        .about-us-Text {
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          margin: 30px;
+          height: 180px;
+          align-items: center;
+          justify-content: space-evenly;
+        }
       }
     }
   }

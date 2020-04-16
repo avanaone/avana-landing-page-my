@@ -106,6 +106,7 @@
 
       &.feature {
         padding: 2vw 7.5vw;
+        margin: 1.3vw;
 
         .description {
           min-width: 250px;
@@ -145,7 +146,8 @@
           max-height: 250px;
           min-width: 300px;
           max-width: 500px;
-          margin: 7.5vw 0 2.5vw;
+          margin-top: 10px;
+          // margin: 7.5vw 0 2.5vw;
 
           img {
             position: absolute;
