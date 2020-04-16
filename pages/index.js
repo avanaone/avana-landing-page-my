@@ -108,6 +108,7 @@ const Home = () => {
         >
           Coba Gratis
         </a>
+        <div className="channels" />
         <div className="bg-hero" />
       </header>
       <main>

@@ -9,16 +9,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5em 0 2.5em;
     background-image: url("/assets/images/hero-background.png");
-    height: 100%;
-    width: 100%;
+    background-size: cover;
+    padding: 1.5em 0 2.5em;
+    margin-bottom: 2.5em;
+    // height: 100%;
+    // width: 100%;
 
     h1 {
       width: 25em;
       min-width: 300px;
       max-width: 80vw;
-      margin-bottom: 0.5em;
+      margin: 1em 0 0.5em;
     }
 
     p {
@@ -26,14 +28,18 @@
     }
 
     .ava-btn {
-      position: relative;
       margin: 2.5em;
       font-size: 0.9rem;
+      z-index: 1;
+    }
+
+    .channels {
+      position: relative;
 
       &::before {
         content: "";
         position: absolute;
-        top: 75%;
+        top: 100%;
         left: 50%;
         background-image: url("/assets/images/header-channels.png");
         background-size: contain;
@@ -45,8 +51,8 @@
         width: 100vw;
         min-width: 350px;
         max-width: 1000px;
-        transform: translate(-50%, -75%);
-        z-index: -1;
+        transform: translate(-50%, -100%);
+        z-index: 0;
       }
     }
 
