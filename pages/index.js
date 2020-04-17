@@ -7,6 +7,8 @@ import styles from "./scss/Home.module.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+import Slider from "../components/Slider/";
+
 import Testimonial from "../json/testimonal.json";
 
 const Home = () => {
@@ -57,7 +59,7 @@ const Home = () => {
     setData({ ...data, [id]: { ...data[id], current: step } });
 
   const handleNavbar = (e) => {
-    e.path[1].scrollY > 0 ? setNavbarBg("#fff") : setNavbarBg("#f4f7f9");
+    window.scrollY > 0 ? setNavbarBg("#fff") : setNavbarBg("#f4f7f9");
   };
 
   return (
@@ -413,7 +415,7 @@ const Home = () => {
             Apa kata mereka yang sudah bergabung dengan AVANA?
           </h2>
 
-          <q>
+          {/* <q>
             Toko online itu bukan hanya sekedar wadah untuk memasarkan barang
             tapi sebagai alat untuk membangun brand juga. Bersama AVANA, saya
             bisa memperkenalkan dan membesarkan nama Amity.
@@ -423,7 +425,8 @@ const Home = () => {
           <img
             src={require("../public/assets/images/testimonial/amity.png")}
             alt=""
-          />
+          /> */}
+          <Slider testimonial={Testimonial} />
         </section>
         <section id="trial">
           <h2 className="is-size-4">Mulai uji coba gratis 14 hari Anda</h2>
