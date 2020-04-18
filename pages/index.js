@@ -111,7 +111,7 @@ const Home = () => {
           Satu Dashboard Untuk Mengelola Semua Penjualan Sosial Mediamu
         </h1>
         <p>
-          Toko Online • Chat Lintas Sosial Media • Auto Reply • Manajemen
+          Toko Online • Integrasi chat sosial media • Auto Reply • Manajemen
           Reseller
         </p>
         <a
@@ -371,7 +371,8 @@ const Home = () => {
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
-              Miliki <span className="hl">toko facebook</span> yang kaya fitur
+              Miliki <span className="hl">toko facebook</span> dengan fitur
+              terbaik
             </h2>
             <p>
               Ubah teman jadi pelanggan. Pelanggan bisa belanja sampai bayar

@@ -41,10 +41,9 @@ export default (props) => {
             alt=""
             key={index}
             className={SlideItem !== index ? "img" : "img-active"}
-            // onClick={() => {
-            //   onClickSlider(index);
-            //   setClicked(true);
-            // }}
+            onClick={() => {
+              setSlideItem(index);
+            }}
           />
         ))}
       </div>
