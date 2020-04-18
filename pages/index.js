@@ -415,7 +415,7 @@ const Home = () => {
             Apa kata mereka yang sudah bergabung dengan AVANA?
           </h2>
 
-          {/* <q>
+          <q>
             Toko online itu bukan hanya sekedar wadah untuk memasarkan barang
             tapi sebagai alat untuk membangun brand juga. Bersama AVANA, saya
             bisa memperkenalkan dan membesarkan nama Amity.
@@ -425,8 +425,8 @@ const Home = () => {
           <img
             src={require("../public/assets/images/testimonial/amity.png")}
             alt=""
-          /> */}
-          <Slider testimonial={Testimonial} />
+          />
+          {/* <Slider testimonial={Testimonial} /> */}
         </section>
         <section id="trial">
           <h2 className="is-size-4">Mulai uji coba gratis 14 hari Anda</h2>
