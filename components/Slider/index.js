@@ -6,11 +6,14 @@ export default (props) => {
   const [SlideItem, setSlideItem] = useState(0);
 
   useEffect(() => {
-    setInterval(() => {
+    const id = setInterval(() => {
       setSlideItem(
         SlideItem == props.testimonial.length - 1 ? 0 : SlideItem + 1
       );
     }, 7000);
+    return () => {
+      clearInterval(id);
+    };
   }, [SlideItem]);
 
   return (
