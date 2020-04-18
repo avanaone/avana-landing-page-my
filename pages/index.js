@@ -66,25 +66,25 @@ const Home = () => {
     <div className={styles.Home} onScroll={handleNavbar}>
       <Head>
         {/* Primary Meta Tags */}
-        <title>AVANA | Social Commerce AVANA Terpercaya di Indonesia</title>
+        <title>AVANA | #1 Leading Social Commerce Platform in Indonesia</title>
         <meta
           name="title"
-          content="Social Commerce AVANA Terpercaya di Indonesia"
+          content="#1 Leading Social Commerce Platform in Indonesia"
         />
         <meta
           name="description"
-          content="AVANA dapat mengubah sosial media  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+          content=" AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://avana.id/" />
         <meta
           property="og:title"
-          content="Social Commerce AVANA Terpercaya di Indonesia"
+          content="#1 Leading Social Commerce Platform in Indonesia"
         />
         <meta
           property="og:description"
-          content="AVANA dapat mengubah sosial media  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+          content=" AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
         <meta property="og:image" content="/assets/images/meta-image.png" />
         {/* Twitter */}
@@ -92,11 +92,11 @@ const Home = () => {
         <meta property="twitter:url" content="https://avana.id/" />
         <meta
           property="twitter:title"
-          content="Social Commerce AVANA Terpercaya di Indonesia"
+          content="#1 Leading Social Commerce Platform in Indonesia"
         />
         <meta
           property="twitter:description"
-          content="AVANA dapat mengubah sosial media  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+          content=" AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
         <meta
           property="twitter:image"
@@ -108,10 +108,12 @@ const Home = () => {
 
       <header>
         <h1 className="is-size-3">
-          Satu dashboard untuk mengelola semua aktivitas penjualanmu di sosial
-          media
+          Satu Dashboard Untuk Mengelola Semua Penjualan Sosial Mediamu
         </h1>
-        <p>Chat Multichannel • Auto Reply • Manajemen Reseller • Toko Online</p>
+        <p>
+          Toko Online • Chat Lintas Sosial Media • Auto Reply • Manajemen
+          Reseller
+        </p>
         <a
           href="https://store.avana.asia/"
           target="__blank"
@@ -137,7 +139,7 @@ const Home = () => {
                 className={data.dashboard.current === 1 ? "active" : ""}
                 onClick={() => handleSlider("dashboard", 1)}
               >
-                Manajemen Order
+                Manajemen Pesanan
               </li>
               <li
                 className={data.dashboard.current === 2 ? "active" : ""}
@@ -149,7 +151,7 @@ const Home = () => {
                 className={data.dashboard.current === 3 ? "active" : ""}
                 onClick={() => handleSlider("dashboard", 3)}
               >
-                Otomatis membalas pesan & komentar
+                Balas Pesan & Komen Otomatis
               </li>
             </ul>
             <div className="ava-btn-group">
@@ -312,7 +314,7 @@ const Home = () => {
               sendiri domain.com pilihanmu
             </h2>
             <p>
-              Website yang kami sediakan untuk Anda memiliki banyak fitur yang
+              Website yang kami sediakan untuk anda memiliki banyak fitur yang
               membantu calon pelanggan untuk bertransaksi.
             </p>
             <ul>
@@ -332,7 +334,7 @@ const Home = () => {
                 className={data.webstore.current === 3 ? "active" : ""}
                 onClick={() => handleSlider("webstore", 3)}
               >
-                Order Melalui Whatsapp
+                Order Melalui WhatsApp
               </li>
             </ul>
             <div className="ava-btn-group">
@@ -369,7 +371,7 @@ const Home = () => {
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
-              Miliki <span className="hl">Facebook Store</span> hebat
+              Miliki <span className="hl">toko facebook</span> yang kaya fitur
             </h2>
             <p>
               Ubah teman jadi pelanggan. Pelanggan bisa belanja sampai bayar
@@ -396,7 +398,7 @@ const Home = () => {
         </section>
         <section id="support">
           <h2 className="is-size-4">
-            Didukung oleh berbagai macam metode pengiriman & pembayaran
+            AVANA sudah didukung oleh berbagai metode pengiriman & pembayaran
           </h2>
           <div>
             <img
@@ -415,7 +417,7 @@ const Home = () => {
             Apa kata mereka yang sudah bergabung dengan AVANA?
           </h2>
 
-          <q>
+          {/* <q>
             Toko online itu bukan hanya sekedar wadah untuk memasarkan barang
             tapi sebagai alat untuk membangun brand juga. Bersama AVANA, saya
             bisa memperkenalkan dan membesarkan nama Amity.
@@ -425,11 +427,11 @@ const Home = () => {
           <img
             src={require("../public/assets/images/testimonial/amity.png")}
             alt=""
-          />
-          {/* <Slider testimonial={Testimonial} /> */}
+          /> */}
+          <Slider testimonial={Testimonial} />
         </section>
         <section id="trial">
-          <h2 className="is-size-4">Mulai uji coba gratis 14 hari Anda</h2>
+          <h2 className="is-size-4">Coba Sekarang GRATIS 14 Hari</h2>
           <a
             href="https://store.avana.asia/"
             target="__blank"

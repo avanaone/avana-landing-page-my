@@ -18,10 +18,13 @@ const AboutUs = () => (
             <h2 className="is-size-4">
               AVANA membantu untuk meningkatkan bisnis Anda
             </h2>
-            <p>
-              Dengan menggunakan inovasi teknologi, AVANA bertujuan untuk
-              memberdayakan bisnis. Kami akan berfokus kepada inovasi teknologi
-              karena kami ingin terus berkembang bersama Anda.
+            <p style={{ marginTop: "10px" }}>
+              Dengan menggunakan inovasi teknologi terbaru dan sistem yang
+              terintegrasi dengan media sosial, AVANA telah membantu lebih dari
+              70.000 pelaku usaha yang ingin mengoptimalkan brand dan
+              mengotomatisasi kan kemampuan bisnis secara online.<br></br>
+              <br></br> Saat ini AVANA tersebar di Malaysia, Singapore dan
+              Indonesia.
             </p>
           </div>
           <iframe
@@ -40,10 +43,9 @@ const AboutUs = () => (
       </section>
       <section id="section-2">
         <div className="about-us-Text">
-          <h2 className="is-size-4">Jadilah bagian dari kami</h2>
+          <h2 className="is-size-4">Berkarir dengan AVANA</h2>
           <p>
-            Sekarang saatnya untuk bergabung bersama kami dan tunjukkan
-            kemampuan Anda.
+            Saatnya untuk bergabung bersama kami dan tunjukkan kemampuan Anda.
           </p>
           <a
             href="https://avana.id/available-roles/?lang=id"

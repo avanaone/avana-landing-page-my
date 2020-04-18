@@ -140,7 +140,7 @@ export default function Navbar({ style }) {
           </button>
           <img src={require("../public/assets/images/download.png")} alt="" />
           <div>
-            <h3 className="is-size-5">Download e-Book Gratis</h3>
+            <h3 className="is-size-5 modalTittle">Download e-Book Gratis</h3>
             <p>
               Baca penggunaan AVANA biar gak pusing. Download juga e-Book AVANA
               lainnya!
@@ -178,6 +178,13 @@ export default function Navbar({ style }) {
           align-items: flex-start;
           margin: 1em;
           max-width: 325px;
+        }
+
+        @media (max-width: 385px) {
+          .modal-content > div {
+            align-items: center;
+            text-align: center;
+          }
         }
 
         .modal-content > div .ava-btn {

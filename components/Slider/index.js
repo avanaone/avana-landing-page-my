@@ -6,12 +6,11 @@ export default (props) => {
   const [SlideItem, setSlideItem] = useState(0);
 
   useEffect(() => {
-    SlideItem < props.testimonial.length &&
-      setTimeout(() => {
-        setSlideItem(
-          SlideItem == props.testimonial.length - 1 ? 0 : SlideItem + 1
-        );
-      }, 5000);
+    setInterval(() => {
+      setSlideItem(
+        SlideItem == props.testimonial.length - 1 ? 0 : SlideItem + 1
+      );
+    }, 7000);
   }, [SlideItem]);
 
   return (
@@ -22,7 +21,9 @@ export default (props) => {
             key={index}
             id={`Message${index}`}
             className={
-              SlideItem == index ? "SliderContentActive" : "SliderContentHidden"
+              SlideItem !== index
+                ? "SliderContentHidden"
+                : "SliderContentActive"
             }
           >
             <p>{item.message}</p>
@@ -30,16 +31,17 @@ export default (props) => {
           </div>
         ))}
       </div>
-      <div className="ImgFrame">
+      <div className="ImgFrameSlider">
         {props.testimonial.map((item, index) => (
           <img
             src={require(`../../public/assets/images/testimonial/${item.image}`)}
             alt=""
             key={index}
-            className={SlideItem == index ? "img-active" : "img"}
-            onClick={() => {
-              setSlideItem(index);
-            }}
+            className={SlideItem !== index ? "img" : "img-active"}
+            // onClick={() => {
+            //   onClickSlider(index);
+            //   setClicked(true);
+            // }}
           />
         ))}
       </div>

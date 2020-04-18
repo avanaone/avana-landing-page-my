@@ -47,13 +47,21 @@ export default function Feature(props) {
           </section>
         ))}
         <section id="trial">
-          <h2 className="is-size-4">Mulai uji coba gratis 14 hari Anda</h2>
+          <h2 className="is-size-4">
+            {title == "Manajemen Reseller"
+              ? "Tertarik dengan Manajemen Reseller?"
+              : title == "AVAChat"
+              ? "Tertarik dengan AVAChat?"
+              : " Mulai uji coba gratis 14 hari Anda"}
+          </h2>
           <a
             href="https://store.avana.asia/"
             target="__blank"
             className="ava-btn btn-primary"
           >
-            Coba Gratis
+            {title == "Manajemen Reseller" || title == "AVAChat"
+              ? "Hubungi kami"
+              : "Coba Sekarang GRATIS 14 Hari"}
           </a>
         </section>
       </main>

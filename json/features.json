@@ -2,7 +2,7 @@
   "dashboard": [
     {
       "title": "Manajemen Produk",
-      "description": "Dengan AVANA, katalog toko Anda teintegrasi ke saluran medsos seperti Facebook dan Instagram. Anda tidak perlu menunggah foto produk satu per satu.",
+      "description": "Dengan AVANA, katalog toko Anda teintegrasi ke saluran sosial media seperti Facebook dan Instagram. Anda tidak perlu menunggah foto produk satu per satu.",
       "image": "dashboard/manajemen-produk.png",
       "slug": "https://store.avana.asia/"
     },
@@ -20,7 +20,7 @@
     },
     {
       "title": "Manajemen Order",
-      "description": "Pesanan pelanggan dari semua saluran medsos akan lebih mudah dimonitoring di satu dashboard AVANA.",
+      "description": "Pesanan pelanggan dari semua saluran sosial media akan lebih mudah dimonitoring di satu dashboard AVANA.",
       "image": "dashboard/manajemen-order.png",
       "slug": "https://store.avana.asia/"
     }
@@ -78,7 +78,7 @@
     },
     {
       "title": "Undang Teman untuk Menjadi Reseller",
-      "description": "Anda juga bisa mengundang orang terdekat untuk menjadi reseller dengan membagikan link ke medsos.",
+      "description": "Anda juga bisa mengundang orang terdekat untuk menjadi reseller dengan membagikan link ke sosial media.",
       "image": "reseller/undang-reseller.png",
       "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk Manajemen Reseller"
     },
@@ -110,7 +110,7 @@
     },
     {
       "title": "Order Melalui Whatsapp",
-      "description": "AVANA juga menambahkan opsi order via whatsapp. Untuk mendukung aktifitas penjualan di sosial media, pesan akan terkoneksi pada nomor whatsapp toko Anda. ",
+      "description": "AVANA juga menambahkan opsi order via WhatsApp. Untuk mendukung Aktifitas penjualan di sosial media, pesan akan terkoneksi pada nomor Whatsapp toko Anda. ",
       "image": "webstore/order-via-whatsapp.png",
       "slug": "https://store.avana.asia/"
     },

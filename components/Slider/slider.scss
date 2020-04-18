@@ -5,7 +5,7 @@
   background-color: transparent;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .SliderFrame {
@@ -21,10 +21,10 @@
     position: absolute;
     flex: 0 0 auto;
     width: 40vw;
-    height: 100px;
+    height: 160px;
     opacity: 1;
     z-index: 0;
-    transition: all 0.5s;
+    transition: opacity 0.5s;
   }
 
   .SliderContentHidden {
@@ -35,7 +35,7 @@
     height: 0px;
     color: transparent;
     z-index: -1;
-    transition: width 0.5s;
+    // transition: height 0.5s;
   }
 
   div {
@@ -47,15 +47,15 @@
   }
 }
 
-.ImgFrame {
+.ImgFrameSlider {
   margin-top: 20px;
-  width: 500px;
+  width: 30vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 
   img {
-    height: 40px;
+    height: 50px;
   }
 
   .img {
@@ -64,5 +64,38 @@
 
   .img-active {
     opacity: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .SliderFrame {
+    width: 50vw;
+
+    .SliderContentActive {
+      width: 50vw;
+      height: 180px;
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .SliderFrame {
+    width: 70vw;
+
+    .SliderContentActive {
+      width: 70vw;
+      height: 160px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .SliderFrame {
+    width: 70vw;
+
+    .SliderContentActive {
+      width: 70vw;
+      height: 160px;
+    }
   }
 }

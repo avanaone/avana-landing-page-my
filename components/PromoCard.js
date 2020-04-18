@@ -25,15 +25,17 @@ export default function PromoCard({ promo }) {
           <span>
             <b>Masa Berlaku</b>
             <br />
-            {promo.period.start !== promo.period.end
-              ? `${moment(promo.period.start, "DD/MM/YYYY").format(
-                  "DD MMM"
-                )} - ${moment(promo.period.end, "DD/MM/YYYY").format(
-                  "DD MMM YYYY"
-                )}`
-              : `${moment(promo.period.start, "DD/MM/YYYY").format(
-                  "DD MMMM YYYY"
-                )}`}
+            {promo.period.start && promo.period.end
+              ? promo.period.start !== promo.period.end
+                ? `${moment(promo.period.start, "DD/MM/YYYY").format(
+                    "DD MMM"
+                  )} - ${moment(promo.period.end, "DD/MM/YYYY").format(
+                    "DD MMM YYYY"
+                  )}`
+                : `${moment(promo.period.start, "DD/MM/YYYY").format(
+                    "DD MMMM YYYY"
+                  )}`
+              : "Lifetime"}
           </span>
           <Link href="/promo/[code]" as={`/promo/${promo.code}`}>
             <a className="ava-btn btn-primary">Lihat Detail</a>
