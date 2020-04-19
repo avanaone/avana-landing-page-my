@@ -86,7 +86,8 @@ export default function App({ Component, pageProps }) {
           rel="preload"
           href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css"
           as="style"
-          onLoad="this.onload=null;this.rel='stylesheet'"
+          // onLoad="this.onload=null;this.rel='stylesheet'"
+          rel="stylesheet"
         />
         <link rel="preload" href="https://www.googletagmanager.com" />
         <link
