@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import Head from "next/head";
 
-import styles from "./scss/Promo.module.scss";
-
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 import PromoCard from "../components/PromoCard";
 
+import styles from "./scss/Promo.module.scss";
+
 const getPromo = import("../json/promo.json");
 
 const Promo = () => {
   const [promo, setPromo] = useState([]);
 
-  getPromo.then((res) => {
-    return setPromo(res.default);
-  });
+  getPromo.then((res) => setPromo(res.default));
 
   return (
     <div className={styles.Promo}>

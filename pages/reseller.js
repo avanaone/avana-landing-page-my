@@ -4,10 +4,7 @@ import Feature from "../components/Feature";
 
 const Reseller = () => (
   <div>
-    <Head>
-      <title>Manajemen Reseller • AVANA</title>
-    </Head>
-    <Feature id="reseller" title="Manajemen Reseller" />
+    <Feature id="reseller" title="Manajemen Reseller" CS />
   </div>
 );
 

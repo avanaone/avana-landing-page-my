@@ -1,46 +1,46 @@
 [
   {
-    "code": "PROMOCERIA",
+    "code": "1",
     "image": "/assets/images/promo/3.jpeg",
     "title": "1000 Star Sellers",
     "period": {
       "start": "01/04/2020",
       "end": "30/06/2020"
     },
-    "description": "<p>Buat pelanggan menjadi betah berbelanja di toko online Anda dengan fitur gratis biaya kirim & admin.</p>",
+    "description": "<p>Program apresiasi bagi para pelaku usaha yang ingin mengembangkan Bisnisnya di dunia online dengan fitur unggulan AVANA.<br>Segera bergabung dengan program 1000 Star Seller AVANA dengan potensi mendapatkan manfaat cashback 100% !!<br>Caranya ANTI RIBET!!</p> <ol><li>Buka toko online di AVANA plan Advance/Business/VIP 1 Tahun</li><li>Lakukan transaksi penjualan sebanyak-banyaknya menggunakan metode pembayaran melalui Dompet Digital resmi milik AVANA yaitu AVAPay untuk keamanan dan kenyamanan bertransaksi, serta ekspedisi pengiriman menggunakan JNE</li><li>Dapatkan Cashback 100% hanya dalam waktu 2-3 Bulan!!</li></ol>",
     "termsConditions": []
   },
   {
-    "code": "AVABIZ31",
-    "image": "/assets/images/promo/2.jpeg",
+    "code": "2",
+    "image": "/assets/images/promo/7.jpeg",
     "title": "Free Shipping and Admin Fee",
     "period": {
       "start": "01/04/2020",
       "end": "30/06/2020"
     },
-    "description": "<p>Program yang mewadahi para pengusaha online untuk mempemudah proses jualan sekaligus membangun brand sendiri.</p>",
+    "description": "<p>Dapatkan kemudahan dan kenyamanan bertransaksi melalui toko online di AVANA Indonesia dengan menggunakan Dompet Digital AVAPay serta ekspedisi pengiriman menggunakan JNE</p><ol><li>AVAPay merupakan Dompet Digital resmi milik AVANA Indonesia, yang menjamin keamanan serta kenyamanan bertransaksi. Bekerjasama dengan banyak Bank besar di Indonesia, dapatkan berbagai kemudahan proses pembayaran termasuk program FREE ADMIN FEE. AVAPay juga menyediakan pembayaran via OVO, mantul!!</li><li>Dapatkan diskon ongkos kirim sebesar Rp.10.000,- untuk setiap transaksi pembelian produk melalui toko online Kamu di AVANA, dengan metode pengiriman menggunakan JNE. Proses pengiriman paling aman dan cepat. Connecting Happiness!!</li><li>Seluruh manfaat di atas bisa di dapatkan untuk setiap transaksi pemesanan produk minimal Rp.50.000,-</li></ol>",
     "termsConditions": []
   },
   {
-    "code": "AVABIZ32",
-    "image": "/assets/images/promo/4.jpeg",
+    "code": "3",
+    "image": "/assets/images/promo/8.jpeg",
     "title": "Free Voucher Rp 100.000",
     "period": {
       "start": "01/04/2020",
       "end": "30/06/2020"
     },
-    "description": "<p>Selain memfasilitasi toko online hebat AVANA, Anda juga bisa mendapakan FREE VOUCHER untuk potongan harga platform AVANA sebesar Rp 100.00, atau untuk foto produk, atau dibantu iklan + copywriting oleh tim AVANA.</p>",
+    "description": "<p>Dapatkan manfaat Promo Voucher sebesar Rp.100.000,- yang dapat kamu gunakan dengan fleksibel, dan bisa kamu pilih untuk :</p><ol><li>Potongan harga layanan AVANA Indonesia untuk registrasi baru / renewal / upgrade</li><li>FREE Facebook Ads produk keren kamu selama 3 Hari</li><li>Foto produk keren kamu yang berdomisili di Bandung / Jakarta, dengan ketentuan 1 produk 5 angle foto</li></ol>",
     "termsConditions": []
   },
   {
-    "code": "AVABIZ33",
+    "code": "4",
     "image": "/assets/images/promo/6.jpeg",
     "title": "Program AVANA Affiliate",
     "period": {
-      "start": "01/04/2020",
-      "end": "30/06/2020"
+      "start": null,
+      "end": null
     },
-    "description": "<p>Pengen jualan tanpa modal atau gak punya barang? Tenang, yuk join aja AVANA Affiliate Program. Anda cukup jual platform AVANA ke teman, saudara, atau siapapun dan dapatkan komisi yang menggiurkan.</p>",
+    "description": "<p>Siapa bilang Berbisnis itu harus punya produk sendiri dulu?<br>Jaman secanggih sekarang, tanpa punya produk sendiri pun masih bisa mendapatkan penghasilan yang LEBIH POTENSIAL!!<br><span>Mau bukti?</span><br><span>Jadilah bagian dari tim penjualan AVANA dengan bergabung sebagai Affiliate.<br>Dapatkan berbagai potensi income seperti :</p><ol><li>Komisi hingga Rp.2.600.000,- untuk setiap penjualan paket AVANA</li><li>Komisi hingga 20% dari total penjualan setiap Bulan nya</li><li>Income tambahan dari Reward Bulanan</li><li>Reward dari total penjualan dalam 1 Tahun, mulai dari Handphone, Umrah, hingga Mobil!!<br></li></ol><p>Tertarik?</p><p>Segera bergabung dalam tim Affiliate AVANA!!</p>",
     "termsConditions": []
   }
 ]

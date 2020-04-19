@@ -3,34 +3,47 @@
 
   :global nav {
     text-align: left;
+    background-color: transparent;
   }
 
   :global header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f4f7f9;
+    background-image: url("/assets/images/hero-background.png");
+    background-size: cover;
     padding: 1.5em 0 2.5em;
+    margin-bottom: 2.5em;
 
     h1 {
       width: 25em;
       min-width: 300px;
       max-width: 80vw;
-      margin-bottom: 0.5em;
+      font-size: 1.85rem !important;
+      margin-bottom: 0.25em;
+      z-index: 1;
     }
 
     p {
-      min-width: 275px;
+      min-width: 250px;
+      margin: 0 1em;
+      z-index: 1;
     }
 
-    .ava-btn {
-      position: relative;
-      margin: 2.5em;
-      font-size: 0.9rem;
+    .ava-button {
+      margin: 2em;
+      font-size: 1rem;
+      z-index: 1;
+    }
 
-      &::before {
+    .channels {
+      position: relative;
+
+      &::after {
         content: "";
         position: absolute;
-        top: 75%;
+        top: 100%;
         left: 50%;
         background-image: url("/assets/images/header-channels.png");
         background-size: contain;
@@ -39,24 +52,18 @@
         height: 25vw;
         min-height: 150px;
         max-height: 250px;
-        width: 100vw;
-        min-width: 350px;
+        width: 95vw;
+        min-width: 250px;
         max-width: 1000px;
-        transform: translate(-50%, -75%);
-        z-index: -1;
+        transform: translate(-50%, -100%);
       }
     }
 
-    .bg-hero {
-      background-image: url("/assets/images/hero.png");
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 25vw;
-      min-height: 150px;
-      max-height: 500px;
+    img {
+      min-height: 125px;
       width: 75%;
-      min-width: 350px;
+      max-width: 50em;
+      min-width: 325px;
     }
   }
 
@@ -105,7 +112,9 @@
       }
 
       &.feature {
-        padding: 2vw 7.5vw;
+        flex-wrap: wrap-reverse;
+        padding: 1em 5vw;
+        max-width: 100%;
 
         .description {
           min-width: 250px;
@@ -115,12 +124,12 @@
           }
 
           ul {
-            margin: 1.5vw 0 0 1.5em;
+            margin: 0.5em 0;
 
             li {
               position: relative;
               list-style: none;
-              margin: 0.75em 0;
+              margin: 0.75em 1.5em;
               font-weight: 700;
               cursor: pointer;
 
@@ -138,27 +147,65 @@
           }
         }
 
-        .feature-img {
+        .slider-container {
+          flex: 1;
           position: relative;
-          height: 25em;
-          min-height: 200px;
-          max-height: 250px;
-          min-width: 300px;
           max-width: 500px;
-          margin: 7.5vw 0 2.5vw;
+          min-width: 300px;
 
-          img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            max-height: 500px;
-            margin: 0;
-            opacity: 0;
-            transform: translate(-50%, -50%);
-            transition: opacity 1.5s ease;
+          .slider {
+            position: static;
 
-            &.active {
-              opacity: 1;
+            &::before {
+              content: " ";
+              width: 5%;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              height: 100%;
+              background-image: linear-gradient(
+                to left,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 1)
+              );
+              z-index: 1;
+            }
+            &::after {
+              content: " ";
+              width: 5%;
+              position: absolute;
+              right: 0;
+              top: 0;
+              height: 100%;
+              background-image: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 1)
+              );
+            }
+
+            .arrow {
+              &.left {
+                left: -2.5vw;
+              }
+
+              &.right {
+                right: -2.5vw;
+              }
+            }
+
+            .dots {
+              bottom: 0;
+
+              .dot {
+                height: 0.5em;
+                width: 0.5em;
+                background-color: rgba(48, 120, 234, 0.2);
+
+                &.active {
+                  background-color: #3078ea;
+                }
+              }
             }
           }
         }
@@ -167,6 +214,7 @@
       &#support {
         background-color: #f4f7f9;
         margin-top: 5vw;
+        z-index: 0;
 
         h2 {
           width: 75vw;
@@ -230,12 +278,9 @@
         }
       }
 
-      &#trial {
-        background-color: #f4f7f9;
-        padding: 2.5em 2.5vw;
-
+      &.trial {
         h2 {
-          margin-bottom: 1em;
+          z-index: 1;
         }
       }
     }

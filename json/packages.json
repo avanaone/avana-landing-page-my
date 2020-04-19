@@ -94,86 +94,86 @@
     ],
     "additional_services": [
       {
-        "name": "First setup",
+        "name": "Atur Toko",
         "services": [
-          "Complete Shop Information",
-          "Add Payment & Shipping method",
-          "Upload first product",
-          "Facebook Integration",
-          "Publish Webstore & Facebook Store",
-          "Auto Reply"
+          "Isi informasi toko",
+          "Atur metode pembayaran & metode pengiriman",
+          "Upload produk pertama",
+          "Integrasi ke facebook",
+          "Terbitkan webstore & facebook store",
+          "Auto reply"
         ],
         "price": "Free"
       },
       {
-        "name": "Upload product",
+        "name": "Upload Produk",
         "services": [
-          "Price count per product",
-          "Max 5 photos",
-          " Setup Categories, Variant, Pricing ",
-          "Collection, Stock, and Auto Reply"
+          "Harga dihitung per produk",
+          "Maksimal 5 produk",
+          "Atur kategori, varian, harga, ",
+          "koleksi, stok, dan auto reply"
         ],
         "price": "IDR 25,000"
       },
       {
-        "name": "Photo product",
+        "name": "Foto Produk",
         "services": [
-          "Price count per product",
-          "Max 4 angle photos",
-          "Size 1×1 Square"
+          "Harga dihitung per produk",
+          "Maksimal 4 sudut foto",
+          "Ukuran 1×1 kotak"
         ],
         "price": "IDR 100,000"
       },
       {
-        "name": "Running ads",
+        "name": "Menjalankan Iklan",
         "services": [
-          "10% from budget allocated to operational fee",
-          "Output will reported by end of the month",
-          "Suggest for next month Budgeting to merchant",
-          "Include setup target audience & metrics"
+          "10% dari anggaran dialokasikan untuk biaya operasional.",
+          "Hasil akan diberitahukan di akhir bulan.",
+          "Menyarankan anggaran untuk bulan depan.",
+          "Menyertakan target pendengar & metrik"
         ],
         "price": "10%"
       },
       {
-        "name": "Custom template",
+        "name": "Template Menyesuikan",
         "services": [
-          "Price will increase based on customer needs",
-          "Max 10 Page",
-          "Include order & payment system",
-          "3x minor revision allowed"
+          "Harga akan meningkat berdasarkan kebutuhan pelanggan",
+          "Maksimal 10 halaman",
+          "Termasuk pesanan & sistem pembayaran",
+          "3x revisi minor"
         ],
         "price": "IDR 5,000,000"
       },
       {
         "name": "Landing page",
         "services": [
-          "Price count per page",
-          "Only design, no wording",
-          "1x minor revision allowed"
+          "Harga dihitung perhalaman",
+          "Hanya desain, tanpa copywriting",
+          "1x revisi minor"
         ],
         "price": "IDR 100,000"
       },
       {
         "name": "Promo content (copywriting)",
-        "services": ["Max 250 Words", "1x minor revision allowed"],
+        "services": ["Maksimal 250 kata", "1x revisi minor"],
         "price": "IDR 100,000"
       },
       {
         "name": "Design logo",
         "services": [
-          "Include concept of brand identity",
-          "1 Color + 1 B&W",
-          "3x minor revision allowed"
+          " Sudah termasuk konsep brand",
+          "1 warna + 1 B&W",
+          "3x revisi minor"
         ],
         "price": "IDR 1,000,000"
       },
       {
-        "name": "Design poster",
+        "name": "Desain poster",
         "services": [
-          "Include concept of brand identity",
-          "Only design, no wording",
-          "Size poster for IG & FB",
-          "2x minor revision allowed"
+          "Sudah termasuk konsep brand",
+          "Hanya desain, tanpa copywriting",
+          "Ukuran poster untuk instagram & facebook",
+          "2x revisi minor"
         ],
         "price": "IDR 200,000"
       }

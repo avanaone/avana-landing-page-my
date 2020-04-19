@@ -9,38 +9,41 @@ export default function App({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         {/* Primary Meta Tags */}
-        <title>AVANA | Social Commerce AVANA Terpercaya di Indonesia </title>
-        <link rel="canonical" href="https://avana.id" />
+        <title>AVANA | #1 Leading Social Commerce Platform in Indonesia</title>
         <meta
           name="title"
-          content="Social Commerce AVANA Terpercaya di Indonesia"
+          content="#1 Leading Social Commerce Platform in Indonesia"
         />
         <meta
-          name="description"
-          content="AVANA dapat mengubah media sosial Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+          name="descrition"
+          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://avana.id" />
+        <meta property="og:url" content="https://avana.id/" />
         <meta
           property="og:title"
-          content="Social Commerce AVANA Terpercaya di Indonesia"
+          content="#1 Leading Social Commerce Platform in Indonesia"
         />
         <meta
           property="og:description"
-          content="AVANA dapat mengubah media sosial Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
         <meta property="og:image" content="/assets/images/meta-image.png" />
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://avana.id" />
+        <meta property="twitter:url" content="https://avana.id/" />
         <meta
           property="twitter:title"
-          content="Social Commerce AVANA Terpercaya di Indonesia"
+          content="#1 Leading Social Commerce Platform in Indonesia"
         />
         <meta
           property="twitter:description"
-          content="AVANA dapat mengubah media sosial Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
+        />
+        <meta
+          property="twitter:image"
+          content="/assets/images/meta-image.png"
         />
         <meta
           property="twitter:image"
@@ -79,6 +82,20 @@ export default function App({ Component, pageProps }) {
         <meta httpEquiv="expires" content="0" />
         <meta httpEquiv="pragma" content="no-cache" />
         <meta httpEquiv="refresh" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+            var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+          })(window, document, "script", "dataLayer", "GTM-WHCB6K9");`,
+          }}
+        />
       </Head>
       <Component {...pageProps} />
     </>

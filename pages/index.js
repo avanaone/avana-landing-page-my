@@ -1,76 +1,73 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 
-import styles from "./scss/Home.module.scss";
-
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+import SliderTestimonial from "../components/SliderTestimonial";
+import Slider from "../components/Slider";
+import { LinkButton } from "../components/Button";
+
+import styles from "./scss/Home.module.scss";
+
+import Testimonial from "../json/testimonal.json";
+
 const Home = () => {
-  const [data, setData] = useState({
-    dashboard: {
-      current: 1,
-    },
-    avachat: {
-      current: 1,
-    },
-    reseller: {
-      current: 1,
-    },
-    webstore: {
-      current: 1,
-    },
+  const [state, setState] = useState({
+    dashboard: 0,
+    avachat: 0,
+    reseller: 0,
+    webstore: 0,
   });
 
+  const { dashboard, avachat, reseller, webstore } = state;
+  const [navbarBg, setNavbarBg] = useState("#f4f7f9");
+
   useEffect(() => {
-    const id = setInterval(() => {
-      setData({
-        dashboard: {
-          current: data.dashboard.current < 3 ? data.dashboard.current + 1 : 1,
-        },
-        avachat: {
-          current: data.avachat.current < 3 ? data.avachat.current + 1 : 1,
-        },
-        reseller: {
-          current: data.reseller.current < 3 ? data.reseller.current + 1 : 1,
-        },
-        webstore: {
-          current: data.webstore.current < 3 ? data.webstore.current + 1 : 1,
-        },
-      });
-    }, 5000);
+    window.addEventListener("scroll", handleNavbar);
 
     return () => {
-      clearInterval(id);
+      window.removeEventListener("scroll", handleNavbar);
     };
-  }, [data]);
+  }, []);
 
-  const handleSlider = (id, step) =>
-    setData({ ...data, [id]: { ...data[id], current: step } });
+  const handleSlider = (id, idx) => {
+    setState((s) => ({ ...s, [id]: idx }));
+  };
+
+  const callbackSlider = ({ id, activeSlide }) =>
+    setState((s) => ({
+      ...s,
+      [id]: activeSlide,
+    }));
+
+  const handleNavbar = (e) => {
+    window.scrollY > 10 ? setNavbarBg("#fff") : setNavbarBg("#f4f7f9");
+  };
 
   return (
-    <div className={styles.Home}>
+    <div className={styles.Home} onScroll={handleNavbar}>
       <Head>
         {/* Primary Meta Tags */}
-        <title>AVANA | Social Commerce AVANA Terpercaya di Indonesia</title>
+        <title>AVANA | #1 Leading Social Commerce Platform in Indonesia</title>
         <meta
           name="title"
-          content="Social Commerce AVANA Terpercaya di Indonesia"
+          content="#1 Leading Social Commerce Platform in Indonesia"
         />
         <meta
-          name="description"
-          content="AVANA dapat mengubah sosial media  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+          name="descrition"
+          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://avana.id/" />
         <meta
           property="og:title"
-          content="Social Commerce AVANA Terpercaya di Indonesia"
+          content="#1 Leading Social Commerce Platform in Indonesia"
         />
         <meta
           property="og:description"
-          content="AVANA dapat mengubah sosial media  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
         <meta property="og:image" content="/assets/images/meta-image.png" />
         {/* Twitter */}
@@ -78,284 +75,309 @@ const Home = () => {
         <meta property="twitter:url" content="https://avana.id/" />
         <meta
           property="twitter:title"
-          content="Social Commerce AVANA Terpercaya di Indonesia"
+          content="#1 Leading Social Commerce Platform in Indonesia"
         />
         <meta
           property="twitter:description"
-          content="AVANA dapat mengubah sosial media  Anda layaknya toko online yang dapat melakukan pembelian dan pembayaran langsung"
+          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
         <meta
           property="twitter:image"
           content="/assets/images/meta-image.png"
         />
       </Head>
-
-      <Navbar />
-
+      <Navbar style={{ backgroundColor: navbarBg }} />
       <header>
         <h1 className="is-size-3">
-          Satu dashboard untuk mengelola semua aktivitas penjualanmu di sosial
-          media
+          Satu Dashboard Untuk Mengelola Semua Penjualan Sosial Mediamu
         </h1>
-        <p>Chat Multichannel • Auto Reply • Manajemen Reseller • Toko Online</p>
-        <a
+        <p>
+          Toko Online • Integrasi Chat Sosial Media • Auto Reply • Manajemen
+          Reseller
+        </p>
+        <LinkButton
           href="https://store.avana.asia/"
           target="__blank"
           className="ava-btn btn-primary"
         >
           Coba Gratis
-        </a>
-        <div className="bg-hero" />
+        </LinkButton>
+        <div className="channels" />
+        <img src={require("public/assets/images/hero.png")} />
       </header>
       <main>
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
               <span className="hl">Dashboard</span> pintar untuk mengelola
-              aktivitas jualanmu di sosial media
+              seluruh aktivitas jualanmu
             </h2>
             <p>
-              Selain membuat Anda lebih produktif dashboard ini juga banyak
-              fitur yang membantu Anda meningkatkan penjualan.
+              Ada banyak fitur yang dapat membantu meningkatkan penjualan anda!
             </p>
             <ul>
               <li
-                className={data.dashboard.current === 1 ? "active" : ""}
-                onClick={() => handleSlider("dashboard", 1)}
+                className={dashboard === 0 ? "active" : ""}
+                onClick={() => handleSlider("dashboard", 0)}
               >
-                Manajemen Order
+                Manajemen Pesanan
               </li>
               <li
-                className={data.dashboard.current === 2 ? "active" : ""}
-                onClick={() => handleSlider("dashboard", 2)}
+                className={dashboard === 1 ? "active" : ""}
+                onClick={() => handleSlider("dashboard", 1)}
               >
                 Manajemen Produk
               </li>
               <li
-                className={data.dashboard.current === 3 ? "active" : ""}
-                onClick={() => handleSlider("dashboard", 3)}
+                className={dashboard === 2 ? "active" : ""}
+                onClick={() => handleSlider("dashboard", 2)}
               >
-                Otomatis Membalas Pesan & Komentar Pelanggan Anda
+                Balas Pesan & Komen Otomatis
               </li>
             </ul>
             <div className="ava-btn-group">
-              <a
+              <LinkButton
                 href="https://store.avana.asia/"
                 target="__blank"
-                className="ava-btn btn-primary"
+                className="btn-primary"
               >
                 Saya Tertarik
-              </a>
-              <a href="/dashboard" className="ava-btn btn-secondary">
+              </LinkButton>
+              <LinkButton href="/dashboard" className="btn-secondary">
                 Lihat Selengkapnya
-              </a>
+              </LinkButton>
             </div>
           </div>
-          <div className="feature-img">
-            <img
-              className={data.dashboard.current === 1 ? "active" : ""}
-              src={require("public/assets/images/dashboard/manajemen-order.png")}
-              alt=""
-            />
-            <img
-              className={data.dashboard.current === 2 ? "active" : ""}
-              src={require("public/assets/images/dashboard/manajemen-produk.png")}
-              alt=""
-            />
-            <img
-              className={data.dashboard.current === 3 ? "active" : ""}
-              src={require("public/assets/images/dashboard/auto-reply.png")}
-              alt=""
+          <div className="slider-container">
+            <Slider
+              id="dashboard"
+              slides={[
+                <img
+                  src={require("../public/assets/images/dashboard/manajemen-order.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/dashboard/manajemen-produk.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/dashboard/auto-reply.png")}
+                  alt=""
+                />,
+              ]}
+              currentSlide={dashboard}
+              hasDots
+              autoPlay
+              callback={callbackSlider}
             />
           </div>
         </section>
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
-              <span className="hl">AVAChat</span> menghubungkan semua chat
-              sosial media menjadi 1 dashboard
+              <span className="hl">AVAChat</span> menghubungkan semua pesan
+              sosial media dalam satu dashboard
             </h2>
             <p>
-              AVAChat juga mempunyai banyak fitur yang meningkatkan
-              produktifitas Anda di berbagai saluran sosial media.
+              Avachat memiliki banyak fitur yang meningkatkan produktifitas Anda
+              di berbagai saluran media sosial.
             </p>
             <ul>
               <li
-                className={data.avachat.current === 1 ? "active" : ""}
+                className={avachat === 0 ? "active" : ""}
+                onClick={() => handleSlider("avachat", 0)}
+              >
+                Kirim Produk & Invois
+              </li>
+              <li
+                className={avachat === 1 ? "active" : ""}
                 onClick={() => handleSlider("avachat", 1)}
               >
-                Mengirim Informasi Produk & Invoice
+                Quick Reply
               </li>
               <li
-                className={data.avachat.current === 2 ? "active" : ""}
+                className={avachat === 2 ? "active" : ""}
                 onClick={() => handleSlider("avachat", 2)}
               >
-                Quick Reply Untuk Membalas Pesan Lebih Cepat
-              </li>
-              <li
-                className={data.avachat.current === 3 ? "active" : ""}
-                onClick={() => handleSlider("avachat", 3)}
-              >
-                Mengirim Informasi & Status Terbaru Paket Pelanggan Anda
+                Info Pengiriman Barang
               </li>
             </ul>
             <div className="ava-btn-group">
-              <a
-                href="https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+              <LinkButton
+                href="https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk AVAChat"
                 target="__blank"
-                className="ava-btn btn-primary"
+                className="btn-primary"
               >
                 Saya Tertarik
-              </a>
-              <a href="/avachat" className="ava-btn btn-secondary">
+              </LinkButton>
+              <LinkButton href="/avachat" className="btn-secondary">
                 Lihat Selengkapnya
-              </a>
+              </LinkButton>
             </div>
           </div>
-          <div className="feature-img">
-            <img
-              className={data.avachat.current === 1 ? "active" : ""}
-              src={require("public/assets/images/avachat/send-product-info.png")}
-              alt=""
-            />
-            <img
-              className={data.avachat.current === 2 ? "active" : ""}
-              src={require("public/assets/images/avachat/quick-reply.png")}
-              alt=""
-            />
-            <img
-              className={data.avachat.current === 3 ? "active" : ""}
-              src={require("public/assets/images/avachat/send-shipping-info.png")}
-              alt=""
+          <div className="slider-container">
+            <Slider
+              id="avachat"
+              slides={[
+                <img
+                  src={require("../public/assets/images/avachat/send-product-info.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/avachat/quick-reply.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/avachat/send-shipping-info.png")}
+                  alt=""
+                />,
+              ]}
+              currentSlide={avachat}
+              hasDots
+              autoPlay
+              callback={callbackSlider}
             />
           </div>
         </section>
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
-              Manajemen resellermu dengan fitur&nbsp;
+              Dilengkapi dengan fitur&nbsp;
               <span className="hl">Manajemen Reseller</span>
             </h2>
             <p>
-              Manajemen Reseller salah satu fitur yang membantu Anda mengamati
-              performa reseller secara realtime.
+              Dengan fitur ini, Anda bisa mengamati performa resellermu secara
+              langsung.
             </p>
             <ul>
               <li
-                className={data.reseller.current === 1 ? "active" : ""}
-                onClick={() => handleSlider("reseller", 1)}
+                className={reseller === 0 ? "active" : ""}
+                onClick={() => handleSlider("reseller", 0)}
               >
                 Manajemen Database Reseller
               </li>
               <li
-                className={data.reseller.current === 2 ? "active" : ""}
-                onClick={() => handleSlider("reseller", 2)}
+                className={reseller === 1 ? "active" : ""}
+                onClick={() => handleSlider("reseller", 1)}
               >
                 Lihat Performa Reseller
               </li>
               <li
-                className={data.reseller.current === 3 ? "active" : ""}
-                onClick={() => handleSlider("reseller", 3)}
+                className={reseller === 2 ? "active" : ""}
+                onClick={() => handleSlider("reseller", 2)}
               >
                 Atur Komisi & Buat Level Reseller
               </li>
             </ul>
             <div className="ava-btn-group">
-              <a
-                href="https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk Manajemen Reseller"
+              <LinkButton
+                href="https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk Manajemen Reseller"
                 target="__blank"
-                className="ava-btn btn-primary"
+                className="btn-primary"
               >
                 Saya Tertarik
-              </a>
-              <a href="/reseller" className="ava-btn btn-secondary">
+              </LinkButton>
+              <LinkButton href="/reseller" className="btn-secondary">
                 Lihat Selengkapnya
-              </a>
+              </LinkButton>
             </div>
           </div>
-          <div className="feature-img">
-            <img
-              className={data.reseller.current === 1 ? "active" : ""}
-              src={require("public/assets/images/reseller/manajemen-database-reseller.png")}
-              alt=""
-            />
-            <img
-              className={data.reseller.current === 2 ? "active" : ""}
-              src={require("public/assets/images/reseller/lihat-performa-reseller.png")}
-              alt=""
-            />
-            <img
-              className={data.reseller.current === 3 ? "active" : ""}
-              src={require("public/assets/images/reseller/atur-komisi-reseller.png")}
-              alt=""
+          <div className="slider-container">
+            <Slider
+              id="reseller"
+              slides={[
+                <img
+                  src={require("../public/assets/images/reseller/manajemen-database-reseller.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/reseller/lihat-performa-reseller.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/reseller/atur-komisi-reseller.png")}
+                  alt=""
+                />,
+              ]}
+              currentSlide={reseller}
+              hasDots
+              autoPlay
+              callback={callbackSlider}
             />
           </div>
         </section>
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
-              Miliki <span className="hl">Webstore</span> (toko online gratis)
-              dan custom domain .com
+              <span className="hl">Buat Website</span> untuk tokomu dan tentukan
+              sendiri domain.com pilihanmu
             </h2>
             <p>
-              Webstore (website toko online) kami mempunyai banyak fitur yang
-              sangat membantu calon customermu melakukan transaksi.
+              Website yang kami sediakan untuk anda memiliki banyak fitur yang
+              membantu calon pelanggan untuk bertransaksi.
             </p>
             <ul>
               <li
-                className={data.webstore.current === 1 ? "active" : ""}
+                className={webstore === 0 ? "active" : ""}
+                onClick={() => handleSlider("webstore", 0)}
+              >
+                Dukungan Payment Gateway
+              </li>
+              <li
+                className={webstore === 1 ? "active" : ""}
                 onClick={() => handleSlider("webstore", 1)}
               >
-                Mendukung Berbagai Metode Pembayaran
+                Berbagai Macam Pilihan Tema
               </li>
               <li
-                className={data.webstore.current === 2 ? "active" : ""}
+                className={webstore === 2 ? "active" : ""}
                 onClick={() => handleSlider("webstore", 2)}
               >
-                Tema (Pembaruan Gratis)
-              </li>
-              <li
-                className={data.webstore.current === 3 ? "active" : ""}
-                onClick={() => handleSlider("webstore", 3)}
-              >
-                Order Melalui Whatsapp
+                Order Melalui WhatsApp
               </li>
             </ul>
             <div className="ava-btn-group">
-              <a
+              <LinkButton
                 href="https://store.avana.asia/"
                 target="__blank"
-                className="ava-btn btn-primary"
+                className="btn-primary"
               >
                 Saya Tertarik
-              </a>
-              <a href="/webstore" className="ava-btn btn-secondary">
+              </LinkButton>
+              <LinkButton href="/webstore" className="btn-secondary">
                 Lihat Selengkapnya
-              </a>
+              </LinkButton>
             </div>
           </div>
-          <div className="feature-img">
-            <img
-              className={data.webstore.current === 1 ? "active" : ""}
-              src={require("public/assets/images/webstore/payment-gateway.png")}
-              alt=""
-            />
-            <img
-              className={data.webstore.current === 2 ? "active" : ""}
-              src={require("public/assets/images/webstore/theme.png")}
-              alt=""
-            />
-            <img
-              className={data.webstore.current === 3 ? "active" : ""}
-              src={require("public/assets/images/webstore/order-via-whatsapp.png")}
-              alt=""
+          <div className="slider-container">
+            <Slider
+              id="webstore"
+              slides={[
+                <img
+                  src={require("../public/assets/images/webstore/payment-gateway.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/webstore/theme.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/webstore/order-via-whatsapp.png")}
+                  alt=""
+                />,
+              ]}
+              currentSlide={webstore}
+              hasDots
+              autoPlay
+              callback={callbackSlider}
             />
           </div>
         </section>
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
-              Miliki <span className="hl">Facebook Store</span> hebat
+              Miliki <span className="hl">Toko Facebook</span> dengan fitur
+              terbaik
             </h2>
             <p>
               Ubah teman jadi pelanggan. Pelanggan bisa belanja sampai bayar
@@ -363,18 +385,18 @@ const Home = () => {
             </p>
             <ul />
             <div className="ava-btn-group">
-              <a
-                href="https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk Facebook Store"
+              <LinkButton
+                href="https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk Facebook Store"
                 target="__blank"
-                className="ava-btn btn-primary"
+                className="btn-primary"
               >
                 Saya Tertarik
-              </a>
+              </LinkButton>
             </div>
           </div>
           <div className="feature-img">
             <img
-              src={require("public/assets/images/facebook-store.png")}
+              src={require("../public/assets/images/facebook-store.png")}
               className="active"
               alt=""
             />
@@ -382,44 +404,37 @@ const Home = () => {
         </section>
         <section id="support">
           <h2 className="is-size-4">
-            Didukung oleh berbagai macam metode pengiriman & pembayaran
+            AVANA sudah didukung oleh berbagai metode pengiriman & pembayaran
           </h2>
           <div>
             <img
-              src={require("public/assets/images/courier.png")}
+              src={require("../public/assets/images/courier.png")}
               alt="Kurir"
             />
             <div className="border" />
-            <img src={require("public/assets/images/bank.png")} alt="Banks" />
+            <img
+              src={require("../public/assets/images/bank.png")}
+              alt="Banks"
+            />
           </div>
         </section>
         <section id="testimonial">
           <h2 className="is-size-4">
             Apa kata mereka yang sudah bergabung dengan AVANA?
           </h2>
-          <q>
-            Toko online itu bukan hanya sekedar wadah untuk memasarkan barang
-            tapi sebagai alat untuk membangun brand juga. Bersama AVANA, saya
-            bisa memperkenalkan dan membesarkan nama Amity.
-          </q>
-          <span className="name">Amity Indonesia</span>
-          <img
-            src={require("public/assets/images/testimonial/amity.png")}
-            alt=""
-          />
+          <SliderTestimonial testimonial={Testimonial} />
         </section>
-        <section id="trial">
-          <h2 className="is-size-4">Mulai uji coba gratis 14 hari Anda</h2>
-          <a
+        <section className="trial">
+          <h2 className="is-size-4">Coba Sekarang GRATIS 14 Hari</h2>
+          <LinkButton
             href="https://store.avana.asia/"
             target="__blank"
             className="ava-btn btn-primary"
           >
             Coba Gratis
-          </a>
+          </LinkButton>
         </section>
       </main>
-
       <Footer />
     </div>
   );

@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import Head from "next/head";
 
-import styles from "./scss/Event.module.scss";
-
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 import EventCard from "../components/EventCard";
 
+import styles from "./scss/Event.module.scss";
+
 const getEvents = import("../json/event.json");
 
 const Event = () => {
   const [events, setEvents] = useState([]);
 
-  getEvents.then((res) => {
-    return setEvents(res.default);
-  });
+  getEvents.then((res) => setEvents(res.default));
 
   return (
     <div className={styles.Event}>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LinkButton } from "./Button";
 
 export default function EventCard({ event }) {
   return (
@@ -27,7 +28,7 @@ export default function EventCard({ event }) {
             }`}</span>
           </div>
           <Link href="/event/[id]" as={`/event/${event.id}`}>
-            <a className="ava-btn btn-primary">Lihat Detail</a>
+            <a className="button ava-button btn-primary">Lihat Detail</a>
           </Link>
         </div>
       </div>

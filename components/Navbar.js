@@ -1,66 +1,114 @@
-import React, { useState } from "react";
-import Head from "next/head";
+import React, { useState, useEffect, useRef } from "react";
 
-export default function Navbar() {
+import { LinkButton } from "./Button";
+
+const getWidth = () => (typeof window !== "undefined" ? window.innerWidth : "");
+
+export default function Navbar({ style }) {
   const [isModal, setIsModal] = useState(false);
   const toggleModal = () => setIsModal(!isModal);
 
+  const [state, setState] = useState({
+    isActive: false,
+    dropdownActive: {
+      event: false,
+    },
+    innerWidth: 1023,
+  });
+
+  const { isActive, dropdownActive, innerWidth } = state;
+
+  const resizeRef = useRef();
+
+  useEffect(() => {
+    resizeRef.current = handleResize;
+  });
+
+  useEffect(() => {
+    const onResize = window.addEventListener("resize", () =>
+      resizeRef.current()
+    );
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
+
+  const handleResize = () =>
+    setState((s) => ({
+      ...s,
+      innerWidth: getWidth(),
+    }));
+  const toggleNavbar = () => setState((s) => ({ ...s, isActive: !s.isActive }));
+  const toggleDropdown = (k) =>
+    setState((s) => ({
+      ...s,
+      dropdownActive: { ...s.dropdownActive, [k]: !s.dropdownActive[k] },
+    }));
+
   return (
     <>
-      <Head>
-        <script src="/static/navbar.js" />
-      </Head>
       <nav
         className="navbar is-white is-fixed-top"
         role="navigation"
         aria-label="main navigation"
+        style={style}
       >
         <div className="navbar-brand">
-          <a href="/" className="navbar-item" title="BERANDA &middot; Avana">
+          <a className="navbar-item" href="/" title="BERANDA &middot; Avana">
             <img
-              src={require("public/assets/images/logo.png")}
+              src={require("../public/assets/images/logo.png")}
               alt="AVANA Logo"
               width="100"
             />
           </a>
+
           <a
             role="button"
-            className="navbar-burger"
+            className={`navbar-burger ${isActive ? "is-active" : ""}`}
             data-target="navMenu"
             aria-label="menu"
             aria-expanded="false"
+            onClick={toggleNavbar}
           >
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
         </div>
-        <div className="navbar-menu" id="navMenu">
+        <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
           <div className="navbar-end">
-            <div className="navbar-item has-dropdown is-hoverable">
-              <a href="#" className="navbar-link" title="Produk">
+            <div
+              className={`navbar-item has-dropdown 
+              ${innerWidth >= 1023 ? "is-hoverable" : ""}
+              ${
+                dropdownActive["produk"] && innerWidth < 1023 ? "is-active" : ""
+              }`}
+              onClick={() => toggleDropdown("produk")}
+            >
+              <a className="navbar-link" title="Produk">
                 Produk
               </a>
               <div className="navbar-dropdown">
-                <a href="/dashboard" className="navbar-item" title="Dashboard">
+                <a className="navbar-item" href="/dashboard" title="Dashboard">
                   Dashboard
                 </a>
-                <a href="/avachat" className="navbar-item" title="AVAChat">
+                <a className="navbar-item" href="/avachat" title="AVAChat">
                   AVAChat
                 </a>
                 <a
-                  href="/reseller"
                   className="navbar-item"
+                  href="/reseller"
                   title="Manajemen Reseller"
                 >
                   Manajemen Reseller
                 </a>
-                <a href="/webstore" className="navbar-item" title="Webstore">
+                <a className="navbar-item" href="/webstore" title="Webstore">
                   Webstore
                 </a>
               </div>
             </div>
-            <a href="/price" className="navbar-item" title="Harga">
+            <a className="navbar-item" href="/price" title="Harga">
               Harga
             </a>
             <a href="/promo" className="navbar-item" title="Promo">
@@ -69,8 +117,17 @@ export default function Navbar() {
             <a href="/event" className="navbar-item" title="Event">
               Event
             </a>
-            <div className="navbar-item has-dropdown is-hoverable">
-              <a href="#" className="navbar-link" title="Pelajari">
+            <div
+              className={`navbar-item has-dropdown ${
+                innerWidth >= 1023 ? "is-hoverable" : ""
+              } ${
+                dropdownActive["pelajari"] && innerWidth < 1023
+                  ? "is-active"
+                  : ""
+              }`}
+              onClick={() => toggleDropdown("pelajari")}
+            >
+              <a className="navbar-link" title="Pelajari">
                 Pelajari
               </a>
               <div className="navbar-dropdown">
@@ -97,22 +154,22 @@ export default function Navbar() {
               Tentang Kami
             </a>
             <div className="navbar-item">
-              <a
+              <LinkButton
                 href="https://store.avana.asia/"
                 target="__blank"
-                className="ava-btn btn-secondary"
+                className="btn-secondary"
                 title="Masuk"
               >
                 Masuk
-              </a>
-              <a
+              </LinkButton>
+              <LinkButton
                 href="https://store.avana.asia/"
                 target="__blank"
-                className="ava-btn btn-primary"
+                className="btn-primary"
                 title="Daftar"
               >
                 Daftar
-              </a>
+              </LinkButton>
             </div>
           </div>
         </div>
@@ -127,20 +184,20 @@ export default function Navbar() {
           >
             Close
           </button>
-          <img src={require("public/assets/images/download.png")} alt="" />
+          <img src={require("../public/assets/images/download.png")} alt="" />
           <div>
-            <h3 className="is-size-5">Download e-Book Gratis</h3>
+            <h3 className="is-size-5 modalTittle">Download e-Book Gratis</h3>
             <p>
               Baca penggunaan AVANA biar gak pusing. Download juga e-Book AVANA
               lainnya!
             </p>
-            <a
+            <LinkButton
               href="/assets/files/tutorial.pdf"
-              className="ava-btn btn-primary"
+              className="btn-primary"
               download
             >
               Download Gratis
-            </a>
+            </LinkButton>
           </div>
         </div>
       </div>
@@ -167,6 +224,13 @@ export default function Navbar() {
           align-items: flex-start;
           margin: 1em;
           max-width: 325px;
+        }
+
+        @media (max-width: 385px) {
+          .modal-content > div {
+            align-items: center;
+            text-align: center;
+          }
         }
 
         .modal-content > div .ava-btn {

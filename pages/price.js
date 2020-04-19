@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import Head from "next/head";
 
-import styles from "./scss/Price.module.scss";
-
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
+import { LinkButton } from "../components/Button";
+import AdditionalService from "../components/AdditionalService";
+
+import styles from "./scss/Price.module.scss";
 
 import { formatCurrency } from "../utils";
 
@@ -14,16 +17,12 @@ const getPackages = import("../json/packages.json");
 const Price = () => {
   const [period, setPeriod] = useState("yearly");
   const [packages, setPackages] = useState([]);
-  const [additionalService, setAdditionalServices] = useState([]);
-  const [isModal, setIsModal] = useState(false);
 
   getPackages.then((res) => {
     setPackages(res.default.id.packages);
-    setAdditionalServices(res.default.id.additional_services);
   });
 
   const handleFilterPeriod = (period) => setPeriod(period);
-  const toggleModal = () => setIsModal(!isModal);
 
   return (
     <div className={styles.Price}>
@@ -61,13 +60,7 @@ const Price = () => {
                 1 Tahun
               </li>
             </ul>
-            <button
-              type="button"
-              className="ava-btn btn-primary"
-              onClick={toggleModal}
-            >
-              Additional Service
-            </button>
+            <AdditionalService />
           </div>
           <div className="packages">
             {packages
@@ -94,7 +87,6 @@ const Price = () => {
                       </div>
                     </div>
                   )}
-
                   <ul>
                     <li className="has-text-weight-light">Facebook store</li>
                     <li className="has-text-weight-light">Webstore</li>
@@ -102,48 +94,18 @@ const Price = () => {
                     <li className="has-text-weight-light">Order management</li>
                     <li className="has-text-weight-light">Promo code</li>
                   </ul>
-                  <a
+                  <LinkButton
                     href={`https://payment.avana.asia/pay?plan=${pkg.slug}`}
                     target="__blank"
-                    className="ava-btn btn-primary"
+                    className="btn-primary"
                   >
                     Pilih Paket
-                  </a>
+                  </LinkButton>
                 </div>
               ))}
           </div>
           <a href="/packages-detail">Lihat Perbandingan</a>
         </section>
-        <div className={`modal ${isModal ? "is-active" : ""}`}>
-          <div className="modal-background" onClick={toggleModal} />
-          <div className="modal-content">
-            <button
-              className="modal-close is-large"
-              aria-label="close"
-              onClick={toggleModal}
-            >
-              Close
-            </button>
-            <h2>Layanan Tambahan</h2>
-            <table>
-              <tbody>
-                {additionalService.map((service, idx) => (
-                  <tr key={idx}>
-                    <td>{service.name}</td>
-                    <td>
-                      <ul>
-                        {service.services.map((item, idx) => (
-                          <li key={idx}>{item}</li>
-                        ))}
-                      </ul>
-                    </td>
-                    <td>{service.price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
       </main>
       <Footer />
     </div>

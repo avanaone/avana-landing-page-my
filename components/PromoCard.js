@@ -1,9 +1,16 @@
 import Link from "next/link";
+import dayjs from "dayjs";
 
-import moment from "moment";
+import { LinkButton } from "./Button";
 
 export default function PromoCard({ promo }) {
-  moment.locale("id");
+  dayjs.locale("id");
+
+  let dateEnd = [];
+
+  if (promo.period.end) {
+    dateEnd = promo.period.end.match(/\d+/g);
+  }
 
   return (
     <div className="promo">
@@ -25,18 +32,25 @@ export default function PromoCard({ promo }) {
           <span>
             <b>Masa Berlaku</b>
             <br />
-            {promo.period.start !== promo.period.end
-              ? `${moment(promo.period.start, "DD/MM/YYYY").format(
-                  "DD MMM"
-                )} - ${moment(promo.period.end, "DD/MM/YYYY").format(
-                  "DD MMM YYYY"
-                )}`
-              : `${moment(promo.period.start, "DD/MM/YYYY").format(
-                  "DD MMMM YYYY"
-                )}`}
+            {promo.period.start && promo.period.end ? (
+              <>
+                {promo.period.start !== promo.period.end
+                  ? `${dayjs(promo.period.start, "DD/MM/YYYY").format(
+                      "DD MMM"
+                    )} - ${dayjs(
+                      new Date(dateEnd[2], dateEnd[1], dateEnd[0]),
+                      "DD/MM/YYYY"
+                    ).format("DD MMM YYYY")}`
+                  : `${dayjs(promo.period.start, "DD/MM/YYYY").format(
+                      "DD MMMM YYYY"
+                    )}`}
+              </>
+            ) : (
+              "Lifetime"
+            )}
           </span>
           <Link href="/promo/[code]" as={`/promo/${promo.code}`}>
-            <a className="ava-btn btn-primary">Lihat Detail</a>
+            <a className="button ava-button btn-primary">Lihat Detail</a>
           </Link>
         </div>
       </div>
