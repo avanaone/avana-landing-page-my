@@ -9,7 +9,8 @@
         "currency": "IDR",
         "price": 3000000,
         "discounted_price": 2499000,
-        "is_popular": false
+        "is_popular": false,
+        "highlight_feature": ["Gratis domain .com"]
       },
       {
         "code": "semi-annually_advance_plan_id",
@@ -19,7 +20,8 @@
         "currency": "IDR",
         "price": 1500000,
         "discounted_price": 1500000,
-        "is_popular": false
+        "is_popular": false,
+        "highlight_feature": []
       },
       {
         "code": "quarterly_advance_plan_id",
@@ -29,7 +31,8 @@
         "currency": "IDR",
         "price": 750000,
         "discounted_price": 750000,
-        "is_popular": false
+        "is_popular": false,
+        "highlight_feature": []
       },
       {
         "code": "monthly_advance_plan_id",
@@ -39,7 +42,8 @@
         "currency": "IDR",
         "price": 250000,
         "discounted_price": 250000,
-        "is_popular": false
+        "is_popular": false,
+        "highlight_feature": []
       },
       {
         "code": "yearly_business",
@@ -49,7 +53,8 @@
         "currency": "IDR",
         "price": 6000000,
         "discounted_price": 4999000,
-        "is_popular": true
+        "is_popular": true,
+        "highlight_feature": ["Gratis domain .com", "Manajemen reseller"]
       },
       {
         "code": "semi-annually_business",
@@ -59,7 +64,8 @@
         "currency": "IDR",
         "price": 3000000,
         "discounted_price": 3000000,
-        "is_popular": true
+        "is_popular": true,
+        "highlight_feature": []
       },
       {
         "code": "quarterly_business",
@@ -69,7 +75,8 @@
         "currency": "IDR",
         "price": 1500000,
         "discounted_price": 1500000,
-        "is_popular": true
+        "is_popular": true,
+        "highlight_feature": []
       },
       {
         "code": "monthly_business",
@@ -79,7 +86,8 @@
         "currency": "IDR",
         "price": 500000,
         "discounted_price": 500000,
-        "is_popular": true
+        "is_popular": true,
+        "highlight_feature": []
       },
       {
         "code": "yearly_vip",
@@ -89,7 +97,12 @@
         "currency": "IDR",
         "price": 12999000,
         "discounted_price": 12999000,
-        "is_popular": false
+        "is_popular": false,
+        "highlight_feature": [
+          "Gratis domain .com",
+          "Manajemen reseller",
+          "AVAChat"
+        ]
       }
     ],
     "additional_services": [

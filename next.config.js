@@ -42,6 +42,18 @@ const nextConfig = {
   },
   webpack: (config, options) => {
     config.resolve.alias["public"] = path.join(__dirname, "public");
+    config.module.rules.push({
+      test: /\.(jpe?g|png)$/i,
+      use: [
+        {
+          loader: "responsive-loader",
+          options: {
+            adapter: require("responsive-loader/sharp"),
+            sizes: [300, 500],
+          },
+        },
+      ],
+    });
 
     return config;
   },
@@ -49,7 +61,16 @@ const nextConfig = {
 
 module.exports = withPlugins(
   [
-    [optimizedImages],
+    [
+      optimizedImages,
+      {
+        optimizeImagesInDev: true,
+        webp: {
+          preset: "default",
+          quality: 65,
+        },
+      },
+    ],
     [
       withStyles,
       {

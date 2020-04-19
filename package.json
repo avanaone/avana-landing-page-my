@@ -19,6 +19,8 @@
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "sass": "^1.26.3"
-  }
+    "sass": "^1.26.3",
+    "webp-loader": "^0.6.0"
+  },
+  "devDependencies": {}
 }

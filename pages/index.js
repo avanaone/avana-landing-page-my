@@ -10,7 +10,7 @@ import { LinkButton } from "../components/Button";
 
 import styles from "./scss/Home.module.scss";
 
-import Testimonial from "../json/testimonal.json";
+import Testimonial from "../json/testimonial.json";
 
 const Home = () => {
   const [state, setState] = useState({
@@ -50,12 +50,13 @@ const Home = () => {
       <Head>
         {/* Primary Meta Tags */}
         <title>AVANA | #1 Leading Social Commerce Platform in Indonesia</title>
+        <link rel="canonical" href="https://avana.id" />
         <meta
           name="title"
           content="#1 Leading Social Commerce Platform in Indonesia"
         />
         <meta
-          name="descrition"
+          name="description"
           content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
         {/* Open Graph / Facebook */}
@@ -69,7 +70,10 @@ const Home = () => {
           property="og:description"
           content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
-        <meta property="og:image" content="/assets/images/meta-image.png" />
+        <meta
+          property="og:image"
+          content="/assets/images/meta-image.png?resize0?webp"
+        />
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://avana.id/" />
@@ -83,7 +87,7 @@ const Home = () => {
         />
         <meta
           property="twitter:image"
-          content="/assets/images/meta-image.png"
+          content="/assets/images/meta-image.png?resize0?webp"
         />
       </Head>
       <Navbar style={{ backgroundColor: navbarBg }} />
@@ -103,7 +107,10 @@ const Home = () => {
           Coba Gratis
         </LinkButton>
         <div className="channels" />
-        <img src={require("public/assets/images/hero.png")} />
+        <img
+          srcSet={require("public/assets/images/hero.png?resize?webp").srcSet}
+          alt=""
+        />
       </header>
       <main>
         <section className="feature">
@@ -153,15 +160,24 @@ const Home = () => {
               id="dashboard"
               slides={[
                 <img
-                  src={require("../public/assets/images/dashboard/manajemen-order.png")}
+                  srcSet={
+                    require("public/assets/images/dashboard/manajemen-order.png?resize?webp")
+                      .srcSet
+                  }
                   alt=""
                 />,
                 <img
-                  src={require("../public/assets/images/dashboard/manajemen-produk.png")}
+                  srcSet={
+                    require("public/assets/images/dashboard/manajemen-produk.png?resize?webp")
+                      .srcSet
+                  }
                   alt=""
                 />,
                 <img
-                  src={require("../public/assets/images/dashboard/auto-reply.png")}
+                  srcSet={
+                    require("public/assets/images/dashboard/auto-reply.png?resize?webp")
+                      .srcSet
+                  }
                   alt=""
                 />,
               ]}
@@ -220,15 +236,24 @@ const Home = () => {
               id="avachat"
               slides={[
                 <img
-                  src={require("../public/assets/images/avachat/send-product-info.png")}
+                  srcSet={
+                    require("public/assets/images/avachat/send-product-info.png?resize?webp")
+                      .srcSet
+                  }
                   alt=""
                 />,
                 <img
-                  src={require("../public/assets/images/avachat/quick-reply.png")}
+                  srcSet={
+                    require("public/assets/images/avachat/quick-reply.png?resize?webp")
+                      .srcSet
+                  }
                   alt=""
                 />,
                 <img
-                  src={require("../public/assets/images/avachat/send-shipping-info.png")}
+                  srcSet={
+                    require("public/assets/images/avachat/send-shipping-info.png?resize?webp")
+                      .srcSet
+                  }
                   alt=""
                 />,
               ]}
@@ -287,15 +312,24 @@ const Home = () => {
               id="reseller"
               slides={[
                 <img
-                  src={require("../public/assets/images/reseller/manajemen-database-reseller.png")}
+                  srcSet={
+                    require("public/assets/images/reseller/manajemen-database-reseller.png?resize?webp")
+                      .srcSet
+                  }
                   alt=""
                 />,
                 <img
-                  src={require("../public/assets/images/reseller/lihat-performa-reseller.png")}
+                  srcSet={
+                    require("public/assets/images/reseller/lihat-performa-reseller.png?resize?webp")
+                      .srcSet
+                  }
                   alt=""
                 />,
                 <img
-                  src={require("../public/assets/images/reseller/atur-komisi-reseller.png")}
+                  srcSet={
+                    require("public/assets/images/reseller/atur-komisi-reseller.png?resize?webp")
+                      .srcSet
+                  }
                   alt=""
                 />,
               ]}
@@ -354,15 +388,24 @@ const Home = () => {
               id="webstore"
               slides={[
                 <img
-                  src={require("../public/assets/images/webstore/payment-gateway.png")}
+                  srcSet={
+                    require("public/assets/images/webstore/payment-gateway.png?resize?webp")
+                      .srcSet
+                  }
                   alt=""
                 />,
                 <img
-                  src={require("../public/assets/images/webstore/theme.png")}
+                  srcSet={
+                    require("public/assets/images/webstore/theme.png?resize?webp")
+                      .srcSet
+                  }
                   alt=""
                 />,
                 <img
-                  src={require("../public/assets/images/webstore/order-via-whatsapp.png")}
+                  srcSet={
+                    require("public/assets/images/webstore/order-via-whatsapp.png?resize?webp")
+                      .srcSet
+                  }
                   alt=""
                 />,
               ]}
@@ -396,7 +439,10 @@ const Home = () => {
           </div>
           <div className="feature-img">
             <img
-              src={require("../public/assets/images/facebook-store.png")}
+              srcSet={
+                require("../public/assets/images/facebook-store.png?resize?webp")
+                  .srcSet
+              }
               className="active"
               alt=""
             />
@@ -408,13 +454,19 @@ const Home = () => {
           </h2>
           <div>
             <img
-              src={require("../public/assets/images/courier.png")}
+              srcSet={
+                require("../public/assets/images/courier.png?resize&size=400?webp")
+                  .srcSet
+              }
               alt="Kurir"
             />
             <div className="border" />
             <img
-              src={require("../public/assets/images/bank.png")}
-              alt="Banks"
+              srcSet={
+                require("../public/assets/images/bank.png?resize&size=400?webp")
+                  .srcSet
+              }
+              alt="Bank"
             />
           </div>
         </section>

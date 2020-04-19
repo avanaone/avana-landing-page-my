@@ -88,11 +88,12 @@ const Price = () => {
                     </div>
                   )}
                   <ul>
-                    <li className="has-text-weight-light">Facebook store</li>
+                    {pkg.highlight_feature.map((feature, idx) => (
+                      <li key={idx}>{feature}</li>
+                    ))}
                     <li className="has-text-weight-light">Webstore</li>
                     <li className="has-text-weight-light">Payment gateway</li>
-                    <li className="has-text-weight-light">Order management</li>
-                    <li className="has-text-weight-light">Promo code</li>
+                    <li className="has-text-weight-light">Manajemen order</li>
                   </ul>
                   <LinkButton
                     href={`https://payment.avana.asia/pay?plan=${pkg.slug}`}
