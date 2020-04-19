@@ -15,7 +15,7 @@ phases:
      - echo "building..."
  post_build:
    commands:
-    - aws s3 sync --delete ./out/ "s3://landing.avana.link"
+    - aws s3 sync --delete ./out/ "s3://www.avana.id"
 cache:
   paths:
     - 'node_modules/**/*'
