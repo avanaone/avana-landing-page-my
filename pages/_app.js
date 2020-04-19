@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
           content="#1 Leading Social Commerce Platform in Indonesia"
         />
         <meta
-          name="descrition"
+          name="description"
           content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
         {/* Open Graph / Facebook */}
@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }) {
           property="og:description"
           content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
-        <meta property="og:image" content="/assets/images/meta-image.png" />
+        <meta property="og:image" content="/assets/images/meta-image.webp" />
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://avana.id/" />
@@ -43,11 +43,11 @@ export default function App({ Component, pageProps }) {
         />
         <meta
           property="twitter:image"
-          content="/assets/images/meta-image.png"
+          content="/assets/images/meta-image.webp"
         />
         <meta
           property="twitter:image"
-          content="/assets/images/meta-image.png"
+          content="/assets/images/meta-image.webp"
         />
         <link
           rel="apple-touch-icon"
@@ -82,6 +82,24 @@ export default function App({ Component, pageProps }) {
         <meta httpEquiv="expires" content="0" />
         <meta httpEquiv="pragma" content="no-cache" />
         <meta httpEquiv="refresh" />
+        <link
+          rel="preload"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css"
+          as="style"
+          onLoad="this.onload=null;this.rel='stylesheet'"
+        />
+        <link rel="preload" href="https://www.googletagmanager.com" />
+        <link
+          rel="preload"
+          href="https://www.google-analytics.com"
+          crossOrigin="anonymous"
+        />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link
+          rel="preconnect"
+          href="https://www.google-analytics.com"
+          crossOrigin="anonymous"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function (w, d, s, l, i) {

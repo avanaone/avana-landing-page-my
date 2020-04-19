@@ -57,7 +57,7 @@ export default function Navbar({ style }) {
         <div className="navbar-brand">
           <a className="navbar-item" href="/" title="BERANDA &middot; Avana">
             <img
-              src={require("../public/assets/images/logo.png")}
+              src={require("../public/assets/images/logo.webp")}
               alt="AVANA Logo"
               width="100"
             />
@@ -184,7 +184,7 @@ export default function Navbar({ style }) {
           >
             Close
           </button>
-          <img src={require("../public/assets/images/download.png")} alt="" />
+          <img src={require("../public/assets/images/download.webp")} alt="" />
           <div>
             <h3 className="is-size-5 modalTittle">Download e-Book Gratis</h3>
             <p>

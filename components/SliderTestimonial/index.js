@@ -37,7 +37,7 @@ export default (props) => {
       <div className="ImgFrameSlider">
         {props.testimonial.map((item, index) => (
           <img
-            src={require(`../../public/assets/images/testimonial/${item.image}`)}
+            src={require(`../../public/assets/images/testimonial/${item.image}?resize&size[]=25?webp`)}
             alt=""
             key={index}
             className={SlideItem !== index ? "img" : "img-active"}

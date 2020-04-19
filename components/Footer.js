@@ -3,12 +3,12 @@ export default function Footer() {
     <footer>
       <div className="meta">
         <img
-          src={require("../public/assets/images/logo.png")}
+          src={require("../public/assets/images/logo.webp")}
           alt="AVANA logo"
         />
         <p>
-          AVANA merupakan platform social commerce untuk mendukung penjualan
-          online dengan mengotomatisasikan website dan sosial media.
+          AVANA merupakan platform social commerce untuk membantu penjualan
+          online melalui website dan sosial media.
         </p>
         <span>
           Call Center :<br />
@@ -16,21 +16,34 @@ export default function Footer() {
         </span>
         <span>Indonesia • Singapore • Malaysia</span>
         <div className="social-icons">
-          <a href="https://www.facebook.com/avanaindonesia/" target="_blank">
+          <a
+            href="https://www.facebook.com/avanaindonesia/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="AVANA Facebook Page"
+          >
             <img
               src={require("../public/assets/images/footer/facebook-f-brands.svg")}
               alt=""
             />
           </a>
-
-          <a href="https://twitter.com/avana_id" target="_blank">
+          <a
+            href="https://twitter.com/avana_id"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="AVANA Twitter"
+          >
             <img
               src={require("../public/assets/images/footer/twitter-brands.svg")}
               alt=""
             />
           </a>
-
-          <a href="https://www.instagram.com/avana.id/" target="_blank">
+          <a
+            href="https://www.instagram.com/avana.id/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="AVANA Instagram"
+          >
             <img
               src={require("../public/assets/images/footer/instagram-brands.svg")}
               alt=""
@@ -39,6 +52,8 @@ export default function Footer() {
           <a
             href="https://www.youtube.com/channel/UCHsdeDF8cJl7C4GzoxPRk0A"
             target="_blank"
+            rel="noreferrer noopener"
+            aria-label="AVANA Youtube"
           >
             <img
               src={require("../public/assets/images/footer/youtube-brands.svg")}
@@ -76,7 +91,7 @@ export default function Footer() {
         </ul>
       </div>
       <div>
-        <h6>Berjualan dengan mudah</h6>
+        <h6>Fitur Utama</h6>
         <ul>
           {/* <li>
             <a>Facebook Store</a>

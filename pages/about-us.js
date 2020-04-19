@@ -18,15 +18,17 @@ const AboutUs = () => (
         <div>
           <div>
             <h2 className="is-size-4">
-              AVANA membantu untuk meningkatkan bisnis Anda
+              AVANA membantu untuk meningkatkan bisnis Anda!
             </h2>
             <p>
+              AVANA adalah platform social commerce untuk mendukung para pelaku
+              bisnis dengan mengoptimalkan penjualan melalui Website, Facebook,
+              Instagram, dan WhatsApp, LINE, hingga Telegram.
+              <br />
               Dengan menggunakan inovasi teknologi terbaru dan sistem yang
               terintegrasi dengan media sosial, AVANA telah membantu lebih dari
               70.000 pelaku usaha yang ingin mengoptimalkan brand dan
-              mengotomatisasi kan kemampuan bisnis secara online.<br></br>
-              <br></br> Saat ini AVANA tersebar di Malaysia, Singapore dan
-              Indonesia.
+              mengotomatisasi kan kemampuan bisnis secara online.
             </p>
           </div>
           <iframe
@@ -49,10 +51,11 @@ const AboutUs = () => (
             Saatnya untuk bergabung bersama kami dan tunjukkan kemampuan Anda.
           </p>
           <LinkButton
-            href="https://avana.id/available-roles/?lang=id"
+            href="https://www.techinasia.com/jobs/search?query=avana%20in&country_name[]=Indonesia"
             target="__blank"
             className="ava-btn btn-primary"
             title="Daftar"
+            rel="noopener noreferrer"
           >
             Lowongan Kerja
           </LinkButton>
