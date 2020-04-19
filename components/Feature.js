@@ -34,7 +34,10 @@ export default function Feature(props) {
             </div>
             <div className="feature-img">
               <img
-                src={require(`../public/assets/images/${feature.image}`)}
+                srcSet={
+                  require(`../public/assets/images/${feature.image}?resize?webp`)
+                    .srcSet
+                }
                 alt=""
               />
             </div>
