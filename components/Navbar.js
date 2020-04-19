@@ -1,15 +1,53 @@
-import React, { useState } from "react";
-import Head from "next/head";
+import React, { useState, useEffect, useRef } from "react";
+
+import { LinkButton } from "./Button";
+
+const getWidth = () => (typeof window !== "undefined" ? window.innerWidth : "");
 
 export default function Navbar({ style }) {
   const [isModal, setIsModal] = useState(false);
   const toggleModal = () => setIsModal(!isModal);
 
+  const [state, setState] = useState({
+    isActive: false,
+    dropdownActive: {
+      event: false,
+    },
+    innerWidth: 1023,
+  });
+
+  const { isActive, dropdownActive, innerWidth } = state;
+
+  const resizeRef = useRef();
+
+  useEffect(() => {
+    resizeRef.current = handleResize;
+  });
+
+  useEffect(() => {
+    const onResize = window.addEventListener("resize", () =>
+      resizeRef.current()
+    );
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
+
+  const handleResize = () =>
+    setState((s) => ({
+      ...s,
+      innerWidth: getWidth(),
+    }));
+  const toggleNavbar = () => setState((s) => ({ ...s, isActive: !s.isActive }));
+  const toggleDropdown = (k) =>
+    setState((s) => ({
+      ...s,
+      dropdownActive: { ...s.dropdownActive, [k]: !s.dropdownActive[k] },
+    }));
+
   return (
     <>
-      <Head>
-        <script src="/static/navbar.js" />
-      </Head>
       <nav
         className="navbar is-white is-fixed-top"
         role="navigation"
@@ -27,19 +65,27 @@ export default function Navbar({ style }) {
 
           <a
             role="button"
-            className="navbar-burger"
+            className={`navbar-burger ${isActive ? "is-active" : ""}`}
             data-target="navMenu"
             aria-label="menu"
             aria-expanded="false"
+            onClick={toggleNavbar}
           >
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
         </div>
-        <div className="navbar-menu" id="navMenu">
+        <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
           <div className="navbar-end">
-            <div className="navbar-item has-dropdown is-hoverable">
+            <div
+              className={`navbar-item has-dropdown 
+              ${innerWidth >= 1023 ? "is-hoverable" : ""}
+              ${
+                dropdownActive["produk"] && innerWidth < 1023 ? "is-active" : ""
+              }`}
+              onClick={() => toggleDropdown("produk")}
+            >
               <a className="navbar-link" title="Produk">
                 Produk
               </a>
@@ -47,11 +93,9 @@ export default function Navbar({ style }) {
                 <a className="navbar-item" href="/dashboard" title="Dashboard">
                   Dashboard
                 </a>
-
                 <a className="navbar-item" href="/avachat" title="AVAChat">
                   AVAChat
                 </a>
-
                 <a
                   className="navbar-item"
                   href="/reseller"
@@ -59,26 +103,30 @@ export default function Navbar({ style }) {
                 >
                   Manajemen Reseller
                 </a>
-
                 <a className="navbar-item" href="/webstore" title="Webstore">
                   Webstore
                 </a>
               </div>
             </div>
-
             <a className="navbar-item" href="/price" title="Harga">
               Harga
             </a>
-
             <a href="/promo" className="navbar-item" title="Promo">
               <span className="dot">Promo</span>
             </a>
-
             <a href="/event" className="navbar-item" title="Event">
               Event
             </a>
-
-            <div className="navbar-item has-dropdown is-hoverable">
+            <div
+              className={`navbar-item has-dropdown ${
+                innerWidth >= 1023 ? "is-hoverable" : ""
+              } ${
+                dropdownActive["pelajari"] && innerWidth < 1023
+                  ? "is-active"
+                  : ""
+              }`}
+              onClick={() => toggleDropdown("pelajari")}
+            >
               <a className="navbar-link" title="Pelajari">
                 Pelajari
               </a>
@@ -102,28 +150,26 @@ export default function Navbar({ style }) {
                 </a>
               </div>
             </div>
-
             <a href="/about-us" className="navbar-item" title="Tentang Kami">
               Tentang Kami
             </a>
-
             <div className="navbar-item">
-              <a
+              <LinkButton
                 href="https://store.avana.asia/"
                 target="__blank"
-                className="ava-btn btn-secondary"
+                className="btn-secondary"
                 title="Masuk"
               >
                 Masuk
-              </a>
-              <a
+              </LinkButton>
+              <LinkButton
                 href="https://store.avana.asia/"
                 target="__blank"
-                className="ava-btn btn-primary"
+                className="btn-primary"
                 title="Daftar"
               >
                 Daftar
-              </a>
+              </LinkButton>
             </div>
           </div>
         </div>
@@ -145,13 +191,13 @@ export default function Navbar({ style }) {
               Baca penggunaan AVANA biar gak pusing. Download juga e-Book AVANA
               lainnya!
             </p>
-            <a
+            <LinkButton
               href="/assets/files/tutorial.pdf"
-              className="ava-btn btn-primary"
+              className="btn-primary"
               download
             >
               Download Gratis
-            </a>
+            </LinkButton>
           </div>
         </div>
       </div>

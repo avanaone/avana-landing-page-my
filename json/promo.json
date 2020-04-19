@@ -1,6 +1,6 @@
 [
   {
-    "code": "PROMOCERIA",
+    "code": "1",
     "image": "/assets/images/promo/3.jpeg",
     "title": "1000 Star Sellers",
     "period": {
@@ -11,7 +11,7 @@
     "termsConditions": []
   },
   {
-    "code": "AVABIZ31",
+    "code": "2",
     "image": "/assets/images/promo/7.jpeg",
     "title": "Free Shipping and Admin Fee",
     "period": {
@@ -22,7 +22,7 @@
     "termsConditions": []
   },
   {
-    "code": "AVABIZ32",
+    "code": "3",
     "image": "/assets/images/promo/8.jpeg",
     "title": "Free Voucher Rp 100.000",
     "period": {
@@ -33,7 +33,7 @@
     "termsConditions": []
   },
   {
-    "code": "AVABIZ33",
+    "code": "4",
     "image": "/assets/images/promo/6.jpeg",
     "title": "Program AVANA Affiliate",
     "period": {

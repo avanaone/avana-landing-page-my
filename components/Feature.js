@@ -5,10 +5,12 @@ import Navbar from "./Navbar";
 import Header from "./Header";
 import Footer from "./Footer";
 
+import { LinkButton } from "./Button";
+
 const Features = import("../json/features.json");
 
 export default function Feature(props) {
-  const { id, title, className } = props;
+  const { id, title, CS, className } = props;
   const [feature, setFeature] = useState([]);
 
   Features.then((res) => setFeature(res.default[id]));
@@ -16,8 +18,7 @@ export default function Feature(props) {
   return (
     <div className="features">
       <Head>
-        <title>{`AVANA - ${title}`}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{`${title} • AVANA`}</title>
       </Head>
       <Navbar />
       <Header title={title} />
@@ -30,13 +31,6 @@ export default function Feature(props) {
             <div className="description">
               <h2 className="is-size-4">{feature.title}</h2>
               <p>{feature.description}</p>
-              {/* <a
-                href={feature.slug}
-                target="__blank"
-                className="ava-btn btn-primary"
-              >
-                Saya Tertarik
-              </a> */}
             </div>
             <div className="feature-img">
               <img
@@ -46,23 +40,21 @@ export default function Feature(props) {
             </div>
           </section>
         ))}
-        <section id="trial">
+        <section className="trial">
           <h2 className="is-size-4">
-            {title == "Manajemen Reseller"
-              ? "Tertarik dengan Manajemen Reseller?"
-              : title == "AVAChat"
-              ? "Tertarik dengan AVAChat?"
-              : " Mulai uji coba gratis 14 hari Anda"}
+            {CS ? `Tertarik dengan ${title}?` : "Coba Sekarang GRATIS 14 Hari"}
           </h2>
-          <a
-            href="https://store.avana.asia/"
+          <LinkButton
+            href={
+              CS
+                ? `https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk ${title}`
+                : "https://store.avana.asia/"
+            }
             target="__blank"
-            className="ava-btn btn-primary"
+            className="btn-primary"
           >
-            {title == "Manajemen Reseller" || title == "AVAChat"
-              ? "Hubungi kami"
-              : "Coba Sekarang GRATIS 14 Hari"}
-          </a>
+            {CS ? `Hubungi Kami` : "Coba Gratis"}
+          </LinkButton>
         </section>
       </main>
       <Footer />

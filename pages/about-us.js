@@ -1,9 +1,11 @@
 import Head from "next/head";
 
-import styles from "./scss/AboutUs.module.scss";
-
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+
+import { LinkButton } from "../components/Button";
+
+import styles from "./scss/AboutUs.module.scss";
 
 const AboutUs = () => (
   <div className={styles.AboutUs}>
@@ -18,7 +20,7 @@ const AboutUs = () => (
             <h2 className="is-size-4">
               AVANA membantu untuk meningkatkan bisnis Anda
             </h2>
-            <p style={{ marginTop: "10px" }}>
+            <p>
               Dengan menggunakan inovasi teknologi terbaru dan sistem yang
               terintegrasi dengan media sosial, AVANA telah membantu lebih dari
               70.000 pelaku usaha yang ingin mengoptimalkan brand dan
@@ -34,7 +36,6 @@ const AboutUs = () => (
             allowFullScreen
           ></iframe>
         </div>
-
         <img
           src={require("../public/assets/images/about-us/channels.png")}
           alt="Channels"
@@ -42,19 +43,19 @@ const AboutUs = () => (
         />
       </section>
       <section id="section-2">
-        <div className="about-us-Text">
+        <div>
           <h2 className="is-size-4">Berkarir dengan AVANA</h2>
           <p>
             Saatnya untuk bergabung bersama kami dan tunjukkan kemampuan Anda.
           </p>
-          <a
+          <LinkButton
             href="https://avana.id/available-roles/?lang=id"
             target="__blank"
             className="ava-btn btn-primary"
             title="Daftar"
           >
             Lowongan Kerja
-          </a>
+          </LinkButton>
         </div>
         <img
           src={require("../public/assets/images/about-us/team.png")}

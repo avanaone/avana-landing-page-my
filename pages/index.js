@@ -1,65 +1,48 @@
 import React, { useState, useEffect } from "react";
-
 import Head from "next/head";
-
-import styles from "./scss/Home.module.scss";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-import Slider from "../components/Slider/";
+import SliderTestimonial from "../components/SliderTestimonial";
+import Slider from "../components/Slider";
+import { LinkButton } from "../components/Button";
+
+import styles from "./scss/Home.module.scss";
 
 import Testimonial from "../json/testimonal.json";
 
 const Home = () => {
-  const [data, setData] = useState({
-    dashboard: {
-      current: 1,
-    },
-    avachat: {
-      current: 1,
-    },
-    reseller: {
-      current: 1,
-    },
-    webstore: {
-      current: 1,
-    },
+  const [state, setState] = useState({
+    dashboard: 0,
+    avachat: 0,
+    reseller: 0,
+    webstore: 0,
   });
 
+  const { dashboard, avachat, reseller, webstore } = state;
   const [navbarBg, setNavbarBg] = useState("#f4f7f9");
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setData({
-        dashboard: {
-          current: data.dashboard.current < 3 ? data.dashboard.current + 1 : 1,
-        },
-        avachat: {
-          current: data.avachat.current < 3 ? data.avachat.current + 1 : 1,
-        },
-        reseller: {
-          current: data.reseller.current < 3 ? data.reseller.current + 1 : 1,
-        },
-        webstore: {
-          current: data.webstore.current < 3 ? data.webstore.current + 1 : 1,
-        },
-      });
-    }, 5000);
-
     window.addEventListener("scroll", handleNavbar);
 
     return () => {
-      clearInterval(id);
       window.removeEventListener("scroll", handleNavbar);
     };
-  }, [data]);
+  }, []);
 
-  const handleSlider = (id, step) =>
-    setData({ ...data, [id]: { ...data[id], current: step } });
+  const handleSlider = (id, idx) => {
+    setState((s) => ({ ...s, [id]: idx }));
+  };
+
+  const callbackSlider = ({ id, activeSlide }) =>
+    setState((s) => ({
+      ...s,
+      [id]: activeSlide,
+    }));
 
   const handleNavbar = (e) => {
-    window.scrollY > 0 ? setNavbarBg("#fff") : setNavbarBg("#f4f7f9");
+    window.scrollY > 10 ? setNavbarBg("#fff") : setNavbarBg("#f4f7f9");
   };
 
   return (
@@ -72,8 +55,8 @@ const Home = () => {
           content="#1 Leading Social Commerce Platform in Indonesia"
         />
         <meta
-          name="description"
-          content=" AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
+          name="descrition"
+          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
@@ -84,7 +67,7 @@ const Home = () => {
         />
         <meta
           property="og:description"
-          content=" AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
+          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
         <meta property="og:image" content="/assets/images/meta-image.png" />
         {/* Twitter */}
@@ -96,33 +79,31 @@ const Home = () => {
         />
         <meta
           property="twitter:description"
-          content=" AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
+          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
         <meta
           property="twitter:image"
           content="/assets/images/meta-image.png"
         />
       </Head>
-
       <Navbar style={{ backgroundColor: navbarBg }} />
-
       <header>
         <h1 className="is-size-3">
           Satu Dashboard Untuk Mengelola Semua Penjualan Sosial Mediamu
         </h1>
         <p>
-          Toko Online • Integrasi chat sosial media • Auto Reply • Manajemen
+          Toko Online • Integrasi Chat Sosial Media • Auto Reply • Manajemen
           Reseller
         </p>
-        <a
+        <LinkButton
           href="https://store.avana.asia/"
           target="__blank"
           className="ava-btn btn-primary"
         >
           Coba Gratis
-        </a>
+        </LinkButton>
         <div className="channels" />
-        <div className="bg-hero" />
+        <img src={require("public/assets/images/hero.png")} />
       </header>
       <main>
         <section className="feature">
@@ -136,52 +117,58 @@ const Home = () => {
             </p>
             <ul>
               <li
-                className={data.dashboard.current === 1 ? "active" : ""}
-                onClick={() => handleSlider("dashboard", 1)}
+                className={dashboard === 0 ? "active" : ""}
+                onClick={() => handleSlider("dashboard", 0)}
               >
                 Manajemen Pesanan
               </li>
               <li
-                className={data.dashboard.current === 2 ? "active" : ""}
-                onClick={() => handleSlider("dashboard", 2)}
+                className={dashboard === 1 ? "active" : ""}
+                onClick={() => handleSlider("dashboard", 1)}
               >
                 Manajemen Produk
               </li>
               <li
-                className={data.dashboard.current === 3 ? "active" : ""}
-                onClick={() => handleSlider("dashboard", 3)}
+                className={dashboard === 2 ? "active" : ""}
+                onClick={() => handleSlider("dashboard", 2)}
               >
                 Balas Pesan & Komen Otomatis
               </li>
             </ul>
             <div className="ava-btn-group">
-              <a
+              <LinkButton
                 href="https://store.avana.asia/"
                 target="__blank"
-                className="ava-btn btn-primary"
+                className="btn-primary"
               >
                 Saya Tertarik
-              </a>
-              <a href="/dashboard" className="ava-btn btn-secondary">
+              </LinkButton>
+              <LinkButton href="/dashboard" className="btn-secondary">
                 Lihat Selengkapnya
-              </a>
+              </LinkButton>
             </div>
           </div>
-          <div className="feature-img">
-            <img
-              className={data.dashboard.current === 1 ? "active" : ""}
-              src={require("../public/assets/images/dashboard/manajemen-order.png")}
-              alt=""
-            />
-            <img
-              className={data.dashboard.current === 2 ? "active" : ""}
-              src={require("../public/assets/images/dashboard/manajemen-produk.png")}
-              alt=""
-            />
-            <img
-              className={data.dashboard.current === 3 ? "active" : ""}
-              src={require("../public/assets/images/dashboard/auto-reply.png")}
-              alt=""
+          <div className="slider-container">
+            <Slider
+              id="dashboard"
+              slides={[
+                <img
+                  src={require("../public/assets/images/dashboard/manajemen-order.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/dashboard/manajemen-produk.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/dashboard/auto-reply.png")}
+                  alt=""
+                />,
+              ]}
+              currentSlide={dashboard}
+              hasDots
+              autoPlay
+              callback={callbackSlider}
             />
           </div>
         </section>
@@ -197,52 +184,58 @@ const Home = () => {
             </p>
             <ul>
               <li
-                className={data.avachat.current === 1 ? "active" : ""}
-                onClick={() => handleSlider("avachat", 1)}
+                className={avachat === 0 ? "active" : ""}
+                onClick={() => handleSlider("avachat", 0)}
               >
                 Kirim Produk & Invois
               </li>
               <li
-                className={data.avachat.current === 2 ? "active" : ""}
-                onClick={() => handleSlider("avachat", 2)}
+                className={avachat === 1 ? "active" : ""}
+                onClick={() => handleSlider("avachat", 1)}
               >
                 Quick Reply
               </li>
               <li
-                className={data.avachat.current === 3 ? "active" : ""}
-                onClick={() => handleSlider("avachat", 3)}
+                className={avachat === 2 ? "active" : ""}
+                onClick={() => handleSlider("avachat", 2)}
               >
                 Info Pengiriman Barang
               </li>
             </ul>
             <div className="ava-btn-group">
-              <a
-                href="https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+              <LinkButton
+                href="https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk AVAChat"
                 target="__blank"
-                className="ava-btn btn-primary"
+                className="btn-primary"
               >
                 Saya Tertarik
-              </a>
-              <a href="/avachat" className="ava-btn btn-secondary">
+              </LinkButton>
+              <LinkButton href="/avachat" className="btn-secondary">
                 Lihat Selengkapnya
-              </a>
+              </LinkButton>
             </div>
           </div>
-          <div className="feature-img">
-            <img
-              className={data.avachat.current === 1 ? "active" : ""}
-              src={require("../public/assets/images/avachat/send-product-info.png")}
-              alt=""
-            />
-            <img
-              className={data.avachat.current === 2 ? "active" : ""}
-              src={require("../public/assets/images/avachat/quick-reply.png")}
-              alt=""
-            />
-            <img
-              className={data.avachat.current === 3 ? "active" : ""}
-              src={require("../public/assets/images/avachat/send-shipping-info.png")}
-              alt=""
+          <div className="slider-container">
+            <Slider
+              id="avachat"
+              slides={[
+                <img
+                  src={require("../public/assets/images/avachat/send-product-info.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/avachat/quick-reply.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/avachat/send-shipping-info.png")}
+                  alt=""
+                />,
+              ]}
+              currentSlide={avachat}
+              hasDots
+              autoPlay
+              callback={callbackSlider}
             />
           </div>
         </section>
@@ -258,52 +251,58 @@ const Home = () => {
             </p>
             <ul>
               <li
-                className={data.reseller.current === 1 ? "active" : ""}
-                onClick={() => handleSlider("reseller", 1)}
+                className={reseller === 0 ? "active" : ""}
+                onClick={() => handleSlider("reseller", 0)}
               >
                 Manajemen Database Reseller
               </li>
               <li
-                className={data.reseller.current === 2 ? "active" : ""}
-                onClick={() => handleSlider("reseller", 2)}
+                className={reseller === 1 ? "active" : ""}
+                onClick={() => handleSlider("reseller", 1)}
               >
                 Lihat Performa Reseller
               </li>
               <li
-                className={data.reseller.current === 3 ? "active" : ""}
-                onClick={() => handleSlider("reseller", 3)}
+                className={reseller === 2 ? "active" : ""}
+                onClick={() => handleSlider("reseller", 2)}
               >
                 Atur Komisi & Buat Level Reseller
               </li>
             </ul>
             <div className="ava-btn-group">
-              <a
-                href="https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk Manajemen Reseller"
+              <LinkButton
+                href="https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk Manajemen Reseller"
                 target="__blank"
-                className="ava-btn btn-primary"
+                className="btn-primary"
               >
                 Saya Tertarik
-              </a>
-              <a href="/reseller" className="ava-btn btn-secondary">
+              </LinkButton>
+              <LinkButton href="/reseller" className="btn-secondary">
                 Lihat Selengkapnya
-              </a>
+              </LinkButton>
             </div>
           </div>
-          <div className="feature-img">
-            <img
-              className={data.reseller.current === 1 ? "active" : ""}
-              src={require("../public/assets/images/reseller/manajemen-database-reseller.png")}
-              alt=""
-            />
-            <img
-              className={data.reseller.current === 2 ? "active" : ""}
-              src={require("../public/assets/images/reseller/lihat-performa-reseller.png")}
-              alt=""
-            />
-            <img
-              className={data.reseller.current === 3 ? "active" : ""}
-              src={require("../public/assets/images/reseller/atur-komisi-reseller.png")}
-              alt=""
+          <div className="slider-container">
+            <Slider
+              id="reseller"
+              slides={[
+                <img
+                  src={require("../public/assets/images/reseller/manajemen-database-reseller.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/reseller/lihat-performa-reseller.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/reseller/atur-komisi-reseller.png")}
+                  alt=""
+                />,
+              ]}
+              currentSlide={reseller}
+              hasDots
+              autoPlay
+              callback={callbackSlider}
             />
           </div>
         </section>
@@ -319,59 +318,65 @@ const Home = () => {
             </p>
             <ul>
               <li
-                className={data.webstore.current === 1 ? "active" : ""}
-                onClick={() => handleSlider("webstore", 1)}
+                className={webstore === 0 ? "active" : ""}
+                onClick={() => handleSlider("webstore", 0)}
               >
                 Dukungan Payment Gateway
               </li>
               <li
-                className={data.webstore.current === 2 ? "active" : ""}
-                onClick={() => handleSlider("webstore", 2)}
+                className={webstore === 1 ? "active" : ""}
+                onClick={() => handleSlider("webstore", 1)}
               >
                 Berbagai Macam Pilihan Tema
               </li>
               <li
-                className={data.webstore.current === 3 ? "active" : ""}
-                onClick={() => handleSlider("webstore", 3)}
+                className={webstore === 2 ? "active" : ""}
+                onClick={() => handleSlider("webstore", 2)}
               >
                 Order Melalui WhatsApp
               </li>
             </ul>
             <div className="ava-btn-group">
-              <a
+              <LinkButton
                 href="https://store.avana.asia/"
                 target="__blank"
-                className="ava-btn btn-primary"
+                className="btn-primary"
               >
                 Saya Tertarik
-              </a>
-              <a href="/webstore" className="ava-btn btn-secondary">
+              </LinkButton>
+              <LinkButton href="/webstore" className="btn-secondary">
                 Lihat Selengkapnya
-              </a>
+              </LinkButton>
             </div>
           </div>
-          <div className="feature-img">
-            <img
-              className={data.webstore.current === 1 ? "active" : ""}
-              src={require("../public/assets/images/webstore/payment-gateway.png")}
-              alt=""
-            />
-            <img
-              className={data.webstore.current === 2 ? "active" : ""}
-              src={require("../public/assets/images/webstore/theme.png")}
-              alt=""
-            />
-            <img
-              className={data.webstore.current === 3 ? "active" : ""}
-              src={require("../public/assets/images/webstore/order-via-whatsapp.png")}
-              alt=""
+          <div className="slider-container">
+            <Slider
+              id="webstore"
+              slides={[
+                <img
+                  src={require("../public/assets/images/webstore/payment-gateway.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/webstore/theme.png")}
+                  alt=""
+                />,
+                <img
+                  src={require("../public/assets/images/webstore/order-via-whatsapp.png")}
+                  alt=""
+                />,
+              ]}
+              currentSlide={webstore}
+              hasDots
+              autoPlay
+              callback={callbackSlider}
             />
           </div>
         </section>
         <section className="feature">
           <div className="description">
             <h2 className="is-size-4">
-              Miliki <span className="hl">toko facebook</span> dengan fitur
+              Miliki <span className="hl">Toko Facebook</span> dengan fitur
               terbaik
             </h2>
             <p>
@@ -380,13 +385,13 @@ const Home = () => {
             </p>
             <ul />
             <div className="ava-btn-group">
-              <a
-                href="https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk Facebook Store"
+              <LinkButton
+                href="https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk Facebook Store"
                 target="__blank"
-                className="ava-btn btn-primary"
+                className="btn-primary"
               >
                 Saya Tertarik
-              </a>
+              </LinkButton>
             </div>
           </div>
           <div className="feature-img">
@@ -417,32 +422,19 @@ const Home = () => {
           <h2 className="is-size-4">
             Apa kata mereka yang sudah bergabung dengan AVANA?
           </h2>
-
-          {/* <q>
-            Toko online itu bukan hanya sekedar wadah untuk memasarkan barang
-            tapi sebagai alat untuk membangun brand juga. Bersama AVANA, saya
-            bisa memperkenalkan dan membesarkan nama Amity.
-          </q>
-          <span className="name">Amity Indonesia</span>
-
-          <img
-            src={require("../public/assets/images/testimonial/amity.png")}
-            alt=""
-          /> */}
-          <Slider testimonial={Testimonial} />
+          <SliderTestimonial testimonial={Testimonial} />
         </section>
-        <section id="trial">
+        <section className="trial">
           <h2 className="is-size-4">Coba Sekarang GRATIS 14 Hari</h2>
-          <a
+          <LinkButton
             href="https://store.avana.asia/"
             target="__blank"
             className="ava-btn btn-primary"
           >
             Coba Gratis
-          </a>
+          </LinkButton>
         </section>
       </main>
-
       <Footer />
     </div>
   );

@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 
-import styles from "./scss/PackagesDetail.module.scss";
-
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
+import { LinkButton } from "../components/Button";
+import AdditionalService from "../components/AdditionalService";
+
+import styles from "./scss/PackagesDetail.module.scss";
 
 import { formatCurrency } from "../utils";
 
@@ -15,18 +18,12 @@ const Price = () => {
   const [period, setPeriod] = useState("yearly");
   const [packages, setPackages] = useState([]);
   const [packagesDetail, setPackagesDetail] = useState([]);
-  const [additionalService, setAdditionalServices] = useState([]);
-  const [isModal, setIsModal] = useState(false);
 
-  getPackages.then((res) => {
-    setPackages(res.default.id.packages);
-    setAdditionalServices(res.default.id.additional_services);
-  });
+  getPackages.then((res) => setPackages(res.default.id.packages));
 
   getPackagesDetail.then((res) => setPackagesDetail(res.default.id.features));
 
   const handleFilterPeriod = (period) => setPeriod(period);
-  const toggleModal = () => setIsModal(!isModal);
 
   return (
     <div className={styles.PackagesDetail}>
@@ -61,13 +58,7 @@ const Price = () => {
                 1 Tahun
               </li>
             </ul>
-            <button
-              type="button"
-              className="ava-btn btn-primary"
-              onClick={toggleModal}
-            >
-              Additional Service
-            </button>
+            <AdditionalService />
           </div>
           <div className="packages-detail">
             <table>
@@ -124,8 +115,8 @@ const Price = () => {
                 {Object.entries(packagesDetail).map(([key, value], idx) => (
                   <tr key={idx}>
                     <td>{key}</td>
-                    {Object.values(value[period]).map((pkg) => (
-                      <td>
+                    {Object.values(value[period]).map((pkg, idx) => (
+                      <td key={idx}>
                         {pkg ? (
                           <span
                             className="material-icons"
@@ -152,10 +143,10 @@ const Price = () => {
                     .filter((pck) => pck.period === period)
                     .map((pkg) => (
                       <td key={pkg.code}>
-                        <a
+                        <LinkButton
                           href={`https://payment.avana.asia/pay?plan=${pkg.slug}`}
                           className="ava-btn btn-primary"
-                        >{`Pilih ${pkg.name}`}</a>
+                        >{`Pilih ${pkg.name}`}</LinkButton>
                       </td>
                     ))}
                 </tr>
@@ -163,36 +154,6 @@ const Price = () => {
             </table>
           </div>
         </section>
-        <div className={`modal ${isModal ? "is-active" : ""}`}>
-          <div className="modal-background" />
-          <div className="modal-content">
-            <button
-              className="modal-close is-large"
-              aria-label="close"
-              onClick={toggleModal}
-            >
-              Close
-            </button>
-            <h2>Additional Service</h2>
-            <table>
-              <tbody>
-                {additionalService.map((service, idx) => (
-                  <tr key={idx}>
-                    <td>{service.name}</td>
-                    <td>
-                      <ul>
-                        {service.services.map((item, idx) => (
-                          <li key={idx}>{item}</li>
-                        ))}
-                      </ul>
-                    </td>
-                    <td>{service.price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
       </main>
       <Footer />
     </div>
