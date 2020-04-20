@@ -61,16 +61,7 @@ const nextConfig = {
 
 module.exports = withPlugins(
   [
-    [
-      optimizedImages,
-      {
-        optimizeImagesInDev: true,
-        webp: {
-          preset: "default",
-          quality: 65,
-        },
-      },
-    ],
+    [optimizedImages],
     [
       withStyles,
       {

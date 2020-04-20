@@ -10,13 +10,9 @@ import EventCard from "../../components/EventCard";
 
 import "./EventDetail.scss";
 
-const getEvents = import("../../json/event.json");
-
-export default function Event() {
+export default function Event({ data }) {
   const router = useRouter();
-  const [events, setEvents] = useState([]);
-
-  getEvents.then((res) => setEvents(res.default));
+  const [events, setEvents] = useState(data);
 
   const event = events.find((x) => x.id === router.query.id);
   const otherEvents = events
@@ -53,9 +49,9 @@ export default function Event() {
   );
 }
 
-// Event.getInitialProps = async () => {
-//   const res = await import("../../json/event.json");
-//   const data = res.default;
+Event.getInitialProps = async () => {
+  const res = await import("../../json/event.json");
+  const data = res.default;
 
-//   return { data };
-// };
+  return { data };
+};

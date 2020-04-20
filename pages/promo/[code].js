@@ -10,13 +10,9 @@ import PromoCard from "../../components/PromoCard";
 
 import "./PromoDetail.scss";
 
-const getPromos = import("../../json/promo.json");
-
-export default function PromoDetail() {
+export default function PromoDetail({ data }) {
   const router = useRouter();
-  const [promos, setPromos] = useState([]);
-
-  getPromos.then((res) => setPromos(res.default));
+  const [promos, setPromos] = useState(data);
 
   const promo = promos.find((x) => x.code === router.query.code);
   const otherPromo = promos
@@ -58,9 +54,9 @@ export default function PromoDetail() {
   );
 }
 
-// PromoDetail.getInitialProps = async () => {
-//   const res = await import("../../json/promo.json");
-//   const data = res.default;
+PromoDetail.getInitialProps = async () => {
+  const res = await import("../../json/promo.json");
+  const data = res.default;
 
-//   return { data };
-// };
+  return { data };
+};
