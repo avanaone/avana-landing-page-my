@@ -78,30 +78,35 @@ export default function App({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <meta httpEquiv="cache-control" content="no-cache" />
+        <meta httpEquiv="cache-control" content="max-age=2592000" />
         <meta httpEquiv="expires" content="0" />
         <meta httpEquiv="pragma" content="no-cache" />
         <meta httpEquiv="refresh" />
         <link
-          rel="preload"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css"
-          as="style"
-          // onLoad="this.onload=null;this.rel='stylesheet'"
           rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css"
+          async
         />
-        <link rel="preload" href="https://www.googletagmanager.com" />
+        {/* <link
+          rel="preload"
+          href="https://www.googletagmanager.com"
+          as="script"
+        />
         <link
           rel="preload"
           href="https://www.google-analytics.com"
+          as="script"
           crossOrigin="anonymous"
-        />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        /> */}
+        <link rel="preload" href="https://fonts.gstatic.com" as="font" />
+        {/* <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link
           rel="preconnect"
           href="https://www.google-analytics.com"
           crossOrigin="anonymous"
-        />
-        <script
+        /> */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `(function (w, d, s, l, i) {
             w[l] = w[l] || [];
@@ -114,7 +119,7 @@ export default function App({ Component, pageProps }) {
             f.parentNode.insertBefore(j, f);
           })(window, document, "script", "dataLayer", "GTM-WHCB6K9");`,
           }}
-        />
+        /> */}
       </Head>
       <Component {...pageProps} />
     </>
