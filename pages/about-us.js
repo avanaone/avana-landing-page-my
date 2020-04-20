@@ -39,7 +39,7 @@ const AboutUs = () => (
           ></iframe>
         </div>
         <img
-          src={require("../public/assets/images/about-us/channels.png")}
+          src={require("../public/assets/images/about-us/channels.png?resize?webp")}
           alt="Channels"
           className="channels"
         />
@@ -61,7 +61,7 @@ const AboutUs = () => (
           </LinkButton>
         </div>
         <img
-          src={require("../public/assets/images/about-us/team.png")}
+          src={require("../public/assets/images/about-us/team.png?resize?webp")}
           alt="AVANA Team"
         />
       </section>

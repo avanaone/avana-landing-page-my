@@ -66,7 +66,7 @@ const Price = () => {
                 <tr>
                   <th>
                     <img
-                      src={require("public/assets/images/ava-cashier.png")}
+                      src={require("public/assets/images/ava-cashier.png?resize&size=300?webp")}
                       alt="AVA Cashier"
                     />
                   </th>
