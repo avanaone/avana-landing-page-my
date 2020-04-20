@@ -94,6 +94,12 @@ const Price = () => {
                     <li className="has-text-weight-light">Webstore</li>
                     <li className="has-text-weight-light">Payment gateway</li>
                     <li className="has-text-weight-light">Manajemen order</li>
+                    {pkg.period !== "yearly" && (
+                      <>
+                        <li className="has-text-weight-light">Toko Facebook</li>
+                        <li className="has-text-weight-light">Kode Promo</li>
+                      </>
+                    )}
                   </ul>
                   <LinkButton
                     href={`https://payment.avana.asia/pay?plan=${pkg.slug}`}
