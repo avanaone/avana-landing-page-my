@@ -13,12 +13,12 @@ const Slider = (props) => {
     slides,
     currentSlide,
     width = "100%",
-    transition,
+    transition = ".3",
     onlyImage,
     hasArrow,
     hasDots,
-    autoPlay,
-    callback,
+    autoPlay = false,
+    callback = false,
   } = props;
 
   const [state, setState] = useState({
@@ -36,10 +36,10 @@ const Slider = (props) => {
   useEffect(() => {
     autoPlayRef.current = nextSlide;
 
-    // if (activeSlide !== currentSlide) {
-    jumpSlide(currentSlide);
-    // }
-  }, [id, activeSlide, currentSlide]);
+    if (callback) {
+      jumpSlide(currentSlide);
+    }
+  }, [currentSlide]);
 
   useEffect(() => {
     let interval;
@@ -58,10 +58,12 @@ const Slider = (props) => {
   }, [id, slides, activeSlide, slidesContrast, onlyImage, autoPlay, callback]);
 
   const jumpSlide = (idx) => {
-    callback({
-      id,
-      activeSlide: idx,
-    });
+    if (callback) {
+      callback({
+        id,
+        activeSlide: idx,
+      });
+    }
 
     return setState({
       ...state,
@@ -71,10 +73,12 @@ const Slider = (props) => {
   };
 
   const nextSlide = () => {
-    callback({
-      id,
-      activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
-    });
+    if (callback) {
+      callback({
+        id,
+        activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
+      });
+    }
 
     return setState({
       ...state,

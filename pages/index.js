@@ -4,13 +4,13 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-import SliderTestimonial from "../components/SliderTestimonial";
-import Slider from "../components/Slider";
 import { LinkButton } from "../components/Button";
+import Slider from "../components/Slider";
+import SliderTestimonial from "../components/SliderTestimonial";
 
 import styles from "./scss/Home.module.scss";
 
-import Testimonial from "../json/testimonial.json";
+import getTestimonials from "../json/testimonial.json";
 
 const Home = () => {
   const [state, setState] = useState({
@@ -474,7 +474,7 @@ const Home = () => {
           <h2 className="is-size-4">
             Apa kata mereka yang sudah bergabung dengan AVANA?
           </h2>
-          <SliderTestimonial testimonial={Testimonial} />
+          <SliderTestimonial testimonials={getTestimonials} />
         </section>
         <section className="trial">
           <h2 className="is-size-4">Coba Sekarang GRATIS 14 Hari</h2>

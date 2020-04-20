@@ -24,7 +24,8 @@ const AboutUs = () => (
               AVANA adalah platform social commerce untuk mendukung para pelaku
               bisnis dengan mengoptimalkan penjualan melalui Website, Facebook,
               Instagram, dan WhatsApp, LINE, hingga Telegram.
-              <br />
+            </p>
+            <p>
               Dengan menggunakan inovasi teknologi terbaru dan sistem yang
               terintegrasi dengan media sosial, AVANA telah membantu lebih dari
               70.000 pelaku usaha yang ingin mengoptimalkan brand dan
