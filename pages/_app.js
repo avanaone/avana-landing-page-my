@@ -87,7 +87,7 @@ export default function App({ Component, pageProps }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css"
           async
         />
-        {/* <link
+        <link
           rel="preload"
           href="https://www.googletagmanager.com"
           as="script"
@@ -97,14 +97,24 @@ export default function App({ Component, pageProps }) {
           href="https://www.google-analytics.com"
           as="script"
           crossOrigin="anonymous"
-        /> */}
+        />
         <link rel="preload" href="https://fonts.gstatic.com" as="font" />
-        {/* <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link
+          rel="preload"
+          href="https://stats.g.doubleclick.net"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://stats.g.doubleclick.net"
+          crossOrigin="anonymous"
+        />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link
           rel="preconnect"
           href="https://www.google-analytics.com"
           crossOrigin="anonymous"
-        /> */}
+        />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         {/* <script
           dangerouslySetInnerHTML={{
