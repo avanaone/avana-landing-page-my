@@ -5,7 +5,7 @@ import parser from "html-react-parser";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-
+import ContainerAnalytic from "../../components/AnalyticContainer";
 import PromoCard from "../../components/PromoCard";
 
 import "./PromoDetail.scss";
@@ -22,7 +22,7 @@ export default function PromoDetail({ data }) {
   return (
     <div className="PromoDetail">
       {promo && (
-        <>
+        <ContainerAnalytic>
           <Navbar />
           <Header title="Promo" />
           <main>
@@ -48,7 +48,7 @@ export default function PromoDetail({ data }) {
             </section>
           </main>
           <Footer />
-        </>
+        </ContainerAnalytic>
       )}
     </div>
   );
