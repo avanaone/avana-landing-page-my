@@ -23,6 +23,7 @@ export default ({ testimonials }) => {
         {testimonials.map((testimonial, idx) => (
           <img
             key={idx}
+            alt=""
             srcSet={
               require(`../../public/assets/images/testimonial/${testimonial.image}?resize&size=50?webp`)
                 .srcSet
