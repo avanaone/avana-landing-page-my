@@ -35,15 +35,11 @@ export default function PromoCard({ promo }) {
             {promo.period.start && promo.period.end ? (
               <>
                 {promo.period.start !== promo.period.end
-                  ? `${dayjs(promo.period.start, "DD/MM/YYYY").format(
-                      "DD MMM"
-                    )} - ${dayjs(
-                      new Date(dateEnd[2], dateEnd[1], dateEnd[0]),
-                      "DD/MM/YYYY"
+                  ? `${dayjs(promo.period.start).format("DD MMM")} - ${dayjs(
+                      // new Date(dateEnd[2], dateEnd[1], dateEnd[0]
+                      promo.period.end
                     ).format("DD MMM YYYY")}`
-                  : `${dayjs(promo.period.start, "DD/MM/YYYY").format(
-                      "DD MMMM YYYY"
-                    )}`}
+                  : `${dayjs(promo.period.start).format("DD MMMM YYYY")}`}
               </>
             ) : (
               "Lifetime"

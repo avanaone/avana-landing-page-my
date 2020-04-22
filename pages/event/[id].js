@@ -5,6 +5,7 @@ import parser from "html-react-parser";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import ContainerAnalytic from "../../components/AnalyticContainer";
 
 import EventCard from "../../components/EventCard";
 
@@ -22,7 +23,7 @@ export default function Event({ data }) {
   return (
     <div className="EventDetail">
       {event && (
-        <>
+        <ContainerAnalytic>
           <Navbar />
           <Header title="Event" />
           <main>
@@ -43,7 +44,7 @@ export default function Event({ data }) {
             </section>
           </main>
           <Footer />
-        </>
+        </ContainerAnalytic>
       )}
     </div>
   );

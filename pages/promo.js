@@ -4,6 +4,7 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ContainerAnalytic from "../components/AnalyticContainer";
 
 import PromoCard from "../components/PromoCard";
 
@@ -17,21 +18,23 @@ const Promo = () => {
   getPromo.then((res) => setPromo(res.default));
 
   return (
-    <div className={styles.Promo}>
-      <Head>
-        <title>Promo • AVANA</title>
-      </Head>
-      <Navbar />
-      <Header title="Promo" />
-      <main>
-        <section>
-          {promo.map((promo) => (
-            <PromoCard key={promo.code} promo={promo} />
-          ))}
-        </section>
-      </main>
-      <Footer />
-    </div>
+    <ContainerAnalytic>
+      <div className={styles.Promo}>
+        <Head>
+          <title>Promo • AVANA</title>
+        </Head>
+        <Navbar />
+        <Header title="Promo" />
+        <main>
+          <section>
+            {promo.map((promo) => (
+              <PromoCard key={promo.code} promo={promo} />
+            ))}
+          </section>
+        </main>
+        <Footer />
+      </div>
+    </ContainerAnalytic>
   );
 };
 
