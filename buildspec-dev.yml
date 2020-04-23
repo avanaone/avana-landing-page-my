@@ -15,8 +15,8 @@ phases:
       - echo "building..."
   post_build:
     commands:
-      - aws s3 sync --delete ./out/ "s3://www.avana.id" --cache-control max-age=31536000 --expires 31536000
-      - aws cloudfront create-invalidation --distribution-id EL2E3BOU4C4D2 --paths "/*"
+      - aws s3 sync --delete ./out/ "s3://landing.avana.link" --cache-control max-age=31536000 --expires 31536000
+      - aws cloudfront create-invalidation --distribution-id E2D7D32WNX2005 --paths "/*"
 cache:
   paths:
     - "node_modules/**/*"
