@@ -75,7 +75,7 @@ const Home = () => {
           />
           <meta
             property="og:image"
-            content="/assets/images/meta-image.png?resize0?webp"
+            content="/assets/images/meta-image.png?resize?webp"
           />
           {/* Twitter */}
           <meta property="twitter:card" content="summary_large_image" />
@@ -90,7 +90,7 @@ const Home = () => {
           />
           <meta
             property="twitter:image"
-            content="/assets/images/meta-image.png?resize0?webp"
+            content="/assets/images/meta-image.png?resize?webp"
           />
         </Head>
         <Navbar style={{ backgroundColor: navbarBg }} />
