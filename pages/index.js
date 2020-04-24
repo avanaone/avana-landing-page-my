@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Head from "next/head";
 
 import Navbar from "../components/Navbar";
@@ -35,11 +35,12 @@ const Home = () => {
     setState((s) => ({ ...s, [id]: idx }));
   };
 
-  const callbackSlider = ({ id, activeSlide }) =>
+  const callbackSlider = ({ id, activeSlide }) => {
     setState((s) => ({
       ...s,
       [id]: activeSlide,
     }));
+  };
 
   const handleNavbar = (e) => {
     window.scrollY > 10 ? setNavbarBg("#fff") : setNavbarBg("#f4f7f9");
