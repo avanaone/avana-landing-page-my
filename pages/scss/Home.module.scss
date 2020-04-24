@@ -63,7 +63,7 @@
       min-height: 125px;
       width: 75%;
       max-width: 50em;
-      min-width: 325px;
+      min-width: 300px;
     }
   }
 
@@ -93,6 +93,7 @@
           width: 5vw;
           background-color: #42c552;
           border-radius: 10vw 0 0 10vw;
+          z-index: -1;
         }
       }
 
@@ -218,7 +219,7 @@
 
         h2 {
           width: 75vw;
-          min-width: 300px;
+          min-width: 275px;
         }
 
         > div {
@@ -259,7 +260,7 @@
       &#testimonial {
         h2 {
           width: 50vw;
-          min-width: 300px;
+          min-width: 275px;
         }
 
         .slider {
@@ -273,7 +274,7 @@
             display: block;
 
             width: 55vw;
-            min-width: 300px;
+            min-width: 275px;
             max-width: 750px;
             margin: 1.5em auto;
             line-height: 1.75em;
@@ -310,9 +311,7 @@
       }
 
       &.trial {
-        h2 {
-          z-index: 1;
-        }
+        z-index: 0;
       }
     }
   }

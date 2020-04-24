@@ -18,35 +18,34 @@ const Slider = (props) => {
     hasArrow,
     hasDots,
     autoPlay = false,
-    callback = false,
+    callback,
   } = props;
 
   const [state, setState] = useState({
-    _slides: slides,
     activeSlide: currentSlide,
     translate: 0,
     isContrast: true,
-    slidesContrast: Array(slides.length).fill(null),
   });
 
-  const { _slides, activeSlide, translate, isContrast, slidesContrast } = state;
+  const { activeSlide, translate, isContrast } = state;
 
-  const autoPlayRef = useRef();
+  // const autoPlayRef = useRef();
 
   useEffect(() => {
-    autoPlayRef.current = nextSlide;
+    // autoPlayRef.current = nextSlide;
+    let interval;
 
     if (callback) {
-      jumpSlide(currentSlide);
+      callback(jumpSlide(currentSlide));
     }
-  }, [currentSlide]);
-
-  useEffect(() => {
-    let interval;
 
     if (autoPlay) {
       interval = setInterval(() => {
-        autoPlayRef.current();
+        if (callback) {
+          callback(nextSlide(currentSlide));
+        } else {
+          nextSlide();
+        }
       }, 5000);
     }
 
@@ -55,32 +54,48 @@ const Slider = (props) => {
         clearInterval(interval);
       }
     };
-  }, [id, slides, activeSlide, slidesContrast, onlyImage, autoPlay, callback]);
+  }, [currentSlide]);
+
+  // useEffect(() => {
+  // let interval;
+  // if (autoPlay) {
+  //   interval = setInterval(() => {
+  //     autoPlayRef.current();
+  //   }, 5000);
+  // }
+  // return () => {
+  //   if (autoPlay) {
+  //     clearInterval(interval);
+  //   }
+  // };
+  // }, [
+  //   id,
+  //   slides,
+  //   activeSlide,
+  //   currentSlide,
+  //   slidesContrast,
+  //   onlyImage,
+  //   autoPlay,
+  //   callback,
+  // ]);
 
   const jumpSlide = (idx) => {
-    if (callback) {
-      callback({
-        id,
-        activeSlide: idx,
-      });
-    }
-
-    return setState({
+    setState({
       ...state,
       translate: idx * 100,
       activeSlide: idx,
     });
+
+    if (callback) {
+      return {
+        id,
+        activeSlide: idx,
+      };
+    }
   };
 
-  const nextSlide = () => {
-    if (callback) {
-      callback({
-        id,
-        activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
-      });
-    }
-
-    return setState({
+  const nextSlide = (activeSlide) => {
+    setState({
       ...state,
       translate:
         translate >= (slides.length - 100 / width.match(/\d+/)[0]) * 100
@@ -88,6 +103,13 @@ const Slider = (props) => {
           : translate + 100,
       activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
     });
+
+    if (callback) {
+      return {
+        id,
+        activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
+      };
+    }
   };
 
   const prevSlide = () =>
@@ -107,9 +129,9 @@ const Slider = (props) => {
         translate={translate}
         transition={transition}
       >
-        {_slides.map((_slide, idx) => (
+        {slides.map((_slide, idx) => (
           <Slide
-            key={_slides + Math.random(idx)}
+            key={slides + Math.random(idx)}
             content={_slide}
             onlyImage={onlyImage}
           />
