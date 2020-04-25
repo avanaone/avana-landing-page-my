@@ -430,10 +430,17 @@ footer {
   padding: 2.5vw 2vw 2vw;
   border-radius: 15px;
 
+  &.eventBanner {
+
+    @media (max-width: 576px) {
+      padding: 2rem 3rem;
+    }
+  }
+
   .modal-close {
     position: absolute;
     top: 5px;
-    right: 15px;
+    right: 5px;
 
     &::before,
     &::after {

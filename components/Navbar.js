@@ -184,12 +184,16 @@ export default function Navbar({ style }) {
           >
             Close
           </button>
-          <img src={require("../public/assets/images/download.webp")} alt="" />
+          <iframe 
+          src="https://www.youtube.com/embed/k15cSGtixoM" 
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen></iframe>
+          {/* <img src={require("../public/assets/images/download.webp")} alt="" /> */}
           <div>
-            <h3 className="is-size-5 modalTittle">Download e-Book Gratis</h3>
+            <h3 className="is-size-5 modalTittle">Gratis eBook Tutorial!</h3>
             <p>
-              Baca penggunaan AVANA biar gak pusing. Download juga e-Book AVANA
-              lainnya!
+              Pelajari tahapan untuk mengembangkan Bisnismu menggunakan Fitur Canggih AVANA dengan klik tombol dibawah ini!
             </p>
             <LinkButton
               href="/assets/files/tutorial.pdf"
@@ -217,13 +221,19 @@ export default function Navbar({ style }) {
           margin: 1em;
         }
 
+        .modal-content iframe {
+          margin: auto;
+        }
+
         .modal-content > div {
           flex: 1;
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center;
+          text-align: center;
           margin: 1em;
           max-width: 325px;
+          min-width: 100%;
         }
 
         @media (max-width: 385px) {

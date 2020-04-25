@@ -33,15 +33,18 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        flex-wrap: nowrap;
         text-align: center;
+        width: calc(100% - 240px);
+        margin: auto;
 
         .package {
           display: flex;
           flex-direction: column;
           background-color: #ffffff;
           padding: 2em 1.25em;
-          margin: 1em 1.5em;
+          margin: 1em 1em;
           border: 0.125em solid #d7d7d7;
           border-radius: 0.75em;
 
@@ -55,13 +58,34 @@
               content: "POPULER";
               position: absolute;
               top: 0;
-              right: -15%;
+              right: -10%;
               background-color: #fdb816;
               padding: 0.5em 5em;
               font-size: 0.75rem;
               font-weight: 700;
               transform: rotate(45deg) translate(15%, 0%);
               box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.125);
+            }
+          }
+
+          &.discounted {
+            position: relative;
+            padding: 2.75em 1.25em;
+            border: 0.125em solid #fdb816;
+            overflow: hidden;
+
+            &::before {
+              content: "Save 15%OFF";
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-color: #EA4A4A;
+              padding: 0.25em 1rem;
+              font-size: 1rem;
+              font-weight: 700;
+              border-radius: 0 0 0.75rem 0;
+              text-transform: uppercase;
+              color: white;
             }
           }
 
@@ -77,13 +101,33 @@
 
           ul {
             list-style: unset;
-            margin: 0.5em 2.5em 1.5em;
+            margin: 0.5em 0.5em 1.5em;
             text-align: left;
 
             li {
               margin: 0.5em 0;
             }
+
+            .more-features {
+              transform: scaleY(0);    
+              transform-origin: top;
+              transition: all 0.26s ease;
+              height: 0;
+
+              &.toggled {
+                transform: scaleY(1);
+                height: 100%;
+                transition: all 0.24s ease;
+              }
+            }
           }
+        }
+      }
+
+      @media (max-width: 768px) {
+        .packages{
+          flex-wrap: wrap;
+          width: 100%;
         }
       }
 

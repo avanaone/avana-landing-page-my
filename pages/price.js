@@ -18,12 +18,35 @@ const getPackages = import("../json/packages.json");
 const Price = () => {
   const [period, setPeriod] = useState("yearly");
   const [packages, setPackages] = useState([]);
+  // const [isHidden, setIsHidden] = useState(false);
+  const [hideBasic, setHideBasic] = useState(false);
+  const [hideAdvance, setHideAdvance] = useState(false);
+  const [hideBusiness, setHideBusiness] = useState(false);
+  const [hideVIP, setHideVIP] = useState(false);
+
+  const toggle = (plan) => {
+    if(plan === 'VIP') {
+      setHideVIP(!hideVIP);
+    } else if(plan === 'Business') {
+      setHideBusiness(!hideBusiness);
+    } else if(plan === 'Advance') {
+      setHideAdvance(!hideAdvance);
+    } else {
+      setHideBasic(!hideBasic);
+    }
+
+  };
 
   getPackages.then((res) => {
     setPackages(res.default.id.packages);
   });
 
   const handleFilterPeriod = (period) => setPeriod(period);
+
+  const avachatBtn = {
+    color: "#3273dc",
+    display: "block"
+  }
 
   return (
     <ContainerAnalytic>
@@ -70,7 +93,7 @@ const Price = () => {
                 .map((pkg) => (
                   <div
                     key={pkg.code}
-                    className={`package ${pkg.is_popular ? "popular" : ""}`}
+                    className={`package ${pkg.is_popular ? "popular" : ""} ${pkg.is_discount ? "discounted" : ""}`}
                   >
                     <span className="name is-size-5">{pkg.name}</span>
                     {pkg.price === pkg.discounted_price ? (
@@ -90,20 +113,54 @@ const Price = () => {
                       </div>
                     )}
                     <ul>
+                      {pkg.period === "yearly" && pkg.name === "VIP" ? 
+                      <li>
+                        <span>AVAChat</span>
+                        <a href="/avachat" title="AVAChat" style={avachatBtn}>
+                          pelajari lebih lanjut
+                        </a>
+                      </li> : ''}
                       {pkg.highlight_feature.map((feature, idx) => (
                         <li key={idx}>{feature}</li>
                       ))}
-                      <li className="has-text-weight-light">Webstore</li>
-                      <li className="has-text-weight-light">Payment gateway</li>
-                      <li className="has-text-weight-light">Manajemen order</li>
-                      {pkg.period !== "yearly" && (
+                      <li className="has-text-weight-light">Order via Comment</li>
+                      <li className="has-text-weight-light">Integrasi Facebook Store</li>
+                      {pkg.name !== "Basic" ? 
+                      <>
+                        <li className="has-text-weight-light">SEO & Integrasi Facebook Pixel</li>
+                        <li className="has-text-weight-light">Website Toko Online</li>
+                      </>
+                      : ''}
+                      {pkg.period === "yearly" && pkg.name !== "Basic" ? (
+                        <>
+                          <li className="has-text-weight-light">Domain.com</li>
+                        </>
+                      ): ''}
+                      {/* {pkg.period !== "yearly" && (
                         <>
                           <li className="has-text-weight-light">
                             Toko Facebook
                           </li>
                           <li className="has-text-weight-light">Kode Promo</li>
                         </>
-                      )}
+                      )} */}
+                      <li className="has-text-weight-light">Auto Reply Facebook Messenger</li>
+                      
+                      <div className={
+                        `more-features 
+                        more-${pkg.name}
+                        ${pkg.name === "VIP" && hideVIP ? "toggled" : ""}
+                        ${pkg.name === "Business" && hideBusiness ? "toggled" : ""}
+                        ${pkg.name === "Advance" && hideAdvance ? "toggled" : ""}
+                        ${pkg.name === "Basic" && hideBasic ? "toggled" : ""}`}>
+                        <li className="has-text-weight-light">Messenger Blast</li>
+                        <li className="has-text-weight-light">Unlimited Upload Produk</li>
+                        <li className="has-text-weight-light">Integrasi Payment Gateway</li>
+                        <li className="has-text-weight-light">Laporan Order</li>
+                        <li className="has-text-weight-light">Manajemen Database Pelanggan</li>
+                        <li className="has-text-weight-light">Manajement Promo</li>
+                      </div>
+                      <a onClick={() => toggle(`${pkg.name}`)}>Lihat Fitur Selengkapnya</a>
                     </ul>
                     <LinkButton
                       href={`https://payment.avana.asia/pay?plan=${pkg.slug}`}

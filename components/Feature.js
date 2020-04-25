@@ -49,8 +49,9 @@ export default function Feature(props) {
           </h2>
           <LinkButton
             href={
-              CS
-                ? `https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk ${title}`
+              CS && title.toLowerCase() == 'avachat'
+              ? `http://mauorder.online/avachat` : CS && title.toLowerCase() == 'manajemen reseller'
+              ? `http://maubeli.online/reseller-manajemen`
                 : "https://store.avana.asia/"
             }
             target="__blank"

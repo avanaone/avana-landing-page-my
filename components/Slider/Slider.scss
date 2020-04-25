@@ -38,6 +38,10 @@
     bottom: 2.5vw;
     width: 100%;
 
+    &.eventBanner {
+      bottom: 0;
+    }
+
     .dot {
       height: 1em;
       width: 1em;
@@ -45,6 +49,10 @@
       margin: 0.25em;
       border-radius: 50%;
       cursor: pointer;
+
+      &.eventBanner {
+        background-color: #DBDBDB;
+      }
 
       &.active {
         background-color: #fff;

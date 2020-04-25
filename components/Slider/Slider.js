@@ -4,6 +4,7 @@ import SliderContent from "./SliderContent";
 import Slide from "./Slide";
 import Arrow from "./Arrow";
 import Dots from "./Dots";
+import Description from "./Description";
 
 import "./Slider.scss";
 
@@ -19,6 +20,7 @@ const Slider = (props) => {
     hasDots,
     autoPlay = false,
     callback,
+    eventBanner
   } = props;
 
   const [state, setState] = useState({
@@ -28,6 +30,8 @@ const Slider = (props) => {
   });
 
   const { activeSlide, translate, isContrast } = state;
+
+  const events = [{title: 'Free Shipping and Admin Fee'}, {title: 'Free Voucher Rp 100.000'}];
 
   // const autoPlayRef = useRef();
 
@@ -153,12 +157,27 @@ const Slider = (props) => {
         </>
       )}
 
+      {eventBanner && (
+      <div className="slider">
+        <SliderContent
+          width={width}
+          translate={translate}
+          transition={transition}
+        >
+          {events.map((_slide, idx) => (
+            <Description eventName={_slide.title}/>
+          ))}
+        </SliderContent>
+      </div>
+      )}
+
       {hasDots && (
         <Dots
           slides={slides}
           activeSlide={activeSlide}
           handleClick={jumpSlide}
           isContrast={isContrast}
+          eventBanner={eventBanner}
         />
       )}
     </div>

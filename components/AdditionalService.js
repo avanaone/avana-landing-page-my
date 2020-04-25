@@ -13,9 +13,11 @@ export default function AdditionalService() {
 
   const toggleModal = () => setIsModal(!isModal);
 
+  const previewPDF = () =>  window.open('/assets/files/layanan_tambahan_2020.pdf');
+
   return (
     <>
-      <Button type="button" className="btn-primary" onClick={toggleModal}>
+      <Button type="button" className="btn-primary" onClick={previewPDF}>
         Layanan Tambahan
       </Button>
       <div className={`modal ${isModal ? "is-active" : ""}`}>

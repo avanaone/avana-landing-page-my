@@ -19,6 +19,8 @@ const Home = () => {
     reseller: 0,
     webstore: 0,
   });
+  const [isModal, setIsModal] = useState(true);
+  const toggleModal = () => setIsModal(!isModal);
 
   const { dashboard, avachat, reseller, webstore } = state;
   const [navbarBg, setNavbarBg] = useState("#f4f7f9");
@@ -188,7 +190,6 @@ const Home = () => {
                 ]}
                 currentSlide={dashboard}
                 hasDots
-                autoPlay
                 callback={callbackSlider}
               />
             </div>
@@ -208,7 +209,7 @@ const Home = () => {
                   className={avachat === 0 ? "active" : ""}
                   onClick={() => handleSlider("avachat", 0)}
                 >
-                  Kirim Produk & Invois
+                  Kirim Produk & Invoice
                 </li>
                 <li
                   className={avachat === 1 ? "active" : ""}
@@ -225,7 +226,7 @@ const Home = () => {
               </ul>
               <div className="ava-btn-group">
                 <LinkButton
-                  href="https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk AVAChat"
+                  href="http://mauorder.online/avachat"
                   target="__blank"
                   className="btn-primary"
                 >
@@ -264,7 +265,6 @@ const Home = () => {
                 ]}
                 currentSlide={avachat}
                 hasDots
-                autoPlay
                 callback={callbackSlider}
               />
             </div>
@@ -301,7 +301,7 @@ const Home = () => {
               </ul>
               <div className="ava-btn-group">
                 <LinkButton
-                  href="https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk Manajemen Reseller"
+                  href="http://mauorder.online/reseller-manajemen"
                   target="__blank"
                   className="btn-primary"
                 >
@@ -340,7 +340,6 @@ const Home = () => {
                 ]}
                 currentSlide={reseller}
                 hasDots
-                autoPlay
                 callback={callbackSlider}
               />
             </div>
@@ -416,7 +415,6 @@ const Home = () => {
                 ]}
                 currentSlide={webstore}
                 hasDots
-                autoPlay
                 callback={callbackSlider}
               />
             </div>
@@ -491,6 +489,35 @@ const Home = () => {
               Coba Gratis
             </LinkButton>
           </section>
+          <div className={`modal ${isModal ? "is-active" : ""}`}>
+            <div className="modal-background" onClick={toggleModal} />
+            <div className="modal-content eventBanner" style={{maxWidth: `500px`}}>
+              <button
+                className="modal-close is-large"
+                onClick={toggleModal}
+                aria-label="close"
+              >
+                Close
+              </button>
+              <Slider
+                id="dashboard"
+                slides={[
+                  <img
+                    srcSet={require("public/assets/images/promo/7.jpeg?resize?webp").srcSet}
+                    alt=""
+                  />,
+                  <img
+                    srcSet={require("public/assets/images/promo/8.jpeg?resize?webp").srcSet}
+                    alt=""
+                  />
+                ]}
+                currentSlide={dashboard}
+                hasDots
+                eventBanner
+                callback={callbackSlider}
+              />
+            </div>
+          </div>
         </main>
         <Footer />
       </div>
