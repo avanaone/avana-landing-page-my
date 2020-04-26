@@ -500,7 +500,7 @@ const Home = () => {
                 Close
               </button>
               <Slider
-                id="dashboard"
+                id="eventBanner"
                 slides={[
                   <img
                     srcSet={require("public/assets/images/promo/7.jpeg?resize?webp").srcSet}
@@ -513,6 +513,7 @@ const Home = () => {
                 ]}
                 currentSlide={dashboard}
                 hasDots
+                hasArrow
                 eventBanner
                 callback={callbackSlider}
               />

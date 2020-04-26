@@ -43,11 +43,6 @@ const Price = () => {
 
   const handleFilterPeriod = (period) => setPeriod(period);
 
-  const avachatBtn = {
-    color: "#3273dc",
-    display: "block"
-  }
-
   return (
     <ContainerAnalytic>
       <div className={styles.Price}>
@@ -91,10 +86,12 @@ const Price = () => {
               {packages
                 .filter((pck) => pck.period === period)
                 .map((pkg) => (
-                  <div
-                    key={pkg.code}
-                    className={`package ${pkg.is_popular ? "popular" : ""} ${pkg.is_discount ? "discounted" : ""}`}
-                  >
+                <div
+                  key={pkg.code}
+                  className={`package ${pkg.is_popular ? "popular" : ""} ${pkg.is_discount ? "discounted" : ""}`}
+                  style={pkg.period === "yearly" ? {minHeight: `740px`} : {}}
+                >
+                  <div className="package-info">
                     <span className="name is-size-5">{pkg.name}</span>
                     {pkg.price === pkg.discounted_price ? (
                       <>
@@ -112,16 +109,20 @@ const Price = () => {
                         </div>
                       </div>
                     )}
+                  </div>
+                  <div>
                     <ul>
-                      {pkg.period === "yearly" && pkg.name === "VIP" ? 
-                      <li>
-                        <span>AVAChat</span>
-                        <a href="/avachat" title="AVAChat" style={avachatBtn}>
-                          pelajari lebih lanjut
-                        </a>
-                      </li> : ''}
+                      
                       {pkg.highlight_feature.map((feature, idx) => (
-                        <li key={idx}>{feature}</li>
+                        <li key={idx}>
+                          {feature === "AVAChat" ? 
+                          <>
+                            <span>{feature}</span>
+                            <a href="/avachat" title="AVAChat" className="avachatBtn">
+                              pelajari lebih lanjut
+                            </a>
+                          </> : feature}
+                        </li>
                       ))}
                       <li className="has-text-weight-light">Order via Comment</li>
                       <li className="has-text-weight-light">Integrasi Facebook Store</li>
@@ -160,8 +161,18 @@ const Price = () => {
                         <li className="has-text-weight-light">Manajemen Database Pelanggan</li>
                         <li className="has-text-weight-light">Manajement Promo</li>
                       </div>
-                      <a onClick={() => toggle(`${pkg.name}`)}>Lihat Fitur Selengkapnya</a>
+                      
                     </ul>
+                  </div>
+                  <div className="package-info">
+                    <a onClick={() => toggle(`${pkg.name}`)} className="price-more">
+                      {
+                        pkg.name === "VIP" && hideVIP ? "Sembunyikan Fitur" :
+                        pkg.name === "Business" && hideBusiness ? "Sembunyikan Fitur" :
+                        pkg.name === "Advance" && hideAdvance ? "Sembunyikan Fitur" :
+                        pkg.name === "Basic" && hideBasic ? "Sembunyikan Fitur" : "Lihat Fitur Selengkapnya"
+                      }
+                    </a>
                     <LinkButton
                       href={`https://payment.avana.asia/pay?plan=${pkg.slug}`}
                       target="__blank"
@@ -170,9 +181,10 @@ const Price = () => {
                       Pilih Paket
                     </LinkButton>
                   </div>
+                </div>
                 ))}
             </div>
-            <a href="/packages-detail">Lihat Perbandingan</a>
+            {/* <a href="/packages-detail">Lihat Perbandingan</a> */}
           </section>
         </main>
         <Footer />

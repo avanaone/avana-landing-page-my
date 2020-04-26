@@ -27,9 +27,10 @@ const Slider = (props) => {
     activeSlide: currentSlide,
     translate: 0,
     isContrast: true,
+    hasOverlay: true
   });
 
-  const { activeSlide, translate, isContrast } = state;
+  const { activeSlide, translate, isContrast, hasOverlay } = state;
 
   const events = [{title: 'Free Shipping and Admin Fee'}, {title: 'Free Voucher Rp 100.000'}];
 
@@ -148,11 +149,13 @@ const Slider = (props) => {
             direction="left"
             handleClick={prevSlide}
             isContrast={isContrast}
+            hasOverlay={hasOverlay}
           />
           <Arrow
             direction="right"
             handleClick={nextSlide}
             isContrast={isContrast}
+            hasOverlay={hasOverlay}
           />
         </>
       )}

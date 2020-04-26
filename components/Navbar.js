@@ -176,7 +176,7 @@ export default function Navbar({ style }) {
       </nav>
       <div className={`modal ${isModal ? "is-active" : ""}`}>
         <div className="modal-background" onClick={toggleModal} />
-        <div className="modal-content">
+        <div className="modal-content tutorial">
           <button
             className="modal-close is-large"
             onClick={toggleModal}
@@ -190,7 +190,7 @@ export default function Navbar({ style }) {
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen></iframe>
           {/* <img src={require("../public/assets/images/download.webp")} alt="" /> */}
-          <div>
+          <div className="tutorial-desc">
             <h3 className="is-size-5 modalTittle">Gratis eBook Tutorial!</h3>
             <p>
               Pelajari tahapan untuk mengembangkan Bisnismu menggunakan Fitur Canggih AVANA dengan klik tombol dibawah ini!
@@ -216,6 +216,9 @@ export default function Navbar({ style }) {
           padding: 0.75em 1em 0.5em;
           text-align: left;
         }
+        .modal-content.tutorial {
+          width: 560px;
+        }
 
         .modal-content img {
           margin: 1em;
@@ -223,6 +226,8 @@ export default function Navbar({ style }) {
 
         .modal-content iframe {
           margin: auto;
+          width: 460px;
+          height: 260px;
         }
 
         .modal-content > div {
@@ -235,7 +240,22 @@ export default function Navbar({ style }) {
           max-width: 325px;
           min-width: 100%;
         }
-
+        .modal-content .tutorial-desc > p {
+          width: calc(100% - 100px);
+          margin: auto;
+        }
+        @media (max-width: 768px) {
+          .modal-content {
+            max-width: calc(100% - 30px);
+          }
+          .modal-content iframe {
+            max-width: calc(100% - 50px);
+            height: auto;
+          }
+          .modal-content .tutorial-desc > p {
+            width: 100%;
+          }
+        }
         @media (max-width: 385px) {
           .modal-content > div {
             align-items: center;

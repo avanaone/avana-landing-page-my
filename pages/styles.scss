@@ -434,6 +434,7 @@ footer {
 
     @media (max-width: 576px) {
       padding: 2rem 3rem;
+      max-width: calc(100% - 30px) !important;
     }
   }
 

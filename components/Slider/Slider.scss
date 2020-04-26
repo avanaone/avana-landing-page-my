@@ -12,6 +12,17 @@
     transition: transform ease-in 0.15s;
     filter: invert(1);
     cursor: pointer;
+    
+    &.hasOverlay {
+      background-color: rgba(0,0,0,0.4);
+      display: flex;
+      justify-content: center;
+      border-radius: 50%;
+
+      img {
+        max-width: calc(100% - 12px);
+      }
+    }
 
     &.left {
       left: 0;
