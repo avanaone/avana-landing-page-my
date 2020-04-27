@@ -129,8 +129,22 @@ const Price = () => {
                         {/* <li className="has-text-weight-light">Whatsapp Commerce</li> */}
                       </>
                       ): ''}
-                      <li className="has-text-weight-light">Order via Comment</li>
+                      {pkg.name !== "Basic" ? 
+                        <li className="has-text-weight-light">Order via Comment</li>
+                      : ''}
+                      
                       <li className="has-text-weight-light">Integrasi Facebook Store</li>
+                      {pkg.name === "Basic" ? 
+                      <>
+                        <li className="has-text-weight-light">Unlimited Upload Produk</li>
+                        <li className="has-text-weight-light">Integrasi Payment Gateway</li>
+                        <li className="has-text-weight-light">Integrasi Logistik</li>
+                        <li className="has-text-weight-light">Laporan Order</li>
+                        <li className="has-text-weight-light">Manajemen Database Pelanggan</li>
+                        <li className="has-text-weight-light">Manajement Promo</li>
+                      </>
+                      : ''}
+                        
                       {pkg.name !== "Basic" ? 
                       <>
                         <li className="has-text-weight-light">SEO & Integrasi Facebook Pixel</li>
@@ -156,7 +170,7 @@ const Price = () => {
                           <li className="has-text-weight-light">Kode Promo</li>
                         </>
                       )} */}
-                      {pkg.name !== "VIP" ?
+                      {pkg.name !== "VIP" && pkg.name !== "Basic" ?
                         <li className="has-text-weight-light">Auto Reply Facebook Messenger</li>
                       : ''
                       }
@@ -176,26 +190,34 @@ const Price = () => {
                         </>
                         : ''
                         }
-                        <li className="has-text-weight-light">Messenger Blast</li>
-                        <li className="has-text-weight-light">Unlimited Upload Produk</li>
-                        <li className="has-text-weight-light">Integrasi Payment Gateway</li>
-                        <li className="has-text-weight-light">Integrasi Logistik</li>
-                        <li className="has-text-weight-light">Laporan Order</li>
-                        <li className="has-text-weight-light">Manajemen Database Pelanggan</li>
-                        <li className="has-text-weight-light">Manajement Promo</li>
+                        {pkg.name !== "Basic" ?
+                        <>
+                          <li className="has-text-weight-light">Messenger Blast</li>
+                          <li className="has-text-weight-light">Unlimited Upload Produk</li>
+                          <li className="has-text-weight-light">Integrasi Payment Gateway</li>
+                          <li className="has-text-weight-light">Integrasi Logistik</li>
+                          <li className="has-text-weight-light">Laporan Order</li>
+                          <li className="has-text-weight-light">Manajemen Database Pelanggan</li>
+                          <li className="has-text-weight-light">Manajement Promo</li>
+                        </>
+                        : ''
+                        }
+                        
                       </div>
                       
                     </ul>
                   </div>
                   <div className="package-info">
-                    <a onClick={() => toggle(`${pkg.name}`)} className="price-more">
-                      {
-                        pkg.name === "VIP" && hideVIP ? "Sembunyikan Fitur" :
-                        pkg.name === "Business" && hideBusiness ? "Sembunyikan Fitur" :
-                        pkg.name === "Advance" && hideAdvance ? "Sembunyikan Fitur" :
-                        pkg.name === "Basic" && hideBasic ? "Sembunyikan Fitur" : "Lihat Fitur Selengkapnya"
-                      }
-                    </a>
+                    {pkg.name !== "Basic" ?
+                      <a onClick={() => toggle(`${pkg.name}`)} className="price-more">
+                        {
+                          pkg.name === "VIP" && hideVIP ? "Sembunyikan Fitur" :
+                          pkg.name === "Business" && hideBusiness ? "Sembunyikan Fitur" :
+                          pkg.name === "Advance" && hideAdvance ? "Sembunyikan Fitur" :
+                          pkg.name === "Basic" && hideBasic ? "Sembunyikan Fitur" : "Lihat Fitur Selengkapnya"
+                        }
+                      </a>
+                    : ''}
                     <LinkButton
                       href={`https://payment.avana.asia/pay?plan=${pkg.slug}`}
                       target="__blank"
