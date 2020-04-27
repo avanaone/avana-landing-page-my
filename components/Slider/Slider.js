@@ -99,7 +99,25 @@ const Slider = (props) => {
     }
   };
 
-  const nextSlide = (activeSlide) => {
+  // const nextSlide = (activeSlide) => {
+  //   setState({
+  //     ...state,
+  //     translate:
+  //       translate >= (slides.length - 100 / width.match(/\d+/)[0]) * 100
+  //         ? 0
+  //         : translate + 100,
+  //     activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
+  //   });
+
+  //   if (callback) {
+  //     return {
+  //       id,
+  //       activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
+  //     };
+  //   }
+  // };
+
+  const nextSlide = () => {
     setState({
       ...state,
       translate:
@@ -108,13 +126,6 @@ const Slider = (props) => {
           : translate + 100,
       activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
     });
-
-    if (callback) {
-      return {
-        id,
-        activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
-      };
-    }
   };
 
   const prevSlide = () =>

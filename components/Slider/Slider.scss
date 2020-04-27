@@ -22,6 +22,14 @@
       img {
         max-width: calc(100% - 12px);
       }
+
+      &.left {
+        left: 10px;
+      }
+
+      &.right {
+        right: 10px;
+      }
     }
 
     &.left {
