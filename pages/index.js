@@ -432,7 +432,7 @@ const Home = () => {
               <ul />
               <div className="ava-btn-group">
                 <LinkButton
-                  href="https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk Facebook Store"
+                  href="https://store.avana.asia/"
                   target="__blank"
                   className="btn-primary"
                 >
