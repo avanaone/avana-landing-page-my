@@ -502,16 +502,16 @@ const Home = () => {
               <Slider
                 id="eventBanner"
                 slides={[
-                  <><a href="/promo/2">
+                  <a href="/promo/2">
                   <img
                     srcSet={require("public/assets/images/promo/7.jpeg?resize?webp").srcSet}
                     alt=""
-                  /></a></>,
-                  <><a href="/promo/3">
+                  /></a>,
+                  <a href="/promo/3">
                   <img
                     srcSet={require("public/assets/images/promo/8.jpeg?resize?webp").srcSet}
                     alt=""
-                  /></a></>
+                  /></a>
                 ]}
                 currentSlide={dashboard}
                 hasDots
