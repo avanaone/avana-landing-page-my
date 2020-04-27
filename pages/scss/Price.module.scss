@@ -163,6 +163,12 @@
             color: #4A4A4A;
           }
         }
+
+        @media (max-width: 541px) {
+          .package{
+            min-height: unset !important;
+          }
+        }
       }
 
       @media (max-width: 768px) {
