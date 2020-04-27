@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -502,16 +503,22 @@ const Home = () => {
               <Slider
                 id="eventBanner"
                 slides={[
-                  <a href="/promo/2">
-                  <img
-                    srcSet={require("public/assets/images/promo/7.jpeg?resize?webp").srcSet}
-                    alt=""
-                  /></a>,
-                  <a href="/promo/3">
-                  <img
-                    srcSet={require("public/assets/images/promo/8.jpeg?resize?webp").srcSet}
-                    alt=""
-                  /></a>
+                  <Link href="/promo/[code]" as={`/promo/2`}>
+                    <a>
+                      <img
+                        srcSet={require("public/assets/images/promo/7.jpeg?resize?webp").srcSet}
+                        alt=""
+                      />
+                    </a>
+                  </Link>,
+                  <Link href="/promo/[code]" as={`/promo/3`}>
+                    <a>
+                      <img
+                        srcSet={require("public/assets/images/promo/8.jpeg?resize?webp").srcSet}
+                        alt=""
+                      />
+                    </a>
+                  </Link>
                 ]}
                 currentSlide={dashboard}
                 hasDots

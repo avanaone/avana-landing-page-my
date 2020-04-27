@@ -88,14 +88,14 @@ const Price = () => {
                 .map((pkg) => (
                 <div
                   key={pkg.code}
-                  className={`package ${pkg.is_popular ? "popular" : ""} ${pkg.is_discount ? "discounted" : ""}`}
+                  className={`package ${pkg.is_popular ? "popular" : ""} ${pkg.is_discount ? "discounted" : ""} ${pkg.name === "Basic" ? "basic" : ""}`}
                   style={pkg.period === "yearly" ? {minHeight: `740px`} : {}}
                 >
                   <div className="package-info">
                     <span className="name is-size-5">{pkg.name}</span>
                     {pkg.price === pkg.discounted_price ? (
                       <>
-                        <span className="price is-size-4">
+                        <span className="price is-size-4" style={pkg.name === "VIP" ? {marginTop: `30px`} : ''}>
                           {formatCurrency(pkg.price, pkg.currency)}
                         </span>
                       </>
@@ -124,17 +124,28 @@ const Price = () => {
                           </> : feature}
                         </li>
                       ))}
+                      {pkg.period === "yearly" && pkg.name === "Basic" ? (
+                      <>
+                        {/* <li className="has-text-weight-light">Whatsapp Commerce</li> */}
+                      </>
+                      ): ''}
                       <li className="has-text-weight-light">Order via Comment</li>
                       <li className="has-text-weight-light">Integrasi Facebook Store</li>
                       {pkg.name !== "Basic" ? 
                       <>
                         <li className="has-text-weight-light">SEO & Integrasi Facebook Pixel</li>
-                        <li className="has-text-weight-light">Website Toko Online</li>
+                        {pkg.name !== "VIP" ?
+                          <li className="has-text-weight-light">Website Toko Online</li>
+                        : ''
+                        }
                       </>
                       : ''}
                       {pkg.period === "yearly" && pkg.name !== "Basic" ? (
                         <>
-                          <li className="has-text-weight-light">Domain.com</li>
+                          {pkg.name !== "VIP" ?
+                            <li className="has-text-weight-light">Domain.com</li>
+                          : ''
+                          }
                         </>
                       ): ''}
                       {/* {pkg.period !== "yearly" && (
@@ -145,7 +156,10 @@ const Price = () => {
                           <li className="has-text-weight-light">Kode Promo</li>
                         </>
                       )} */}
-                      <li className="has-text-weight-light">Auto Reply Facebook Messenger</li>
+                      {pkg.name !== "VIP" ?
+                        <li className="has-text-weight-light">Auto Reply Facebook Messenger</li>
+                      : ''
+                      }
                       
                       <div className={
                         `more-features 
@@ -154,9 +168,18 @@ const Price = () => {
                         ${pkg.name === "Business" && hideBusiness ? "toggled" : ""}
                         ${pkg.name === "Advance" && hideAdvance ? "toggled" : ""}
                         ${pkg.name === "Basic" && hideBasic ? "toggled" : ""}`}>
+                        {pkg.name === "VIP" ?
+                        <>
+                          <li className="has-text-weight-light">Website Toko Online</li>
+                          <li className="has-text-weight-light">Domain.com</li>
+                          <li className="has-text-weight-light">Auto Reply Facebook Messenger</li>
+                        </>
+                        : ''
+                        }
                         <li className="has-text-weight-light">Messenger Blast</li>
                         <li className="has-text-weight-light">Unlimited Upload Produk</li>
                         <li className="has-text-weight-light">Integrasi Payment Gateway</li>
+                        <li className="has-text-weight-light">Integrasi Logistik</li>
                         <li className="has-text-weight-light">Laporan Order</li>
                         <li className="has-text-weight-light">Manajemen Database Pelanggan</li>
                         <li className="has-text-weight-light">Manajement Promo</li>

@@ -49,6 +49,13 @@
           border-radius: 0.75em;
           justify-content: space-between;
 
+          &.basic {
+            
+            &::before {
+              content: "Save 50%OFF" !important;
+            }
+          }
+
           &.popular {
             position: relative;
             // padding: 2.75em 1.25em;
@@ -76,7 +83,7 @@
             overflow: hidden;
 
             &::before {
-              content: "Save 15%OFF";
+              content: "Save 16%OFF";
               position: absolute;
               top: 0;
               left: 0;
@@ -161,6 +168,12 @@
             text-decoration: underline;
             font-weight: 600;
             color: #4A4A4A;
+          }
+
+          @media (max-width: 541px) {
+            .price{
+              margin-top: 0 !important;
+            }
           }
         }
 
