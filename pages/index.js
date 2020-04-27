@@ -432,7 +432,7 @@ const Home = () => {
               <ul />
               <div className="ava-btn-group">
                 <LinkButton
-                  href="https://store.avana.asia/"
+                  href="http://mauorder.online/order-avana"
                   target="__blank"
                   className="btn-primary"
                 >
