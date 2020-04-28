@@ -93,16 +93,9 @@ const Price = () => {
                     <div className="package-info">
                       <span className="name is-size-5">{pkg.name}</span>
                       {pkg.price === pkg.discounted_price ? (
-                        <>
-                          <span
-                            className="price is-size-4"
-                            style={
-                              pkg.name === 'VIP' ? { marginTop: `30px` } : ''
-                            }
-                          >
-                            {formatCurrency(pkg.price, pkg.currency)}
-                          </span>
-                        </>
+                        <span className="price is-size-4">
+                          {formatCurrency(pkg.price, pkg.currency)}
+                        </span>
                       ) : (
                         <div>
                           <strike className="is-size-6">
