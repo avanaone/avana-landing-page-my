@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #f4f7f9;
-    background-image: url("/assets/images/hero-background.png");
+    background-image: url('/assets/images/hero-background.png');
     background-size: cover;
     padding: 1.5em 0 2.5em;
     margin-bottom: 2.5em;
@@ -41,11 +41,11 @@
       position: relative;
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 100%;
         left: 50%;
-        background-image: url("/assets/images/header-channels.png");
+        background-image: url('/assets/images/header-channels.png');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -85,7 +85,7 @@
 
       &:nth-child(even) {
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           top: 5em;
           right: 0;
@@ -99,7 +99,7 @@
 
       &:not(:last-child):nth-child(odd) {
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           top: 5em;
           left: -3.75%;
@@ -135,8 +135,8 @@
               cursor: pointer;
 
               &::before {
-                font-family: "Material Icons";
-                content: "\e5c8";
+                font-family: 'Material Icons';
+                content: '\e5c8';
                 position: absolute;
                 left: -25px;
               }
@@ -158,7 +158,7 @@
             position: static;
 
             &::before {
-              content: " ";
+              content: ' ';
               width: 5%;
               position: absolute;
               left: 0;
@@ -172,7 +172,7 @@
               z-index: 1;
             }
             &::after {
-              content: " ";
+              content: ' ';
               width: 5%;
               position: absolute;
               right: 0;
@@ -312,6 +312,21 @@
 
       &.trial {
         z-index: 0;
+      }
+    }
+
+    .modal {
+      .modal-content {
+        min-height: fit-content;
+        overflow: hidden;
+
+        .dots {
+          bottom: 0;
+
+          .dot:not(.active) {
+            background-color: rgba(0, 0, 0, 0.25);
+          }
+        }
       }
     }
   }

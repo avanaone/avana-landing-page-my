@@ -285,6 +285,7 @@ footer {
 
 .header-channels {
   padding: 1.5em 5vw 1.5vw;
+  overflow: hidden;
 
   h2 {
     position: relative;
@@ -300,20 +301,14 @@ footer {
       content: '';
       position: absolute;
       top: 100%;
-      right: -5%;
+      left: 10vw;
       background-image: url('/assets/images/channels.png');
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       height: 10em;
-      width: 75vw;
-      transform: translate(5%, -100%);
-    }
-  }
-
-  @media (max-width: 786px) {
-    .channels {
-      display: none;
+      width: 75em;
+      transform: translate(0, -100%);
     }
   }
 }
@@ -429,13 +424,6 @@ footer {
   background-color: #ffffff;
   padding: 2.5vw 2vw 2vw;
   border-radius: 15px;
-
-  &.eventBanner {
-    @media (max-width: 576px) {
-      padding: 2rem 3rem;
-      max-width: calc(100% - 30px) !important;
-    }
-  }
 
   .modal-close {
     position: absolute;

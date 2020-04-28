@@ -1,39 +1,39 @@
-require("next/dynamic");
-const withPlugins = require("next-compose-plugins");
-const withStyles = require("@webdeb/next-styles");
-const optimizedImages = require("next-optimized-images");
-const path = require("path");
+require('next/dynamic');
+const withPlugins = require('next-compose-plugins');
+const withStyles = require('@webdeb/next-styles');
+const optimizedImages = require('next-optimized-images');
+const path = require('path');
 
 const nextConfig = {
   optimizeImagesInDev: true,
   exportTrailingSlash: true,
   exportPathMap: async function () {
     const paths = {
-      "/": { page: "/" },
-      "/about-us": { page: "/about-us" },
-      "/price": { page: "/price" },
-      "/packages-detail": { page: "/packages-detail" },
-      "/event": { page: "/event" },
-      "/promo": { page: "/promo" },
-      "/dashboard": { page: "/dashboard" },
-      "/avachat": { page: "/avachat" },
-      "/webstore": { page: "/webstore" },
-      "/reseller": { page: "/reseller" },
+      '/': { page: '/' },
+      '/about-us': { page: '/about-us' },
+      '/price': { page: '/price' },
+      '/packages-detail': { page: '/packages-detail' },
+      '/event': { page: '/event' },
+      '/promo': { page: '/promo' },
+      '/dashboard': { page: '/dashboard' },
+      '/avachat': { page: '/avachat' },
+      '/webstore': { page: '/webstore' },
+      '/reseller': { page: '/reseller' },
     };
 
-    const getPromo = await require("./json/promo.json");
-    const getEvents = await require("./json/event.json");
+    const getPromo = await require('./json/promo.json');
+    const getEvents = await require('./json/event.json');
 
     getPromo.map((promo) => {
       paths[`promo/${promo.code}`] = {
-        page: "promo/[code]",
+        page: 'promo/[code]',
         query: { code: promo.code },
       };
     });
 
     getEvents.map((event) => {
       paths[`event/${event.id}`] = {
-        page: "event/[id]",
+        page: 'event/[id]',
         query: { id: event.id },
       };
     });
@@ -41,14 +41,14 @@ const nextConfig = {
     return paths;
   },
   webpack: (config, options) => {
-    config.resolve.alias["public"] = path.join(__dirname, "public");
+    config.resolve.alias['public'] = path.join(__dirname, 'public');
     config.module.rules.push({
       test: /\.(jpe?g|png)$/i,
       use: [
         {
-          loader: "responsive-loader",
+          loader: 'responsive-loader',
           options: {
-            adapter: require("responsive-loader/sharp"),
+            adapter: require('responsive-loader/sharp'),
             sizes: [300, 500],
           },
         },

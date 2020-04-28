@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-const Dots = ({ slides, activeSlide, isContrast, eventBanner, handleClick }) => (
-  <div className={`dots ${eventBanner ? 'eventBanner' : ''}`}>
+const Dots = ({ slides, activeSlide, isContrast, handleClick }) => (
+  <div className="dots">
     {slides.map((slide, idx) => (
       <span
         key={slide + Math.random(idx)}
-        className={`dot ${eventBanner ? 'eventBanner' : ''} ${activeSlide === idx ? "active" : ""} ${
-          activeSlide === idx && isContrast ? "active-contrast" : ""
+        className={`dot ${activeSlide === idx ? 'active' : ''} ${
+          activeSlide === idx && isContrast ? 'active-contrast' : ''
         }`}
         onClick={() => handleClick(idx)}
       />

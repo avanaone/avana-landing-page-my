@@ -6,7 +6,7 @@
       &::after {
         top: 50%;
         right: 0;
-        background-image: url("/assets/images/price/header.png");
+        background-image: url('/assets/images/price/header.png');
         transform: translate(0, -50%);
       }
     }
@@ -33,40 +33,37 @@
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
-        // flex-wrap: wrap;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         text-align: center;
-        width: calc(100% - 240px);
-        margin: auto;
 
         .package {
           display: flex;
           flex-direction: column;
           background-color: #ffffff;
-          padding: 2.75em 1.75em 2em 1.75em;
-          margin: 1em 1em;
+          padding: 2em 1.25em;
+          margin: 1em 0.5em;
           border: 0.125em solid #d7d7d7;
           border-radius: 0.75em;
           justify-content: space-between;
+          max-width: 17.5em;
 
           &.basic {
-            
             &::before {
-              content: "Save 50%OFF" !important;
+              content: 'Save 50%OFF' !important;
             }
           }
 
           &.popular {
             position: relative;
-            // padding: 2.75em 1.25em;
+            padding: 2.75em 1.25em;
             border: 0.125em solid #fdb816;
             overflow: hidden;
 
             &::after {
-              content: "POPULER";
+              content: 'POPULER';
               position: absolute;
               top: 0;
-              right: -10%;
+              right: -12.5%;
               background-color: #fdb816;
               padding: 0.5em 5em;
               font-size: 0.75rem;
@@ -78,55 +75,59 @@
 
           &.discounted {
             position: relative;
-            // padding: 2.75em 1.25em;
+            padding: 2.75em 1.25em;
             border: 0.125em solid #fdb816;
             overflow: hidden;
 
             &::before {
-              content: "Save 16%OFF";
+              content: 'Save 16%OFF';
               position: absolute;
               top: 0;
               left: 0;
-              background-color: #EA4A4A;
-              padding: 0.25em 1rem;
-              font-size: 1rem;
+              color: #fff;
+              background-color: #ea4a4a;
+              padding: 0.5em 0.75em;
+              font-size: 0.85rem;
               font-weight: 700;
-              border-radius: 0 0 0.75rem 0;
+              border-radius: 0 0 0.75em 0;
               text-transform: uppercase;
-              color: white;
             }
           }
 
           .package-info {
             display: flex;
             flex-direction: column;
-          }
 
-          .name {
-            font-weight: 700;
-          }
+            .name {
+              font-weight: 700;
+            }
 
-          .price {
-            color: #45df8f;
-            font-weight: 700;
-            margin: 0.25em 0;
+            .price {
+              color: #45df8f;
+              font-weight: 700;
+              margin: 0.25em 0;
+            }
           }
 
           ul {
-            list-style: unset;
+            // list-style: unset;
             margin: 0.5em 0.5em 1.5em;
-            text-align: left;
+            text-align: center;
 
             li {
               margin: 0.5em 0;
 
               .avachatBtn {
+                position: relative;
                 color: #3273dc;
                 display: block;
-                position: relative;
 
                 &:hover {
                   text-decoration: underline;
+
+                  &::after {
+                    right: 22px;
+                  }
                 }
 
                 &::after {
@@ -134,26 +135,27 @@
                   border-radius: 2px;
                   border-left: 0;
                   border-top: 0;
-                  content: " ";
+                  content: ' ';
                   display: block;
-                  height: .625em;
-                  margin-top: -.4375em;
+                  height: 0.625em;
+                  width: 0.625em;
+                  margin-top: -0.4375em;
                   pointer-events: none;
                   position: absolute;
-                  left: 142px;
+                  right: 25px;
                   top: 14px;
                   transform: rotate(-45deg);
                   transform-origin: center;
-                  width: .625em;
                   border-color: #3273dc;
+                  transition: all 0.3s ease;
                 }
               }
             }
 
             .more-features {
-              transform: scaleY(0);    
+              transform: scaleY(0);
               transform-origin: top;
-              transition: all 0.26s ease;
+              transition: all 0.3s ease;
               height: 0;
 
               &.toggled {
@@ -165,29 +167,9 @@
           }
 
           .price-more {
+            font-weight: 700;
             text-decoration: underline;
-            font-weight: 600;
-            color: #4A4A4A;
           }
-
-          @media (max-width: 541px) {
-            .price{
-              margin-top: 0 !important;
-            }
-          }
-        }
-
-        @media (max-width: 541px) {
-          .package{
-            min-height: unset !important;
-          }
-        }
-      }
-
-      @media (max-width: 768px) {
-        .packages{
-          flex-wrap: wrap;
-          width: 100%;
         }
       }
 

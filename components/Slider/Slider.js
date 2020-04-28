@@ -1,38 +1,35 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from 'react';
 
-import SliderContent from "./SliderContent";
-import Slide from "./Slide";
-import Arrow from "./Arrow";
-import Dots from "./Dots";
-import Description from "./Description";
+import SliderContent from './SliderContent';
+import Slide from './Slide';
+import Arrow from './Arrow';
+import Dots from './Dots';
 
-import "./Slider.scss";
+import './Slider.scss';
 
 const Slider = (props) => {
   const {
     id,
     slides,
-    currentSlide,
-    width = "100%",
-    transition = ".3",
+    currentSlide = 0,
+    width = '100%',
+    transition = '.3',
     onlyImage,
     hasArrow,
     hasDots,
     autoPlay = false,
     callback,
-    eventBanner
+    eventBanner,
   } = props;
 
   const [state, setState] = useState({
     activeSlide: currentSlide,
     translate: 0,
     isContrast: true,
-    hasOverlay: true
+    hasOverlay: true,
   });
 
   const { activeSlide, translate, isContrast, hasOverlay } = state;
-
-  const events = [{title: 'Free Shipping and Admin Fee'}, {title: 'Free Voucher Rp 100.000'}];
 
   // const autoPlayRef = useRef();
 
@@ -99,33 +96,25 @@ const Slider = (props) => {
     }
   };
 
-  // const nextSlide = (activeSlide) => {
-  //   setState({
-  //     ...state,
-  //     translate:
-  //       translate >= (slides.length - 100 / width.match(/\d+/)[0]) * 100
-  //         ? 0
-  //         : translate + 100,
-  //     activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
-  //   });
+  const nextSlide = (currentSlide) => {
+    let _activeSlide =
+      typeof currentSlide === 'number' ? currentSlide : activeSlide;
 
-  //   if (callback) {
-  //     return {
-  //       id,
-  //       activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
-  //     };
-  //   }
-  // };
-
-  const nextSlide = () => {
     setState({
       ...state,
       translate:
         translate >= (slides.length - 100 / width.match(/\d+/)[0]) * 100
           ? 0
           : translate + 100,
-      activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
+      activeSlide: _activeSlide === slides.length - 1 ? 0 : _activeSlide + 1,
     });
+
+    if (callback) {
+      return {
+        id,
+        activeSlide: _activeSlide === slides.length - 1 ? 0 : _activeSlide + 1,
+      };
+    }
   };
 
   const prevSlide = () =>
@@ -169,20 +158,6 @@ const Slider = (props) => {
             hasOverlay={hasOverlay}
           />
         </>
-      )}
-
-      {eventBanner && (
-      <div className="slider">
-        <SliderContent
-          width={width}
-          translate={translate}
-          transition={transition}
-        >
-          {events.map((_slide, idx) => (
-            <Description eventName={_slide.title}/>
-          ))}
-        </SliderContent>
-      </div>
       )}
 
       {hasDots && (
