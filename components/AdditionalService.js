@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../components/Button";
+import Button, { LinkButton } from "../components/Button";
 
 const getPackages = import("../json/packages.json");
 
@@ -13,11 +13,11 @@ export default function AdditionalService() {
 
   const toggleModal = () => setIsModal(!isModal);
 
-  const previewPDF = () =>  window.open('/assets/files/layanan_tambahan_2020.pdf');
+  // const previewPDF = () =>  window.open('/assets/files/layanan_tambahan_2020.pdf');
 
   return (
     <>
-      <Button type="button" className="btn-primary" onClick={previewPDF}>
+      <Button type="button" className="btn-primary" onClick={toggleModal}>
         Layanan Tambahan
       </Button>
       <div className={`modal ${isModal ? "is-active" : ""}`}>
@@ -31,7 +31,7 @@ export default function AdditionalService() {
             Close
           </button>
           <h2>Layanan Tambahan</h2>
-          <table>
+          {/* <table>
             <tbody>
               {additionalService.map((service, idx) => (
                 <tr key={idx}>
@@ -47,7 +47,16 @@ export default function AdditionalService() {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </table> */}
+          <img src="/assets/images/price/Brosur Layanan Tambahan-01.jpg" />
+          <img src="/assets/images/price/Brosur Layanan Tambahan-02.jpg" />
+          <LinkButton
+            href="http://mauorder.online/order-avana"
+            target="__blank"
+            className="btn-primary btn-middle"
+          >
+            Hubungi Kami
+          </LinkButton>
         </div>
       </div>
     </>

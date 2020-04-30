@@ -160,6 +160,12 @@ footer {
     }
   }
 
+  &.btn-middle {
+    margin: 1.25em auto !important;
+    display: flex;
+    width: fit-content;
+  }
+
   &.is-rounded {
     border-radius: 290486px;
   }
@@ -456,6 +462,10 @@ footer {
     li {
       margin-bottom: 0.5em;
     }
+  }
+
+  @media (max-width: 521px) {
+      max-width: calc(100% - 30px) !important;
   }
 }
 
