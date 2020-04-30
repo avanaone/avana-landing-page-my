@@ -302,7 +302,7 @@ const Home = () => {
               </ul>
               <div className="ava-btn-group">
                 <LinkButton
-                  href="http://mauorder.online/reseller-manajemen"
+                  href="http://maubeli.online/reseller-manajemen"
                   target="__blank"
                   className="btn-primary"
                 >
