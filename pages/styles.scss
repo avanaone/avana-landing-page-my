@@ -431,6 +431,33 @@ footer {
   padding: 2.5vw 2vw 2vw;
   border-radius: 15px;
 
+  &.hf-sticky {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .modal-close {
+      z-index: 2;
+    }
+
+    .modal-header-sticky {
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 1em 0;
+
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+    
+    .modal-footer-sticky {
+      position: sticky;
+      bottom: 0;
+      background: white;
+      padding: 0.25em 0;
+    }
+  }
+
   .modal-close {
     position: absolute;
     top: 5px;

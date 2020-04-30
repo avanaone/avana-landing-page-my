@@ -22,7 +22,7 @@ export default function AdditionalService() {
       </Button>
       <div className={`modal ${isModal ? "is-active" : ""}`}>
         <div className="modal-background" onClick={toggleModal} />
-        <div className="modal-content">
+        <div className="modal-content hf-sticky">
           <button
             className="modal-close is-large"
             aria-label="close"
@@ -30,7 +30,9 @@ export default function AdditionalService() {
           >
             Close
           </button>
-          <h2>Layanan Tambahan</h2>
+          <div className="modal-header-sticky">
+            <h2>Layanan Tambahan</h2>
+          </div>
           {/* <table>
             <tbody>
               {additionalService.map((service, idx) => (
@@ -48,15 +50,17 @@ export default function AdditionalService() {
               ))}
             </tbody>
           </table> */}
-          <img src="/assets/images/price/Brosur Layanan Tambahan-01.jpg" />
-          <img src="/assets/images/price/Brosur Layanan Tambahan-02.jpg" />
-          <LinkButton
-            href="http://mauorder.online/order-avana"
-            target="__blank"
-            className="btn-primary btn-middle"
-          >
-            Hubungi Kami
-          </LinkButton>
+          <img src="/assets/images/price/Brosur Layanan Tambahan-03.jpeg" />
+          <img src="/assets/images/price/Brosur Layanan Tambahan-04.jpeg" />
+          <div className="modal-footer-sticky">
+            <LinkButton
+              href="http://mauorder.online/order-avana"
+              target="__blank"
+              className="btn-primary btn-middle"
+            >
+              Hubungi Kami
+            </LinkButton>
+          </div>
         </div>
       </div>
     </>

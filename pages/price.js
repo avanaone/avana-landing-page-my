@@ -113,7 +113,7 @@ const Price = () => {
                           <li key={idx}>
                             {feature === 'AVAChat' ? (
                               <>
-                                <span>Integrasi Chat Sosial Media</span>
+                                <span>{feature}</span>
                                 <a
                                   href="/avachat"
                                   title="AVAChat"
@@ -140,27 +140,41 @@ const Price = () => {
                         <li className="has-text-weight-light">
                           Order via Comment
                         </li>
-                        <li className="has-text-weight-light">
-                          Integrasi Facebook Store
-                        </li>
-                        <li className="has-text-weight-light">
-                          Search Engine Optimization
-                        </li>
-                        {pkg.name !== 'Basic' ? (
+                        {pkg.name !== 'VIP' ? (
                           <>
                             <li className="has-text-weight-light">
-                              Integrasi Facebook Pixel
+                              Integrasi Facebook Store
                             </li>
                             <li className="has-text-weight-light">
-                              Website Toko Online
+                              Search Engine Optimization
                             </li>
+                          </>
+                        ) : (
+                          ''
+                        )}
+                        {pkg.name !== 'Basic' ? (
+                          <>
+                            {pkg.name !== 'VIP' ? (
+                              <li className="has-text-weight-light">
+                                Integrasi Facebook Pixel
+                              </li>
+                            ) : (
+                              ''
+                            )}
+                            {pkg.name === 'Advance' ? (
+                              <li className="has-text-weight-light">
+                                Website Toko Online
+                              </li>
+                            ) : (
+                              ''
+                            )}
                           </>
                         ) : (
                           ''
                         )}
                         {pkg.period === 'yearly' && pkg.name !== 'Basic' ? (
                           <>
-                            {pkg.name !== 'VIP' ? (
+                            {pkg.name === 'Advance' ? (
                               <li className="has-text-weight-light">
                                 Domain.com
                               </li>
@@ -179,9 +193,13 @@ const Price = () => {
                           <li className="has-text-weight-light">Kode Promo</li>
                         </>
                       )} */}
-                        <li className="has-text-weight-light">
-                          Auto Reply Facebook Messenger
-                        </li>
+                        {pkg.name === 'Basic' ? (
+                          <li className="has-text-weight-light">
+                            Auto Reply Facebook Messenger
+                          </li>
+                        ) : (
+                          ''
+                        )}
                         <div
                           className={`more-features 
                         more-${pkg.name}
@@ -196,6 +214,40 @@ const Price = () => {
                         }
                         ${pkg.name === 'Basic' && hideBasic ? 'toggled' : ''}`}
                         >
+                          {pkg.name === 'VIP' ? (
+                            <>
+                            <li className="has-text-weight-light">
+                              Integrasi Facebook Store
+                            </li>
+                            <li className="has-text-weight-light">
+                              Search Engine Optimization
+                            </li>
+                            <li className="has-text-weight-light">
+                              Integrasi Facebook Pixel
+                            </li>
+                            </>
+                          ) : (
+                            ''
+                          )}
+                          {pkg.name !== 'Basic' ? (
+                            <li className="has-text-weight-light">
+                              Auto Reply Facebook Messenger
+                            </li>
+                          ) : (
+                            ''
+                          )}
+                          {pkg.name !== 'Basic' && pkg.name !== 'Advance' ? (
+                            <>
+                            <li className="has-text-weight-light">
+                              Website Toko Online
+                            </li>
+                            <li className="has-text-weight-light">
+                              Domain.com
+                            </li>
+                            </>
+                          ) : (
+                            ''
+                          )}
                           <li className="has-text-weight-light">
                             Messenger Blast
                           </li>
