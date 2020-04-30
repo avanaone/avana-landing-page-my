@@ -2,6 +2,18 @@
   "id": {
     "packages": [
       {
+        "code": "yearly_basic",
+        "slug": "basic",
+        "name": "Basic",
+        "period": "yearly",
+        "currency": "IDR",
+        "price": 1499000,
+        "discounted_price": 749000,
+        "is_popular": false,
+        "is_discount": true,
+        "highlight_feature": []
+      },
+      {
         "code": "yearly_advance_plan_id",
         "slug": "advance_id",
         "name": "Advance",

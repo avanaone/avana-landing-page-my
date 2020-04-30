@@ -221,7 +221,6 @@ const Price = () => {
                       </ul>
                     </div>
                     <div className="package-info">
-                      {pkg.name !== 'Basic' ? (
                         <a
                           onClick={() => toggle(`${pkg.name}`)}
                           className="price-more"
@@ -236,11 +235,8 @@ const Price = () => {
                             ? 'Sembunyikan Fitur'
                             : 'Lihat Fitur Selengkapnya'}
                         </a>
-                      ) : (
-                        ''
-                      )}
                       <LinkButton
-                        href={`https://payment.avana.asia/pay?plan=${pkg.slug}`}
+                        href={`${pkg.name === 'Basic' ? 'http://mauorder.online/order-avana': `https://payment.avana.asia/pay?plan=${pkg.slug}`}`}
                         target="__blank"
                         className="btn-primary"
                       >
