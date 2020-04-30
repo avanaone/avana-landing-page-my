@@ -250,7 +250,7 @@ const Price = () => {
                   </div>
                 ))}
             </div>
-            <a href="/packages-detail">Lihat Perbandingan</a>
+            {/* <a href="/packages-detail">Lihat Perbandingan</a> */}
           </section>
         </main>
         <Footer />
