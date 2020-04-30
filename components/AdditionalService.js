@@ -23,15 +23,15 @@ export default function AdditionalService() {
       <div className={`modal ${isModal ? "is-active" : ""}`}>
         <div className="modal-background" onClick={toggleModal} />
         <div className="modal-content hf-sticky">
-          <button
-            className="modal-close is-large"
-            aria-label="close"
-            onClick={toggleModal}
-          >
-            Close
-          </button>
           <div className="modal-header-sticky">
             <h2>Layanan Tambahan</h2>
+            <button
+              className="modal-close is-large"
+              aria-label="close"
+              onClick={toggleModal}
+            >
+              Close
+            </button>
           </div>
           {/* <table>
             <tbody>
