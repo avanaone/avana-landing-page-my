@@ -2,19 +2,6 @@
   "id": {
     "packages": [
       {
-        "code": "yearly_basic",
-        "slug": "basic",
-        "name": "Basic",
-        "period": "yearly",
-        "currency": "IDR",
-        "price": 1499000,
-        "discounted_price": 749000,
-        "is_popular": false,
-        "is_discount": true,
-        "highlight_feature": [
-        ]
-      },
-      {
         "code": "yearly_advance_plan_id",
         "slug": "advance_id",
         "name": "Advance",
@@ -72,7 +59,7 @@
         "discounted_price": 4999000,
         "is_popular": true,
         "is_discount": true,
-        "highlight_feature": ["AVAChat"]
+        "highlight_feature": ["Manajemen Reseller & Agen", "AVAChat"]
       },
       {
         "code": "semi-annually_business",
@@ -84,7 +71,7 @@
         "discounted_price": 3000000,
         "is_popular": true,
         "is_discount": false,
-        "highlight_feature": ["AVAChat"]
+        "highlight_feature": ["Manajemen Reseller & Agen", "AVAChat"]
       },
       {
         "code": "quarterly_business",
@@ -96,7 +83,7 @@
         "discounted_price": 1500000,
         "is_popular": true,
         "is_discount": false,
-        "highlight_feature": ["AVAChat"]
+        "highlight_feature": ["Manajemen Reseller & Agen", "AVAChat"]
       },
       {
         "code": "monthly_business",
@@ -108,7 +95,7 @@
         "discounted_price": 500000,
         "is_popular": true,
         "is_discount": false,
-        "highlight_feature": ["AVAChat"]
+        "highlight_feature": ["Manajemen Reseller & Agen", "AVAChat"]
       },
       {
         "code": "yearly_vip",
@@ -121,6 +108,7 @@
         "is_popular": false,
         "is_discount": false,
         "highlight_feature": [
+          "Manajemen Reseller & Agen",
           "AVAChat",
           "Free Setup Store",
           "Digital Marketing Training",

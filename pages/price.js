@@ -113,7 +113,7 @@ const Price = () => {
                           <li key={idx}>
                             {feature === 'AVAChat' ? (
                               <>
-                                <span>{feature}</span>
+                                <span>Integrasi Chat Sosial Media</span>
                                 <a
                                   href="/avachat"
                                   title="AVAChat"
@@ -134,54 +134,26 @@ const Price = () => {
                         ) : (
                           ''
                         )}
-                        {pkg.name !== 'Basic' ? (
-                          <li className="has-text-weight-light">
-                            Order via Comment
-                          </li>
-                        ) : (
-                          ''
-                        )}
-
+                        <li className="has-text-weight-light">
+                          Whatsapp Commerce
+                        </li>
+                        <li className="has-text-weight-light">
+                          Order via Comment
+                        </li>
                         <li className="has-text-weight-light">
                           Integrasi Facebook Store
                         </li>
-                        {pkg.name === 'Basic' ? (
-                          <>
-                            <li className="has-text-weight-light">
-                              Unlimited Upload Produk
-                            </li>
-                            <li className="has-text-weight-light">
-                              Integrasi Payment Gateway
-                            </li>
-                            <li className="has-text-weight-light">
-                              Integrasi Logistik
-                            </li>
-                            <li className="has-text-weight-light">
-                              Laporan Order
-                            </li>
-                            <li className="has-text-weight-light">
-                              Manajemen Database Pelanggan
-                            </li>
-                            <li className="has-text-weight-light">
-                              Manajement Promo
-                            </li>
-                          </>
-                        ) : (
-                          ''
-                        )}
-
+                        <li className="has-text-weight-light">
+                          Search Engine Optimization
+                        </li>
                         {pkg.name !== 'Basic' ? (
                           <>
                             <li className="has-text-weight-light">
-                              SEO & Integrasi Facebook Pixel
+                              Integrasi Facebook Pixel
                             </li>
-                            {pkg.name !== 'VIP' ? (
-                              <li className="has-text-weight-light">
-                                Website Toko Online
-                              </li>
-                            ) : (
-                              ''
-                            )}
+                            <li className="has-text-weight-light">
+                              Website Toko Online
+                            </li>
                           </>
                         ) : (
                           ''
@@ -207,13 +179,9 @@ const Price = () => {
                           <li className="has-text-weight-light">Kode Promo</li>
                         </>
                       )} */}
-                        {pkg.name !== 'VIP' && pkg.name !== 'Basic' ? (
-                          <li className="has-text-weight-light">
-                            Auto Reply Facebook Messenger
-                          </li>
-                        ) : (
-                          ''
-                        )}
+                        <li className="has-text-weight-light">
+                          Auto Reply Facebook Messenger
+                        </li>
                         <div
                           className={`more-features 
                         more-${pkg.name}
@@ -228,48 +196,27 @@ const Price = () => {
                         }
                         ${pkg.name === 'Basic' && hideBasic ? 'toggled' : ''}`}
                         >
-                          {pkg.name === 'VIP' ? (
-                            <>
-                              <li className="has-text-weight-light">
-                                Website Toko Online
-                              </li>
-                              <li className="has-text-weight-light">
-                                Domain.com
-                              </li>
-                              <li className="has-text-weight-light">
-                                Auto Reply Facebook Messenger
-                              </li>
-                            </>
-                          ) : (
-                            ''
-                          )}
-                          {pkg.name !== 'Basic' ? (
-                            <>
-                              <li className="has-text-weight-light">
-                                Messenger Blast
-                              </li>
-                              <li className="has-text-weight-light">
-                                Unlimited Upload Produk
-                              </li>
-                              <li className="has-text-weight-light">
-                                Integrasi Payment Gateway
-                              </li>
-                              <li className="has-text-weight-light">
-                                Integrasi Logistik
-                              </li>
-                              <li className="has-text-weight-light">
-                                Laporan Order
-                              </li>
-                              <li className="has-text-weight-light">
-                                Manajemen Database Pelanggan
-                              </li>
-                              <li className="has-text-weight-light">
-                                Manajement Promo
-                              </li>
-                            </>
-                          ) : (
-                            ''
-                          )}
+                          <li className="has-text-weight-light">
+                            Messenger Blast
+                          </li>
+                          <li className="has-text-weight-light">
+                            Unlimited Upload Produk
+                          </li>
+                          <li className="has-text-weight-light">
+                            Integrasi Payment Gateway
+                          </li>
+                          <li className="has-text-weight-light">
+                            Integrasi Logistik
+                          </li>
+                          <li className="has-text-weight-light">
+                            Laporan Order
+                          </li>
+                          <li className="has-text-weight-light">
+                            Manajemen Database Pelanggan
+                          </li>
+                          <li className="has-text-weight-light">
+                            Manajement Promo
+                          </li>
                         </div>
                       </ul>
                     </div>
