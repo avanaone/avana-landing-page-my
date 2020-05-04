@@ -13,6 +13,25 @@
     filter: invert(1);
     cursor: pointer;
 
+    &.hasOverlay {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+
+      img {
+        max-width: calc(100% - 10px);
+      }
+
+      &.left {
+        left: 10px;
+      }
+
+      &.right {
+        right: 10px;
+      }
+    }
+
     &.left {
       left: 0;
     }
@@ -45,6 +64,10 @@
       margin: 0.25em;
       border-radius: 50%;
       cursor: pointer;
+
+      &.eventBanner {
+        background-color: #dbdbdb;
+      }
 
       &.active {
         background-color: #fff;

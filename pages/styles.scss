@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:700,800|Nunito:400,700,800|Material+Icons&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700,800|Nunito:400,700,800|Material+Icons&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 16px;
 }
 
@@ -19,7 +19,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   line-height: 1.5em;
 }
 
@@ -92,7 +92,7 @@ footer {
       min-width: 250px;
 
       img {
-        width: 150px;
+        width: 125px;
       }
 
       p {
@@ -160,6 +160,12 @@ footer {
     }
   }
 
+  &.btn-middle {
+    margin: 1.25em auto !important;
+    display: flex;
+    width: fit-content;
+  }
+
   &.is-rounded {
     border-radius: 290486px;
   }
@@ -211,7 +217,7 @@ footer {
       position: relative;
 
       &::after {
-        content: "•";
+        content: '•';
         position: absolute;
         top: -5px;
         right: -10px;
@@ -285,10 +291,11 @@ footer {
 
 .header-channels {
   padding: 1.5em 5vw 1.5vw;
+  overflow: hidden;
 
   h2 {
     position: relative;
-    min-width: 300px;
+    min-width: 250px;
     margin: 0.5em 0;
     z-index: 1;
   }
@@ -297,23 +304,17 @@ footer {
     position: relative;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 100%;
-      right: -5%;
-      background-image: url("/assets/images/channels.png");
+      left: 10vw;
+      background-image: url('/assets/images/channels.png');
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       height: 10em;
-      width: 75vw;
-      transform: translate(5%, -100%);
-    }
-  }
-
-  @media (max-width: 786px) {
-    .channels {
-      display: none;
+      width: 75em;
+      transform: translate(0, -100%);
     }
   }
 }
@@ -430,10 +431,38 @@ footer {
   padding: 2.5vw 2vw 2vw;
   border-radius: 15px;
 
+  &.hf-sticky {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .modal-close {
+      z-index: 2;
+      top: 15px;
+    }
+
+    .modal-header-sticky {
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 1em 0;
+
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+
+    .modal-footer-sticky {
+      position: sticky;
+      bottom: 0;
+      background: white;
+      padding: 0.25em 0;
+    }
+  }
+
   .modal-close {
     position: absolute;
     top: 5px;
-    right: 15px;
+    right: 5px;
 
     &::before,
     &::after {
@@ -461,6 +490,10 @@ footer {
     li {
       margin-bottom: 0.5em;
     }
+  }
+
+  @media (max-width: 521px) {
+    max-width: calc(100% - 30px) !important;
   }
 }
 

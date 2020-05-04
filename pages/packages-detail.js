@@ -1,21 +1,24 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import Navbar from "../components/Navbar";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Navbar from '../components/Navbar';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-import { LinkButton } from "../components/Button";
-import AdditionalService from "../components/AdditionalService";
-import ContainerAnalytic from "../components/AnalyticContainer";
-import styles from "./scss/PackagesDetail.module.scss";
+import AdditionalService from '../components/AdditionalService';
 
-import { formatCurrency } from "../utils";
+import { LinkButton } from '../components/Button';
 
-const getPackages = import("../json/packages.json");
-const getPackagesDetail = import("../json/packages-detail.json");
+import ContainerAnalytic from '../components/AnalyticContainer';
 
-const Price = () => {
-  const [period, setPeriod] = useState("yearly");
+import styles from './scss/PackagesDetail.module.scss';
+
+import { formatCurrency } from '../utils';
+
+const getPackages = import('../json/packages.json');
+const getPackagesDetail = import('../json/packages-detail.json');
+
+const PackagesDetail = () => {
+  const [period, setPeriod] = useState('yearly');
   const [packages, setPackages] = useState([]);
   const [packagesDetail, setPackagesDetail] = useState([]);
 
@@ -35,26 +38,26 @@ const Price = () => {
             <div className="tabs-container">
               <ul className="ava-tabs">
                 <li
-                  className={period === "monthly" ? "active" : ""}
-                  onClick={() => handleFilterPeriod("monthly")}
+                  className={period === 'monthly' ? 'active' : ''}
+                  onClick={() => handleFilterPeriod('monthly')}
                 >
                   Bulanan
                 </li>
                 <li
-                  className={period === "quarterly" ? "active" : ""}
-                  onClick={() => handleFilterPeriod("quarterly")}
+                  className={period === 'quarterly' ? 'active' : ''}
+                  onClick={() => handleFilterPeriod('quarterly')}
                 >
                   3 Bulan
                 </li>
                 <li
-                  className={period === "semi-annually" ? "active" : ""}
-                  onClick={() => handleFilterPeriod("semi-annually")}
+                  className={period === 'semi-annually' ? 'active' : ''}
+                  onClick={() => handleFilterPeriod('semi-annually')}
                 >
                   6 Bulan
                 </li>
                 <li
-                  className={period === "yearly" ? "active" : ""}
-                  onClick={() => handleFilterPeriod("yearly")}
+                  className={period === 'yearly' ? 'active' : ''}
+                  onClick={() => handleFilterPeriod('yearly')}
                 >
                   1 Tahun
                 </li>
@@ -67,12 +70,15 @@ const Price = () => {
                   <tr>
                     <th>
                       <img
-                        src={require("public/assets/images/ava-cashier.png?resize&size=300?webp")}
+                        srcSet={
+                          require('public/assets/images/ava-cashier.png?resize&size=300?webp')
+                            .srcSet
+                        }
                         alt="AVA Cashier"
                       />
                     </th>
                     {packages
-                      .filter((pck) => pck.period === period)
+                      .filter((pkg) => pkg.period === period)
                       .map((pkg) => (
                         <th key={pkg.code}>
                           <div className="package">
@@ -99,7 +105,7 @@ const Price = () => {
                           </div>
                         </th>
                       ))}
-                    {packages.filter((pck) => pck.period === period).length <
+                    {packages.filter((pkg) => pkg.period === period).length <
                       3 && (
                       <th>
                         <div className="package">
@@ -121,14 +127,14 @@ const Price = () => {
                           {pkg ? (
                             <span
                               className="material-icons"
-                              style={{ color: "#fdb816" }}
+                              style={{ color: '#fdb816' }}
                             >
                               check_circle
                             </span>
                           ) : (
                             <span
                               className="material-icons"
-                              style={{ color: "#e92554" }}
+                              style={{ color: '#e92554' }}
                             >
                               cancel
                             </span>
@@ -146,7 +152,7 @@ const Price = () => {
                         <td key={pkg.code}>
                           <LinkButton
                             href={`https://payment.avana.asia/pay?plan=${pkg.slug}`}
-                            className="ava-btn btn-primary"
+                            className="btn-primary"
                           >{`Pilih ${pkg.name}`}</LinkButton>
                         </td>
                       ))}
@@ -162,4 +168,4 @@ const Price = () => {
   );
 };
 
-export default Price;
+export default PackagesDetail;

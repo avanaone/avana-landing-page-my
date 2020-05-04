@@ -2,6 +2,18 @@
   "id": {
     "packages": [
       {
+        "code": "yearly_basic",
+        "slug": "basic",
+        "name": "Basic",
+        "period": "yearly",
+        "currency": "IDR",
+        "price": 1499000,
+        "discounted_price": 749000,
+        "is_popular": false,
+        "is_discount": true,
+        "highlight_feature": []
+      },
+      {
         "code": "yearly_advance_plan_id",
         "slug": "advance_id",
         "name": "Advance",
@@ -10,7 +22,8 @@
         "price": 3000000,
         "discounted_price": 2499000,
         "is_popular": false,
-        "highlight_feature": ["Gratis domain .com"]
+        "is_discount": true,
+        "highlight_feature": []
       },
       {
         "code": "semi-annually_advance_plan_id",
@@ -21,6 +34,7 @@
         "price": 1500000,
         "discounted_price": 1500000,
         "is_popular": false,
+        "is_discount": false,
         "highlight_feature": []
       },
       {
@@ -32,6 +46,7 @@
         "price": 750000,
         "discounted_price": 750000,
         "is_popular": false,
+        "is_discount": false,
         "highlight_feature": []
       },
       {
@@ -43,6 +58,7 @@
         "price": 250000,
         "discounted_price": 250000,
         "is_popular": false,
+        "is_discount": false,
         "highlight_feature": []
       },
       {
@@ -54,7 +70,8 @@
         "price": 6000000,
         "discounted_price": 4999000,
         "is_popular": true,
-        "highlight_feature": ["Gratis domain .com", "Manajemen reseller"]
+        "is_discount": true,
+        "highlight_feature": ["Manajemen Reseller & Agen", "AVAChat"]
       },
       {
         "code": "semi-annually_business",
@@ -65,7 +82,8 @@
         "price": 3000000,
         "discounted_price": 3000000,
         "is_popular": true,
-        "highlight_feature": []
+        "is_discount": false,
+        "highlight_feature": ["Manajemen Reseller & Agen", "AVAChat"]
       },
       {
         "code": "quarterly_business",
@@ -76,7 +94,8 @@
         "price": 1500000,
         "discounted_price": 1500000,
         "is_popular": true,
-        "highlight_feature": []
+        "is_discount": false,
+        "highlight_feature": ["Manajemen Reseller & Agen", "AVAChat"]
       },
       {
         "code": "monthly_business",
@@ -87,7 +106,8 @@
         "price": 500000,
         "discounted_price": 500000,
         "is_popular": true,
-        "highlight_feature": []
+        "is_discount": false,
+        "highlight_feature": ["Manajemen Reseller & Agen", "AVAChat"]
       },
       {
         "code": "yearly_vip",
@@ -98,10 +118,13 @@
         "price": 12999000,
         "discounted_price": 12999000,
         "is_popular": false,
+        "is_discount": false,
         "highlight_feature": [
-          "Gratis domain .com",
-          "Manajemen reseller",
-          "AVAChat"
+          "Manajemen Reseller & Agen",
+          "AVAChat",
+          "Free Setup Store",
+          "Digital Marketing Training",
+          "Social Media Ads Service"
         ]
       }
     ],

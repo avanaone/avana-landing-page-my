@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import { useRouter } from "next/router";
-import parser from "html-react-parser";
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import parser from 'html-react-parser';
 
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import ContainerAnalytic from "../../components/AnalyticContainer";
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
-import EventCard from "../../components/EventCard";
+import EventCard from '../../components/EventCard';
 
-import "./EventDetail.scss";
+import ContainerAnalytic from '../../components/AnalyticContainer';
+
+import './EventDetail.scss';
 
 export default function Event({ data }) {
   const router = useRouter();
@@ -17,6 +18,7 @@ export default function Event({ data }) {
 
   const event = events.find((x) => x.id === router.query.id);
   const otherEvents = events
+    .reverse()
     .filter((x) => x.id !== router.query.id)
     .slice(0, 5);
 
@@ -51,7 +53,7 @@ export default function Event({ data }) {
 }
 
 Event.getInitialProps = async () => {
-  const res = await import("../../json/event.json");
+  const res = await import('../../json/event.json');
   const data = res.default;
 
   return { data };

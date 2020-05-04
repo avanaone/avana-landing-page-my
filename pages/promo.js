@@ -1,21 +1,22 @@
-import React, { useState } from "react";
-import Head from "next/head";
+import React, { useState } from 'react';
+import Head from 'next/head';
 
-import Navbar from "../components/Navbar";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import ContainerAnalytic from "../components/AnalyticContainer";
+import Navbar from '../components/Navbar';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-import PromoCard from "../components/PromoCard";
+import PromoCard from '../components/PromoCard';
 
-import styles from "./scss/Promo.module.scss";
+import ContainerAnalytic from '../components/AnalyticContainer';
 
-const getPromo = import("../json/promo.json");
+import styles from './scss/Promo.module.scss';
+
+const getPromos = import('../json/promo.json');
 
 const Promo = () => {
-  const [promo, setPromo] = useState([]);
+  const [promos, setPromos] = useState([]);
 
-  getPromo.then((res) => setPromo(res.default));
+  getPromos.then((res) => setPromos(res.default));
 
   return (
     <ContainerAnalytic>
@@ -27,7 +28,7 @@ const Promo = () => {
         <Header title="Promo" />
         <main>
           <section>
-            {promo.map((promo) => (
+            {promos.reverse().map((promo) => (
               <PromoCard key={promo.code} promo={promo} />
             ))}
           </section>

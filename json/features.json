@@ -27,6 +27,12 @@
   ],
   "avachat": [
     {
+      "title": "Integrasi dengan berbagai platform sosial media",
+      "description": "Dengan AVAchat, kamu bisa mengatur seluruh aktivitas chat kamu di Facebook, WhatsApp, Instagram, Line dan Telegram hany melalui satu dashboard.",
+      "image": "avachat/multichannel-chat.png",
+      "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+    },
+    {
       "title": "Kirim Informasi Produk",
       "description": "Kirim gambar dan informasi katalog produk Anda ke pelanggan dengan mudah dan cepat.",
       "image": "avachat/send-product-info.png",

@@ -1,33 +1,35 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from 'react';
 
-import SliderContent from "./SliderContent";
-import Slide from "./Slide";
-import Arrow from "./Arrow";
-import Dots from "./Dots";
+import SliderContent from './SliderContent';
+import Slide from './Slide';
+import Arrow from './Arrow';
+import Dots from './Dots';
 
-import "./Slider.scss";
+import './Slider.scss';
 
 const Slider = (props) => {
   const {
     id,
     slides,
-    currentSlide,
-    width = "100%",
-    transition = ".3",
+    currentSlide = 0,
+    width = '100%',
+    transition = '.3',
     onlyImage,
     hasArrow,
     hasDots,
     autoPlay = false,
     callback,
+    eventBanner,
   } = props;
 
   const [state, setState] = useState({
     activeSlide: currentSlide,
     translate: 0,
     isContrast: true,
+    hasOverlay: true,
   });
 
-  const { activeSlide, translate, isContrast } = state;
+  const { activeSlide, translate, isContrast, hasOverlay } = state;
 
   // const autoPlayRef = useRef();
 
@@ -94,20 +96,23 @@ const Slider = (props) => {
     }
   };
 
-  const nextSlide = (activeSlide) => {
+  const nextSlide = (currentSlide) => {
+    let _activeSlide =
+      typeof currentSlide === 'number' ? currentSlide : activeSlide;
+
     setState({
       ...state,
       translate:
         translate >= (slides.length - 100 / width.match(/\d+/)[0]) * 100
           ? 0
           : translate + 100,
-      activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
+      activeSlide: _activeSlide === slides.length - 1 ? 0 : _activeSlide + 1,
     });
 
     if (callback) {
       return {
         id,
-        activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
+        activeSlide: _activeSlide === slides.length - 1 ? 0 : _activeSlide + 1,
       };
     }
   };
@@ -144,11 +149,13 @@ const Slider = (props) => {
             direction="left"
             handleClick={prevSlide}
             isContrast={isContrast}
+            hasOverlay={hasOverlay}
           />
           <Arrow
             direction="right"
             handleClick={nextSlide}
             isContrast={isContrast}
+            hasOverlay={hasOverlay}
           />
         </>
       )}
@@ -159,6 +166,7 @@ const Slider = (props) => {
           activeSlide={activeSlide}
           handleClick={jumpSlide}
           isContrast={isContrast}
+          eventBanner={eventBanner}
         />
       )}
     </div>

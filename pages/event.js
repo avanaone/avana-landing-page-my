@@ -1,15 +1,17 @@
-import React, { useState } from "react";
-import Head from "next/head";
+import React, { useState } from 'react';
+import Head from 'next/head';
 
-import Navbar from "../components/Navbar";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Navbar from '../components/Navbar';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-import EventCard from "../components/EventCard";
-import ContainerAnalytic from "../components/AnalyticContainer";
-import styles from "./scss/Event.module.scss";
+import EventCard from '../components/EventCard';
 
-const getEvents = import("../json/event.json");
+import ContainerAnalytic from '../components/AnalyticContainer';
+
+import styles from './scss/Event.module.scss';
+
+const getEvents = import('../json/event.json');
 
 const Event = () => {
   const [events, setEvents] = useState([]);
@@ -26,7 +28,7 @@ const Event = () => {
         <Header title="Event" />
         <main>
           <section>
-            {events.map((event) => (
+            {events.reverse().map((event) => (
               <EventCard key={event.id} event={event} />
             ))}
           </section>

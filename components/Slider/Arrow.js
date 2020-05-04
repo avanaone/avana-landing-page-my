@@ -1,19 +1,22 @@
-import React from "react";
+import React from 'react';
 
-const Arrow = ({ direction, isContrast, handleClick }) => {
+const Arrow = ({ direction, isContrast, hasOverlay, handleClick }) => {
   return (
-    <div onClick={handleClick} className={`arrow ${direction}`}>
-      {direction === "left" ? (
+    <div
+      onClick={handleClick}
+      className={`arrow ${direction} ${hasOverlay ? 'hasOverlay' : ''}`}
+    >
+      {direction === 'left' ? (
         <img
-          src="/assets/images/back.svg"
+          src="assets/images/back.svg"
           alt=""
-          className={isContrast ? "contrast" : ""}
+          className={isContrast ? 'contrast' : ''}
         />
       ) : (
         <img
-          src="/assets/images/next.svg"
+          src="assets/images/next.svg"
           alt=""
-          className={isContrast ? "contrast" : ""}
+          className={isContrast ? 'contrast' : ''}
         />
       )}
     </div>

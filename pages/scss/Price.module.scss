@@ -6,7 +6,7 @@
       &::after {
         top: 50%;
         right: 0;
-        background-image: url("/assets/images/price/header.png");
+        background-image: url('/assets/images/price/header.png');
         transform: translate(0, -50%);
       }
     }
@@ -32,7 +32,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
         text-align: center;
 
@@ -41,9 +41,17 @@
           flex-direction: column;
           background-color: #ffffff;
           padding: 2em 1.25em;
-          margin: 1em 1.5em;
+          margin: 1em 0.5em;
           border: 0.125em solid #d7d7d7;
           border-radius: 0.75em;
+          justify-content: space-between;
+          max-width: 17.5em;
+
+          &.basic {
+            &::before {
+              content: 'Save 50% OFF' !important;
+            }
+          }
 
           &.popular {
             position: relative;
@@ -52,10 +60,10 @@
             overflow: hidden;
 
             &::after {
-              content: "POPULER";
+              content: 'POPULER';
               position: absolute;
               top: 0;
-              right: -15%;
+              right: -12.5%;
               background-color: #fdb816;
               padding: 0.5em 5em;
               font-size: 0.75rem;
@@ -65,24 +73,102 @@
             }
           }
 
-          .name {
-            font-weight: 700;
+          &.discounted {
+            position: relative;
+            padding: 2.75em 1.25em;
+            border: 0.125em solid #fdb816;
+            overflow: hidden;
+
+            &::before {
+              content: 'Save 15% OFF';
+              position: absolute;
+              top: 0;
+              left: 0;
+              color: #fff;
+              background-color: #ea4a4a;
+              padding: 0.5em 0.75em;
+              font-size: 0.85rem;
+              font-weight: 700;
+              border-radius: 0 0 0.75em 0;
+              text-transform: uppercase;
+            }
           }
 
-          .price {
-            color: #45df8f;
-            font-weight: 700;
-            margin: 0.25em 0;
+          .package-info {
+            display: flex;
+            flex-direction: column;
+
+            .name {
+              font-weight: 700;
+            }
+
+            .price {
+              color: #45df8f;
+              font-weight: 700;
+              margin: 0.25em 0;
+            }
           }
 
           ul {
             list-style: unset;
-            margin: 0.5em 2.5em 1.5em;
+            margin: 0.5em 0.5em 1.5em;
             text-align: left;
 
             li {
-              margin: 0.5em 0;
+              margin: 0.5em 1em;
+
+              .avachatBtn {
+                position: relative;
+                color: #3273dc;
+                display: block;
+
+                &:hover {
+                  text-decoration: underline;
+
+                  &::after {
+                    right: 22px;
+                  }
+                }
+
+                &::after {
+                  border: 3px solid transparent;
+                  border-radius: 2px;
+                  border-left: 0;
+                  border-top: 0;
+                  content: ' ';
+                  display: block;
+                  height: 0.625em;
+                  width: 0.625em;
+                  margin-top: -0.4375em;
+                  pointer-events: none;
+                  position: absolute;
+                  right: 25px;
+                  top: 14px;
+                  transform: rotate(-45deg);
+                  transform-origin: center;
+                  border-color: #3273dc;
+                  transition: all 0.3s ease;
+                }
+              }
             }
+
+            .more-features {
+              transform: scaleY(0);
+              transform-origin: top;
+              transition: all 0.3s ease;
+              height: 0;
+
+              &.toggled {
+                transform: scaleY(1);
+                height: 100%;
+                transition: all 0.24s ease;
+              }
+            }
+          }
+
+          .price-more {
+            font-weight: 700;
+            text-decoration: underline;
           }
         }
       }

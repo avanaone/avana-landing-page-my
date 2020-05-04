@@ -1,16 +1,17 @@
-import React, { useState, useEffect, useCallback } from "react";
-import Head from "next/head";
+import React, { useState, useEffect, useCallback } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import ContainerAnalytic from "../components/AnalyticContainer";
-import { LinkButton } from "../components/Button";
-import Slider from "../components/Slider";
-import SliderTestimonial from "../components/SliderTestimonial";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import ContainerAnalytic from '../components/AnalyticContainer';
+import { LinkButton } from '../components/Button';
+import Slider from '../components/Slider';
+import SliderTestimonial from '../components/SliderTestimonial';
 
-import styles from "./scss/Home.module.scss";
+import styles from './scss/Home.module.scss';
 
-import getTestimonials from "../json/testimonial.json";
+import getTestimonials from '../json/testimonial.json';
 
 const Home = () => {
   const [state, setState] = useState({
@@ -19,15 +20,17 @@ const Home = () => {
     reseller: 0,
     webstore: 0,
   });
+  const [navbarBg, setNavbarBg] = useState('#f4f7f9');
+  const [isModal, setIsModal] = useState(true);
+  const toggleModal = () => setIsModal(!isModal);
 
   const { dashboard, avachat, reseller, webstore } = state;
-  const [navbarBg, setNavbarBg] = useState("#f4f7f9");
 
   useEffect(() => {
-    window.addEventListener("scroll", handleNavbar);
+    window.addEventListener('scroll', handleNavbar);
 
     return () => {
-      window.removeEventListener("scroll", handleNavbar);
+      window.removeEventListener('scroll', handleNavbar);
     };
   }, []);
 
@@ -43,7 +46,7 @@ const Home = () => {
   };
 
   const handleNavbar = (e) => {
-    window.scrollY > 10 ? setNavbarBg("#fff") : setNavbarBg("#f4f7f9");
+    window.scrollY > 10 ? setNavbarBg('#fff') : setNavbarBg('#f4f7f9');
   };
 
   return (
@@ -112,7 +115,7 @@ const Home = () => {
           </LinkButton>
           <div className="channels" />
           <img
-            srcSet={require("public/assets/images/hero.png?resize?webp").srcSet}
+            srcSet={require('public/assets/images/hero.png?resize?webp').srcSet}
             alt=""
           />
         </header>
@@ -129,20 +132,20 @@ const Home = () => {
               </p>
               <ul>
                 <li
-                  className={dashboard === 0 ? "active" : ""}
-                  onClick={() => handleSlider("dashboard", 0)}
+                  className={dashboard === 0 ? 'active' : ''}
+                  onClick={() => handleSlider('dashboard', 0)}
                 >
                   Manajemen Pesanan
                 </li>
                 <li
-                  className={dashboard === 1 ? "active" : ""}
-                  onClick={() => handleSlider("dashboard", 1)}
+                  className={dashboard === 1 ? 'active' : ''}
+                  onClick={() => handleSlider('dashboard', 1)}
                 >
                   Manajemen Produk
                 </li>
                 <li
-                  className={dashboard === 2 ? "active" : ""}
-                  onClick={() => handleSlider("dashboard", 2)}
+                  className={dashboard === 2 ? 'active' : ''}
+                  onClick={() => handleSlider('dashboard', 2)}
                 >
                   Balas Pesan & Komen Otomatis
                 </li>
@@ -166,21 +169,21 @@ const Home = () => {
                 slides={[
                   <img
                     srcSet={
-                      require("public/assets/images/dashboard/manajemen-order.png?resize?webp")
+                      require('public/assets/images/dashboard/manajemen-order.png?resize?webp')
                         .srcSet
                     }
                     alt=""
                   />,
                   <img
                     srcSet={
-                      require("public/assets/images/dashboard/manajemen-produk.png?resize?webp")
+                      require('public/assets/images/dashboard/manajemen-produk.png?resize?webp')
                         .srcSet
                     }
                     alt=""
                   />,
                   <img
                     srcSet={
-                      require("public/assets/images/dashboard/auto-reply.png?resize?webp")
+                      require('public/assets/images/dashboard/auto-reply.png?resize?webp')
                         .srcSet
                     }
                     alt=""
@@ -188,7 +191,6 @@ const Home = () => {
                 ]}
                 currentSlide={dashboard}
                 hasDots
-                autoPlay
                 callback={callbackSlider}
               />
             </div>
@@ -205,27 +207,27 @@ const Home = () => {
               </p>
               <ul>
                 <li
-                  className={avachat === 0 ? "active" : ""}
-                  onClick={() => handleSlider("avachat", 0)}
+                  className={avachat === 0 ? 'active' : ''}
+                  onClick={() => handleSlider('avachat', 0)}
                 >
-                  Kirim Produk & Invois
+                  Kirim Produk & Invoice
                 </li>
                 <li
-                  className={avachat === 1 ? "active" : ""}
-                  onClick={() => handleSlider("avachat", 1)}
+                  className={avachat === 1 ? 'active' : ''}
+                  onClick={() => handleSlider('avachat', 1)}
                 >
                   Quick Reply
                 </li>
                 <li
-                  className={avachat === 2 ? "active" : ""}
-                  onClick={() => handleSlider("avachat", 2)}
+                  className={avachat === 2 ? 'active' : ''}
+                  onClick={() => handleSlider('avachat', 2)}
                 >
                   Info Pengiriman Barang
                 </li>
               </ul>
               <div className="ava-btn-group">
                 <LinkButton
-                  href="https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk AVAChat"
+                  href="http://nanya.online/tanya-ava-3"
                   target="__blank"
                   className="btn-primary"
                 >
@@ -242,21 +244,21 @@ const Home = () => {
                 slides={[
                   <img
                     srcSet={
-                      require("public/assets/images/avachat/send-product-info.png?resize?webp")
+                      require('public/assets/images/avachat/send-product-info.png?resize?webp')
                         .srcSet
                     }
                     alt=""
                   />,
                   <img
                     srcSet={
-                      require("public/assets/images/avachat/quick-reply.png?resize?webp")
+                      require('public/assets/images/avachat/quick-reply.png?resize?webp')
                         .srcSet
                     }
                     alt=""
                   />,
                   <img
                     srcSet={
-                      require("public/assets/images/avachat/send-shipping-info.png?resize?webp")
+                      require('public/assets/images/avachat/send-shipping-info.png?resize?webp')
                         .srcSet
                     }
                     alt=""
@@ -264,7 +266,6 @@ const Home = () => {
                 ]}
                 currentSlide={avachat}
                 hasDots
-                autoPlay
                 callback={callbackSlider}
               />
             </div>
@@ -281,27 +282,27 @@ const Home = () => {
               </p>
               <ul>
                 <li
-                  className={reseller === 0 ? "active" : ""}
-                  onClick={() => handleSlider("reseller", 0)}
+                  className={reseller === 0 ? 'active' : ''}
+                  onClick={() => handleSlider('reseller', 0)}
                 >
                   Manajemen Database Reseller
                 </li>
                 <li
-                  className={reseller === 1 ? "active" : ""}
-                  onClick={() => handleSlider("reseller", 1)}
+                  className={reseller === 1 ? 'active' : ''}
+                  onClick={() => handleSlider('reseller', 1)}
                 >
                   Lihat Performa Reseller
                 </li>
                 <li
-                  className={reseller === 2 ? "active" : ""}
-                  onClick={() => handleSlider("reseller", 2)}
+                  className={reseller === 2 ? 'active' : ''}
+                  onClick={() => handleSlider('reseller', 2)}
                 >
                   Atur Komisi & Buat Level Reseller
                 </li>
               </ul>
               <div className="ava-btn-group">
                 <LinkButton
-                  href="https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk Manajemen Reseller"
+                  href="http://nanya.online/tanya-ava-3"
                   target="__blank"
                   className="btn-primary"
                 >
@@ -318,21 +319,21 @@ const Home = () => {
                 slides={[
                   <img
                     srcSet={
-                      require("public/assets/images/reseller/manajemen-database-reseller.png?resize?webp")
+                      require('public/assets/images/reseller/manajemen-database-reseller.png?resize?webp')
                         .srcSet
                     }
                     alt=""
                   />,
                   <img
                     srcSet={
-                      require("public/assets/images/reseller/lihat-performa-reseller.png?resize?webp")
+                      require('public/assets/images/reseller/lihat-performa-reseller.png?resize?webp')
                         .srcSet
                     }
                     alt=""
                   />,
                   <img
                     srcSet={
-                      require("public/assets/images/reseller/atur-komisi-reseller.png?resize?webp")
+                      require('public/assets/images/reseller/atur-komisi-reseller.png?resize?webp')
                         .srcSet
                     }
                     alt=""
@@ -340,7 +341,6 @@ const Home = () => {
                 ]}
                 currentSlide={reseller}
                 hasDots
-                autoPlay
                 callback={callbackSlider}
               />
             </div>
@@ -357,20 +357,20 @@ const Home = () => {
               </p>
               <ul>
                 <li
-                  className={webstore === 0 ? "active" : ""}
-                  onClick={() => handleSlider("webstore", 0)}
+                  className={webstore === 0 ? 'active' : ''}
+                  onClick={() => handleSlider('webstore', 0)}
                 >
                   Dukungan Payment Gateway
                 </li>
                 <li
-                  className={webstore === 1 ? "active" : ""}
-                  onClick={() => handleSlider("webstore", 1)}
+                  className={webstore === 1 ? 'active' : ''}
+                  onClick={() => handleSlider('webstore', 1)}
                 >
                   Berbagai Macam Pilihan Tema
                 </li>
                 <li
-                  className={webstore === 2 ? "active" : ""}
-                  onClick={() => handleSlider("webstore", 2)}
+                  className={webstore === 2 ? 'active' : ''}
+                  onClick={() => handleSlider('webstore', 2)}
                 >
                   Order Melalui WhatsApp
                 </li>
@@ -394,21 +394,21 @@ const Home = () => {
                 slides={[
                   <img
                     srcSet={
-                      require("public/assets/images/webstore/payment-gateway.png?resize?webp")
+                      require('public/assets/images/webstore/payment-gateway.png?resize?webp')
                         .srcSet
                     }
                     alt=""
                   />,
                   <img
                     srcSet={
-                      require("public/assets/images/webstore/theme.png?resize?webp")
+                      require('public/assets/images/webstore/theme.png?resize?webp')
                         .srcSet
                     }
                     alt=""
                   />,
                   <img
                     srcSet={
-                      require("public/assets/images/webstore/order-via-whatsapp.png?resize?webp")
+                      require('public/assets/images/webstore/order-via-whatsapp.png?resize?webp')
                         .srcSet
                     }
                     alt=""
@@ -416,7 +416,6 @@ const Home = () => {
                 ]}
                 currentSlide={webstore}
                 hasDots
-                autoPlay
                 callback={callbackSlider}
               />
             </div>
@@ -434,7 +433,7 @@ const Home = () => {
               <ul />
               <div className="ava-btn-group">
                 <LinkButton
-                  href="https://ws.avana.asia/6288211047841/Halo, saya tertarik menggunakan produk Facebook Store"
+                  href="http://nanya.online/tanya-ava-3"
                   target="__blank"
                   className="btn-primary"
                 >
@@ -445,7 +444,7 @@ const Home = () => {
             <div className="feature-img">
               <img
                 srcSet={
-                  require("../public/assets/images/facebook-store.png?resize?webp")
+                  require('../public/assets/images/facebook-store.png?resize?webp')
                     .srcSet
                 }
                 className="active"
@@ -460,7 +459,7 @@ const Home = () => {
             <div>
               <img
                 srcSet={
-                  require("../public/assets/images/courier.png?resize&size=400?webp")
+                  require('../public/assets/images/courier.png?resize&size=400?webp')
                     .srcSet
                 }
                 alt="Kurir"
@@ -468,7 +467,7 @@ const Home = () => {
               <div className="border" />
               <img
                 srcSet={
-                  require("../public/assets/images/bank.png?resize&size=400?webp")
+                  require('../public/assets/images/bank.png?resize&size=400?webp')
                     .srcSet
                 }
                 alt="Bank"
@@ -491,6 +490,48 @@ const Home = () => {
               Coba Gratis
             </LinkButton>
           </section>
+          <div className={`modal ${isModal ? 'is-active' : ''}`}>
+            <div className="modal-background" onClick={toggleModal} />
+            <div
+              className="modal-content eventBanner"
+              style={{ maxWidth: `500px` }}
+            >
+              <button
+                className="modal-close is-large"
+                onClick={toggleModal}
+                aria-label="close"
+              >
+                Close
+              </button>
+              <Slider
+                slides={[
+                  <>
+                    <Link href="/promo/[code]" as={`/promo/2/`}>
+                      <img
+                        srcSet={
+                          require('public/assets/images/promo/7.jpeg?resize?webp')
+                            .srcSet
+                        }
+                        alt=""
+                      />
+                    </Link>
+                    <div
+                      style={{
+                        padding: `1rem`,
+                        marginBottom: `1rem`,
+                        width: `100%`,
+                        minWidth: `100%`,
+                      }}
+                    >
+                      <h3 className="name is-size-6">
+                        Free Shipping and Admin Fee
+                      </h3>
+                    </div>
+                  </>,
+                ]}
+              />
+            </div>
+          </div>
         </main>
         <Footer />
       </div>
