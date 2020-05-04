@@ -54,7 +54,7 @@ export default function AdditionalService() {
           <img src="/assets/images/price/Brosur Layanan Tambahan-04.jpg" />
           <div className="modal-footer-sticky">
             <LinkButton
-              href="http://mauorder.online/order-avana"
+              href="http://nanya.online/tanya-ava-3"
               target="__blank"
               className="btn-primary btn-middle"
             >

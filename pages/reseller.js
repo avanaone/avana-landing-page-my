@@ -8,7 +8,7 @@ const Reseller = () => (
       <Feature
         id="reseller"
         title="Manajemen Reseller"
-        link="http://maubeli.online/reseller-manajemen"
+        link="http://nanya.online/tanya-ava-3"
         CS
       />
     </div>

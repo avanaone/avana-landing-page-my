@@ -6,7 +6,7 @@ const Avachat = () => (
       <Feature
         id="avachat"
         title="AVAChat"
-        link="http://mauorder.online/avachat"
+        link="http://nanya.online/tanya-ava-3"
         CS
       />
     </div>

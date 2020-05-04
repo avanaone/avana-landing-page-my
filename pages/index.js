@@ -227,7 +227,7 @@ const Home = () => {
               </ul>
               <div className="ava-btn-group">
                 <LinkButton
-                  href="http://mauorder.online/avachat"
+                  href="http://nanya.online/tanya-ava-3"
                   target="__blank"
                   className="btn-primary"
                 >
@@ -302,7 +302,7 @@ const Home = () => {
               </ul>
               <div className="ava-btn-group">
                 <LinkButton
-                  href="http://maubeli.online/reseller-manajemen"
+                  href="http://nanya.online/tanya-ava-3"
                   target="__blank"
                   className="btn-primary"
                 >
@@ -433,7 +433,7 @@ const Home = () => {
               <ul />
               <div className="ava-btn-group">
                 <LinkButton
-                  href="http://mauorder.online/order-avana"
+                  href="http://nanya.online/tanya-ava-3"
                   target="__blank"
                   className="btn-primary"
                 >
