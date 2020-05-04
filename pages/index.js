@@ -529,35 +529,8 @@ const Home = () => {
                         Free Shipping and Admin Fee
                       </h3>
                     </div>
-                  </>,
-                  <>
-                    <Link href="/promo/[code]" as={`/promo/3/`}>
-                      <a>
-                        <img
-                          srcSet={
-                            require('public/assets/images/promo/8.jpeg?resize?webp')
-                              .srcSet
-                          }
-                          alt=""
-                        />
-                      </a>
-                    </Link>
-                    <div
-                      style={{
-                        padding: `1rem`,
-                        marginBottom: `1rem`,
-                        width: `100%`,
-                        minWidth: `100%`,
-                      }}
-                    >
-                      <h3 className="name is-size-6">
-                        Free Voucher Rp 100.000
-                      </h3>
-                    </div>
-                  </>,
+                  </>
                 ]}
-                hasDots
-                hasArrow
               />
             </div>
           </div>

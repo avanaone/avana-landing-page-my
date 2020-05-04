@@ -50,8 +50,8 @@ export default function AdditionalService() {
               ))}
             </tbody>
           </table> */}
-          <img src="/assets/images/price/Brosur Layanan Tambahan-03.jpeg" />
-          <img src="/assets/images/price/Brosur Layanan Tambahan-04.jpeg" />
+          <img src="/assets/images/price/Brosur Layanan Tambahan-03.jpg" />
+          <img src="/assets/images/price/Brosur Layanan Tambahan-04.jpg" />
           <div className="modal-footer-sticky">
             <LinkButton
               href="http://mauorder.online/order-avana"
