@@ -1,11 +1,13 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import ContainerAnalytic from "../components/AnalyticContainer";
-import { LinkButton } from "../components/Button";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
-import styles from "./scss/AboutUs.module.scss";
+import { LinkButton } from '../components/Button';
+
+import ContainerAnalytic from '../components/AnalyticContainer';
+
+import styles from './scss/AboutUs.module.scss';
 
 const AboutUs = () => (
   <ContainerAnalytic>
@@ -38,11 +40,14 @@ const AboutUs = () => (
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-            ></iframe>
+            />
           </div>
           <img
-            src={require("../public/assets/images/about-us/channels.png?resize?webp")}
-            alt="Channels"
+            srcSet={
+              require('../public/assets/images/about-us/channels.png?resize?webp')
+                .srcSet
+            }
+            alt=""
             className="channels"
           />
         </section>
@@ -55,7 +60,7 @@ const AboutUs = () => (
             <LinkButton
               href="https://www.techinasia.com/companies/avana"
               target="__blank"
-              className="ava-btn btn-primary"
+              className="btn-primary"
               title="Daftar"
               rel="noopener noreferrer"
             >
@@ -63,8 +68,11 @@ const AboutUs = () => (
             </LinkButton>
           </div>
           <img
-            src={require("../public/assets/images/about-us/team.png?resize?webp")}
-            alt="AVANA Team"
+            srcSet={
+              require('../public/assets/images/about-us/team.png?resize?webp')
+                .srcSet
+            }
+            alt="AVANA Teams"
           />
         </section>
       </main>

@@ -1,17 +1,15 @@
-import Head from 'next/head';
-import ContainerAnalytic from '../components/AnalyticContainer';
 import Feature from '../components/Feature';
+
+import ContainerAnalytic from '../components/AnalyticContainer';
 
 const Reseller = () => (
   <ContainerAnalytic>
-    <div>
-      <Feature
-        id="reseller"
-        title="Manajemen Reseller"
-        link="http://nanya.online/tanya-ava-3"
-        CS
-      />
-    </div>
+    <Feature
+      id="reseller"
+      title="Manajemen Reseller"
+      link="http://nanya.online/tanya-ava-3"
+      CS
+    />
   </ContainerAnalytic>
 );
 

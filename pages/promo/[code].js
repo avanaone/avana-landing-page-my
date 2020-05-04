@@ -1,14 +1,16 @@
-import React, { useState } from "react";
-import { useRouter } from "next/router";
-import parser from "html-react-parser";
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import parser from 'html-react-parser';
 
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import ContainerAnalytic from "../../components/AnalyticContainer";
-import PromoCard from "../../components/PromoCard";
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
-import "./PromoDetail.scss";
+import PromoCard from '../../components/PromoCard';
+
+import ContainerAnalytic from '../../components/AnalyticContainer';
+
+import './PromoDetail.scss';
 
 export default function PromoDetail({ data }) {
   const router = useRouter();
@@ -16,6 +18,7 @@ export default function PromoDetail({ data }) {
 
   const promo = promos.find((x) => x.code === router.query.code);
   const otherPromo = promos
+    .reverse()
     .filter((x) => x.code !== router.query.code)
     .slice(0, 5);
 
@@ -55,7 +58,7 @@ export default function PromoDetail({ data }) {
 }
 
 PromoDetail.getInitialProps = async () => {
-  const res = await import("../../json/promo.json");
+  const res = await import('../../json/promo.json');
   const data = res.default;
 
   return { data };

@@ -1,6 +1,6 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-import "./styles.scss";
+import './styles.scss';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }) {
           property="og:description"
           content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
         />
-        <meta property="og:image" content="/assets/images/meta-image.webp" />
+        <meta property="og:image" content="/assets/images/meta-image.png" />
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://avana.id/" />
@@ -43,11 +43,11 @@ export default function App({ Component, pageProps }) {
         />
         <meta
           property="twitter:image"
-          content="/assets/images/meta-image.webp"
+          content="/assets/images/meta-image.png"
         />
         <meta
           property="twitter:image"
-          content="/assets/images/meta-image.webp"
+          content="/assets/images/meta-image.png"
         />
         <link
           rel="apple-touch-icon"
@@ -88,48 +88,22 @@ export default function App({ Component, pageProps }) {
           async
         />
         <link
-          rel="preload"
-          href="https://www.googletagmanager.com"
-          as="script"
-        />
-        <link
-          rel="preload"
+          rel="preconnect"
           href="https://www.google-analytics.com"
           as="script"
           crossOrigin="anonymous"
         />
-        <link rel="preload" href="https://fonts.gstatic.com" as="font" />
         <link
-          rel="preload"
-          href="https://stats.g.doubleclick.net"
-          crossOrigin="anonymous"
+          rel="preconnect"
+          href="https://static.doubleclick.net"
+          as="script"
         />
         <link
           rel="preconnect"
-          href="https://stats.g.doubleclick.net"
+          href="https://googleads.g.doubleclick.net"
+          as="script"
           crossOrigin="anonymous"
         />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link
-          rel="preconnect"
-          href="https://www.google-analytics.com"
-          crossOrigin="anonymous"
-        />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        {/* <script
-          dangerouslySetInnerHTML={{
-            __html: `(function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-            var f = d.getElementsByTagName(s)[0],
-              j = d.createElement(s),
-              dl = l != "dataLayer" ? "&l=" + l : "";
-            j.async = true;
-            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-            f.parentNode.insertBefore(j, f);
-          })(window, document, "script", "dataLayer", "GTM-WHCB6K9");`,
-          }}
-        /> */}
       </Head>
       <Component {...pageProps} />
     </>

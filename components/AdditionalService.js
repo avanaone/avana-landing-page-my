@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import Button, { LinkButton } from "../components/Button";
+import React, { useState } from 'react';
+import { Button, LinkButton } from '../components/Button';
 
-const getPackages = import("../json/packages.json");
+const getPackages = import('../json/packages.json');
 
 export default function AdditionalService() {
-  const [additionalService, setAdditionalServices] = useState([]);
+  const [additionalServices, setAdditionalServices] = useState([]);
   const [isModal, setIsModal] = useState(false);
 
   getPackages.then((res) =>
@@ -13,14 +13,12 @@ export default function AdditionalService() {
 
   const toggleModal = () => setIsModal(!isModal);
 
-  // const previewPDF = () =>  window.open('/assets/files/layanan_tambahan_2020.pdf');
-
   return (
     <>
       <Button type="button" className="btn-primary" onClick={toggleModal}>
         Layanan Tambahan
       </Button>
-      <div className={`modal ${isModal ? "is-active" : ""}`}>
+      <div className={`modal ${isModal ? 'is-active' : ''}`}>
         <div className="modal-background" onClick={toggleModal} />
         <div className="modal-content hf-sticky">
           <div className="modal-header-sticky">
@@ -50,8 +48,20 @@ export default function AdditionalService() {
               ))}
             </tbody>
           </table> */}
-          <img src="/assets/images/price/Brosur Layanan Tambahan-03.jpg" />
-          <img src="/assets/images/price/Brosur Layanan Tambahan-04.jpg" />
+          <img
+            srcSet={
+              require('../public/assets/images/price/Brosur Layanan Tambahan-03.jpg?resize?webp')
+                .srcSet
+            }
+            alt=""
+          />
+          <img
+            srcSet={
+              require('../public/assets/images/price/Brosur Layanan Tambahan-04.jpg?resize?webp')
+                .srcSet
+            }
+            alt=""
+          />
           <div className="modal-footer-sticky">
             <LinkButton
               href="http://nanya.online/tanya-ava-3"

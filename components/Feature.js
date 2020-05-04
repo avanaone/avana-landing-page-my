@@ -11,9 +11,9 @@ const Features = import('../json/features.json');
 
 export default function Feature(props) {
   const { id, title, link, CS, className } = props;
-  const [feature, setFeature] = useState([]);
+  const [features, setFeatures] = useState([]);
 
-  Features.then((res) => setFeature(res.default[id]));
+  Features.then((res) => setFeatures(res.default[id]));
 
   return (
     <div className="features">
@@ -23,7 +23,7 @@ export default function Feature(props) {
       <Navbar />
       <Header title={title} />
       <main>
-        {feature.map((feature, idx) => (
+        {features.map((feature, idx) => (
           <section
             key={idx}
             className={`feature ${className ? className : ''}`}

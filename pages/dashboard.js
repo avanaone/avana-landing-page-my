@@ -1,16 +1,10 @@
-import Head from "next/head";
-import ContainerAnalytic from "../components/AnalyticContainer";
-import Feature from "../components/Feature";
+import Feature from '../components/Feature';
+
+import ContainerAnalytic from '../components/AnalyticContainer';
 
 const Dashboard = () => (
   <ContainerAnalytic>
-    <div>
-      <Feature
-        id="dashboard"
-        title="Dashboard"
-        className="flex-d-row-reverse"
-      />
-    </div>
+    <Feature id="dashboard" title="Dashboard" className="flex-d-row-reverse" />
   </ContainerAnalytic>
 );
 

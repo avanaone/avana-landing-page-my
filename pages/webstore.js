@@ -1,15 +1,10 @@
-import Head from "next/head";
-import ContainerAnalytic from "../components/AnalyticContainer";
-import Feature from "../components/Feature";
+import Feature from '../components/Feature';
+
+import ContainerAnalytic from '../components/AnalyticContainer';
 
 const Webstore = () => (
   <ContainerAnalytic>
-    <div>
-      <Head>
-        <title>Webstore • AVANA</title>
-      </Head>
-      <Feature id="webstore" title="Webstore" className="flex-d-row-reverse" />
-    </div>
+    <Feature id="webstore" title="Webstore" className="flex-d-row-reverse" />
   </ContainerAnalytic>
 );
 

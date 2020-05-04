@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
-import { LinkButton } from "./Button";
+import { LinkButton } from './Button';
 
-const getWidth = () => (typeof window !== "undefined" ? window.innerWidth : "");
+const getWidth = () => (typeof window !== 'undefined' ? window.innerWidth : '');
 
 export default function Navbar({ style }) {
   const [isModal, setIsModal] = useState(false);
@@ -25,12 +25,12 @@ export default function Navbar({ style }) {
   });
 
   useEffect(() => {
-    const onResize = window.addEventListener("resize", () =>
+    const onResize = window.addEventListener('resize', () =>
       resizeRef.current()
     );
 
     return () => {
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener('resize', onResize);
     };
   }, []);
 
@@ -56,16 +56,12 @@ export default function Navbar({ style }) {
       >
         <div className="navbar-brand">
           <a className="navbar-item" href="/" title="BERANDA &middot; Avana">
-            <img
-              src={require("../public/assets/images/logo.webp")}
-              alt="AVANA Logo"
-              width="100"
-            />
+            <img src="/assets/images/logo.webp" alt="AVANA Logo" width="100" />
           </a>
 
           <a
             role="button"
-            className={`navbar-burger ${isActive ? "is-active" : ""}`}
+            className={`navbar-burger ${isActive ? 'is-active' : ''}`}
             data-target="navMenu"
             aria-label="menu"
             aria-expanded="false"
@@ -76,15 +72,15 @@ export default function Navbar({ style }) {
             <span aria-hidden="true"></span>
           </a>
         </div>
-        <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
+        <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
           <div className="navbar-end">
             <div
               className={`navbar-item has-dropdown 
-              ${innerWidth >= 1023 ? "is-hoverable" : ""}
+              ${innerWidth >= 1023 ? 'is-hoverable' : ''}
               ${
-                dropdownActive["produk"] && innerWidth < 1023 ? "is-active" : ""
+                dropdownActive['produk'] && innerWidth < 1023 ? 'is-active' : ''
               }`}
-              onClick={() => toggleDropdown("produk")}
+              onClick={() => toggleDropdown('produk')}
             >
               <a className="navbar-link" title="Produk">
                 Produk
@@ -119,13 +115,13 @@ export default function Navbar({ style }) {
             </a>
             <div
               className={`navbar-item has-dropdown ${
-                innerWidth >= 1023 ? "is-hoverable" : ""
+                innerWidth >= 1023 ? 'is-hoverable' : ''
               } ${
-                dropdownActive["pelajari"] && innerWidth < 1023
-                  ? "is-active"
-                  : ""
+                dropdownActive['pelajari'] && innerWidth < 1023
+                  ? 'is-active'
+                  : ''
               }`}
-              onClick={() => toggleDropdown("pelajari")}
+              onClick={() => toggleDropdown('pelajari')}
             >
               <a className="navbar-link" title="Pelajari">
                 Pelajari
@@ -174,7 +170,7 @@ export default function Navbar({ style }) {
           </div>
         </div>
       </nav>
-      <div className={`modal ${isModal ? "is-active" : ""}`}>
+      <div className={`modal ${isModal ? 'is-active' : ''}`}>
         <div className="modal-background" onClick={toggleModal} />
         <div className="modal-content tutorial">
           <button
@@ -184,16 +180,17 @@ export default function Navbar({ style }) {
           >
             Close
           </button>
-          <iframe 
-          src="https://www.youtube.com/embed/xq5475VItVM" 
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen></iframe>
-          {/* <img src={require("../public/assets/images/download.webp")} alt="" /> */}
+          <iframe
+            src="https://www.youtube.com/embed/xq5475VItVM"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
           <div className="tutorial-desc">
             <h3 className="is-size-5 modalTittle">Gratis eBook Tutorial!</h3>
             <p>
-              Pelajari tahapan untuk mengembangkan Bisnismu menggunakan Fitur Canggih AVANA dengan klik tombol dibawah ini!
+              Pelajari tahapan untuk mengembangkan Bisnismu menggunakan Fitur
+              Canggih AVANA dengan klik tombol dibawah ini!
             </p>
             <LinkButton
               href="/assets/files/tutorial.pdf"

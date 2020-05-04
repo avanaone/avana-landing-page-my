@@ -507,15 +507,13 @@ const Home = () => {
                 slides={[
                   <>
                     <Link href="/promo/[code]" as={`/promo/2/`}>
-                      <a>
-                        <img
-                          srcSet={
-                            require('public/assets/images/promo/7.jpeg?resize?webp')
-                              .srcSet
-                          }
-                          alt=""
-                        />
-                      </a>
+                      <img
+                        srcSet={
+                          require('public/assets/images/promo/7.jpeg?resize?webp')
+                            .srcSet
+                        }
+                        alt=""
+                      />
                     </Link>
                     <div
                       style={{
@@ -529,7 +527,7 @@ const Home = () => {
                         Free Shipping and Admin Fee
                       </h3>
                     </div>
-                  </>
+                  </>,
                 ]}
               />
             </div>

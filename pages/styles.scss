@@ -92,7 +92,7 @@ footer {
       min-width: 250px;
 
       img {
-        width: 150px;
+        width: 125px;
       }
 
       p {
@@ -450,7 +450,7 @@ footer {
         margin-bottom: 0;
       }
     }
-    
+
     .modal-footer-sticky {
       position: sticky;
       bottom: 0;
@@ -493,7 +493,7 @@ footer {
   }
 
   @media (max-width: 521px) {
-      max-width: calc(100% - 30px) !important;
+    max-width: calc(100% - 30px) !important;
   }
 }
 
