@@ -25,10 +25,10 @@ const Promo = () => {
           <title>Promo • AVANA</title>
         </Head>
         <Navbar />
-        <Header title="Promo" />
+        <Header title='Promo' />
         <main>
           <section>
-            {promos.reverse().map((promo) => (
+            {promos.map((promo) => (
               <PromoCard key={promo.code} promo={promo} />
             ))}
           </section>

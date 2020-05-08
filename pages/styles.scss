@@ -375,6 +375,10 @@ footer {
   border-radius: 0.5em;
   box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.125);
 
+  &.expired {
+    opacity: 0.75;
+  }
+
   .image {
     height: 24em;
     width: 100%;
