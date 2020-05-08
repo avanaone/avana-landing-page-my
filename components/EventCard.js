@@ -3,7 +3,7 @@ import { LinkButton } from './Button';
 
 export default function EventCard({ event }) {
   return (
-    <div className='event expired'>
+    <div className={`event ${event.id > 9 ? '' : 'expired'}`}>
       <div
         className='image'
         style={{ backgroundImage: `url(${event.image})` }}
