@@ -57,49 +57,49 @@ const Home = () => {
           <title>
             AVANA | #1 Leading Social Commerce Platform in Indonesia
           </title>
-          <link rel="canonical" href="https://avana.id" />
+          <link rel='canonical' href='https://avana.id' />
           <meta
-            name="title"
-            content="#1 Leading Social Commerce Platform in Indonesia"
+            name='title'
+            content='#1 Leading Social Commerce Platform in Indonesia'
           />
           <meta
-            name="description"
-            content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
+            name='description'
+            content='AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp'
           />
           {/* Open Graph / Facebook */}
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://avana.id/" />
+          <meta property='og:type' content='website' />
+          <meta property='og:url' content='https://avana.id/' />
           <meta
-            property="og:title"
-            content="#1 Leading Social Commerce Platform in Indonesia"
+            property='og:title'
+            content='#1 Leading Social Commerce Platform in Indonesia'
           />
           <meta
-            property="og:description"
-            content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
+            property='og:description'
+            content='AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp'
           />
           <meta
-            property="og:image"
-            content="/assets/images/meta-image.png?resize?webp"
+            property='og:image'
+            content='/assets/images/meta-image.png?resize?webp'
           />
           {/* Twitter */}
-          <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://avana.id/" />
+          <meta property='twitter:card' content='summary_large_image' />
+          <meta property='twitter:url' content='https://avana.id/' />
           <meta
-            property="twitter:title"
-            content="#1 Leading Social Commerce Platform in Indonesia"
+            property='twitter:title'
+            content='#1 Leading Social Commerce Platform in Indonesia'
           />
           <meta
-            property="twitter:description"
-            content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
+            property='twitter:description'
+            content='AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp'
           />
           <meta
-            property="twitter:image"
-            content="/assets/images/meta-image.png?resize?webp"
+            property='twitter:image'
+            content='/assets/images/meta-image.png?resize?webp'
           />
         </Head>
         <Navbar style={{ backgroundColor: navbarBg }} />
         <header>
-          <h1 className="is-size-3">
+          <h1 className='is-size-3'>
             Satu Dashboard Untuk Mengelola Semua Penjualan Sosial Mediamu
           </h1>
           <p>
@@ -107,23 +107,23 @@ const Home = () => {
             Reseller
           </p>
           <LinkButton
-            href="https://store.avana.asia/"
-            target="__blank"
-            className="ava-btn btn-primary"
+            href='https://store.avana.asia/'
+            target='__blank'
+            className='ava-btn btn-primary'
           >
             Coba Gratis
           </LinkButton>
-          <div className="channels" />
+          <div className='channels' />
           <img
             srcSet={require('public/assets/images/hero.png?resize?webp').srcSet}
-            alt=""
+            alt=''
           />
         </header>
         <main>
-          <section className="feature">
-            <div className="description">
-              <h2 className="is-size-4">
-                <span className="hl">Dashboard</span> pintar untuk mengelola
+          <section className='feature'>
+            <div className='description'>
+              <h2 className='is-size-4'>
+                <span className='hl'>Dashboard</span> pintar untuk mengelola
                 seluruh aktivitas jualanmu
               </h2>
               <p>
@@ -150,43 +150,43 @@ const Home = () => {
                   Balas Pesan & Komen Otomatis
                 </li>
               </ul>
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 <LinkButton
-                  href="https://store.avana.asia/"
-                  target="__blank"
-                  className="btn-primary"
+                  href='https://store.avana.asia/'
+                  target='__blank'
+                  className='btn-primary'
                 >
                   Saya Tertarik
                 </LinkButton>
-                <LinkButton href="/dashboard" className="btn-secondary">
+                <LinkButton href='/dashboard' className='btn-secondary'>
                   Lihat Selengkapnya
                 </LinkButton>
               </div>
             </div>
-            <div className="slider-container">
+            <div className='slider-container'>
               <Slider
-                id="dashboard"
+                id='dashboard'
                 slides={[
                   <img
                     srcSet={
                       require('public/assets/images/dashboard/manajemen-order.png?resize?webp')
                         .srcSet
                     }
-                    alt=""
+                    alt=''
                   />,
                   <img
                     srcSet={
                       require('public/assets/images/dashboard/manajemen-produk.png?resize?webp')
                         .srcSet
                     }
-                    alt=""
+                    alt=''
                   />,
                   <img
                     srcSet={
                       require('public/assets/images/dashboard/auto-reply.png?resize?webp')
                         .srcSet
                     }
-                    alt=""
+                    alt=''
                   />,
                 ]}
                 currentSlide={dashboard}
@@ -195,10 +195,10 @@ const Home = () => {
               />
             </div>
           </section>
-          <section className="feature">
-            <div className="description">
-              <h2 className="is-size-4">
-                <span className="hl">AVAChat</span> menghubungkan semua pesan
+          <section className='feature'>
+            <div className='description'>
+              <h2 className='is-size-4'>
+                <span className='hl'>AVAChat</span> menghubungkan semua pesan
                 sosial media dalam satu dashboard
               </h2>
               <p>
@@ -225,43 +225,43 @@ const Home = () => {
                   Info Pengiriman Barang
                 </li>
               </ul>
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 <LinkButton
-                  href="http://nanya.online/tanya-ava-3"
-                  target="__blank"
-                  className="btn-primary"
+                  href='http://nanya.online/tanya-ava-3'
+                  target='__blank'
+                  className='btn-primary'
                 >
                   Saya Tertarik
                 </LinkButton>
-                <LinkButton href="/avachat" className="btn-secondary">
+                <LinkButton href='/avachat' className='btn-secondary'>
                   Lihat Selengkapnya
                 </LinkButton>
               </div>
             </div>
-            <div className="slider-container">
+            <div className='slider-container'>
               <Slider
-                id="avachat"
+                id='avachat'
                 slides={[
                   <img
                     srcSet={
                       require('public/assets/images/avachat/send-product-info.png?resize?webp')
                         .srcSet
                     }
-                    alt=""
+                    alt=''
                   />,
                   <img
                     srcSet={
                       require('public/assets/images/avachat/quick-reply.png?resize?webp')
                         .srcSet
                     }
-                    alt=""
+                    alt=''
                   />,
                   <img
                     srcSet={
                       require('public/assets/images/avachat/send-shipping-info.png?resize?webp')
                         .srcSet
                     }
-                    alt=""
+                    alt=''
                   />,
                 ]}
                 currentSlide={avachat}
@@ -270,11 +270,11 @@ const Home = () => {
               />
             </div>
           </section>
-          <section className="feature">
-            <div className="description">
-              <h2 className="is-size-4">
+          <section className='feature'>
+            <div className='description'>
+              <h2 className='is-size-4'>
                 Dilengkapi dengan fitur&nbsp;
-                <span className="hl">Manajemen Reseller</span>
+                <span className='hl'>Manajemen Reseller</span>
               </h2>
               <p>
                 Dengan fitur ini, Anda bisa mengamati performa resellermu secara
@@ -300,43 +300,43 @@ const Home = () => {
                   Atur Komisi & Buat Level Reseller
                 </li>
               </ul>
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 <LinkButton
-                  href="http://nanya.online/tanya-ava-3"
-                  target="__blank"
-                  className="btn-primary"
+                  href='http://nanya.online/tanya-ava-3'
+                  target='__blank'
+                  className='btn-primary'
                 >
                   Saya Tertarik
                 </LinkButton>
-                <LinkButton href="/reseller" className="btn-secondary">
+                <LinkButton href='/reseller' className='btn-secondary'>
                   Lihat Selengkapnya
                 </LinkButton>
               </div>
             </div>
-            <div className="slider-container">
+            <div className='slider-container'>
               <Slider
-                id="reseller"
+                id='reseller'
                 slides={[
                   <img
                     srcSet={
                       require('public/assets/images/reseller/manajemen-database-reseller.png?resize?webp')
                         .srcSet
                     }
-                    alt=""
+                    alt=''
                   />,
                   <img
                     srcSet={
                       require('public/assets/images/reseller/lihat-performa-reseller.png?resize?webp')
                         .srcSet
                     }
-                    alt=""
+                    alt=''
                   />,
                   <img
                     srcSet={
                       require('public/assets/images/reseller/atur-komisi-reseller.png?resize?webp')
                         .srcSet
                     }
-                    alt=""
+                    alt=''
                   />,
                 ]}
                 currentSlide={reseller}
@@ -345,10 +345,10 @@ const Home = () => {
               />
             </div>
           </section>
-          <section className="feature">
-            <div className="description">
-              <h2 className="is-size-4">
-                <span className="hl">Buat Website</span> untuk tokomu dan
+          <section className='feature'>
+            <div className='description'>
+              <h2 className='is-size-4'>
+                <span className='hl'>Buat Website</span> untuk tokomu dan
                 tentukan sendiri domain.com pilihanmu
               </h2>
               <p>
@@ -375,43 +375,43 @@ const Home = () => {
                   Order Melalui WhatsApp
                 </li>
               </ul>
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 <LinkButton
-                  href="https://store.avana.asia/"
-                  target="__blank"
-                  className="btn-primary"
+                  href='https://store.avana.asia/'
+                  target='__blank'
+                  className='btn-primary'
                 >
                   Saya Tertarik
                 </LinkButton>
-                <LinkButton href="/webstore" className="btn-secondary">
+                <LinkButton href='/webstore' className='btn-secondary'>
                   Lihat Selengkapnya
                 </LinkButton>
               </div>
             </div>
-            <div className="slider-container">
+            <div className='slider-container'>
               <Slider
-                id="webstore"
+                id='webstore'
                 slides={[
                   <img
                     srcSet={
                       require('public/assets/images/webstore/payment-gateway.png?resize?webp')
                         .srcSet
                     }
-                    alt=""
+                    alt=''
                   />,
                   <img
                     srcSet={
                       require('public/assets/images/webstore/theme.png?resize?webp')
                         .srcSet
                     }
-                    alt=""
+                    alt=''
                   />,
                   <img
                     srcSet={
                       require('public/assets/images/webstore/order-via-whatsapp.png?resize?webp')
                         .srcSet
                     }
-                    alt=""
+                    alt=''
                   />,
                 ]}
                 currentSlide={webstore}
@@ -420,10 +420,10 @@ const Home = () => {
               />
             </div>
           </section>
-          <section className="feature">
-            <div className="description">
-              <h2 className="is-size-4">
-                Miliki <span className="hl">Toko Facebook</span> dengan fitur
+          <section className='feature'>
+            <div className='description'>
+              <h2 className='is-size-4'>
+                Miliki <span className='hl'>Toko Facebook</span> dengan fitur
                 terbaik
               </h2>
               <p>
@@ -431,29 +431,29 @@ const Home = () => {
                 langsung di Facebook Page Anda tanpa keluar dari laman ini.
               </p>
               <ul />
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 <LinkButton
-                  href="http://nanya.online/tanya-ava-3"
-                  target="__blank"
-                  className="btn-primary"
+                  href='http://nanya.online/tanya-ava-3'
+                  target='__blank'
+                  className='btn-primary'
                 >
                   Saya Tertarik
                 </LinkButton>
               </div>
             </div>
-            <div className="feature-img">
+            <div className='feature-img'>
               <img
                 srcSet={
                   require('../public/assets/images/facebook-store.png?resize?webp')
                     .srcSet
                 }
-                className="active"
-                alt=""
+                className='active'
+                alt=''
               />
             </div>
           </section>
-          <section id="support">
-            <h2 className="is-size-4">
+          <section id='support'>
+            <h2 className='is-size-4'>
               AVANA sudah didukung oleh berbagai metode pengiriman & pembayaran
             </h2>
             <div>
@@ -462,57 +462,57 @@ const Home = () => {
                   require('../public/assets/images/courier.png?resize&size=400?webp')
                     .srcSet
                 }
-                alt="Kurir"
+                alt='Kurir'
               />
-              <div className="border" />
+              <div className='border' />
               <img
                 srcSet={
                   require('../public/assets/images/bank.png?resize&size=400?webp')
                     .srcSet
                 }
-                alt="Bank"
+                alt='Bank'
               />
             </div>
           </section>
-          <section id="testimonial">
-            <h2 className="is-size-4">
+          <section id='testimonial'>
+            <h2 className='is-size-4'>
               Apa kata mereka yang sudah bergabung dengan AVANA?
             </h2>
             <SliderTestimonial testimonials={getTestimonials} />
           </section>
-          <section className="trial">
-            <h2 className="is-size-4">Coba Sekarang GRATIS 14 Hari</h2>
+          <section className='trial'>
+            <h2 className='is-size-4'>Coba Sekarang GRATIS 14 Hari</h2>
             <LinkButton
-              href="https://store.avana.asia/"
-              target="__blank"
-              className="ava-btn btn-primary"
+              href='https://store.avana.asia/'
+              target='__blank'
+              className='ava-btn btn-primary'
             >
               Coba Gratis
             </LinkButton>
           </section>
           <div className={`modal ${isModal ? 'is-active' : ''}`}>
-            <div className="modal-background" onClick={toggleModal} />
+            <div className='modal-background' onClick={toggleModal} />
             <div
-              className="modal-content eventBanner"
+              className='modal-content eventBanner'
               style={{ maxWidth: `500px` }}
             >
               <button
-                className="modal-close is-large"
+                className='modal-close is-large'
                 onClick={toggleModal}
-                aria-label="close"
+                aria-label='close'
               >
                 Close
               </button>
               <Slider
                 slides={[
                   <>
-                    <Link href="/promo/[code]" as={`/promo/2/`}>
+                    <Link href='/promo/[code]' as={`/promo/2/`}>
                       <img
                         srcSet={
-                          require('public/assets/images/promo/7.jpeg?resize?webp')
+                          require('public/assets/images/promo/2.jpeg?resize?webp')
                             .srcSet
                         }
-                        alt=""
+                        alt=''
                       />
                     </Link>
                     <div
@@ -523,7 +523,7 @@ const Home = () => {
                         minWidth: `100%`,
                       }}
                     >
-                      <h3 className="name is-size-6">
+                      <h3 className='name is-size-6'>
                         Free Shipping and Admin Fee
                       </h3>
                     </div>
