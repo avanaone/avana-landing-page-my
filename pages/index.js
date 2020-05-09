@@ -513,7 +513,7 @@ const Home = () => {
                 hasArrow
                 slides={promos.map((promo) => (
                   <>
-                    <Link href='/promo/[code]' as={`/promo/${promo.id}/`}>
+                    <Link href='/promo/[code]' as={`/promo/${promo.code}/`}>
                       <img srcSet={promo.image} alt='' />
                     </Link>
                     <div

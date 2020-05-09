@@ -34,7 +34,7 @@ export default function AdditionalService() {
           <table>
             <tbody>
               {additionalService.map((service, idx) => (
-                <tr key={idx}>
+                <tr key={idx} className='addon'>
                   <td>{service.name}</td>
                   <td>
                     <ul>
