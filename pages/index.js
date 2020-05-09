@@ -13,6 +13,8 @@ import styles from './scss/Home.module.scss';
 
 import getTestimonials from '../json/testimonial.json';
 
+const getPromos = import('../json/promo.json');
+
 const Home = () => {
   const [state, setState] = useState({
     dashboard: 0,
@@ -21,6 +23,9 @@ const Home = () => {
     webstore: 0,
   });
   const [navbarBg, setNavbarBg] = useState('#f4f7f9');
+  const [promos, setPromos] = useState([]);
+
+  getPromos.then((res) => setPromos(res.default));
   const [isModal, setIsModal] = useState(true);
   const toggleModal = () => setIsModal(!isModal);
 
@@ -504,16 +509,12 @@ const Home = () => {
                 Close
               </button>
               <Slider
-                slides={[
+                hasDots
+                hasArrow
+                slides={promos.map((promo) => (
                   <>
-                    <Link href='/promo/[code]' as={`/promo/2/`}>
-                      <img
-                        srcSet={
-                          require('public/assets/images/promo/2.jpeg?resize?webp')
-                            .srcSet
-                        }
-                        alt=''
-                      />
+                    <Link href='/promo/[code]' as={`/promo/${promo.id}/`}>
+                      <img srcSet={promo.image} alt='' />
                     </Link>
                     <div
                       style={{
@@ -523,12 +524,10 @@ const Home = () => {
                         minWidth: `100%`,
                       }}
                     >
-                      <h3 className='name is-size-6'>
-                        Free Shipping and Admin Fee
-                      </h3>
+                      <h3 className='name is-size-6'>{promo.title}</h3>
                     </div>
-                  </>,
-                ]}
+                  </>
+                ))}
               />
             </div>
           </div>
