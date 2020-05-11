@@ -18,7 +18,6 @@ export default function PromoDetail({ data }) {
 
   const promo = promos.find((x) => x.code === router.query.code);
   const otherPromo = promos
-    .reverse()
     .filter((x) => x.code !== router.query.code)
     .slice(0, 5);
 

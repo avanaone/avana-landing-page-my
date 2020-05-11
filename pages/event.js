@@ -25,10 +25,10 @@ const Event = () => {
           <title>Event • AVANA</title>
         </Head>
         <Navbar />
-        <Header title="Event" />
+        <Header title='Event' />
         <main>
           <section>
-            {events.reverse().map((event) => (
+            {events.map((event) => (
               <EventCard key={event.id} event={event} />
             ))}
           </section>

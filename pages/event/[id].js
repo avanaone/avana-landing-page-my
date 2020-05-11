@@ -18,7 +18,6 @@ export default function Event({ data }) {
 
   const event = events.find((x) => x.id === router.query.id);
   const otherEvents = events
-    .reverse()
     .filter((x) => x.id !== router.query.id)
     .slice(0, 5);
 

@@ -134,84 +134,84 @@
         "services": [
           "Isi informasi toko",
           "Atur metode pembayaran & metode pengiriman",
-          "Upload produk pertama",
+          "Upload 5 foto produk pertama",
           "Integrasi ke facebook",
-          "Terbitkan webstore & facebook store",
-          "Auto reply"
-        ],
-        "price": "Free"
-      },
-      {
-        "name": "Upload Produk",
-        "services": [
-          "Harga dihitung per produk",
-          "Maksimal 5 produk",
-          "Atur kategori, varian, harga, ",
-          "koleksi, stok, dan auto reply"
-        ],
-        "price": "IDR 25,000"
-      },
-      {
-        "name": "Foto Produk",
-        "services": [
-          "Harga dihitung per produk",
-          "Maksimal 4 sudut foto",
-          "Ukuran 1×1 kotak"
-        ],
-        "price": "IDR 100,000"
-      },
-      {
-        "name": "Menjalankan Iklan",
-        "services": [
-          "10% dari anggaran dialokasikan untuk biaya operasional.",
-          "Hasil akan diberitahukan di akhir bulan.",
-          "Menyarankan anggaran untuk bulan depan.",
-          "Menyertakan target pendengar & metrik"
-        ],
-        "price": "10%"
-      },
-      {
-        "name": "Template Menyesuikan",
-        "services": [
-          "Harga akan meningkat berdasarkan kebutuhan pelanggan",
-          "Maksimal 10 halaman",
-          "Termasuk pesanan & sistem pembayaran",
-          "3x revisi minor"
-        ],
-        "price": "IDR 5,000,000"
-      },
-      {
-        "name": "Landing page",
-        "services": [
-          "Harga dihitung perhalaman",
-          "Hanya desain, tanpa copywriting",
-          "1x revisi minor"
-        ],
-        "price": "IDR 100,000"
-      },
-      {
-        "name": "Promo content (copywriting)",
-        "services": ["Maksimal 250 kata", "1x revisi minor"],
-        "price": "IDR 100,000"
-      },
-      {
-        "name": "Design logo",
-        "services": [
-          " Sudah termasuk konsep brand",
-          "1 warna + 1 B&W",
-          "3x revisi minor"
-        ],
-        "price": "IDR 1,000,000"
-      },
-      {
-        "name": "Desain poster",
-        "services": [
-          "Sudah termasuk konsep brand",
-          "Hanya desain, tanpa copywriting",
-          "Ukuran poster untuk instagram & facebook",
-          "2x revisi minor"
+          "Publish webstore & facebook store",
+          "Atur kategori, varian, harga, koleksi, stok dan Auto reply"
         ],
         "price": "IDR 200,000"
+      },
+      {
+        "name": "Pembuatan Domain",
+        "services": ["Domain.com", "Domain.co.id", "Domain.id"],
+        "price": ["IDR 165,000", "IDR 300,000", "IDR 280,000"]
+      },
+      {
+        "name": "Custom Template Website",
+        "services": [
+          "Free Custom Tema",
+          "Maksimal 10 halaman",
+          "Pilihan konversi mata uang",
+          "Karakter website interaktif dan dinamis",
+          "Desain slider foto",
+          "Fitur Cart dan Checkout",
+          "Catalog",
+          "Synchronized with google analytic"
+        ],
+        "price": "IDR 15,000,000"
+      },
+      {
+        "name": "Desain Logo",
+        "services": [
+          "Mengikuti konsep brand",
+          "Logo dibuat Berwarna dan Hitam/Putih",
+          "Hasil logo dalam format .ai"
+        ],
+        "price": "IDR 1,500,000"
+      },
+      {
+        "name": "Iklan Online di Sosial Media",
+        "services": [
+          "Mencakup Facebook dan Instagram Ads",
+          "Target Konsumen yang spesifik",
+          "Jangkauan Audience sebanyak 200.000",
+          "Konsultasi Konten dan budget",
+          "Iklan selama 4 minggu",
+          "Termasuk biaya operasional 500.000",
+          "Laporan lengkap sesuai analytic"
+        ],
+        "price": "IDR 3,500,000"
+      },
+      {
+        "name": "Pembuatan Konten Promosi - Sosial Media",
+        "services": [
+          "10 Konten Copywriting -  SEO Friendly",
+          "10 Posting di Facebook dan Instagram",
+          "1 Video Motion Graphic (Durasi 30 detik)",
+          "1 Desain Poster Promosi"
+        ],
+        "price": "IDR 7,000,000"
+      },
+      {
+        "name": "Jasa Foto Produk",
+        "services": [
+          "Harga dihitung per produk",
+          "5 Angle Foto",
+          "Resolusi Tinggi",
+          "Ukuran 1×1"
+        ],
+        "price": "IDR 200,000"
+      },
+      {
+        "name": "Konsultasi Bisnis Online",
+        "services": [
+          "Harga untuk 1 orang trainer",
+          "Durasi konsultasi selama 90 menit",
+          "Pengenalan Facebook dan Google Ads",
+          "Cara memaksimalkan budget ads",
+          "Konsultasi Konten"
+        ],
+        "price": "IDR 650,000"
       }
     ]
   }
