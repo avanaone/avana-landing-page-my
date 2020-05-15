@@ -17,7 +17,7 @@ const Event = () => {
   const [events, setEvents] = useState([]);
 
   getEvents.then((res) => setEvents(res.default));
-
+  console.log(events);
   return (
     <ContainerAnalytic>
       <div className={styles.Event}>
@@ -27,10 +27,29 @@ const Event = () => {
         <Navbar />
         <Header title='Event' />
         <main>
+          <section className="section-title">
+            <h3>Upcoming</h3>
+          </section>
           <section>
-            {events.map((event) => (
+            {events ? events.filter((x) => x.id > 10).map((event) => (
               <EventCard key={event.id} event={event} />
-            ))}
+            )): ''}
+          </section>
+          <section className="section-title">
+            <h3>Past</h3>
+          </section>
+          <section>
+            {events ? events.filter((x) => x.id < 11 && !x.isTraining).map((event) => (
+              <EventCard key={event.id} event={event} />
+            )): ''}
+          </section>
+          <section className="section-title">
+            <h3>Training</h3>
+          </section>
+          <section>
+            {events ? events.filter((x) => x.isTraining).map((event) => (
+              <EventCard key={event.id} event={event} />
+            )): ''}
           </section>
         </main>
         <Footer />

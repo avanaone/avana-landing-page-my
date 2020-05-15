@@ -2,13 +2,13 @@
   "dashboard": [
     {
       "title": "Manajemen Produk",
-      "description": "Dengan AVANA, katalog toko Anda teintegrasi ke saluran sosial media seperti Facebook dan Instagram. Anda tidak perlu mengunggah foto produk satu per satu.",
+      "description": "Dengan AVANA, katalog toko Kamu terintegrasi ke saluran sosial media seperti Facebook dan Instagram. Kamu tidak perlu mengunggah foto produk satu per satu.",
       "image": "dashboard/manajemen-produk.png",
       "slug": "https://store.avana.asia/"
     },
     {
       "title": "Balas Pesan & Komentar Otomatis",
-      "description": "Fitur balas pesan & komentar secara otomatis akan memudahkan Anda dalam berbisnis. Otomatisasi ini akan membuat Anda bekerja lebih efisien.",
+      "description": "Fitur balas pesan & komentar secara otomatis akan memudahkan Kamu dalam berbisnis. Otomatisasi ini akan membuat Kamu bekerja lebih efisien.",
       "image": "dashboard/auto-reply.png",
       "slug": "https://store.avana.asia/"
     },
@@ -28,13 +28,13 @@
   "avachat": [
     {
       "title": "Integrasi dengan berbagai platform sosial media",
-      "description": "Dengan AVAchat, kamu bisa mengatur seluruh aktivitas chat kamu di Facebook, WhatsApp, Instagram, Line dan Telegram hany melalui satu dashboard.",
+      "description": "Dengan AVAChat, kamu bisa mengatur seluruh aktivitas chat kamu di Facebook, WhatsApp, Instagram, Line dan Telegram hany melalui satu dashboard.",
       "image": "avachat/multichannel-chat.png",
       "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
     },
     {
       "title": "Kirim Informasi Produk",
-      "description": "Kirim gambar dan informasi katalog produk Anda ke pelanggan dengan mudah dan cepat.",
+      "description": "Kirim gambar dan informasi katalog produk Kamu ke pelanggan dengan mudah dan cepat.",
       "image": "avachat/send-product-info.png",
       "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
     },
@@ -46,19 +46,19 @@
     },
     {
       "title": "Kirim Informasi Pengiriman",
-      "description": "Pelanggan Anda khawatir progress pengiriman barangnya?  Dengan AVAChat, Anda dapat mengirimkan informasi progres pengiriman barang secara realtime.",
+      "description": "Pelanggan Kamu khawatir progress pengiriman barangnya?  Dengan AVAChat, Kamu dapat mengirimkan informasi progres pengiriman barang secara realtime.",
       "image": "avachat/send-shipping-info.png",
       "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
     },
     {
       "title": "Kirim Invoice",
-      "description": "Pelanggan Anda sering minta dikirimkan invoice? Kini, Anda dapat mengirimkan invoice ke pelanggan anda dengan mudah dan cepat.",
+      "description": "Pelanggan Kamu sering minta dikirimkan invoice? Kini, Kamu dapat mengirimkan invoice ke pelanggan kamu dengan mudah dan cepat.",
       "image": "avachat/send-invoice.png",
       "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
     },
     {
       "title": "Buat Pesanan",
-      "description": "Tidak perlu pindah platform untuk buat pesanan. Anda bisa membuatkan pesanan lain sambil melayani pelanggan.",
+      "description": "Tidak perlu pindah platform untuk buat pesanan. Kamu bisa membuatkan pesanan lain sambil melayani pelanggan.",
       "image": "avachat/create-order.png",
       "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
     }
@@ -66,7 +66,7 @@
   "reseller": [
     {
       "title": "Manajemen Database Reseller",
-      "description": "AVANA menyediakan database reseller yang memudahkan Anda untuk mengelola reseller.",
+      "description": "AVANA menyediakan database reseller yang memudahkan Kamu untuk mengelola reseller.",
       "image": "reseller/manajemen-database-reseller.png",
       "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk Manajemen Reseller"
     },
@@ -78,19 +78,19 @@
     },
     {
       "title": "Atur Komisi Reseller",
-      "description": "Anda juga bisa mengatur komisi dari setiap level reseller dengan mudah.",
+      "description": "Kamu juga bisa mengatur komisi dari setiap level reseller dengan mudah.",
       "image": "reseller/atur-komisi-reseller.png",
       "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk Manajemen Reseller"
     },
     {
       "title": "Undang Teman untuk Menjadi Reseller",
-      "description": "Anda juga bisa mengundang orang terdekat untuk menjadi reseller dengan membagikan link ke sosial media.",
+      "description": "Kamu juga bisa mengundang orang terdekat untuk menjadi reseller dengan membagikan link ke sosial media.",
       "image": "reseller/undang-reseller.png",
       "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk Manajemen Reseller"
     },
     {
       "title": "Kelola Level Reseller",
-      "description": "Anda bisa membuat level untuk reseller dan membedakan komisi dari setiap level.",
+      "description": "Kamu bisa membuat level untuk reseller dan membedakan komisi dari setiap level.",
       "image": "reseller/kelola-level-reseller.png",
       "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk Manajemen Reseller"
     }
@@ -104,25 +104,25 @@
     },
     {
       "title": "Dukungan Payment Gateway",
-      "description": "AVANA menyediakan berbagai pilihan metode pembayaran yang calon pelanggan anda untuk melakukan transaksi di toko Anda.",
+      "description": "AVANA menyediakan berbagai pilihan metode pembayaran yang calon pelanggan kamu untuk melakukan transaksi di toko Kamu.",
       "image": "webstore/payment-gateway.png",
       "slug": "https://store.avana.asia/"
     },
     {
       "title": "Didukung Oleh Partner Logistik",
-      "description": "AVANA juga bekerja sama dengan banyak jasa kurir untuk menyediakan berbagai pilihan metode pengiriman, sehingga pelanggan Anda memiliki banyak pilihan kurir.",
+      "description": "AVANA juga bekerja sama dengan banyak jasa kurir untuk menyediakan berbagai pilihan metode pengiriman, sehingga pelanggan Kamu memiliki banyak pilihan kurir.",
       "image": "webstore/shipping-provider.png",
       "slug": "https://store.avana.asia/"
     },
     {
       "title": "Order Melalui Whatsapp",
-      "description": "AVANA juga menambahkan opsi order via WhatsApp. Untuk mendukung Aktifitas penjualan di sosial media, pesan akan terkoneksi pada nomor Whatsapp toko Anda. ",
+      "description": "AVANA juga menambahkan opsi order via WhatsApp. Untuk mendukung Aktifitas penjualan di sosial media, pesan akan terkoneksi pada nomor Whatsapp toko Kamu. ",
       "image": "webstore/order-via-whatsapp.png",
       "slug": "https://store.avana.asia/"
     },
     {
       "title": "Mendukung Sistem Kupon",
-      "description": "AVANA memilliki fitur untuk mendukung aktivitas marketing dengan fitur kupon yang memungkinkan Anda membuat kupon untuk digunakan untuk calon pelanggan.",
+      "description": "AVANA memilliki fitur untuk mendukung aktivitas marketing dengan fitur kupon yang memungkinkan Kamu membuat kupon untuk digunakan untuk calon pelanggan.",
       "image": "webstore/coupon-system.png",
       "slug": "https://store.avana.asia/"
     }

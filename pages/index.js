@@ -133,7 +133,7 @@ const Home = () => {
               </h2>
               <p>
                 Ada banyak fitur yang dapat membantu meningkatkan penjualan
-                anda!
+                kamu!
               </p>
               <ul>
                 <li
@@ -207,8 +207,8 @@ const Home = () => {
                 sosial media dalam satu dashboard
               </h2>
               <p>
-                Avachat memiliki banyak fitur yang meningkatkan produktifitas
-                Anda di berbagai saluran media sosial.
+                AVAChat memiliki banyak fitur yang meningkatkan produktifitas
+                Kamu di berbagai saluran media sosial.
               </p>
               <ul>
                 <li
@@ -282,7 +282,7 @@ const Home = () => {
                 <span className='hl'>Manajemen Reseller</span>
               </h2>
               <p>
-                Dengan fitur ini, Anda bisa mengamati performa resellermu secara
+                Dengan fitur ini, Kamu bisa mengamati performa resellermu secara
                 langsung.
               </p>
               <ul>
@@ -357,7 +357,7 @@ const Home = () => {
                 tentukan sendiri domain.com pilihanmu
               </h2>
               <p>
-                Website yang kami sediakan untuk anda memiliki banyak fitur yang
+                Website yang kami sediakan untuk kamu memiliki banyak fitur yang
                 membantu calon pelanggan untuk bertransaksi.
               </p>
               <ul>
@@ -433,7 +433,7 @@ const Home = () => {
               </h2>
               <p>
                 Ubah teman jadi pelanggan. Pelanggan bisa belanja sampai bayar
-                langsung di Facebook Page Anda tanpa keluar dari laman ini.
+                langsung di Facebook Page Kamu tanpa keluar dari laman ini.
               </p>
               <ul />
               <div className='ava-btn-group'>
