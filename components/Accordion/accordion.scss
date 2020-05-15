@@ -1,6 +1,9 @@
 section {
-    display: flex !important;
-    flex-direction: column;
+    
+    &.faq-section {
+        display: flex !important;
+        flex-direction: column;
+    }
 
     /* Style the accordion section */
     .accordion__section {

@@ -27,7 +27,7 @@ const Promo = () => {
         <Navbar />
         <Header title='FAQ' />
         <main>
-          <section>
+          <section className="faq-section">
             {faqs.map((faq) => (
                 <Accordion key={faq.code} title={faq.title} content={faq.description} />
             ))}
