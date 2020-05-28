@@ -12,7 +12,7 @@ const nextConfig = {
       '/': { page: '/' },
       '/about-us': { page: '/about-us' },
       '/price': { page: '/price' },
-      '/packages-detail': { page: '/packages-detail' },
+      // '/packages-detail': { page: '/packages-detail' },
       '/event': { page: '/event' },
       // '/event/:id': { page: '/event/[id]' },
       '/promo': { page: '/promo' },

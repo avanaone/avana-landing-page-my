@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import parser from 'html-react-parser';
 
@@ -15,6 +15,15 @@ import './PromoDetail.scss';
 export default function PromoDetail({ data }) {
   const router = useRouter();
   const [promos, setPromos] = useState(data);
+  const [lang, setLang] = useState("en");
+
+  useEffect(() => {
+    if(localStorage.getItem("lang")) {
+      setLang(localStorage.getItem("lang"));
+    } else {
+      localStorage.setItem("lang", "en");
+    }
+  }, []);
 
   const promo = promos.find((x) => x.code === router.query.code);
   const otherPromo = promos
@@ -31,8 +40,8 @@ export default function PromoDetail({ data }) {
             <section>
               <div>
                 <img src={promo.image} alt="" />
-                <h3 className="is-size-4">{promo.title}</h3>
-                {parser(promo.description)}
+                <h3 className="is-size-4">{lang === 'en' ? promo.title.en : promo.title.bm }</h3>
+                {lang === 'en' ? parser(promo.description.en) : parser(promo.description.bm) }
                 <ol>
                   {promo.termsConditions.map((item, idx) => (
                     <li key={idx}>{item}</li>
@@ -40,7 +49,7 @@ export default function PromoDetail({ data }) {
                 </ol>
               </div>
               <div>
-                <h3 className="is-size-5">Promo Lainnya</h3>
+                <h3 className="is-size-5">{lang === 'en' ? "Other Promo" : "Promo lainnya" }</h3>
                 <div>
                   {otherPromo.map((promo) => (
                     <PromoCard key={promo.code} promo={promo} />

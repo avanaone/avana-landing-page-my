@@ -57,7 +57,7 @@ export default function Footer() {
             <a href="https://academy.avana.id/">Akademi</a>
           </li>
           <li>
-            <a href="https://blog.avana.id/">Blog</a>
+            <a href="https://blog.avana.asia/">Blog</a>
           </li>
           <li>
             <a href="https://avana.id/career/">Karir</a>
