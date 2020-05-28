@@ -27,19 +27,19 @@ const nextConfig = {
     const getPromos = await require('./json/promo.json');
     const getEvents = await require('./json/event.json');
 
-    getPromos.map((promo) => {
-      paths[`promo/${promo.code}`] = {
-        page: 'promo/[code]',
-        query: { code: promo.code },
-      };
-    });
+    // getPromos.map((promo) => {
+    //   paths[`promo/${promo.code}`] = {
+    //     page: 'promo/[code]',
+    //     query: { code: promo.code },
+    //   };
+    // });
 
-    getEvents.map((event) => {
-      paths[`event/${event.id}`] = {
-        page: 'event/[id]',
-        query: { id: event.id },
-      };
-    });
+    // getEvents.map((event) => {
+    //   paths[`event/${event.id}`] = {
+    //     page: 'event/[id]',
+    //     query: { id: event.id },
+    //   };
+    // });
 
     return paths;
   },
