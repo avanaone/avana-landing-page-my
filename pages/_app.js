@@ -9,10 +9,10 @@ export default function App({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         {/* Primary Meta Tags */}
-        <title>AVANA | #1 Leading Social Commerce Platform in Indonesia</title>
+        <title>AVANA - The best social commerce solution for your business</title>
         <meta
           name="title"
-          content="#1 Leading Social Commerce Platform in Indonesia"
+          content="AVANA - The best social commerce solution for your business"
         />
         <meta
           name="description"
@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:url" content="https://avana.id/" />
         <meta
           property="og:title"
-          content="#1 Leading Social Commerce Platform in Indonesia"
+          content="AVANA - The best social commerce solution for your business"
         />
         <meta
           property="og:description"
@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }) {
         <meta property="twitter:url" content="https://avana.id/" />
         <meta
           property="twitter:title"
-          content="#1 Leading Social Commerce Platform in Indonesia"
+          content="AVANA - The best social commerce solution for your business"
         />
         <meta
           property="twitter:description"
