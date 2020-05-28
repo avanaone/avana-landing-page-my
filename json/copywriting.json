@@ -1,0 +1,34 @@
+{
+    "en": {
+            "button": ["I'm interested", "More Info"],
+            "navbar": ["Product", "Price", "Promotion", "Events", "Learn", "Tutorial", "Blog", "eBook", "About Us", "Log In", "Sign Up"],
+            "h1": "All-in-One Dashboard For Managing All the Sales on your Social Media",
+            "features": ["Online Store", "Social Media Chat Integration", "Auto Reply", "Reseller Management"],
+            "dashboard": ["Smart Dashboard", "for managing all of your online sales activities", "There are many functions that can help you increase your sales!", "Order Management", "Product Management", "Automated reply to comments & orders"],
+            "avachat": ["FB Live Auto Reply", "helps you respond to all of the comments you received while you are actively going live on Facebook - especially to the ones who are interested in purchasing the products you are promoting at that time.", "This feature has numerous benefits that can improve sales while you're on Facebook live.", "Buyers can get the answer right away", "They can also buy products directly at the live session", "There is no need to pay additional staff to respond to the comments during the live session"],
+            "reseller": ["Equipped with the", "Reseller Management", "function", "With this function, you can see the performance of your reseller directly.", "Reseller Database Management", "View Reseller Performance", "Set Commissions & Reseller Levels"],
+            "webstore": ["Build Website", "for your online store / brand / product and choose your own domain.com", "The website we provide you has many functions that can help your customers buy online.", "Payment Gateway integration", "Various website theme options", "Smartphone user friendly"],
+            "fbshop": ["Have the Most Functional", "Facebook Store", "", "Turn your Facebook Page followers into subscribers. They can buy your product directly on your Facebook Page without having to go to another site."],
+            "support": "AVANA has partnered with various logistics & e-payment systems",
+            "testimonial": "What our sellers said after joining AVANA?",
+            "footerCta": ["FREE 14 DAYS TRIAL ☻ Try Now for FREE!", "Sign Up For Free"],
+            "error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
+            "error-without-status": "Auf dem Server ist ein Fehler aufgetreten"
+    },
+    "bm": {
+            "button": ["Saya berminat", "Info Lanjut"],
+            "navbar": ["Produk", "Harga", "Promo", "Acara", "Pelajari", "Tutorial", "Blog", "eBook", "Tentang Kami", "Log Masuk", "Daftar"],
+            "h1": "Satu dashboard untuk menguruskan semua penjualan di media sosial anda",
+            "features": ["Kedai Online", "Integrasi Chat Media Sosial", "Auto Reply", "Pengurusan Reseller"],
+            "dashboard": ["Dashboard", "pintar untuk menguruskan semua aktiviti jualan online anda", "Ada banyak fungsi-fungsi yang dapat membantu meningkatkan jualan anda!", "Pengurusan Order", "Pengurusan Produk", "Automatik menjawab komen & order"],
+            "avachat": ["Live Autoreply", "memudahkan anda mendapatkan jualan ketika sesi Live di Facebook Pages berlangsung", "Fungsi ini dapat menjimatkan masa anda untuk menjawab semua komen & memudahkan pelanggan membuat pembelian ketika sesi Live sedang berlangsung.", "Pelanggan boleh beli produk anda pada sesi LIVE itu juga", "Set ‘keyword’ untuk jawab komen secara automatik", "Hantar mesej kepada pelanggan secara automatik"],
+            "reseller": ["Dilengkapi dengan fungsi", "Pengurusan Reseller", "", "Dengan fungsi ini, anda boleh melihat prestasi reseller anda secara langsung.", "Pengurusan Database Reseller", "Lihat Prestasi Reseller", "Setkan Komisen & Level Reseller"],
+            "webstore": ["Bina Website", "untuk kedai online/jenama/produk anda dan pilih sendiri domain.com anda", "Website yang kami sediakan mempunyai banyak fungsi yang dapat membantu pelanggan anda membeli online.", "Integrasi Payment Gateway", "Pelbagai pilihan tema website", "Mesra pengguna telefon pintar"],
+            "fbshop": ["Miliki", "Kedai Facebook", "dengan fungsi yang terbaik", "Ubah followers Facebook Pages anda menjadi pelanggan. Mereka boleh membeli produk terus Facebook Pages anda tanpa perlu membuka laman web lain."],
+            "support": "AVANA menjalinkan kerjasama strategik dengan pelbagai pihak",
+            "testimonial": "Apa kata mereka yang sudah menggunakan AVANA?",
+            "footerCta": ["PERCUMA 14 HARI ☻ Cuba Sekarang!", "DAFTAR SEKARANG"],
+            "error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
+            "error-without-status": "Auf dem Server ist ein Fehler aufgetreten"
+    }
+}

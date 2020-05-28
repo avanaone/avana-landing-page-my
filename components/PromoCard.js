@@ -1,9 +1,20 @@
+import {useState, useEffect} from "react";
 import Link from "next/link";
 import dayjs from "dayjs";
 
 import { LinkButton } from "./Button";
 
 export default function PromoCard({ promo }) {
+  const [lang, setLang] = useState("en");
+
+  useEffect(() => {
+    if(localStorage.getItem("lang")) {
+      setLang(localStorage.getItem("lang"));
+    } else {
+      localStorage.setItem("lang", "en");
+    }
+  }, []);
+
   dayjs.locale("id");
 
   let dateEnd = [];
@@ -22,15 +33,15 @@ export default function PromoCard({ promo }) {
         <div>
           <h3
             className="name is-size-6"
-            title={promo.title}
-          >{`${promo.title.slice(0, 75)}${
-            promo.title.length > 75 ? " ..." : ""
+            title={lang === 'en' ? promo.title.en : promo.title.bm}
+          >{`${lang === 'en' ? promo.title.en.slice(0, 75) : promo.title.bm.slice(0, 75)}${
+            lang === 'en' && promo.title.en.length > 75 ? " ..." : lang === 'bm' && promo.title.bm.length > 75 ? " ..." : ""
           }`}</h3>
         </div>
         <hr />
         <div>
           <span>
-            <b>Masa Berlaku</b>
+            <b>{lang === 'en' ? 'Validity Period' : 'Bila'}</b>
             <br />
             {promo.period.start && promo.period.end ? (
               <>
@@ -46,7 +57,7 @@ export default function PromoCard({ promo }) {
             )}
           </span>
           <Link href="/promo/[code]" as={`/promo/${promo.code}`}>
-            <a className="button ava-button btn-primary">Lihat Detail</a>
+            <a className="button ava-button btn-primary">{lang === 'en' ? 'See Details' : 'Lagi'}</a>
           </Link>
         </div>
       </div>

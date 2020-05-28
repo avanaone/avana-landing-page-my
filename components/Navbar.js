@@ -2,11 +2,20 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import { LinkButton } from './Button';
 
+const getCw = import('../json/copywriting.json');
 const getWidth = () => (typeof window !== 'undefined' ? window.innerWidth : '');
 
 export default function Navbar({ style }) {
+  const [lang, setLang] = useState("en");
+  const [cw, setCw] = useState([]);
+
   const [isModal, setIsModal] = useState(false);
   const toggleModal = () => setIsModal(!isModal);
+  const toggleLang = (language) => {
+    localStorage.setItem("lang", language);
+    setLang(language);
+    location.reload();
+  }
 
   const [state, setState] = useState({
     isActive: false,
@@ -25,6 +34,17 @@ export default function Navbar({ style }) {
   });
 
   useEffect(() => {
+    if(localStorage.getItem("lang")) {
+      console.log(localStorage.getItem("lang"));
+      setLang(localStorage.getItem("lang"));
+      getCw.then((res) => {
+        console.log(lang);
+        console.log(res.default[localStorage.getItem("lang")]); 
+        setCw(res.default[localStorage.getItem("lang")])
+      });
+    } else {
+      localStorage.setItem("lang", "en");
+    }
     const onResize = window.addEventListener('resize', () =>
       resizeRef.current()
     );
@@ -58,6 +78,36 @@ export default function Navbar({ style }) {
           <a className="navbar-item" href="/" title="BERANDA &middot; Avana">
             <img src="/assets/images/logo.webp" alt="AVANA Logo" width="100" />
           </a>
+          <div
+              className={`navbar-item has-dropdown ${
+                innerWidth >= 1023 ? 'is-hoverable' : ''
+              } ${
+                dropdownActive['pelajari'] && innerWidth < 1023
+                  ? 'is-active'
+                  : ''
+              }`}
+              onClick={() => toggleDropdown('pelajari')}
+            >
+              <a className="navbar-link" title="Pelajari">
+                {lang === 'en' ? 'En' : 'Bm'}
+              </a>
+              <div className="navbar-dropdown">
+                <a
+                  className="navbar-item"
+                  title="Tutorial"
+                  onClick={() => toggleLang("en")}
+                >
+                  En
+                </a>
+                <a
+                  className="navbar-item"
+                  title="Blog"
+                  onClick={() => toggleLang("bm")}
+                >
+                  Bm
+                </a>
+              </div>
+            </div>
 
           <a
             role="button"
@@ -83,21 +133,21 @@ export default function Navbar({ style }) {
               onClick={() => toggleDropdown('produk')}
             >
               <a className="navbar-link" title="Produk">
-                Produk
+                {cw.navbar ? cw.navbar[0] : 'loading'}
               </a>
               <div className="navbar-dropdown">
                 <a className="navbar-item" href="/dashboard" title="Dashboard">
                   Dashboard
                 </a>
-                <a className="navbar-item" href="/avachat" title="AVAChat">
-                  AVAChat
+                <a className="navbar-item" href="/avachat" title="Live autoreply">
+                  Live Autoreply
                 </a>
                 <a
                   className="navbar-item"
                   href="/reseller"
-                  title="Manajemen Reseller"
+                  title="Reseller"
                 >
-                  Manajemen Reseller
+                  Reseller
                 </a>
                 <a className="navbar-item" href="/webstore" title="Webstore">
                   Webstore
@@ -105,13 +155,13 @@ export default function Navbar({ style }) {
               </div>
             </div>
             <a className="navbar-item" href="/price" title="Harga">
-              Harga
+              {cw.navbar ? cw.navbar[1] : 'loading'}
             </a>
             <a href="/promo" className="navbar-item" title="Promo">
-              <span className="dot">Promo</span>
+              <span className="dot">{cw.navbar ? cw.navbar[2] : 'loading'}</span>
             </a>
             <a href="/event" className="navbar-item" title="Event">
-              Event
+              {cw.navbar ? cw.navbar[3] : 'loading'}
             </a>
             <div
               className={`navbar-item has-dropdown ${
@@ -124,7 +174,7 @@ export default function Navbar({ style }) {
               onClick={() => toggleDropdown('pelajari')}
             >
               <a className="navbar-link" title="Pelajari">
-                Pelajari
+                {cw.navbar ? cw.navbar[4] : 'loading'}
               </a>
               <div className="navbar-dropdown">
                 <a
@@ -132,22 +182,29 @@ export default function Navbar({ style }) {
                   title="Tutorial"
                   onClick={toggleModal}
                 >
-                  Tutorial
+                  {cw.navbar ? cw.navbar[5] : 'loading'}
                 </a>
                 {/* <a href="/FAQ" className="navbar-item" title="FAQ">
                   FAQ
                 </a> */}
                 <a
-                  href="https://blog.avana.id/"
+                  href="https://blog.avana.asia/"
                   className="navbar-item"
                   title="Blog"
                 >
-                  Blog
+                  {cw.navbar ? cw.navbar[6] : 'loading'}
+                </a>
+                <a
+                  href="/ebook"
+                  className="navbar-item"
+                  title="eBook"
+                >
+                  {cw.navbar ? cw.navbar[7] : 'loading'}
                 </a>
               </div>
             </div>
             <a href="/about-us" className="navbar-item" title="Tentang Kami">
-              Tentang Kami
+              {cw.navbar ? cw.navbar[8] : 'loading'}
             </a>
             <div className="navbar-item">
               <LinkButton
@@ -156,7 +213,7 @@ export default function Navbar({ style }) {
                 className="btn-secondary"
                 title="Masuk"
               >
-                Masuk
+                {cw.navbar ? cw.navbar[9] : 'loading'}
               </LinkButton>
               <LinkButton
                 href="https://store.avana.asia/"
@@ -164,7 +221,7 @@ export default function Navbar({ style }) {
                 className="btn-primary"
                 title="Daftar"
               >
-                Daftar
+                {cw.navbar ? cw.navbar[10] : 'loading'}
               </LinkButton>
             </div>
           </div>

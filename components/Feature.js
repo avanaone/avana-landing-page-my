@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
 import Navbar from './Navbar';
@@ -11,9 +11,19 @@ const Features = import('../json/features.json');
 
 export default function Feature(props) {
   const { id, title, link, CS, className } = props;
+  const [lang, setLang] = useState("en");
   const [features, setFeatures] = useState([]);
 
-  Features.then((res) => setFeatures(res.default[id]));
+  useEffect(() => {
+    if(localStorage.getItem("lang")) {
+      setLang(localStorage.getItem("lang"));
+      Features.then((res) => {
+        setFeatures(res.default[id][lang])
+      });
+    } else {
+      localStorage.setItem("lang", "en");
+    }
+  }, []);
 
   return (
     <div className="features">
@@ -45,14 +55,16 @@ export default function Feature(props) {
         ))}
         <section className="trial">
           <h2 className="is-size-4">
-            {CS ? `Tertarik dengan ${title}?` : 'Coba Sekarang GRATIS 14 Hari'}
+            {/* {CS ? `Tertarik dengan ${title}?` : 'Coba Sekarang GRATIS 14 Hari'} */}
+            { lang === 'en' ? 'FREE 14 DAYS TRIAL ☻ Try Now for FREE!' : 'PERCUMA 14 HARI ☻ Cuba Sekarang!'}
           </h2>
           <LinkButton
             href={CS ? link : 'https://store.avana.asia/'}
             target="__blank"
             className="btn-primary"
           >
-            {CS ? `Hubungi Kami` : 'Coba Gratis'}
+            {/* {CS ? `Hubungi Kami` : 'Coba Gratis'} */}
+            { lang === 'en' ? 'Sign Up For Free' : 'DAFTAR SEKARANG'}
           </LinkButton>
         </section>
       </main>

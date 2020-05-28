@@ -12,10 +12,13 @@ import SliderTestimonial from '../components/SliderTestimonial';
 import styles from './scss/Home.module.scss';
 
 import getTestimonials from '../json/testimonial.json';
-
+const getCw = import('../json/copywriting.json');
 const getPromos = import('../json/promo.json');
 
 const Home = () => {
+  const [lang, setLang] = useState("en");
+  const [cw, setCw] = useState([]);
+
   const [state, setState] = useState({
     dashboard: 0,
     avachat: 0,
@@ -32,6 +35,17 @@ const Home = () => {
   const { dashboard, avachat, reseller, webstore } = state;
 
   useEffect(() => {
+    if(localStorage.getItem("lang")) {
+      console.log(localStorage.getItem("lang"));
+      setLang(localStorage.getItem("lang"));
+      getCw.then((res) => {
+        console.log(lang);
+        console.log(res.default[localStorage.getItem("lang")]); 
+        setCw(res.default[localStorage.getItem("lang")])
+      });
+    } else {
+      localStorage.setItem("lang", "en");
+    }
     window.addEventListener('scroll', handleNavbar);
 
     return () => {
@@ -105,9 +119,16 @@ const Home = () => {
         <Navbar style={{ backgroundColor: navbarBg }} />
         <header>
           <h1 className='is-size-3'>
-            Satu Dashboard Untuk Mengelola Semua Penjualan Sosial Mediamu
+            {cw.h1}
           </h1>
           <p>
+            {cw.features ? cw.features.map((feature, i) => {
+              if(cw.features.length === i + 1) {
+                feature
+              } else {
+                feature + " • "
+              }
+            }) : 'loading...'}
             Toko Online • Integrasi Chat Sosial Media • Auto Reply • Manajemen
             Reseller
           </p>
@@ -128,31 +149,29 @@ const Home = () => {
           <section className='feature'>
             <div className='description'>
               <h2 className='is-size-4'>
-                <span className='hl'>Dashboard</span> pintar untuk mengelola
-                seluruh aktivitas jualanmu
+                <span className='hl'>{cw.dashboard ? cw.dashboard[0] : 'loading'}</span> {cw.dashboard ? cw.dashboard[1] : 'loading'}
               </h2>
               <p>
-                Ada banyak fitur yang dapat membantu meningkatkan penjualan
-                anda!
+                {cw.dashboard ? cw.dashboard[2] : 'loading'}
               </p>
               <ul>
                 <li
                   className={dashboard === 0 ? 'active' : ''}
                   onClick={() => handleSlider('dashboard', 0)}
                 >
-                  Manajemen Pesanan
+                  {cw.dashboard ? cw.dashboard[3] : 'loading'}
                 </li>
                 <li
                   className={dashboard === 1 ? 'active' : ''}
                   onClick={() => handleSlider('dashboard', 1)}
                 >
-                  Manajemen Produk
+                  {cw.dashboard ? cw.dashboard[4] : 'loading'}
                 </li>
                 <li
                   className={dashboard === 2 ? 'active' : ''}
                   onClick={() => handleSlider('dashboard', 2)}
                 >
-                  Balas Pesan & Komen Otomatis
+                  {cw.dashboard ? cw.dashboard[5] : 'loading'}
                 </li>
               </ul>
               <div className='ava-btn-group'>
@@ -161,10 +180,10 @@ const Home = () => {
                   target='__blank'
                   className='btn-primary'
                 >
-                  Saya Tertarik
+                  {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton>
                 <LinkButton href='/dashboard' className='btn-secondary'>
-                  Lihat Selengkapnya
+                  {cw.button ? cw.button[1] : 'loading'}
                 </LinkButton>
               </div>
             </div>
@@ -203,31 +222,29 @@ const Home = () => {
           <section className='feature'>
             <div className='description'>
               <h2 className='is-size-4'>
-                <span className='hl'>AVAChat</span> menghubungkan semua pesan
-                sosial media dalam satu dashboard
+                <span className='hl'>{cw.avachat ? cw.avachat[0] : 'loading'}</span> {cw.avachat ? cw.avachat[1] : 'loading'}
               </h2>
               <p>
-                Avachat memiliki banyak fitur yang meningkatkan produktifitas
-                Anda di berbagai saluran media sosial.
+                {cw.avachat ? cw.avachat[2] : 'loading'}
               </p>
               <ul>
                 <li
                   className={avachat === 0 ? 'active' : ''}
                   onClick={() => handleSlider('avachat', 0)}
                 >
-                  Kirim Produk & Invoice
+                  {cw.avachat ? cw.avachat[3] : 'loading'}
                 </li>
                 <li
                   className={avachat === 1 ? 'active' : ''}
                   onClick={() => handleSlider('avachat', 1)}
                 >
-                  Quick Reply
+                  {cw.avachat ? cw.avachat[4] : 'loading'}
                 </li>
                 <li
                   className={avachat === 2 ? 'active' : ''}
                   onClick={() => handleSlider('avachat', 2)}
                 >
-                  Info Pengiriman Barang
+                  {cw.avachat ? cw.avachat[5] : 'loading'}
                 </li>
               </ul>
               <div className='ava-btn-group'>
@@ -236,10 +253,10 @@ const Home = () => {
                   target='__blank'
                   className='btn-primary'
                 >
-                  Saya Tertarik
+                  {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton>
                 <LinkButton href='/avachat' className='btn-secondary'>
-                  Lihat Selengkapnya
+                  {cw.button ? cw.button[1] : 'loading'}
                 </LinkButton>
               </div>
             </div>
@@ -278,31 +295,30 @@ const Home = () => {
           <section className='feature'>
             <div className='description'>
               <h2 className='is-size-4'>
-                Dilengkapi dengan fitur&nbsp;
-                <span className='hl'>Manajemen Reseller</span>
+                {cw.reseller ? cw.reseller[0] : 'loading'}&nbsp;
+                <span className='hl'>{cw.reseller ? cw.reseller[1] : 'loading'}</span> {cw.reseller ? cw.reseller[2] : 'loading'}
               </h2>
               <p>
-                Dengan fitur ini, Anda bisa mengamati performa resellermu secara
-                langsung.
+                {cw.reseller ? cw.reseller[3] : 'loading'}
               </p>
               <ul>
                 <li
                   className={reseller === 0 ? 'active' : ''}
                   onClick={() => handleSlider('reseller', 0)}
                 >
-                  Manajemen Database Reseller
+                  {cw.reseller ? cw.reseller[4] : 'loading'}
                 </li>
                 <li
                   className={reseller === 1 ? 'active' : ''}
                   onClick={() => handleSlider('reseller', 1)}
                 >
-                  Lihat Performa Reseller
+                  {cw.reseller ? cw.reseller[5] : 'loading'}
                 </li>
                 <li
                   className={reseller === 2 ? 'active' : ''}
                   onClick={() => handleSlider('reseller', 2)}
                 >
-                  Atur Komisi & Buat Level Reseller
+                  {cw.reseller ? cw.reseller[6] : 'loading'}
                 </li>
               </ul>
               <div className='ava-btn-group'>
@@ -311,10 +327,10 @@ const Home = () => {
                   target='__blank'
                   className='btn-primary'
                 >
-                  Saya Tertarik
+                  {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton>
                 <LinkButton href='/reseller' className='btn-secondary'>
-                  Lihat Selengkapnya
+                  {cw.button ? cw.button[1] : 'loading'}
                 </LinkButton>
               </div>
             </div>
@@ -353,31 +369,29 @@ const Home = () => {
           <section className='feature'>
             <div className='description'>
               <h2 className='is-size-4'>
-                <span className='hl'>Buat Website</span> untuk tokomu dan
-                tentukan sendiri domain.com pilihanmu
+                <span className='hl'>{cw.webstore ? cw.webstore[0] : 'loading'}</span> {cw.webstore ? cw.webstore[1] : 'loading'}
               </h2>
               <p>
-                Website yang kami sediakan untuk anda memiliki banyak fitur yang
-                membantu calon pelanggan untuk bertransaksi.
+                {cw.webstore ? cw.webstore[2] : 'loading'}
               </p>
               <ul>
                 <li
                   className={webstore === 0 ? 'active' : ''}
                   onClick={() => handleSlider('webstore', 0)}
                 >
-                  Dukungan Payment Gateway
+                  {cw.webstore ? cw.webstore[3] : 'loading'}
                 </li>
                 <li
                   className={webstore === 1 ? 'active' : ''}
                   onClick={() => handleSlider('webstore', 1)}
                 >
-                  Berbagai Macam Pilihan Tema
+                  {cw.webstore ? cw.webstore[4] : 'loading'}
                 </li>
                 <li
                   className={webstore === 2 ? 'active' : ''}
                   onClick={() => handleSlider('webstore', 2)}
                 >
-                  Order Melalui WhatsApp
+                  {cw.webstore ? cw.webstore[5] : 'loading'}
                 </li>
               </ul>
               <div className='ava-btn-group'>
@@ -386,10 +400,10 @@ const Home = () => {
                   target='__blank'
                   className='btn-primary'
                 >
-                  Saya Tertarik
+                  {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton>
                 <LinkButton href='/webstore' className='btn-secondary'>
-                  Lihat Selengkapnya
+                  {cw.button ? cw.button[1] : 'loading'}
                 </LinkButton>
               </div>
             </div>
@@ -428,12 +442,10 @@ const Home = () => {
           <section className='feature'>
             <div className='description'>
               <h2 className='is-size-4'>
-                Miliki <span className='hl'>Toko Facebook</span> dengan fitur
-                terbaik
+                {cw.fbshop ? cw.fbshop[0] : 'loading'} <span className='hl'>{cw.fbshop ? cw.fbshop[1] : 'loading'}</span> {cw.fbshop ? cw.fbshop[2] : 'loading'}
               </h2>
               <p>
-                Ubah teman jadi pelanggan. Pelanggan bisa belanja sampai bayar
-                langsung di Facebook Page Anda tanpa keluar dari laman ini.
+                {cw.fbshop ? cw.fbshop[3] : 'loading'}
               </p>
               <ul />
               <div className='ava-btn-group'>
@@ -442,7 +454,7 @@ const Home = () => {
                   target='__blank'
                   className='btn-primary'
                 >
-                  Saya Tertarik
+                  {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton>
               </div>
             </div>
@@ -459,7 +471,7 @@ const Home = () => {
           </section>
           <section id='support'>
             <h2 className='is-size-4'>
-              AVANA sudah didukung oleh berbagai metode pengiriman & pembayaran
+              {cw.support ? cw.support : 'loading'}
             </h2>
             <div>
               <img
@@ -481,18 +493,18 @@ const Home = () => {
           </section>
           <section id='testimonial'>
             <h2 className='is-size-4'>
-              Apa kata mereka yang sudah bergabung dengan AVANA?
+              {cw.testimonial ? cw.testimonial : 'loading'}
             </h2>
             <SliderTestimonial testimonials={getTestimonials} />
           </section>
           <section className='trial'>
-            <h2 className='is-size-4'>Coba Sekarang GRATIS 14 Hari</h2>
+            <h2 className='is-size-4'>{cw.footerCta ? cw.footerCta[0] : 'loading'}</h2>
             <LinkButton
               href='https://store.avana.asia/'
               target='__blank'
               className='ava-btn btn-primary'
             >
-              Coba Gratis
+              {cw.footerCta ? cw.footerCta[1] : 'loading'}
             </LinkButton>
           </section>
           <div className={`modal ${isModal ? 'is-active' : ''}`}>
@@ -524,7 +536,7 @@ const Home = () => {
                         minWidth: `100%`,
                       }}
                     >
-                      <h3 className='name is-size-6'>{promo.title}</h3>
+                      <h3 className='name is-size-6'>{lang === 'en' ? promo.title.en : promo.title.bm}</h3>
                     </div>
                   </>
                 ))}
