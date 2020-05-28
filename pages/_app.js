@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }) {
         />
         <meta
           name="description"
-          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
+          content="Our commerce platform helps automate your business so that you can make money with ease"
         />
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }) {
         />
         <meta
           property="og:description"
-          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
+          content="Our commerce platform helps automate your business so that you can make money with ease"
         />
         <meta property="og:image" content="/assets/images/meta-image.png" />
         {/* Twitter */}
@@ -39,7 +39,7 @@ export default function App({ Component, pageProps }) {
         />
         <meta
           property="twitter:description"
-          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
+          content="Our commerce platform helps automate your business so that you can make money with ease"
         />
         <meta
           property="twitter:image"
