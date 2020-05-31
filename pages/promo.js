@@ -27,17 +27,17 @@ const Promo = () => {
         <Navbar />
         <Header title='Promo' />
         <main>
-          <section className="section-title">
+          {/* <section className="section-title">
             <h3>Promo</h3>
-          </section>
-          <section>
+          </section> */}
+          {/* <section>
             {promos.filter((x) => x.isPromo ).map((promo) => (
               <PromoCard key={promo.code} promo={promo} />
             ))}
           </section>
           <section className="section-title">
             <h3>Program</h3>
-          </section>
+          </section> */}
           <section>
             {promos.filter((x) => !x.isPromo ).map((promo) => (
               <PromoCard key={promo.code} promo={promo} />

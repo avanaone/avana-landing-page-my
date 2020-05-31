@@ -1,12 +1,18 @@
 [
   {
     "id": "2",
-    "image": "/assets/images/event/2.jpeg",
+    "image": {
+      "en": "/assets/images/event/tingkatkan-sales.png",
+      "bm": "/assets/images/event/tingkatkan-sales.png"
+    },
     "title": {
       "en": "Webinar - Increase Sales With AVANA Affiliate System",
       "bm": "Webinar - Tingkatkan Sales Dengan Sistem Affiliate AVANA"
     },
-    "date": "Thu, Dec 16 2019, 9:00 AM",
+    "date": {
+      "en": "Every Fridays, 2:30 PM",
+      "bm": "Setiap Jumaat, 2:30 Petang"
+    },
     "location": "Live at Zoom.us",
     "description": {
       "en": "<p>Many online business owners in Malaysia run businesses using agent, stockist & dropship business models. But most of them have problems to deal with Agent, Stockist, Dropship and Affiliate such as -<br><br><ul><li>❌ Misunderstood the meaning of agent, stockist & dropship</li><li>❌ Misplaced commissions for agents, stockists & dropship</li><li>❌ Don't know the exact amount of agent, stockist & dropship available</li><li>❌ and more.</li></ul><br><br>After attending this webinar session with Coach Kamal, you will no longer be confused even though you have thousands of agents, stockists & dropship agents under you as you know how to manage them all in a more organized and systematic way.<br><br>Each session of this webinar has a limited slot. Do not miss this opportunity!<br><br><a class='button ava-button btn-primary' href=''>Sign up now</a></p>",
@@ -15,12 +21,18 @@
   },
   {
     "id": "1",
-    "image": "/assets/images/event/1.jpeg",
+    "image": {
+      "en": "/assets/images/event/jual-mudah.png",
+      "bm": "/assets/images/event/jual-mudah.png"
+    },
     "title": {
       "en": "Webinar - Sell Easily with AVANA",
       "bm": "Webinar - Jual Dengan Mudah Bersama AVANA"
     },
-    "date": "Tue, Nov 8 2019, 01:00 PM",
+    "date": {
+      "en": "Setiap Jumaat, 10:00 Pagi",
+      "bm": "Every Fridays, 10:00 AM"
+    },
     "location": "Live at Zoom.us",
     "description": {
       "en": "<p>In 2020, online trading has increased 149% since the MCO was implemented. Buying and selling online has become a new norm for all Malaysians. Many businesses have to change using an online platform to make sure their businesses are able to run as usual.<br><br>After you join this webinar session with Coach Zodie, you can shift your business to an online platform or start an online business more easily.<br><br>Each webinar session has a limited slot. Don't lose the chance to join this golden opportunity! <br><br><a class='button ava-button btn-primary' href=''>Sign up now</a></p>",

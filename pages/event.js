@@ -27,7 +27,7 @@ const Event = () => {
         <Navbar />
         <Header title='Event' />
         <main>
-          <section className="section-title">
+          {/* <section className="section-title">
             <h3>Upcoming</h3>
           </section>
           <section>
@@ -37,20 +37,20 @@ const Event = () => {
           </section>
           <section className="section-title">
             <h3>Past</h3>
-          </section>
+          </section> */}
           <section>
             {events ? events.filter((x) => x.id < 11 && !x.isTraining).map((event) => (
               <EventCard key={event.id} event={event} />
             )): ''}
           </section>
-          <section className="section-title">
+          {/* <section className="section-title">
             <h3>Training</h3>
           </section>
           <section>
             {events ? events.filter((x) => x.isTraining).map((event) => (
               <EventCard key={event.id} event={event} />
             )): ''}
-          </section>
+          </section> */}
         </main>
         <Footer />
       </div>

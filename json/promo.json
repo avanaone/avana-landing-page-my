@@ -1,14 +1,17 @@
 [
   {
     "code": "6",
-    "image": "/assets/images/promo/6.webp",
+    "image": {
+      "en": "/assets/images/promo/MoveDigital-en.png",
+      "bm": "/assets/images/promo/MoveDigital-bm.png"
+    },
     "title": {
       "en": "Move Digital",
       "bm": "Move Digital"
     },
     "period": {
-      "start": "2020-05-01",
-      "end": "2020-05-31"
+      "start": null,
+      "end": null
     },
     "description": {
       "en": "<p>Doing our part for the nation during this pandemic period, AVANA is launching the MoveDigital campaign to assist you to move your business online with the help of our certified consultants.<br><br>With AVANA Quarterly Business plan, you are able to jumpstart your online business right away.<br><ol><li>Free webstore</li><li>Free payment gateway integration</li><li>Auto reply Facebook comment</li><li>Product & Order management</li><li>Customer database management</li><li>Consultation with our certified consultants to move your business online</li></ol><br><br>If your business has been impacted by COVID-19, submit your details in the form by clicking the button below.<br><br><a class='button ava-button btn-primary' href=''>Sign Up Now</a><br><br>Let's fight together and support each other during COVID-19!</p>",
@@ -18,14 +21,17 @@
   },
   {
     "code": "5",
-    "image": "/assets/images/promo/5.webp",
+    "image": {
+      "en": "/assets/images/promo/makan-mall.png",
+      "bm": "/assets/images/promo/makan-mall.png"
+    },
     "title": {
       "en": "Makan Makan Mall",
       "bm": "Makan Makan Mall"
     },
     "period": {
-      "start": "2020-05-01",
-      "end": "2020-05-31"
+      "start": null,
+      "end": null
     },
     "description": {
       "en": "<p>Let's go buy some food at Makan Makan Mall! Many types of local foods and drinks are served to facilitate your Ramadan cravings.<br><br>At the same time you can help traders continue their business during the pandemic period.<br><br><a class='button ava-button btn-primary' href=''>Go to Makan Makan Mall</a></p>",
@@ -35,14 +41,17 @@
   },
   {
     "code": "4",
-    "image": "/assets/images/promo/4.webp",
+    "image": {
+      "en": "/assets/images/promo/raya-mall.png",
+      "bm": "/assets/images/promo/raya-mall.png"
+    },
     "title": {
       "en": "Raya Mall",
       "bm": "Raya Mall"
     },
     "period": {
-      "start": "2020-04-06",
-      "end": "2020-06-30"
+      "start": null,
+      "end": null
     },
     "description": {
       "en": "<p>Brought to you, AVANA Raya Mall, to celebrate the holy month of Ramadhan with you!<br><br>You can find a wide variety of products from different brands for your own use or gift to your loved ones. Even if you can't meet them, you can still give #syawalgift to your loved ones.<br><br><a class='button ava-button btn-primary' href=''>Check out AVANA Raya Mall</a></p>",
@@ -52,7 +61,10 @@
   },
   {
     "code": "3",
-    "image": "/assets/images/promo/3.jpeg",
+    "image": {
+      "en": "/assets/images/promo/xixili-en.png",
+      "bm": "/assets/images/promo/xixili-bm.png"
+    },
     "title": {
       "en": "XIXILI Reseller Program",
       "bm": "Program XIXILI Reseller"
@@ -69,14 +81,21 @@
   },
   {
     "code": "2",
-    "image": "/assets/images/promo/2.jpeg",
+    "image": {
+      "en": "/assets/images/promo/AVANA-reseller-en.png",
+      "bm": "/assets/images/promo/AVANA-reseller-bm.png"
+    },
     "title": {
       "en": "Webinar Consultation",
       "bm": "Konsultasi Webinar"
     },
     "period": {
       "start": null,
-      "end": null
+      "end": null,
+      "custom": {
+        "en": "Every Fridays",
+        "bm": "Setiap Hari Jumaat"
+      }
     },
     "description": {
       "en": "<p>We provide webinar sessions to help you better understand how AVANA can help you run online business easily. At the same time you will also be able to learn what kind of businesses you can develop using the affiliate system which is called a busy person today.<br><br>Now everyone can start an online business & develop business online with more structured & strategic. Limited slot. Click the button below!<br><br><a class='button ava-button btn-primary' href=''>See Webinar Session</a></p>",
@@ -86,7 +105,10 @@
   },
   {
     "code": "1",
-    "image": "/assets/images/promo/1.jpeg",
+    "image": {
+      "en": "/assets/images/promo/AVANA-reseller-en.png",
+      "bm": "/assets/images/promo/AVANA-reseller-bm.png"
+    },
     "title": {
       "en": "AVANA Reseller Program",
       "bm": "Program AVANA Reseller"

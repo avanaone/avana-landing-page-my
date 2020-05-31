@@ -17,11 +17,11 @@ export default function EventCard({ event }) {
     <div className={`event`}>
       <div
         className='image'
-        style={{ backgroundImage: `url(${event.image})` }}
+        style={{ backgroundImage: `url(${lang === 'en' ? event.image.en : event.image.bm })` }}
       />
       <div className='detail'>
         <span className='has-text-success has-text-weight-bold'>
-          {event.date}
+          {lang === 'en' ? event.date.en : event.date.bm}
         </span>
         <div>
           <h3

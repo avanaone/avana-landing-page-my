@@ -39,7 +39,7 @@ export default function PromoDetail({ data }) {
           <main>
             <section>
               <div>
-                <img src={promo.image} alt="" />
+                <img src={lang === 'en' ? promo.image.en : promo.image.bm } alt="" />
                 <h3 className="is-size-4">{lang === 'en' ? promo.title.en : promo.title.bm }</h3>
                 {lang === 'en' ? parser(promo.description.en) : parser(promo.description.bm) }
                 <ol>

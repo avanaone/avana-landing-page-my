@@ -39,7 +39,7 @@ export default function Event({ data }) {
           <main>
             <section>
               <div>
-                <img src={event.image} alt="" />
+                <img src={lang === 'en' ? event.image.en : event.image.bm} alt="" />
                 <h3 className="is-size-4">{lang === 'en' ? event.title.en : event.title.bm }</h3>
                 {lang === 'en' ? parser(event.description.en) : parser(event.description.bm) }
               </div>

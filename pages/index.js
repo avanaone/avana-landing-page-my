@@ -124,13 +124,11 @@ const Home = () => {
           <p>
             {cw.features ? cw.features.map((feature, i) => {
               if(cw.features.length === i + 1) {
-                feature
+                return feature
               } else {
-                feature + " • "
+                return feature + " • "
               }
             }) : 'loading...'}
-            Toko Online • Integrasi Chat Sosial Media • Auto Reply • Manajemen
-            Reseller
           </p>
           <LinkButton
             href='https://store.avana.asia/'
@@ -476,18 +474,10 @@ const Home = () => {
             <div>
               <img
                 srcSet={
-                  require('../public/assets/images/courier.png?resize&size=400?webp')
+                  require('../public/assets/images/logisticandepayment.png?resize&size=400?webp')
                     .srcSet
                 }
-                alt='Kurir'
-              />
-              <div className='border' />
-              <img
-                srcSet={
-                  require('../public/assets/images/bank.png?resize&size=400?webp')
-                    .srcSet
-                }
-                alt='Bank'
+                alt='Logistics & e-payment'
               />
             </div>
           </section>
@@ -526,7 +516,7 @@ const Home = () => {
                 slides={promos.map((promo) => (
                   <>
                     <Link href='/promo/[code]' as={`/promo/${promo.code}/`}>
-                      <img srcSet={promo.image} alt='' />
+                      <img srcSet={lang === 'en' ? promo.image.en : promo.image.bm} alt='' style={{ cursor: `pointer`}}/>
                     </Link>
                     <div
                       style={{

@@ -27,7 +27,7 @@ export default function PromoCard({ promo }) {
     <div className="promo">
       <div
         className="image"
-        style={{ backgroundImage: `url(${promo.image})` }}
+        style={{ backgroundImage: `url(${lang === 'en' ? promo.image.en : promo.image.bm})` }}
       />
       <div className="detail">
         <div>
@@ -52,7 +52,9 @@ export default function PromoCard({ promo }) {
                     ).format("DD MMM YYYY")}`
                   : `${dayjs(promo.period.start).format("DD MMMM YYYY")}`}
               </>
-            ) : (
+            ) : promo.period.custom ? (
+              lang === 'en' ? promo.period.custom.en : promo.period.custom.bm
+            ) :(
               "Lifetime"
             )}
           </span>

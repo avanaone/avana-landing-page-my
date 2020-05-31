@@ -32,6 +32,28 @@ p {
   body {
     font-size: 15px;
   }
+
+  .navbar-item {
+
+    &.has-dropdown {
+
+      .lang-title {
+        display: none;
+      }
+
+      .lang-dropdown {
+        display: flex;
+        
+        .navbar-item {
+
+          &.lang-active {
+            font-weight: bold;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 786px) {
@@ -467,6 +489,7 @@ footer {
     position: absolute;
     top: 5px;
     right: 5px;
+    z-index: 2;
 
     &::before,
     &::after {

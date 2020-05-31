@@ -11,7 +11,14 @@
         "discounted_price": null,
         "is_popular": false,
         "is_discount": false,
-        "highlight_feature": ["Facebook store", "Webstore", "Payment gateway integration", "Order management", "Product management", "Customer database management", "Promo code management", "Shop manager"]
+        "highlight_feature": {
+          "en": [
+            "Facebook store", "Webstore", "Payment gateway integration", "Order management", "Product management", "Customer database management", "Promo code management", "Shop manager"
+          ],
+          "bm": [
+            "Facebook store", "Webstore/Website eCommerce", "Integrasi Payment Gateway/Integrasi Pembayaran Online", "Pengurusan Order", "Pengurusan Produk", "Pengurusan Database Pelanggan", "Pengurusan Kod Promo", "Shop Manager/Pengurus"
+          ]
+        }
       },
       {
         "code": "yearly_beginner",
@@ -23,7 +30,14 @@
         "discounted_price": null,
         "is_popular": false,
         "is_discount": false,
-        "highlight_feature": ["Facebook store", "Webstore", "Payment gateway integration", "Order management", "Product management", "Customer database management", "Promo code management", "Shop manager"]
+        "highlight_feature": {
+          "en": [
+            "Facebook store", "Webstore", "Payment gateway integration", "Order management", "Product management", "Customer database management", "Promo code management", "Shop manager"
+          ],
+          "bm": [
+            "Facebook store", "Webstore/Website eCommerce", "Integrasi Payment Gateway/Integrasi Pembayaran Online", "Pengurusan Order", "Pengurusan Produk", "Pengurusan Database Pelanggan", "Pengurusan Kod Promo", "Shop Manager/Pengurus"
+          ]
+        }
       },
       {
         "code": "yearly_advance_plan_id",
@@ -35,7 +49,14 @@
         "discounted_price": null,
         "is_popular": true,
         "is_discount": false,
-        "highlight_feature": ["All Beginner plan features", "Messenger store", "Messenger blast", "Auto reply Facebook comments", "Free domain name (.com.my or .my) for first year", "Free Ecommerce training (Basic) and Facebook Marketing (Introductory Level)"]
+        "highlight_feature": {
+          "en": [
+            "All Beginner plan features", "Messenger store", "Messenger blast", "Auto reply Facebook comments", "Free domain name (.com.my or .my) for first year", "Free Ecommerce training (Basic) and Facebook Marketing (Introductory Level)"
+          ],
+          "bm": [
+            "Semua fungsi yang ada pada Beginner pelan", "Messenger Store", "Messenger Blast", "Auto Reply Komen Facebook", "Percuma nama domain (.com.my atau .my) pada tahun pertama", "Percuma latihan eCommerce (Asas)  dan Pemasaran Facebook (Pengenalan)"
+          ]
+        }
       },
       {
         "code": "yearly_vip",
@@ -47,14 +68,24 @@
         "discounted_price": null,
         "is_popular": false,
         "is_discount": false,
-        "highlight_feature": [
+        "highlight_feature": {
+          "en": [
           "Check the performance of your agents on your dashboard",
           "View top performing Agents, Stockists and Dropshippers on your dashboard",
           "View newly registered Agents, Stockists and dropshippers on your dashboard",
           "Invite unlimited number of new agents",
           "Manage the levels and rules for your agents",
           "Manage individual pricing for either Agents, Stockists or Dropshipper"
-        ]
+          ],
+          "bm": [
+            "Semak prestasi agen-agen anda pada dashboard",
+            "Lihat ejen, stokis dan dropshipper terbaik pada dashboard",
+            "Semak ejen, stokis dan dropshipper yang baru berdaftar pada dashboard anda",
+            "Rekrut ejen baru tanpa had",
+            "Urus level dan peraturan untuk agen anda",
+            "Susun harga mengikut Ejen, Stokis atau Dropshipper"
+          ]
+        }
       }
     ]
   }

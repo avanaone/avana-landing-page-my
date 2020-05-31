@@ -120,7 +120,11 @@ const Price = () => {
                     </div>
                     <div>
                       <ul>
-                        {pkg.highlight_feature.map((feature, idx) => (
+                        {lang === 'en' ? pkg.highlight_feature.en.map((feature, idx) => (
+                          <li key={idx}>
+                            {feature}
+                          </li>
+                        )) : pkg.highlight_feature.bm.map((feature, idx) => (
                           <li key={idx}>
                             {feature}
                           </li>

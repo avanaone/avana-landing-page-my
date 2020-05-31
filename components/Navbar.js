@@ -82,25 +82,25 @@ export default function Navbar({ style }) {
               className={`navbar-item has-dropdown ${
                 innerWidth >= 1023 ? 'is-hoverable' : ''
               } ${
-                dropdownActive['pelajari'] && innerWidth < 1023
+                dropdownActive['lang'] && innerWidth < 1023
                   ? 'is-active'
                   : ''
               }`}
-              onClick={() => toggleDropdown('pelajari')}
+              onClick={() => toggleDropdown('lang')}
             >
-              <a className="navbar-link" title="Pelajari">
+              <a className="navbar-link lang-title" title="lang">
                 {lang === 'en' ? 'En' : 'Bm'}
               </a>
-              <div className="navbar-dropdown">
+              <div className="navbar-dropdown lang-dropdown">
                 <a
-                  className="navbar-item"
+                  className={`navbar-item ${lang === 'en' ? 'lang-active' : ''}`}
                   title="Tutorial"
                   onClick={() => toggleLang("en")}
                 >
                   En
                 </a>
                 <a
-                  className="navbar-item"
+                  className={`navbar-item ${lang === 'bm' ? 'lang-active' : ''}`}
                   title="Blog"
                   onClick={() => toggleLang("bm")}
                 >
