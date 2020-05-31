@@ -479,6 +479,14 @@ const Home = () => {
                 }
                 alt='Logistics & e-payment'
               />
+              <div className='border' />
+              <img
+                srcSet={
+                  require('../public/assets/images/bank.png?resize&size=400?webp')
+                    .srcSet
+                }
+                alt='Bank'
+              />
             </div>
           </section>
           <section id='testimonial'>

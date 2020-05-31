@@ -10,7 +10,7 @@ import { LinkButton } from './Button';
 const Features = import('../json/features.json');
 
 export default function Feature(props) {
-  const { id, title, link, CS, className } = props;
+  const { id, title, link, CS, className, showVideo } = props;
   const [lang, setLang] = useState("en");
   const [features, setFeatures] = useState([]);
 
@@ -33,6 +33,21 @@ export default function Feature(props) {
       <Navbar />
       <Header title={title} />
       <main>
+        {showVideo ? 
+          <section id="section-1" class="feature">
+            <div>
+              <iframe
+                src="https://www.youtube.com/embed/_4BQZP5nIKo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{width: `600px`,
+                  height: `300px`,
+                  maxWidth: `100%`,
+                  maxHeight: `calc(50vw - 16px)`}}
+              />
+            </div>
+          </section> : ''}
         {features.map((feature, idx) => (
           <section
             key={idx}

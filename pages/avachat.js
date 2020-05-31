@@ -9,6 +9,7 @@ const Avachat = () => (
       title="Live Autoreply"
       link="http://nanya.online/tanya-ava-3"
       CS
+      showVideo
     />
   </ContainerAnalytic>
 );

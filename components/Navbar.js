@@ -180,13 +180,13 @@ export default function Navbar({ style }) {
                 {cw.navbar ? cw.navbar[4] : 'loading'}
               </a>
               <div className="navbar-dropdown">
-                <a
+                {/* <a
                   className="navbar-item"
                   title="Tutorial"
                   onClick={toggleModal}
                 >
                   {cw.navbar ? cw.navbar[5] : 'loading'}
-                </a>
+                </a> */}
                 <a href="/FAQ" className="navbar-item" title="FAQ">
                   FAQ
                 </a>
