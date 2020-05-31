@@ -76,7 +76,10 @@ export default function Navbar({ style }) {
       >
         <div className="navbar-brand">
           <a className="navbar-item" href="/" title="BERANDA &middot; Avana">
-            <img src="/assets/images/logo.webp" alt="AVANA Logo" width="100" />
+            <picture>
+              <source srcset="/assets/images/logo.webp" type="image/webp" /> 
+              <img src="/assets/images/logo.png" alt="Avana logo" />
+            </picture>
           </a>
           <div
               className={`navbar-item has-dropdown ${

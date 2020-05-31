@@ -2,7 +2,10 @@ export default function Footer() {
   return (
     <footer>
       <div className="meta">
-        <img src="/assets/images/logo.webp" alt="AVANA logo" />
+        <picture>
+          <source srcset="/assets/images/logo.webp" type="image/webp" alt="Avana logo"/> 
+          <img src="/assets/images/logo.png" alt="Avana logo" />
+        </picture>
         <p>
           AVANA merupakan platform social commerce untuk membantu penjualan
           online melalui website dan sosial media.
