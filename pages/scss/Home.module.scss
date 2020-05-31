@@ -302,6 +302,7 @@
             opacity: 0.5;
             transition: opacity 0.3s ease;
             cursor: pointer;
+            border-radius: 50%;
 
             &.is-active {
               opacity: 1;

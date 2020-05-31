@@ -7,12 +7,11 @@ export default function Footer() {
           <img src="/assets/images/logo.png" alt="Avana logo" />
         </picture>
         <p>
-          AVANA merupakan platform social commerce untuk membantu penjualan
-          online melalui website dan sosial media.
+          AVANA merupakan platform social commerce untuk membantu penjualan online melalui website dan sosial media.
         </p>
         <span>
-          Call Center :<br />
-          +62 22 2050 9731
+          WhatsApp Khidmat Pelanggan:<br />
+          <a href="https://wa.me/60149774275" style={{color: `#3273dc`}}>+60 14 977 4275</a>
         </span>
         <span>Indonesia • Singapore • Malaysia</span>
         <div className="social-icons">
@@ -63,28 +62,28 @@ export default function Footer() {
             <a href="https://blog.avana.asia/">Blog</a>
           </li>
           <li>
-            <a href="https://avana.id/career/">Karir</a>
+            <a href="https://avana.id/career/">Kerjaya</a>
           </li>
           <li>
             <a>Media</a>
           </li>
           <li>
-            <a href="https://avana.id/contact/">Kontak Kami</a>
+            <a href="https://avana.id/contact/">Hubungi Kami</a>
           </li>
           <li>
             <a href="https://avana.id/wp-content/uploads/2018/05/AVANA-Privacy-Policy.pdf">
-              Privasi dan Kebijakan
+              Dasar Privasi
             </a>
           </li>
         </ul>
       </div>
       <div>
-        <h6>Fitur Utama</h6>
+        <h6>Fungsi Utama</h6>
         <ul>
           {/* <li>
             <a>Facebook Store</a>
           </li> */}
-          <li>
+          {/* <li>
             <a href="https://avana.id/features-auto-reply/?lang=id">
               Facebook Auto Reply
             </a>
@@ -93,7 +92,7 @@ export default function Footer() {
             <a href="https://avana.id/features-messenger/?lang=id">
               Messenger Store
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="/webstore">Webstore</a>
           </li>
@@ -107,10 +106,10 @@ export default function Footer() {
             <a href="/dashboard">Dashboard</a>
           </li>
           <li>
-            <a href="/avachat">Avachat</a>
+            <a href="/avachat">Live Auto Reply</a>
           </li>
           <li>
-            <a href="/reseller">Manajemen Reseller</a>
+            <a href="/reseller">Pengurusan Reseller</a>
           </li>
         </ul>
       </div>

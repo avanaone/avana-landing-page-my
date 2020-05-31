@@ -135,7 +135,7 @@ const Home = () => {
             target='__blank'
             className='ava-btn btn-primary'
           >
-            Coba Gratis
+            {lang === 'en' ? 'Try for free' : 'Cuba secara percuma'}
           </LinkButton>
           <div className='channels' />
           <img

@@ -14,12 +14,13 @@ export default ({ testimonials }) => {
           <>
             <q>{testimonial.message}</q>
             <h4>{testimonial.name}</h4>
+            <p style={{fontSize: `.875rem`}}>{testimonial.subtext}</p>
           </>
         ))}
         currentSlide={currentSlide}
         callback={callbackSlider}
       />
-      <div className="images">
+      <div className="images" style={{display: `flex`, alignItems: `center`}}>
         {testimonials.map((testimonial, idx) => (
           <img
             key={idx}
