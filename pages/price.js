@@ -186,9 +186,9 @@ const Price = () => {
                           pkg.name === 'Beginner' && lang === 'en' ? 'Choose Beginner Plan' : 
                           pkg.name === 'Advance' && lang === 'en' ? 'Choose Advance Plan' :
                           pkg.name === 'Agent' && lang === 'en' ? 'Choose Agent Plan' :
-                          pkg.name === 'Beginner' && lang === 'bm' ? 'Daftar Pelan Beginner' : 
-                          pkg.name === 'Advance' && lang === 'bm' ? 'Daftar Pelan Advance' :
-                          'Daftar Pelan Agent'
+                          pkg.name === 'Beginner' && lang === 'bm' ? 'Daftar Plan Beginner' : 
+                          pkg.name === 'Advance' && lang === 'bm' ? 'Daftar Plan Advance' :
+                          'Daftar Plan Agent'
                         }`}
                       </LinkButton>
                     </div>

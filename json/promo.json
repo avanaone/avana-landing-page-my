@@ -1,25 +1,5 @@
 [
   {
-    "code": "6",
-    "image": {
-      "en": "/assets/images/promo/MoveDigital-en.png",
-      "bm": "/assets/images/promo/MoveDigital-bm.png"
-    },
-    "title": {
-      "en": "Move Digital",
-      "bm": "Move Digital"
-    },
-    "period": {
-      "start": null,
-      "end": null
-    },
-    "description": {
-      "en": "<p>Doing our part for the nation during this pandemic period, AVANA is launching the MoveDigital campaign to assist you to move your business online with the help of our certified consultants.<br><br>With AVANA Quarterly Business plan, you are able to jumpstart your online business right away.<br><ol><li>Free webstore</li><li>Free payment gateway integration</li><li>Auto reply Facebook comment</li><li>Product & Order management</li><li>Customer database management</li><li>Consultation with our certified consultants to move your business online</li></ol><br><br>If your business has been impacted by COVID-19, submit your details in the form by clicking the button below.<br><br><a class='button ava-button btn-primary' href=''>Sign Up Now</a><br><br>Let's fight together and support each other during COVID-19!</p>",
-      "bm": "<p>Demi membantu anda dan negara dalam keadaan yang getir ini, dengan bantuan pakar perunding kami, AVANA akan melaksanakan kempen “MoveDigital” untuk membantu anda untuk menukar perniagaan anda kepada perniagaan online.<br><br>Kongsikan maklumat ini dengan rakan-rakan perniagaan anda yang lain.<br><br><a class='button ava-button btn-primary' href=''>Lihat Move Digital</a></p>"
-    },
-    "termsConditions": []
-  },
-  {
     "code": "5",
     "image": {
       "en": "/assets/images/promo/makan-mall.png",
