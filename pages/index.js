@@ -238,12 +238,12 @@ const Home = () => {
                 >
                   {cw.avachat ? cw.avachat[4] : 'loading'}
                 </li>
-                <li
+                {/* <li
                   className={avachat === 2 ? 'active' : ''}
                   onClick={() => handleSlider('avachat', 2)}
                 >
                   {cw.avachat ? cw.avachat[5] : 'loading'}
-                </li>
+                </li> */}
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
@@ -276,13 +276,13 @@ const Home = () => {
                     }
                     alt=''
                   />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/avachat/send-shipping-info.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
+                  // <img
+                  //   srcSet={
+                  //     require('public/assets/images/avachat/send-shipping-info.png?resize?webp')
+                  //       .srcSet
+                  //   }
+                  //   alt=''
+                  // />,
                 ]}
                 currentSlide={avachat}
                 hasDots
