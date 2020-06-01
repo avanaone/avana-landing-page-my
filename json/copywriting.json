@@ -17,7 +17,7 @@
     },
     "bm": {
             "button": ["Saya berminat", "Info Lanjut"],
-            "navbar": ["Produk", "Harga", "Promo", "Acara", "Pelajari", "Tutorial", "Blog", "eBook", "Tentang Kami", "Log Masuk", "Daftar"],
+            "navbar": ["Produk", "Harga", "Promo", "Event", "Pelajari", "Tutorial", "Blog", "eBook", "Tentang Kami", "Log Masuk", "Daftar"],
             "h1": "Satu dashboard untuk menguruskan semua penjualan di media sosial anda",
             "features": ["Kedai Online", "Integrasi Chat Media Sosial", "Auto Reply", "Pengurusan Reseller"],
             "dashboard": ["Dashboard", "pintar untuk menguruskan semua aktiviti jualan online anda", "Ada banyak fungsi-fungsi yang dapat membantu meningkatkan jualan anda!", "Pengurusan Order", "Pengurusan Produk", "Automatik menjawab komen & order"],
