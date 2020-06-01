@@ -1,4 +1,17 @@
+import { useState, useEffect } from 'react';
+
 export default function Footer() {
+  const [lang, setLang] = useState("en");
+
+  useEffect(() => {
+    if(localStorage.getItem("lang")) {
+      console.log(localStorage.getItem("lang"));
+      setLang(localStorage.getItem("lang"));
+    } else {
+      localStorage.setItem("lang", "en");
+    }
+  }, []);
+
   return (
     <footer>
       <div className="meta">
@@ -7,10 +20,12 @@ export default function Footer() {
           <img src="/assets/images/logo.png" alt="Avana logo" />
         </picture>
         <p>
-          AVANA merupakan platform social commerce untuk membantu penjualan online melalui website dan sosial media.
+          {lang === 'en' ? 
+          'AVANA is a social commerce platform to help online sales through websites and social media.' : 
+          'AVANA merupakan platform social commerce untuk membantu penjualan online melalui website dan sosial media.'}
         </p>
         <span>
-          WhatsApp Khidmat Pelanggan:<br />
+          {lang === 'en' ? 'WhatsApp Customer Service:' : 'WhatsApp Khidmat Pelanggan:'}<br />
           <a href="https://wa.me/60149774275" style={{color: `#3273dc`}}>+60 14 977 4275</a>
         </span>
         <span>Indonesia • Singapore • Malaysia</span>
@@ -53,26 +68,26 @@ export default function Footer() {
         <h6>Avana</h6>
         <ul>
           <li>
-            <a href="/about-us">Tentang Kami</a>
+            <a href="/about-us">{lang === 'en' ? 'About Us' : 'Tentang Kami'}</a>
           </li>
           <li>
-            <a href="https://academy.avana.id/">Akademi</a>
+            <a href="https://academy.avana.id/">{lang === 'en' ? 'Academy' : 'Akademi'}</a>
           </li>
           <li>
-            <a href="https://blog.avana.asia/">Blog</a>
+            <a href="https://blog.avana.asia/">{lang === 'en' ? 'Blog' : 'Blog'}</a>
           </li>
           <li>
-            <a href="https://avana.id/career/">Kerjaya</a>
+            <a href="https://avana.id/career/">{lang === 'en' ? 'Career' : 'Kerjaya'}</a>
           </li>
           <li>
             <a>Media</a>
           </li>
           <li>
-            <a href="https://avana.id/contact/">Hubungi Kami</a>
+            <a href="https://avana.id/contact/">{lang === 'en' ? 'Contact Us' : 'Hubungi Kami'}</a>
           </li>
           <li>
             <a href="https://avana.id/wp-content/uploads/2018/05/AVANA-Privacy-Policy.pdf">
-              Dasar Privasi
+            {lang === 'en' ? 'Privacy Policy' : 'Dasar Privasi'}
             </a>
           </li>
         </ul>
@@ -106,10 +121,10 @@ export default function Footer() {
             <a href="/dashboard">Dashboard</a>
           </li>
           <li>
-            <a href="/avachat">Live Auto Reply</a>
+            <a href="/avachat">Live Autoreply</a>
           </li>
           <li>
-            <a href="/reseller">Pengurusan Reseller</a>
+            <a href="/reseller">{lang === 'en' ? 'Reseller Management' : 'Pengurusan Reseller'}</a>
           </li>
         </ul>
       </div>

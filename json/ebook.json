@@ -1,7 +1,7 @@
 [
     {
         "id": "6",
-        "image": "/assets/images/event/2.jpeg",
+        "image": "/assets/images/ebook/6.png",
         "title": "COVID-19 And Business: Crisis Or Opportunity?",
         "file": "COVID-19_Crisis_Opportunity for business (2).pdf",
         "date": "Thu, Dec 16 2019, 9:00 AM",
@@ -13,7 +13,7 @@
     },
     {
         "id": "5",
-        "image": "/assets/images/event/2.jpeg",
+        "image": "/assets/images/ebook/5.png",
         "title": "The Introductory Guide To Promoting Your Online Store",
         "file": "Guide to FB Marketing Vol. 1.pdf",
         "date": "Thu, Dec 16 2019, 9:00 AM",
@@ -25,7 +25,7 @@
     },
     {
         "id": "4",
-        "image": "/assets/images/event/2.jpeg",
+        "image": "/assets/images/ebook/4.png",
         "title": "Selling Online Made Easier With Automation",
         "file": "AVANA E-Book Vol 4.pdf",
         "date": "Thu, Dec 16 2019, 9:00 AM",
@@ -37,7 +37,7 @@
     },
     {
         "id": "3",
-        "image": "/assets/images/event/2.jpeg",
+        "image": "/assets/images/ebook/3.png",
         "title": "5 Must Have Mobile Apps In Your Arsenal To Amp Up Your Creatives",
         "file": "AVANA E-Book Vol 3.pdf",
         "date": "Thu, Dec 16 2019, 9:00 AM",
@@ -49,7 +49,7 @@
     },
     {
       "id": "2",
-      "image": "/assets/images/event/2.jpeg",
+      "image": "/assets/images/ebook/2.png",
       "title": "Creative Content & Copywriting for eCommerce",
       "file": "AVANA E-Book Vol 2.pdf",
       "date": "Thu, Dec 16 2019, 9:00 AM",
@@ -61,7 +61,7 @@
     },
     {
       "id": "1",
-      "image": "/assets/images/event/1.jpeg",
+      "image": "/assets/images/ebook/1.png",
       "title": "Attract The Right Customer At Facebook",
       "file": "AVANA E-Book Vol 1.pdf",
       "date": "Tue, Nov 8 2019, 01:00 PM",
