@@ -184,10 +184,10 @@ const Price = () => {
                       >
                         {`${
                           pkg.name === 'Beginner' && lang === 'en' ? 'Choose Beginner Plan' : 
-                          pkg.name === 'Advance' && lang === 'en' ? 'Choose Advance Plan' :
+                          pkg.name === 'Business' && lang === 'en' ? 'Choose Business Plan' :
                           pkg.name === 'Agent' && lang === 'en' ? 'Choose Agent Plan' :
                           pkg.name === 'Beginner' && lang === 'bm' ? 'Daftar Plan Beginner' : 
-                          pkg.name === 'Advance' && lang === 'bm' ? 'Daftar Plan Advance' :
+                          pkg.name === 'Business' && lang === 'bm' ? 'Daftar Plan Business' :
                           'Daftar Plan Agent'
                         }`}
                       </LinkButton>
