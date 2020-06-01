@@ -187,9 +187,9 @@ export default function Navbar({ style }) {
                 >
                   {cw.navbar ? cw.navbar[5] : 'loading'}
                 </a> */}
-                <a href="/FAQ" className="navbar-item" title="FAQ">
+                {/* <a href="/FAQ" className="navbar-item" title="FAQ">
                   FAQ
-                </a>
+                </a> */}
                 <a
                   href="https://blog.avana.asia/"
                   className="navbar-item"

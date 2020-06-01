@@ -34,20 +34,25 @@ export default function Feature(props) {
       <Header title={title} />
       <main>
         {showVideo ? 
-          <section id="section-1" class="feature">
+          <>
             <div>
-              <iframe
-                src="https://www.youtube.com/embed/_4BQZP5nIKo"
-                frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                style={{width: `600px`,
-                  height: `300px`,
-                  maxWidth: `100%`,
-                  maxHeight: `calc(50vw - 16px)`}}
-              />
+              <h3 style={{textAlign: `center`, marginTop: `3rem`}}>“Convenient and hassle-free live session with AVANA”</h3>
             </div>
-          </section> : ''}
+            <section id="section-1" className="feature">
+              <div>
+                <iframe
+                  src="https://www.youtube.com/embed/_4BQZP5nIKo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{width: `600px`,
+                    height: `300px`,
+                    maxWidth: `100%`,
+                    maxHeight: `calc(50vw - 16px)`}}
+                />
+              </div>
+            </section>
+          </> : ''}
         {features.map((feature, idx) => (
           <section
             key={idx}

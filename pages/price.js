@@ -174,7 +174,8 @@ const Price = () => {
                             ? 'Sembunyikan Fitur'
                             : pkg.name === 'Basic' && hideBasic
                             ? 'Sembunyikan Fitur'
-                            : 'Lihat Fitur Selengkapnya'}
+                            : lang === 'en'
+                            ? 'View Full Features' : 'Lihat Ciri Selengkapnya'}
                         </a>
                       <LinkButton
                         href={`https://payment.avana.asia/pay?plan=${pkg.slug}`}

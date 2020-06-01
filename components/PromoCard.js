@@ -55,7 +55,7 @@ export default function PromoCard({ promo }) {
             ) : promo.period.custom ? (
               lang === 'en' ? promo.period.custom.en : promo.period.custom.bm
             ) :(
-              "Lifetime"
+              "Limited Time"
             )}
           </span>
           <Link href="/promo/[code]" as={`/promo/${promo.code}`}>
