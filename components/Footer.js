@@ -16,7 +16,7 @@ export default function Footer() {
     <footer>
       <div className="meta">
         <picture>
-          <source srcset="/assets/images/logo.webp" type="image/webp" alt="Avana logo"/> 
+          <source srcSet="/assets/images/logo.webp" type="image/webp" alt="Avana logo"/> 
           <img src="/assets/images/logo.png" alt="Avana logo" />
         </picture>
         <p>
