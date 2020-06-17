@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Slider from "../Slider";
 
@@ -7,19 +7,30 @@ export default ({ testimonials }) => {
 
   const callbackSlider = ({ activeSlide }) => setCurrentSlide(activeSlide);
 
+  const [lang, setLang] = useState("en");
+
+  useEffect(() => {
+    if(localStorage.getItem("lang")) {
+      setLang(localStorage.getItem("lang"));
+    } else {
+      localStorage.setItem("lang", "en");
+    }
+  }, []);
+
   return (
     <>
       <Slider
         slides={testimonials.map((testimonial) => (
           <>
-            <q>{testimonial.message}</q>
+            <q>{lang === 'en' ? testimonial.message.en : testimonial.message.bm}</q>
             <h4>{testimonial.name}</h4>
+            <p style={{fontSize: `.875rem`}}>{testimonial.subtext}</p>
           </>
         ))}
         currentSlide={currentSlide}
         callback={callbackSlider}
       />
-      <div className="images">
+      <div className="images" style={{display: `flex`, alignItems: `center`}}>
         {testimonials.map((testimonial, idx) => (
           <img
             key={idx}

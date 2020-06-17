@@ -15,8 +15,9 @@ const nextConfig = {
       // '/packages-detail': { page: '/packages-detail' },
       '/event': { page: '/event' },
       // '/event/:id': { page: '/event/[id]' },
-      '/promo': { page: '/promo' },
+      // '/promo': { page: '/promo' },
       // '/promo/:code': { page: '/promo/[code]' },
+      '/ebook': { page: '/ebook' },
       '/dashboard': { page: '/dashboard' },
       '/avachat': { page: '/avachat' },
       '/webstore': { page: '/webstore' },
@@ -26,19 +27,19 @@ const nextConfig = {
     const getPromos = await require('./json/promo.json');
     const getEvents = await require('./json/event.json');
 
-    getPromos.map((promo) => {
-      paths[`promo/${promo.code}`] = {
-        page: 'promo/[code]',
-        query: { code: promo.code },
-      };
-    });
+    // getPromos.map((promo) => {
+    //   paths[`promo/${promo.code}`] = {
+    //     page: 'promo/[code]',
+    //     query: { code: promo.code },
+    //   };
+    // });
 
-    getEvents.map((event) => {
-      paths[`event/${event.id}`] = {
-        page: 'event/[id]',
-        query: { id: event.id },
-      };
-    });
+    // getEvents.map((event) => {
+    //   paths[`event/${event.id}`] = {
+    //     page: 'event/[id]',
+    //     query: { id: event.id },
+    //   };
+    // });
 
     return paths;
   },

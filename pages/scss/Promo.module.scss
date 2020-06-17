@@ -7,6 +7,18 @@
       grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
       grid-gap: 1.5em;
       padding: 2.5vw 7.5vw 5em;
+
+      &.section-title {
+        padding: 0;
+        padding-left: 7.5vw;
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: bold;
+          line-height: 29px;
+          color: #000;
+        }
+      }
     }
   }
 }

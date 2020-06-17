@@ -6,7 +6,7 @@ const Reseller = () => (
   <ContainerAnalytic>
     <Feature
       id="reseller"
-      title="Manajemen Reseller"
+      title="Reseller"
       link="http://nanya.online/tanya-ava-3"
       CS
     />

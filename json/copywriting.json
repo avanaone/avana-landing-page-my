@@ -1,0 +1,34 @@
+{
+    "en": {
+            "button": ["I'm interested", "More Info"],
+            "navbar": ["Product", "Price", "Promotion", "Events", "Learn", "Tutorial", "Tutorial", "Blog", "eBook", "About Us", "Log In", "Sign Up"],
+            "h1": "All-in-One Dashboard to manage all your sales across social media and webstore.",
+            "features": ["Online Store", "Social Media Chat Integration", "Auto Reply", "Reseller Management"],
+            "dashboard": ["One Dashboard for all sales activities","Order Management & Status", "Auto Consignment Note Printout", "Schedule for Shipping"],
+            "avachat": ["Never miss a comment on social media", "Auto reply to live comments on your FB Livestream", "Auto reply to comments on FB posts"],
+            "reseller": ["Sell even more with Affiliate and Dropship Feature", "Manage Reseller/Dropshiper Database", "Set Commissions & Reseller Levels", "Review sales performance"],
+            "webstore": ["Level up your brand image with owned domain and beautiful website", "Various website theme options", "Payment Gateway integration", "Mobile friendly"],
+            "fbshop": ["Sell across social media", "Link AVANA to your Facebook Page, Whatsapp, Instagram, Line & Telegram account"],
+            "support": "We partner with these amazing companies",
+            "testimonial": "What our sellers said after joining AVANA?",
+            "footerCta": ["Try AVANA 14 days for FREE!", "Sign Up For Free"],
+            "error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
+            "error-without-status": "Auf dem Server ist ein Fehler aufgetreten"
+    },
+    "bm": {
+            "button": ["Saya berminat", "Info Lanjut"],
+            "navbar": ["Produk", "Harga", "Promo", "Event", "Pelajari", "Tutorial", "Tutorial", "Blog", "eBook", "Tentang Kami", "Log Masuk", "Daftar"],
+            "h1": "Uruskan jualan dari media sosial dan webstore anda dalam satu dashboard.",
+            "features": ["Kedai Online", "Integrasi 'Chat' di Media Sosial", "Auto Reply", "Pengurusan Sales Agent"],
+            "dashboard": ["Semua aktiviti jualan dalam satu dashboard", "Pengurusan Order & Status", "Cetak Nota Konsainan Automatik", "Jadualkan penghantaran"],
+            "avachat": ["Sentiasa menjawab komen di media sosial", "Auto reply komen semasa FB Livestream anda", "Auto reply komen di post FB"],
+            "reseller": ["Jual lebih banyak dengan Sistem Agent Sales", "Menguruskan Agent Sales", "Setkan Komisen & Level Sales Agent", "Pantau prestasi jualan"],
+            "webstore": ["Eksklusifkan imej jenama anda dengan domain sendiri dan laman web yang profesional", "Pelbagai pilihan tema laman web", "Integrasi Payment Gateway", "Telefon pintar mesra pengguna"],
+            "fbshop": ["Jual di seluruh media sosial", "Sambungkan AVANA ke akaun Facebook, Whatsapp, Instagram, Line & Telegram anda"],
+            "support": "Antara kerjasama AVANA bersama rakan niaga",
+            "testimonial": "Apa kata mereka yang sudah menggunakan AVANA?",
+            "footerCta": ["Cuba AVANA selama 14 hari secara PERCUMA!", "DAFTAR SEKARANG"],
+            "error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
+            "error-without-status": "Auf dem Server ist ein Fehler aufgetreten"
+    }
+}

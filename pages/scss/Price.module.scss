@@ -40,7 +40,7 @@
           display: flex;
           flex-direction: column;
           background-color: #ffffff;
-          padding: 2em 1.25em;
+          padding: 2.75em 1.25em;
           margin: 1em 0.5em;
           border: 0.125em solid #d7d7d7;
           border-radius: 0.75em;
@@ -60,7 +60,7 @@
             overflow: hidden;
 
             &::after {
-              content: 'POPULER';
+              content: 'POPULAR';
               position: absolute;
               top: 0;
               right: -12.5%;

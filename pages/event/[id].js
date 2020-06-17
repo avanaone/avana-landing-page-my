@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import parser from 'html-react-parser';
 
@@ -15,6 +15,15 @@ import './EventDetail.scss';
 export default function Event({ data }) {
   const router = useRouter();
   const [events, setEvents] = useState(data);
+  const [lang, setLang] = useState("en");
+
+  useEffect(() => {
+    if(localStorage.getItem("lang")) {
+      setLang(localStorage.getItem("lang"));
+    } else {
+      localStorage.setItem("lang", "en");
+    }
+  }, []);
 
   const event = events.find((x) => x.id === router.query.id);
   const otherEvents = events
@@ -30,12 +39,12 @@ export default function Event({ data }) {
           <main>
             <section>
               <div>
-                <img src={event.image} alt="" />
-                <h3 className="is-size-4">{event.title}</h3>
-                {parser(event.description)}
+                <img src={lang === 'en' ? event.image.en : event.image.bm} alt="" />
+                <h3 className="is-size-4">{lang === 'en' ? event.title.en : event.title.bm }</h3>
+                {lang === 'en' ? parser(event.description.en) : parser(event.description.bm) }
               </div>
               <div>
-                <h3 className="is-size-5">Event Lainnya</h3>
+                <h3 className="is-size-5">{lang === 'en' ? "Other Event" : "Event lainnya" }</h3>
                 <div>
                   {otherEvents.map((event) => (
                     <EventCard key={event.id} event={event} />

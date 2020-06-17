@@ -9,25 +9,25 @@ export default function App({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         {/* Primary Meta Tags */}
-        <title>AVANA | #1 Leading Social Commerce Platform in Indonesia</title>
+        <title>AVANA - The best social commerce solution for your business</title>
         <meta
           name="title"
-          content="#1 Leading Social Commerce Platform in Indonesia"
+          content="AVANA - The best social commerce solution for your business"
         />
         <meta
           name="description"
-          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
+          content="Our commerce platform helps automate your business so that you can make money with ease"
         />
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://avana.id/" />
         <meta
           property="og:title"
-          content="#1 Leading Social Commerce Platform in Indonesia"
+          content="AVANA - The best social commerce solution for your business"
         />
         <meta
           property="og:description"
-          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
+          content="Our commerce platform helps automate your business so that you can make money with ease"
         />
         <meta property="og:image" content="/assets/images/meta-image.png" />
         {/* Twitter */}
@@ -35,11 +35,11 @@ export default function App({ Component, pageProps }) {
         <meta property="twitter:url" content="https://avana.id/" />
         <meta
           property="twitter:title"
-          content="#1 Leading Social Commerce Platform in Indonesia"
+          content="AVANA - The best social commerce solution for your business"
         />
         <meta
           property="twitter:description"
-          content="AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp"
+          content="Our commerce platform helps automate your business so that you can make money with ease"
         />
         <meta
           property="twitter:image"

@@ -2,216 +2,90 @@
   "id": {
     "packages": [
       {
-        "code": "yearly_basic",
-        "slug": "basic",
-        "name": "Basic",
+        "code": "yearly_beginner",
+        "slug": "shop_premium_p1",
+        "name": "Beginner",
         "period": "yearly",
-        "currency": "IDR",
-        "price": 1499000,
-        "discounted_price": 749000,
+        "currency": "MYR",
+        "price": 429,
+        "discounted_price": null,
         "is_popular": false,
-        "is_discount": true,
-        "highlight_feature": []
+        "is_discount": false,
+        "highlight_feature": {
+          "en": [
+            "Facebook store", "Webstore", "Payment gateway integration", "Order management", "Product management", "Customer database management", "Promo code management", "Shop manager"
+          ],
+          "bm": [
+            "Facebook store", "Webstore/Website eCommerce", "Integrasi Payment Gateway/Integrasi Pembayaran Online", "Pengurusan Order", "Pengurusan Produk", "Pengurusan Database Pelanggan", "Pengurusan Kod Promo", "Shop Manager/Pengurus"
+          ]
+        }
+      },
+      {
+        "code": "yearly_beginner",
+        "slug": "shop_premium_p1",
+        "name": "Beginner",
+        "period": "quarterly",
+        "currency": "MYR",
+        "price": 109,
+        "discounted_price": null,
+        "is_popular": false,
+        "is_discount": false,
+        "highlight_feature": {
+          "en": [
+            "Facebook store", "Webstore", "Payment gateway integration", "Order management", "Product management", "Customer database management", "Promo code management", "Shop manager"
+          ],
+          "bm": [
+            "Facebook store", "Webstore/Website eCommerce", "Integrasi Payment Gateway/Integrasi Pembayaran Online", "Pengurusan Order", "Pengurusan Produk", "Pengurusan Database Pelanggan", "Pengurusan Kod Promo", "Shop Manager/Pengurus"
+          ]
+        }
       },
       {
         "code": "yearly_advance_plan_id",
-        "slug": "advance_id",
-        "name": "Advance",
-        "period": "yearly",
-        "currency": "IDR",
-        "price": 3000000,
-        "discounted_price": 2499000,
-        "is_popular": false,
-        "is_discount": true,
-        "highlight_feature": []
-      },
-      {
-        "code": "semi-annually_advance_plan_id",
-        "slug": "advance_id",
-        "name": "Advance",
-        "period": "semi-annually",
-        "currency": "IDR",
-        "price": 1500000,
-        "discounted_price": 1500000,
-        "is_popular": false,
-        "is_discount": false,
-        "highlight_feature": []
-      },
-      {
-        "code": "quarterly_advance_plan_id",
-        "slug": "advance_id",
-        "name": "Advance",
-        "period": "quarterly",
-        "currency": "IDR",
-        "price": 750000,
-        "discounted_price": 750000,
-        "is_popular": false,
-        "is_discount": false,
-        "highlight_feature": []
-      },
-      {
-        "code": "monthly_advance_plan_id",
-        "slug": "advance_id",
-        "name": "Advance",
-        "period": "monthly",
-        "currency": "IDR",
-        "price": 250000,
-        "discounted_price": 250000,
-        "is_popular": false,
-        "is_discount": false,
-        "highlight_feature": []
-      },
-      {
-        "code": "yearly_business",
-        "slug": "business",
+        "slug": "shop_premium_p2",
         "name": "Business",
         "period": "yearly",
-        "currency": "IDR",
-        "price": 6000000,
-        "discounted_price": 4999000,
-        "is_popular": true,
-        "is_discount": true,
-        "highlight_feature": ["Manajemen Reseller & Agen", "AVAChat"]
-      },
-      {
-        "code": "semi-annually_business",
-        "slug": "business",
-        "name": "Business",
-        "period": "semi-annually",
-        "currency": "IDR",
-        "price": 3000000,
-        "discounted_price": 3000000,
+        "currency": "MYR",
+        "price": 749,
+        "discounted_price": null,
         "is_popular": true,
         "is_discount": false,
-        "highlight_feature": ["Manajemen Reseller & Agen", "AVAChat"]
-      },
-      {
-        "code": "quarterly_business",
-        "slug": "business",
-        "name": "Business",
-        "period": "quarterly",
-        "currency": "IDR",
-        "price": 1500000,
-        "discounted_price": 1500000,
-        "is_popular": true,
-        "is_discount": false,
-        "highlight_feature": ["Manajemen Reseller & Agen", "AVAChat"]
-      },
-      {
-        "code": "monthly_business",
-        "slug": "business",
-        "name": "Business",
-        "period": "monthly",
-        "currency": "IDR",
-        "price": 500000,
-        "discounted_price": 500000,
-        "is_popular": true,
-        "is_discount": false,
-        "highlight_feature": ["Manajemen Reseller & Agen", "AVAChat"]
+        "highlight_feature": {
+          "en": [
+            "All Beginner plan features", "Messenger store", "Messenger blast", "Auto reply Facebook comments", "Free domain name (.com.my or .my) for first year", "Free Ecommerce training (Basic) and Facebook Marketing (Introductory Level)"
+          ],
+          "bm": [
+            "Semua fungsi yang ada pada Beginner pelan", "Messenger Store", "Messenger Blast", "Auto Reply Komen Facebook", "Percuma nama domain (.com.my atau .my) pada tahun pertama", "Percuma latihan eCommerce (Asas)  dan Pemasaran Facebook (Pengenalan)"
+          ]
+        }
       },
       {
         "code": "yearly_vip",
         "slug": "agent",
-        "name": "VIP",
+        "name": "Agent",
         "period": "yearly",
-        "currency": "IDR",
-        "price": 12999000,
-        "discounted_price": 12999000,
+        "currency": "MYR",
+        "price": 1399,
+        "discounted_price": null,
         "is_popular": false,
         "is_discount": false,
-        "highlight_feature": [
-          "Manajemen Reseller & Agen",
-          "AVAChat",
-          "Free Setup Store",
-          "Digital Marketing Training",
-          "Social Media Ads Service"
-        ]
-      }
-    ],
-    "additional_services": [
-      {
-        "name": "Atur Toko",
-        "services": [
-          "Isi informasi toko",
-          "Atur metode pembayaran & metode pengiriman",
-          "Upload 5 foto produk pertama",
-          "Integrasi ke facebook",
-          "Publish webstore & facebook store",
-          "Atur kategori, varian, harga, koleksi, stok dan Auto reply"
-        ],
-        "price": "IDR 200,000"
-      },
-      {
-        "name": "Pembuatan Domain",
-        "services": ["Domain.com", "Domain.co.id", "Domain.id"],
-        "price": ["IDR 165,000", "IDR 300,000", "IDR 280,000"]
-      },
-      {
-        "name": "Custom Template Website",
-        "services": [
-          "Free Custom Tema",
-          "Maksimal 10 halaman",
-          "Pilihan konversi mata uang",
-          "Karakter website interaktif dan dinamis",
-          "Desain slider foto",
-          "Fitur Cart dan Checkout",
-          "Catalog",
-          "Synchronized with google analytic"
-        ],
-        "price": "IDR 15,000,000"
-      },
-      {
-        "name": "Desain Logo",
-        "services": [
-          "Mengikuti konsep brand",
-          "Logo dibuat Berwarna dan Hitam/Putih",
-          "Hasil logo dalam format .ai"
-        ],
-        "price": "IDR 1,500,000"
-      },
-      {
-        "name": "Iklan Online di Sosial Media",
-        "services": [
-          "Mencakup Facebook dan Instagram Ads",
-          "Target Konsumen yang spesifik",
-          "Jangkauan Audience sebanyak 200.000",
-          "Konsultasi Konten dan budget",
-          "Iklan selama 4 minggu",
-          "Termasuk biaya operasional 500.000",
-          "Laporan lengkap sesuai analytic"
-        ],
-        "price": "IDR 3,500,000"
-      },
-      {
-        "name": "Pembuatan Konten Promosi - Sosial Media",
-        "services": [
-          "10 Konten Copywriting -  SEO Friendly",
-          "10 Posting di Facebook dan Instagram",
-          "1 Video Motion Graphic (Durasi 30 detik)",
-          "1 Desain Poster Promosi"
-        ],
-        "price": "IDR 7,000,000"
-      },
-      {
-        "name": "Jasa Foto Produk",
-        "services": [
-          "Harga dihitung per produk",
-          "5 Angle Foto",
-          "Resolusi Tinggi",
-          "Ukuran 1×1"
-        ],
-        "price": "IDR 200,000"
-      },
-      {
-        "name": "Konsultasi Bisnis Online",
-        "services": [
-          "Harga untuk 1 orang trainer",
-          "Durasi konsultasi selama 90 menit",
-          "Pengenalan Facebook dan Google Ads",
-          "Cara memaksimalkan budget ads",
-          "Konsultasi Konten"
-        ],
-        "price": "IDR 650,000"
+        "highlight_feature": {
+          "en": [
+          "Check the performance of your agents on your dashboard",
+          "View top performing Agents, Stockists and Dropshippers on your dashboard",
+          "View newly registered Agents, Stockists and dropshippers on your dashboard",
+          "Invite unlimited number of new agents",
+          "Manage the levels and rules for your agents",
+          "Manage individual pricing for either Agents, Stockists or Dropshipper"
+          ],
+          "bm": [
+            "Semak prestasi agen-agen anda pada dashboard",
+            "Lihat ejen, stokis dan dropshipper terbaik pada dashboard",
+            "Semak ejen, stokis dan dropshipper yang baru berdaftar pada dashboard anda",
+            "Rekrut ejen baru tanpa had",
+            "Urus level dan peraturan untuk agen anda",
+            "Susun harga mengikut Ejen, Stokis atau Dropshipper"
+          ]
+        }
       }
     ]
   }

@@ -1,22 +1,29 @@
 [
   {
-    "message": "Toko online itu bukan hanya sekedar wadah untuk memasarkan barang tapi sebagai alat untuk membangun brand juga. Bersama AVANA, saya bisa memperkenalkan dan membesarkan nama Amity.",
-    "name": "Amity Indonesia",
-    "image": "amity.png"
+    "message": {
+      "en": "AVANA gives us a great website that is user-friendly and integrated with Facebook and Messenger. AVANA makes it easy for us to monitor our customers and our sales record.",
+      "bm": "AVANA memberikan kami sebuah laman web yang mesra pengguna dan mempunyai integrasi dengan Facebook dan Facebook Messenger."
+    },
+    "name": "Funthera",
+    "subtext": "Afiq Ikhwan",
+    "image": "funthera.jpg"
   },
   {
-    "message": "AVANA bukan sekedar jasa pembuatan toko online, tapi membimbing juga cara penggunaan sampai beriklan di media sosial sampai bisa. Baru 1 minggu dipandu cara menggunakan AVANA dan beriklan saya sudah dapat banyak orderan dimana-mana.",
-    "name": "By Kaffah",
-    "image": "by-kaffah.png"
+    "message": {
+      "en": "AVANA is the best tool that I have purchased. I have tried Shopify and other webstore. I can say that AVANA is the easiest to use among all and it comes with a free payment.",
+      "bm": "AVANA adalah sistem terbaik yang saya pernah langgan. Sebelum ini, saya telah cuba gunakan Shopify dan servis laman web yang lain. Saya boleh katakan AVANA adalah platform yang paling mudah digunakan berbanding platform-platform yang lain."
+    },
+    "name": "Key It Simple",
+    "subtext": "Arnold Neo",
+    "image": "arnold.jpg"
   },
   {
-    "message": "Desain keren toko online dari AVANA membantu bisnis saya. Bagi saya, fitur Auto Reply dan Messenger Bot adalah salah satu fitur yang dapat hemat waktu karena bisa balas pesan dari pelanggan secara otomatis. Fitur lain yang saya suka adalah Kode Kupon karena saya bisa buat semacam reward untuk pelanggan setia. AVANA juga memberikan pelatihan setiap waktu.",
-    "name": "Seriemas Empire",
-    "image": "Seriemas-Empire.png"
-  },
-  {
-    "message": "Dari dulu cari jasa pembuatan toko online biar bisa jualan di “tempat sendiri”. Kini saya sudah punya “rumah sendiri” buat jualan yang profesional dan gampang digunakan.",
-    "name": "Mukena TJA",
-    "image": "mukena-tja.png"
+    "message": {
+      "en": "One thing that AVANA did was accelerate my business growth when it linked to my Facebook Pages, all comments that I received, AVANA can help to auto reply. That's the first feature that made me fall in love with AVANA.",
+      "bm": "Satu benda pasal AVANA yang mempercepatkan lagi pertumbuhan bisnes saya bila dia bersambung dengan Facebook Pages saya, semua komen yang saya dapat, AVANA boleh tolong auto reply. Itulah fungsi pertama yang buat saya jatuh cinta dengan AVANA."
+    },
+    "name": "Nana Mahazan",
+    "subtext": "Founder of Nana Mahazan Beauty",
+    "image": "NANA-MAHZAN.png"
   }
 ]

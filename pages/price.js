@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
 import Navbar from '../components/Navbar';
@@ -6,7 +6,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 import { LinkButton } from '../components/Button';
-import AdditionalService from '../components/AdditionalService';
 import ContainerAnalytic from '../components/AnalyticContainer';
 
 import styles from './scss/Price.module.scss';
@@ -23,8 +22,18 @@ const Price = () => {
   const [hideBusiness, setHideBusiness] = useState(false);
   const [hideVIP, setHideVIP] = useState(false);
 
+  const [lang, setLang] = useState("en");
+
+  useEffect(() => {
+    if(localStorage.getItem("lang")) {
+      setLang(localStorage.getItem("lang"));
+    } else {
+      localStorage.setItem("lang", "en");
+    }
+  }, []);
+
   const toggle = (plan) => {
-    if (plan === 'VIP') {
+    if (plan === 'Agent') {
       setHideVIP(!hideVIP);
     } else if (plan === 'Business') {
       setHideBusiness(!hideBusiness);
@@ -48,37 +57,36 @@ const Price = () => {
           <title>Harga Paket • AVANA</title>
         </Head>
         <Navbar />
-        <Header title="Harga Paket" />
+        <Header title={`${ lang === 'en' ? 'Package Price' : 'Harga Pakej'}`} />
         <main>
           <section>
             <div className="tabs-container">
               <ul className="ava-tabs">
-                <li
+                {/* <li
                   className={period === 'monthly' ? 'active' : ''}
                   onClick={() => handleFilterPeriod('monthly')}
                 >
                   Bulanan
-                </li>
+                </li> */}
                 <li
                   className={period === 'quarterly' ? 'active' : ''}
                   onClick={() => handleFilterPeriod('quarterly')}
                 >
-                  3 Bulan
+                  Quarterly
                 </li>
-                <li
+                {/* <li
                   className={period === 'semi-annually' ? 'active' : ''}
                   onClick={() => handleFilterPeriod('semi-annually')}
                 >
                   6 Bulan
-                </li>
+                </li> */}
                 <li
                   className={period === 'yearly' ? 'active' : ''}
                   onClick={() => handleFilterPeriod('yearly')}
                 >
-                  1 Tahun
+                  Yearly
                 </li>
               </ul>
-              <AdditionalService />
             </div>
             <div className="packages">
               {packages
@@ -92,7 +100,10 @@ const Price = () => {
                   >
                     <div className="package-info">
                       <span className="name is-size-5">{pkg.name}</span>
-                      {pkg.price === pkg.discounted_price ? (
+                      <span className="price is-size-4">
+                        {formatCurrency(pkg.price, pkg.currency)}
+                      </span>
+                      {/* {pkg.price === pkg.discounted_price ? (
                         <span className="price is-size-4">
                           {formatCurrency(pkg.price, pkg.currency)}
                         </span>
@@ -105,105 +116,23 @@ const Price = () => {
                             {formatCurrency(pkg.discounted_price, pkg.currency)}
                           </div>
                         </div>
-                      )}
+                      )} */}
                     </div>
                     <div>
                       <ul>
-                        {pkg.highlight_feature.map((feature, idx) => (
+                        {lang === 'en' ? pkg.highlight_feature.en.map((feature, idx) => (
                           <li key={idx}>
-                            {feature === 'AVAChat' ? (
-                              <>
-                                <span>{feature}</span>
-                                <a
-                                  href="/avachat"
-                                  title="AVAChat"
-                                  className="avachatBtn"
-                                >
-                                  pelajari lebih lanjut
-                                </a>
-                              </>
-                            ) : (
-                              feature
-                            )}
+                            {feature}
+                          </li>
+                        )) : pkg.highlight_feature.bm.map((feature, idx) => (
+                          <li key={idx}>
+                            {feature}
                           </li>
                         ))}
-                        {pkg.period === 'yearly' && pkg.name === 'Basic' ? (
-                          <>
-                            {/* <li className="has-text-weight-light">Whatsapp Commerce</li> */}
-                          </>
-                        ) : (
-                          ''
-                        )}
-                        <li className="has-text-weight-light">
-                          Whatsapp Commerce
-                        </li>
-                        <li className="has-text-weight-light">
-                          Order via Comment
-                        </li>
-                        {pkg.name !== 'VIP' ? (
-                          <>
-                            <li className="has-text-weight-light">
-                              Integrasi Facebook Store
-                            </li>
-                            <li className="has-text-weight-light">
-                              Search Engine Optimization
-                            </li>
-                          </>
-                        ) : (
-                          ''
-                        )}
-                        {pkg.name !== 'Basic' ? (
-                          <>
-                            {pkg.name !== 'VIP' ? (
-                              <li className="has-text-weight-light">
-                                Integrasi Facebook Pixel
-                              </li>
-                            ) : (
-                              ''
-                            )}
-                            {pkg.name === 'Advance' ? (
-                              <li className="has-text-weight-light">
-                                Website Toko Online
-                              </li>
-                            ) : (
-                              ''
-                            )}
-                          </>
-                        ) : (
-                          ''
-                        )}
-                        {pkg.period === 'yearly' && pkg.name !== 'Basic' ? (
-                          <>
-                            {pkg.name === 'Advance' ? (
-                              <li className="has-text-weight-light">
-                                Domain.com
-                              </li>
-                            ) : (
-                              ''
-                            )}
-                          </>
-                        ) : (
-                          ''
-                        )}
-                        {/* {pkg.period !== "yearly" && (
-                        <>
-                          <li className="has-text-weight-light">
-                            Toko Facebook
-                          </li>
-                          <li className="has-text-weight-light">Kode Promo</li>
-                        </>
-                      )} */}
-                        {pkg.name === 'Basic' ? (
-                          <li className="has-text-weight-light">
-                            Auto Reply Facebook Messenger
-                          </li>
-                        ) : (
-                          ''
-                        )}
                         <div
                           className={`more-features 
                         more-${pkg.name}
-                        ${pkg.name === 'VIP' && hideVIP ? 'toggled' : ''}
+                        ${pkg.name === 'Agent' && hideVIP ? 'toggled' : ''}
                         ${
                           pkg.name === 'Business' && hideBusiness
                             ? 'toggled'
@@ -212,62 +141,22 @@ const Price = () => {
                         ${
                           pkg.name === 'Advance' && hideAdvance ? 'toggled' : ''
                         }
-                        ${pkg.name === 'Basic' && hideBasic ? 'toggled' : ''}`}
+                        ${pkg.name === 'Beginner' && hideBasic ? 'toggled' : ''}`}
                         >
-                          {pkg.name === 'VIP' ? (
-                            <>
-                            <li className="has-text-weight-light">
-                              Integrasi Facebook Store
-                            </li>
-                            <li className="has-text-weight-light">
-                              Search Engine Optimization
-                            </li>
-                            <li className="has-text-weight-light">
-                              Integrasi Facebook Pixel
-                            </li>
-                            </>
-                          ) : (
-                            ''
-                          )}
-                          {pkg.name !== 'Basic' ? (
-                            <li className="has-text-weight-light">
-                              Auto Reply Facebook Messenger
-                            </li>
-                          ) : (
-                            ''
-                          )}
-                          {pkg.name !== 'Basic' && pkg.name !== 'Advance' ? (
-                            <>
-                            <li className="has-text-weight-light">
-                              Website Toko Online
-                            </li>
-                            <li className="has-text-weight-light">
-                              Domain.com
-                            </li>
-                            </>
-                          ) : (
-                            ''
-                          )}
                           <li className="has-text-weight-light">
-                            Messenger Blast
+                            Manual Payment from Customer
                           </li>
                           <li className="has-text-weight-light">
-                            Unlimited Upload Produk
+                            Multiple Store Admin
                           </li>
                           <li className="has-text-weight-light">
-                            Integrasi Payment Gateway
+                            Blogspot Integration
                           </li>
                           <li className="has-text-weight-light">
-                            Integrasi Logistik
+                            Instagram Integration
                           </li>
                           <li className="has-text-weight-light">
-                            Laporan Order
-                          </li>
-                          <li className="has-text-weight-light">
-                            Manajemen Database Pelanggan
-                          </li>
-                          <li className="has-text-weight-light">
-                            Manajement Promo
+                            Live Chat and Whatsapp Support
                           </li>
                         </div>
                       </ul>
@@ -277,22 +166,30 @@ const Price = () => {
                           onClick={() => toggle(`${pkg.name}`)}
                           className="price-more"
                         >
-                          {pkg.name === 'VIP' && hideVIP
-                            ? 'Sembunyikan Fitur'
+                          {pkg.name === 'Agent' && hideVIP
+                            ? lang === 'en' ? 'Hide Features' : 'Sembunyikan Fitur'
                             : pkg.name === 'Business' && hideBusiness
-                            ? 'Sembunyikan Fitur'
+                            ? lang === 'en' ? 'Hide Features' : 'Sembunyikan Fitur'
                             : pkg.name === 'Advance' && hideAdvance
-                            ? 'Sembunyikan Fitur'
-                            : pkg.name === 'Basic' && hideBasic
-                            ? 'Sembunyikan Fitur'
-                            : 'Lihat Fitur Selengkapnya'}
+                            ? lang === 'en' ? 'Hide Features' : 'Sembunyikan Fitur'
+                            : pkg.name === 'Beginner' && hideBasic
+                            ? lang === 'en' ? 'Hide Features' : 'Sembunyikan Fitur'
+                            : lang === 'en'
+                            ? 'View Full Features' : 'Lihat Ciri Selengkapnya'}
                         </a>
                       <LinkButton
-                        href={`${pkg.name === 'Basic' ? 'http://mauorder.online/order-avana': `https://payment.avana.asia/pay?plan=${pkg.slug}`}`}
+                        href={`https://payment.avana.asia/pay?plan=${pkg.slug}`}
                         target="__blank"
                         className="btn-primary"
                       >
-                        Pilih Paket
+                        {`${
+                          pkg.name === 'Beginner' && lang === 'en' ? 'Choose Beginner Plan' : 
+                          pkg.name === 'Business' && lang === 'en' ? 'Choose Business Plan' :
+                          pkg.name === 'Agent' && lang === 'en' ? 'Choose Agent Plan' :
+                          pkg.name === 'Beginner' && lang === 'bm' ? 'Daftar Plan Beginner' : 
+                          pkg.name === 'Business' && lang === 'bm' ? 'Daftar Plan Business' :
+                          'Daftar Plan Agent'
+                        }`}
                       </LinkButton>
                     </div>
                   </div>
