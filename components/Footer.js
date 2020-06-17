@@ -70,9 +70,9 @@ export default function Footer() {
           <li>
             <a href="/about-us">{lang === 'en' ? 'About Us' : 'Tentang Kami'}</a>
           </li>
-          <li>
+          {/* <li>
             <a href="https://academy.avana.id/">{lang === 'en' ? 'Academy' : 'Akademi'}</a>
-          </li>
+          </li> */}
           <li>
             <a href="https://blog.avana.asia/">{lang === 'en' ? 'Blog' : 'Blog'}</a>
           </li>
@@ -85,15 +85,15 @@ export default function Footer() {
           <li>
             <a href="https://avana.asia/contact/">{lang === 'en' ? 'Contact Us' : 'Hubungi Kami'}</a>
           </li>
-          <li>
+          {/* <li>
             <a href="https://avana.id/wp-content/uploads/2018/05/AVANA-Privacy-Policy.pdf">
             {lang === 'en' ? 'Privacy Policy' : 'Dasar Privasi'}
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
       <div>
-        <h6>{lang === 'en' ? 'Main Function' : 'Fungsi Utama'}</h6>
+        <h6>{lang === 'en' ? 'Main Features' : 'Fungsi Utama'}</h6>
         <ul>
           {/* <li>
             <a>Facebook Store</a>
