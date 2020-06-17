@@ -81,7 +81,7 @@ export default function Feature(props) {
         <section className="trial">
           <h2 className="is-size-4">
             {/* {CS ? `Tertarik dengan ${title}?` : 'Coba Sekarang GRATIS 14 Hari'} */}
-            { lang === 'en' ? 'FREE 14 DAYS TRIAL ☻ Try Now for FREE!' : 'PERCUMA 14 HARI ☻ Cuba Sekarang!'}
+            { lang === 'en' ? 'Try AVANA 14 days for FREE!' : 'Cuba AVANA selama 14 hari secara PERCUMA!'}
           </h2>
           <LinkButton
             href={CS ? link : 'https://store.avana.asia/'}

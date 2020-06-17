@@ -93,7 +93,7 @@ export default function Footer() {
         </ul>
       </div>
       <div>
-        <h6>Fungsi Utama</h6>
+        <h6>{lang === 'en' ? 'Main Function' : 'Fungsi Utama'}</h6>
         <ul>
           {/* <li>
             <a>Facebook Store</a>
