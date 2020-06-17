@@ -147,29 +147,30 @@ const Home = () => {
           <section className='feature'>
             <div className='description'>
               <h2 className='is-size-4'>
-                <span className='hl'>{cw.dashboard ? cw.dashboard[0] : 'loading'}</span> {cw.dashboard ? cw.dashboard[1] : 'loading'}
+                {/* <span className='hl'>{cw.dashboard ? cw.dashboard[0] : 'loading'}</span> {cw.dashboard ? cw.dashboard[1] : 'loading'} */}
+                {cw.dashboard ? cw.dashboard[0] : 'loading'}
               </h2>
-              <p>
+              {/* <p>
                 {cw.dashboard ? cw.dashboard[2] : 'loading'}
-              </p>
+              </p> */}
               <ul>
                 <li
                   className={dashboard === 0 ? 'active' : ''}
                   onClick={() => handleSlider('dashboard', 0)}
                 >
-                  {cw.dashboard ? cw.dashboard[3] : 'loading'}
+                  {cw.dashboard ? cw.dashboard[1] : 'loading'}
                 </li>
                 <li
                   className={dashboard === 1 ? 'active' : ''}
                   onClick={() => handleSlider('dashboard', 1)}
                 >
-                  {cw.dashboard ? cw.dashboard[4] : 'loading'}
+                  {cw.dashboard ? cw.dashboard[2] : 'loading'}
                 </li>
                 <li
                   className={dashboard === 2 ? 'active' : ''}
                   onClick={() => handleSlider('dashboard', 2)}
                 >
-                  {cw.dashboard ? cw.dashboard[5] : 'loading'}
+                  {cw.dashboard ? cw.dashboard[3] : 'loading'}
                 </li>
               </ul>
               <div className='ava-btn-group'>
@@ -220,30 +221,31 @@ const Home = () => {
           <section className='feature'>
             <div className='description'>
               <h2 className='is-size-4'>
-                <span className='hl'>{cw.avachat ? cw.avachat[0] : 'loading'}</span> {cw.avachat ? cw.avachat[1] : 'loading'}
+                {/* <span className='hl'>{cw.avachat ? cw.avachat[0] : 'loading'}</span> {cw.avachat ? cw.avachat[1] : 'loading'} */}
+                {cw.avachat ? cw.avachat[0] : 'loading'}
               </h2>
-              <p>
+              {/* <p>
                 {cw.avachat ? cw.avachat[2] : 'loading'}
-              </p>
+              </p> */}
               <ul>
                 <li
                   className={avachat === 0 ? 'active' : ''}
                   onClick={() => handleSlider('avachat', 0)}
                 >
-                  {cw.avachat ? cw.avachat[3] : 'loading'}
+                  {cw.avachat ? cw.avachat[1] : 'loading'}
                 </li>
                 <li
                   className={avachat === 1 ? 'active' : ''}
                   onClick={() => handleSlider('avachat', 1)}
                 >
-                  {cw.avachat ? cw.avachat[4] : 'loading'}
+                  {cw.avachat ? cw.avachat[2] : 'loading'}
                 </li>
-                <li
+                {/* <li
                   className={avachat === 2 ? 'active' : ''}
                   onClick={() => handleSlider('avachat', 2)}
                 >
                   {cw.avachat ? cw.avachat[5] : 'loading'}
-                </li>
+                </li> */}
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
@@ -276,13 +278,13 @@ const Home = () => {
                     }
                     alt=''
                   />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/avachat/send-shipping-info.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
+                  // <img
+                  //   srcSet={
+                  //     require('public/assets/images/avachat/send-shipping-info.png?resize?webp')
+                  //       .srcSet
+                  //   }
+                  //   alt=''
+                  // />,
                 ]}
                 currentSlide={avachat}
                 hasDots
@@ -293,30 +295,31 @@ const Home = () => {
           <section className='feature'>
             <div className='description'>
               <h2 className='is-size-4'>
-                {cw.reseller ? cw.reseller[0] : 'loading'}&nbsp;
-                <span className='hl'>{cw.reseller ? cw.reseller[1] : 'loading'}</span> {cw.reseller ? cw.reseller[2] : 'loading'}
+                {/* {cw.reseller ? cw.reseller[0] : 'loading'}&nbsp;
+                <span className='hl'>{cw.reseller ? cw.reseller[1] : 'loading'}</span> {cw.reseller ? cw.reseller[2] : 'loading'} */}
+                {cw.reseller ? cw.reseller[0] : 'loading'}
               </h2>
-              <p>
+              {/* <p>
                 {cw.reseller ? cw.reseller[3] : 'loading'}
-              </p>
+              </p> */}
               <ul>
                 <li
                   className={reseller === 0 ? 'active' : ''}
                   onClick={() => handleSlider('reseller', 0)}
                 >
-                  {cw.reseller ? cw.reseller[4] : 'loading'}
+                  {cw.reseller ? cw.reseller[1] : 'loading'}
                 </li>
                 <li
                   className={reseller === 1 ? 'active' : ''}
                   onClick={() => handleSlider('reseller', 1)}
                 >
-                  {cw.reseller ? cw.reseller[5] : 'loading'}
+                  {cw.reseller ? cw.reseller[2] : 'loading'}
                 </li>
                 <li
                   className={reseller === 2 ? 'active' : ''}
                   onClick={() => handleSlider('reseller', 2)}
                 >
-                  {cw.reseller ? cw.reseller[6] : 'loading'}
+                  {cw.reseller ? cw.reseller[3] : 'loading'}
                 </li>
               </ul>
               <div className='ava-btn-group'>
@@ -367,29 +370,30 @@ const Home = () => {
           <section className='feature'>
             <div className='description'>
               <h2 className='is-size-4'>
-                <span className='hl'>{cw.webstore ? cw.webstore[0] : 'loading'}</span> {cw.webstore ? cw.webstore[1] : 'loading'}
+                {/* <span className='hl'>{cw.webstore ? cw.webstore[0] : 'loading'}</span> {cw.webstore ? cw.webstore[1] : 'loading'} */}
+                {cw.webstore ? cw.webstore[0] : 'loading'}
               </h2>
-              <p>
+              {/* <p>
                 {cw.webstore ? cw.webstore[2] : 'loading'}
-              </p>
+              </p> */}
               <ul>
                 <li
                   className={webstore === 0 ? 'active' : ''}
                   onClick={() => handleSlider('webstore', 0)}
                 >
-                  {cw.webstore ? cw.webstore[3] : 'loading'}
+                  {cw.webstore ? cw.webstore[1] : 'loading'}
                 </li>
                 <li
                   className={webstore === 1 ? 'active' : ''}
                   onClick={() => handleSlider('webstore', 1)}
                 >
-                  {cw.webstore ? cw.webstore[4] : 'loading'}
+                  {cw.webstore ? cw.webstore[2] : 'loading'}
                 </li>
                 <li
                   className={webstore === 2 ? 'active' : ''}
                   onClick={() => handleSlider('webstore', 2)}
                 >
-                  {cw.webstore ? cw.webstore[5] : 'loading'}
+                  {cw.webstore ? cw.webstore[3] : 'loading'}
                 </li>
               </ul>
               <div className='ava-btn-group'>
@@ -411,14 +415,14 @@ const Home = () => {
                 slides={[
                   <img
                     srcSet={
-                      require('public/assets/images/webstore/payment-gateway.png?resize?webp')
+                      require('public/assets/images/webstore/theme.png?resize?webp')
                         .srcSet
                     }
                     alt=''
                   />,
                   <img
                     srcSet={
-                      require('public/assets/images/webstore/theme.png?resize?webp')
+                      require('public/assets/images/webstore/payment-gateway.png?resize?webp')
                         .srcSet
                     }
                     alt=''
@@ -440,10 +444,11 @@ const Home = () => {
           <section className='feature'>
             <div className='description'>
               <h2 className='is-size-4'>
-                {cw.fbshop ? cw.fbshop[0] : 'loading'} <span className='hl'>{cw.fbshop ? cw.fbshop[1] : 'loading'}</span> {cw.fbshop ? cw.fbshop[2] : 'loading'}
+                {/* {cw.fbshop ? cw.fbshop[0] : 'loading'} <span className='hl'>{cw.fbshop ? cw.fbshop[1] : 'loading'}</span> {cw.fbshop ? cw.fbshop[2] : 'loading'} */}
+                {cw.fbshop ? cw.fbshop[0] : 'loading'}
               </h2>
               <p>
-                {cw.fbshop ? cw.fbshop[3] : 'loading'}
+                {cw.fbshop ? cw.fbshop[1] : 'loading'}
               </p>
               <ul />
               <div className='ava-btn-group'>
@@ -505,7 +510,7 @@ const Home = () => {
               {cw.footerCta ? cw.footerCta[1] : 'loading'}
             </LinkButton>
           </section>
-          <div className={`modal ${isModal ? 'is-active' : ''}`}>
+          {/* <div className={`modal ${isModal ? 'is-active' : ''}`}>
             <div className='modal-background' onClick={toggleModal} />
             <div
               className='modal-content eventBanner'
@@ -540,7 +545,7 @@ const Home = () => {
                 ))}
               />
             </div>
-          </div>
+          </div> */}
         </main>
         <Footer />
       </div>

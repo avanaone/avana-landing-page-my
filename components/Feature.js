@@ -16,14 +16,19 @@ export default function Feature(props) {
 
   useEffect(() => {
     if(localStorage.getItem("lang")) {
+      console.log('start', localStorage.getItem("lang"));
       setLang(localStorage.getItem("lang"));
-      Features.then((res) => {
-        setFeatures(res.default[id][lang])
-      });
     } else {
       localStorage.setItem("lang", "en");
     }
   }, []);
+
+  useEffect(() => {
+      Features.then((res) => {
+        console.log("lang is", lang);
+        setFeatures(res.default[id][lang])
+      });
+  }, [lang]);
 
   return (
     <div className="features">

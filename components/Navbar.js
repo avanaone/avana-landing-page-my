@@ -160,9 +160,9 @@ export default function Navbar({ style }) {
             <a className="navbar-item" href="/price" title="Harga">
               {cw.navbar ? cw.navbar[1] : 'loading'}
             </a>
-            <a href="/promo" className="navbar-item" title="Promo">
+            {/* <a href="/promo" className="navbar-item" title="Promo">
               <span className="dot">{cw.navbar ? cw.navbar[2] : 'loading'}</span>
-            </a>
+            </a> */}
             <a href="/event" className="navbar-item" title="Event">
               {cw.navbar ? cw.navbar[3] : 'loading'}
             </a>
@@ -191,23 +191,30 @@ export default function Navbar({ style }) {
                   FAQ
                 </a> */}
                 <a
+                  href={lang === 'en' ? 'http://bit.ly/avanaeng' : 'http://bit.ly/avanabm'}
+                  className="navbar-item"
+                  title="Turtle"
+                >
+                  {cw.navbar ? cw.navbar[6] : 'loading'}
+                </a>
+                <a
                   href="https://blog.avana.asia/"
                   className="navbar-item"
                   title="Blog"
                 >
-                  {cw.navbar ? cw.navbar[6] : 'loading'}
+                  {cw.navbar ? cw.navbar[7] : 'loading'}
                 </a>
                 <a
                   href="/ebook"
                   className="navbar-item"
                   title="eBook"
                 >
-                  {cw.navbar ? cw.navbar[7] : 'loading'}
+                  {cw.navbar ? cw.navbar[8] : 'loading'}
                 </a>
               </div>
             </div>
             <a href="/about-us" className="navbar-item" title="Tentang Kami">
-              {cw.navbar ? cw.navbar[8] : 'loading'}
+              {cw.navbar ? cw.navbar[9] : 'loading'}
             </a>
             <div className="navbar-item">
               <LinkButton
@@ -216,7 +223,7 @@ export default function Navbar({ style }) {
                 className="btn-secondary"
                 title="Masuk"
               >
-                {cw.navbar ? cw.navbar[9] : 'loading'}
+                {cw.navbar ? cw.navbar[10] : 'loading'}
               </LinkButton>
               <LinkButton
                 href="https://store.avana.asia/"
@@ -224,7 +231,7 @@ export default function Navbar({ style }) {
                 className="btn-primary"
                 title="Daftar"
               >
-                {cw.navbar ? cw.navbar[10] : 'loading'}
+                {cw.navbar ? cw.navbar[11] : 'loading'}
               </LinkButton>
             </div>
           </div>

@@ -15,7 +15,7 @@ const nextConfig = {
       // '/packages-detail': { page: '/packages-detail' },
       '/event': { page: '/event' },
       // '/event/:id': { page: '/event/[id]' },
-      '/promo': { page: '/promo' },
+      // '/promo': { page: '/promo' },
       // '/promo/:code': { page: '/promo/[code]' },
       '/ebook': { page: '/ebook' },
       '/dashboard': { page: '/dashboard' },

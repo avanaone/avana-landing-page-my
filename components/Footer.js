@@ -77,13 +77,13 @@ export default function Footer() {
             <a href="https://blog.avana.asia/">{lang === 'en' ? 'Blog' : 'Blog'}</a>
           </li>
           <li>
-            <a href="https://avana.id/career/">{lang === 'en' ? 'Career' : 'Kerjaya'}</a>
+            <a href="https://avana.asia/career/">{lang === 'en' ? 'Career' : 'Kerjaya'}</a>
           </li>
           <li>
             <a>Media</a>
           </li>
           <li>
-            <a href="https://avana.id/contact/">{lang === 'en' ? 'Contact Us' : 'Hubungi Kami'}</a>
+            <a href="https://avana.asia/contact/">{lang === 'en' ? 'Contact Us' : 'Hubungi Kami'}</a>
           </li>
           <li>
             <a href="https://avana.id/wp-content/uploads/2018/05/AVANA-Privacy-Policy.pdf">
