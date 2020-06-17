@@ -76,12 +76,16 @@ export default function Navbar({ style }) {
       >
         <div className="navbar-brand">
           <a className="navbar-item" href="/" title="BERANDA &middot; Avana">
-            <picture>
+            <picture style={{display: `flex`, alignItems: `center`}}>
               <source srcSet="/assets/images/logo.webp" type="image/webp" /> 
               <img src="/assets/images/logo.png" alt="Avana logo" />
             </picture>
           </a>
-          <div
+          <div className="navbar-lang">
+            <a role="button" onClick={() => toggleLang("en")} className={`lang-switcher ${lang === 'en' ? 'active' : ''}`}>ENG</a>
+            <a role="button" onClick={() => toggleLang("bm")} className={`lang-switcher ${lang === 'en' ? '' : 'active'}`}>BM</a>
+          </div>
+            {/* <div
               className={`navbar-item has-dropdown ${
                 innerWidth >= 1023 ? 'is-hoverable' : ''
               } ${
@@ -110,7 +114,7 @@ export default function Navbar({ style }) {
                   Bm
                 </a>
               </div>
-            </div>
+            </div> */}
 
           <a
             role="button"
@@ -125,6 +129,7 @@ export default function Navbar({ style }) {
             <span aria-hidden="true"></span>
           </a>
         </div>
+        
         <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
           <div className="navbar-end">
             <div
