@@ -36,7 +36,7 @@ export default function Feature(props) {
         <title>{`${title} • AVANA`}</title>
       </Head>
       <Navbar />
-      <Header title={title} />
+      <Header title={lang === 'bm' && title === 'Webstore' ? 'Kedai Online' : lang === 'bm' && title === 'Reseller' ? 'Sales Agent' : title} />
       <main>
         {showVideo ? 
           <>

@@ -167,13 +167,13 @@ const Price = () => {
                           className="price-more"
                         >
                           {pkg.name === 'Agent' && hideVIP
-                            ? 'Sembunyikan Fitur'
+                            ? lang === 'en' ? 'Hide Features' : 'Sembunyikan Fitur'
                             : pkg.name === 'Business' && hideBusiness
-                            ? 'Sembunyikan Fitur'
+                            ? lang === 'en' ? 'Hide Features' : 'Sembunyikan Fitur'
                             : pkg.name === 'Advance' && hideAdvance
-                            ? 'Sembunyikan Fitur'
-                            : pkg.name === 'Basic' && hideBasic
-                            ? 'Sembunyikan Fitur'
+                            ? lang === 'en' ? 'Hide Features' : 'Sembunyikan Fitur'
+                            : pkg.name === 'Beginner' && hideBasic
+                            ? lang === 'en' ? 'Hide Features' : 'Sembunyikan Fitur'
                             : lang === 'en'
                             ? 'View Full Features' : 'Lihat Ciri Selengkapnya'}
                         </a>

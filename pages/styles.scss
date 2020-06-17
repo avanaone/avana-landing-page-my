@@ -139,6 +139,21 @@ footer {
           }
         }
       }
+
+      .wa-footer {
+        display: flex;
+
+        img {
+          width: 19px;
+          height: 19px;
+          margin-right: 6px;
+
+          @media (max-width: 576px) {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
     }
   }
 }

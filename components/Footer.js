@@ -26,7 +26,7 @@ export default function Footer() {
         </p>
         <span>
           {lang === 'en' ? 'WhatsApp Customer Service:' : 'WhatsApp Khidmat Pelanggan:'}<br />
-          <a href="https://wa.me/60149774275" style={{color: `#3273dc`}}>+60 14 977 4275</a>
+          <a href="https://wa.me/60149774275" style={{color: `#3273dc`}} className="wa-footer"><img src="/assets/images/footer/whatsapp-contact.png" alt=""  />+60 14 977 4275</a>
         </span>
         <span>Indonesia • Singapore • Malaysia</span>
         <div className="social-icons">
