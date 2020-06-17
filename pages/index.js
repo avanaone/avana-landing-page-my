@@ -527,8 +527,6 @@ const Home = () => {
                 Close
               </button>
               <Slider
-                hasDots
-                hasArrow
                 slides={events.map((event) => (
                   <>
                     <Link href='/event/[code]' as={`/event/${event.id}/`}>
