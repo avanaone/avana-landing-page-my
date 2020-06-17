@@ -13,7 +13,8 @@ import styles from './scss/Home.module.scss';
 
 import getTestimonials from '../json/testimonial.json';
 const getCw = import('../json/copywriting.json');
-const getPromos = import('../json/promo.json');
+// const getPromos = import('../json/promo.json');
+const getEvents = import('../json/event.json');
 
 const Home = () => {
   const [lang, setLang] = useState("en");
@@ -26,9 +27,11 @@ const Home = () => {
     webstore: 0,
   });
   const [navbarBg, setNavbarBg] = useState('#f4f7f9');
-  const [promos, setPromos] = useState([]);
+  // const [promos, setPromos] = useState([]);
+  const [events, setEvents] = useState([]);
 
-  getPromos.then((res) => setPromos(res.default));
+  // getPromos.then((res) => setPromos(res.default));
+  getEvents.then((res) => setEvents(res.default));
   const [isModal, setIsModal] = useState(true);
   const toggleModal = () => setIsModal(!isModal);
 
@@ -510,7 +513,7 @@ const Home = () => {
               {cw.footerCta ? cw.footerCta[1] : 'loading'}
             </LinkButton>
           </section>
-          {/* <div className={`modal ${isModal ? 'is-active' : ''}`}>
+          <div className={`modal ${isModal ? 'is-active' : ''}`}>
             <div className='modal-background' onClick={toggleModal} />
             <div
               className='modal-content eventBanner'
@@ -526,10 +529,10 @@ const Home = () => {
               <Slider
                 hasDots
                 hasArrow
-                slides={promos.map((promo) => (
+                slides={events.map((event) => (
                   <>
-                    <Link href='/promo/[code]' as={`/promo/${promo.code}/`}>
-                      <img srcSet={lang === 'en' ? promo.image.en : promo.image.bm} alt='' style={{ cursor: `pointer`}}/>
+                    <Link href='/event/[code]' as={`/event/${event.id}/`}>
+                      <img srcSet={lang === 'en' ? event.image.en : event.image.bm} alt='' style={{ cursor: `pointer`}}/>
                     </Link>
                     <div
                       style={{
@@ -539,13 +542,13 @@ const Home = () => {
                         minWidth: `100%`,
                       }}
                     >
-                      <h3 className='name is-size-6'>{lang === 'en' ? promo.title.en : promo.title.bm}</h3>
+                      <h3 className='name is-size-6'>{lang === 'en' ? event.title.en : event.title.bm}</h3>
                     </div>
                   </>
                 ))}
               />
             </div>
-          </div> */}
+          </div>
         </main>
         <Footer />
       </div>

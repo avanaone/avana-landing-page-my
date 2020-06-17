@@ -1,7 +1,7 @@
 {
     "en": {
             "button": ["I'm interested", "More Info"],
-            "navbar": ["Product", "Price", "Promotion", "Events", "Learn", "Tutorial", "Turtle", "Blog", "eBook", "About Us", "Log In", "Sign Up"],
+            "navbar": ["Product", "Price", "Promotion", "Events", "Learn", "Tutorial", "Tutorial", "Blog", "eBook", "About Us", "Log In", "Sign Up"],
             "h1": "All-in-One Dashboard to manage all your sales across social media and webstore.",
             "features": ["Online Store", "Social Media Chat Integration", "Auto Reply", "Reseller Management"],
             "dashboard": ["One Dashboard for all sales activities","Order Management & Status", "Auto Connote Printout", "Schedule for Shipping"],
@@ -17,7 +17,7 @@
     },
     "bm": {
             "button": ["Saya berminat", "Info Lanjut"],
-            "navbar": ["Produk", "Harga", "Promo", "Event", "Pelajari", "Tutorial", "Turtle", "Blog", "eBook", "Tentang Kami", "Log Masuk", "Daftar"],
+            "navbar": ["Produk", "Harga", "Promo", "Event", "Pelajari", "Tutorial", "Tutorial", "Blog", "eBook", "Tentang Kami", "Log Masuk", "Daftar"],
             "h1": "Uruskan jualan dari media sosial dan webstore anda dalam satu dashboard.",
             "features": ["Kedai Online", "Integrasi 'Chat' di Media Sosial", "Auto Reply", "Pengurusan Sales Agent"],
             "dashboard": ["Semua aktiviti jualan dalam satu dashboard", "Pengurusan Order & Status", "Cetak Nota Konsainan Automatik", "Jadualkan penghantaran"],

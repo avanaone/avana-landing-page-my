@@ -140,20 +140,20 @@ export default function Navbar({ style }) {
               </a>
               <div className="navbar-dropdown">
                 <a className="navbar-item" href="/dashboard" title="Dashboard">
-                  Dashboard
+                  { lang === 'en' ? 'Dashboard' : 'Dashboard'}
                 </a>
                 <a className="navbar-item" href="/avachat" title="Live autoreply">
-                  Live Autoreply
+                  { lang === 'en' ? 'Live Autoreply' : 'Live Autoreply'}
                 </a>
                 <a
                   className="navbar-item"
                   href="/reseller"
                   title="Reseller"
                 >
-                  Reseller
+                  { lang === 'en' ? 'Reseller' : 'Sales Agent'}
                 </a>
                 <a className="navbar-item" href="/webstore" title="Webstore">
-                  Webstore
+                { lang === 'en' ? 'Webstore' : 'Kedai Online'}
                 </a>
               </div>
             </div>
