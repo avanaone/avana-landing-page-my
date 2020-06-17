@@ -41,7 +41,7 @@ export default function Feature(props) {
         {showVideo ? 
           <>
             <div>
-              <h3 style={{textAlign: `center`, marginTop: `3rem`}}>“{ lang === 'en' ? 'Convenient and hassle-free live session with AVANA' : 'Pengalaman sesi LIVE bersama AVANA yang MUDAH dan SELESA!'}”</h3>
+              <h3 className="video-headline">“{ lang === 'en' ? 'Convenient and hassle-free live session with AVANA' : 'Pengalaman sesi LIVE bersama AVANA yang MUDAH dan SELESA!'}”</h3>
             </div>
             <section id="section-1" className="feature">
               <div>

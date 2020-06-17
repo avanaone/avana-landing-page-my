@@ -388,6 +388,16 @@ footer {
   }
 }
 
+.video-headline {
+  text-align: center;
+  margin-top: 3rem;
+
+  @media (max-width: 576px) {
+    max-width: 240px;
+    margin: auto;
+  }
+}
+
 .features {
   background-color: #f4f7f9;
 }

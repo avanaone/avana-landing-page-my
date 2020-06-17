@@ -69,7 +69,7 @@ export default function AboutUs() {
                 {lang === 'en' ? 'Now it’s time to bring your A-Game to the squad. Show us what you’ve got!' : 'Inilah masanya untuk anda berkerjasama dengan kami dan tunjukkan kemampuan anda'}
               </p>
               <LinkButton
-                href="mailto:ajmamon@avana.asia"
+                href="mailto:work@avana.asia"
                 className="btn-primary"
                 title="Daftar"
                 rel="noopener noreferrer"

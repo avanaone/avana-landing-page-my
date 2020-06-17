@@ -31,7 +31,7 @@ export default function Footer() {
         <span>Indonesia • Singapore • Malaysia</span>
         <div className="social-icons">
           <a
-            href="https://www.facebook.com/avanaindonesia/"
+            href={lang === 'en' ? "https://www.facebook.com/avana.asia/" : "https://www.facebook.com/avanamalaysia"}
             target="_blank"
             rel="noreferrer noopener"
             aria-label="AVANA Facebook Page"
@@ -39,7 +39,7 @@ export default function Footer() {
             <img src="/assets/images/footer/facebook-f-brands.svg" alt="" />
           </a>
           <a
-            href="https://twitter.com/avana_id"
+            href="https://twitter.com/avanaasia"
             target="_blank"
             rel="noreferrer noopener"
             aria-label="AVANA Twitter"
@@ -47,7 +47,7 @@ export default function Footer() {
             <img src="/assets/images/footer/twitter-brands.svg" alt="" />
           </a>
           <a
-            href="https://www.instagram.com/avana.id/"
+            href="https://www.instagram.com/avana.asia/"
             target="_blank"
             rel="noreferrer noopener"
             aria-label="AVANA Instagram"
@@ -55,7 +55,7 @@ export default function Footer() {
             <img src="/assets/images/footer/instagram-brands.svg" alt="" />
           </a>
           <a
-            href="https://www.youtube.com/channel/UCHsdeDF8cJl7C4GzoxPRk0A"
+            href="https://www.youtube.com/channel/UCRtW-cCOi4B_-k0wAur2vOg"
             target="_blank"
             rel="noreferrer noopener"
             aria-label="AVANA Youtube"
@@ -76,7 +76,7 @@ export default function Footer() {
           <li>
             <a href="https://blog.avana.asia/">{lang === 'en' ? 'Blog' : 'Blog'}</a>
           </li>
-          <li>
+          {/* <li>
             <a href="https://avana.asia/career/">{lang === 'en' ? 'Career' : 'Kerjaya'}</a>
           </li>
           <li>
@@ -84,7 +84,7 @@ export default function Footer() {
           </li>
           <li>
             <a href="https://avana.asia/contact/">{lang === 'en' ? 'Contact Us' : 'Hubungi Kami'}</a>
-          </li>
+          </li> */}
           {/* <li>
             <a href="https://avana.id/wp-content/uploads/2018/05/AVANA-Privacy-Policy.pdf">
             {lang === 'en' ? 'Privacy Policy' : 'Dasar Privasi'}
