@@ -6,16 +6,16 @@ const getCw = import('../json/copywriting.json');
 const getWidth = () => (typeof window !== 'undefined' ? window.innerWidth : '');
 
 export default function Navbar({ style }) {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState('en');
   const [cw, setCw] = useState([]);
 
   const [isModal, setIsModal] = useState(false);
   const toggleModal = () => setIsModal(!isModal);
   const toggleLang = (language) => {
-    localStorage.setItem("lang", language);
+    localStorage.setItem('lang', language);
     setLang(language);
     location.reload();
-  }
+  };
 
   const [state, setState] = useState({
     isActive: false,
@@ -34,16 +34,17 @@ export default function Navbar({ style }) {
   });
 
   useEffect(() => {
-    if(localStorage.getItem("lang")) {
-      console.log(localStorage.getItem("lang"));
-      setLang(localStorage.getItem("lang"));
+    if (localStorage.getItem('lang')) {
+      console.log(localStorage.getItem('lang'));
+      setLang(localStorage.getItem('lang'));
       getCw.then((res) => {
-        console.log(lang);
-        console.log(res.default[localStorage.getItem("lang")]); 
-        setCw(res.default[localStorage.getItem("lang")])
+        setCw(res.default[localStorage.getItem('lang')]);
       });
     } else {
-      localStorage.setItem("lang", "en");
+      localStorage.setItem('lang', 'en');
+      getCw.then((res) => {
+        setCw(res.default[localStorage.getItem('lang')]);
+      });
     }
     const onResize = window.addEventListener('resize', () =>
       resizeRef.current()
@@ -69,23 +70,35 @@ export default function Navbar({ style }) {
   return (
     <>
       <nav
-        className="navbar is-white is-fixed-top"
-        role="navigation"
-        aria-label="main navigation"
+        className='navbar is-white is-fixed-top'
+        role='navigation'
+        aria-label='main navigation'
         style={style}
       >
-        <div className="navbar-brand">
-          <a className="navbar-item" href="/" title="BERANDA &middot; Avana">
-            <picture style={{display: `flex`, alignItems: `center`}}>
-              <source srcSet="/assets/images/logo.webp" type="image/webp" /> 
-              <img src="/assets/images/logo.png" alt="Avana logo" />
+        <div className='navbar-brand'>
+          <a className='navbar-item' href='/' title='BERANDA &middot; Avana'>
+            <picture style={{ display: `flex`, alignItems: `center` }}>
+              <source srcSet='/assets/images/logo.webp' type='image/webp' />
+              <img src='/assets/images/logo.png' alt='Avana logo' />
             </picture>
           </a>
-          <div className="navbar-lang">
-            <a role="button" onClick={() => toggleLang("en")} className={`lang-switcher ${lang === 'en' ? 'active' : ''}`}>ENG</a>
-            <a role="button" onClick={() => toggleLang("bm")} className={`lang-switcher ${lang === 'en' ? '' : 'active'}`}>BM</a>
+          <div className='navbar-lang'>
+            <a
+              role='button'
+              onClick={() => toggleLang('en')}
+              className={`lang-switcher ${lang === 'en' ? 'active' : ''}`}
+            >
+              ENG
+            </a>
+            <a
+              role='button'
+              onClick={() => toggleLang('bm')}
+              className={`lang-switcher ${lang === 'en' ? '' : 'active'}`}
+            >
+              BM
+            </a>
           </div>
-            {/* <div
+          {/* <div
               className={`navbar-item has-dropdown ${
                 innerWidth >= 1023 ? 'is-hoverable' : ''
               } ${
@@ -117,21 +130,21 @@ export default function Navbar({ style }) {
             </div> */}
 
           <a
-            role="button"
+            role='button'
             className={`navbar-burger ${isActive ? 'is-active' : ''}`}
-            data-target="navMenu"
-            aria-label="menu"
-            aria-expanded="false"
+            data-target='navMenu'
+            aria-label='menu'
+            aria-expanded='false'
             onClick={toggleNavbar}
           >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+            <span aria-hidden='true'></span>
+            <span aria-hidden='true'></span>
+            <span aria-hidden='true'></span>
           </a>
         </div>
-        
+
         <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
-          <div className="navbar-end">
+          <div className='navbar-end'>
             <div
               className={`navbar-item has-dropdown 
               ${innerWidth >= 1023 ? 'is-hoverable' : ''}
@@ -140,35 +153,35 @@ export default function Navbar({ style }) {
               }`}
               onClick={() => toggleDropdown('produk')}
             >
-              <a className="navbar-link" title="Produk">
+              <a className='navbar-link' title='Produk'>
                 {cw.navbar ? cw.navbar[0] : 'loading'}
               </a>
-              <div className="navbar-dropdown">
-                <a className="navbar-item" href="/dashboard" title="Dashboard">
-                  { lang === 'en' ? 'Dashboard' : 'Dashboard'}
-                </a>
-                <a className="navbar-item" href="/avachat" title="Live autoreply">
-                  { lang === 'en' ? 'Live Autoreply' : 'Live Autoreply'}
+              <div className='navbar-dropdown'>
+                <a className='navbar-item' href='/dashboard' title='Dashboard'>
+                  {lang === 'en' ? 'Dashboard' : 'Dashboard'}
                 </a>
                 <a
-                  className="navbar-item"
-                  href="/reseller"
-                  title="Reseller"
+                  className='navbar-item'
+                  href='/avachat'
+                  title='Live autoreply'
                 >
-                  { lang === 'en' ? 'Reseller' : 'Sales Agent'}
+                  {lang === 'en' ? 'Live Autoreply' : 'Live Autoreply'}
                 </a>
-                <a className="navbar-item" href="/webstore" title="Webstore">
-                { lang === 'en' ? 'Webstore' : 'Kedai Online'}
+                <a className='navbar-item' href='/reseller' title='Reseller'>
+                  {lang === 'en' ? 'Reseller' : 'Sales Agent'}
+                </a>
+                <a className='navbar-item' href='/webstore' title='Webstore'>
+                  {lang === 'en' ? 'Webstore' : 'Kedai Online'}
                 </a>
               </div>
             </div>
-            <a className="navbar-item" href="/price" title="Harga">
+            <a className='navbar-item' href='/price' title='Harga'>
               {cw.navbar ? cw.navbar[1] : 'loading'}
             </a>
             {/* <a href="/promo" className="navbar-item" title="Promo">
               <span className="dot">{cw.navbar ? cw.navbar[2] : 'loading'}</span>
             </a> */}
-            <a href="/event" className="navbar-item" title="Event">
+            <a href='/event' className='navbar-item' title='Event'>
               {cw.navbar ? cw.navbar[3] : 'loading'}
             </a>
             <div
@@ -181,10 +194,10 @@ export default function Navbar({ style }) {
               }`}
               onClick={() => toggleDropdown('pelajari')}
             >
-              <a className="navbar-link" title="Pelajari">
+              <a className='navbar-link' title='Pelajari'>
                 {cw.navbar ? cw.navbar[4] : 'loading'}
               </a>
-              <div className="navbar-dropdown">
+              <div className='navbar-dropdown'>
                 {/* <a
                   className="navbar-item"
                   title="Tutorial"
@@ -196,45 +209,45 @@ export default function Navbar({ style }) {
                   FAQ
                 </a> */}
                 <a
-                  href={lang === 'en' ? 'http://bit.ly/avanaeng' : 'http://bit.ly/avanabm'}
-                  className="navbar-item"
-                  title="Turtle"
+                  href={
+                    lang === 'en'
+                      ? 'http://bit.ly/avanaeng'
+                      : 'http://bit.ly/avanabm'
+                  }
+                  className='navbar-item'
+                  title='Turtle'
                 >
                   {cw.navbar ? cw.navbar[6] : 'loading'}
                 </a>
                 <a
-                  href="https://blog.avana.asia/"
-                  className="navbar-item"
-                  title="Blog"
+                  href='https://blog.avana.asia/'
+                  className='navbar-item'
+                  title='Blog'
                 >
                   {cw.navbar ? cw.navbar[7] : 'loading'}
                 </a>
-                <a
-                  href="/ebook"
-                  className="navbar-item"
-                  title="eBook"
-                >
+                <a href='/ebook' className='navbar-item' title='eBook'>
                   {cw.navbar ? cw.navbar[8] : 'loading'}
                 </a>
               </div>
             </div>
-            <a href="/about-us" className="navbar-item" title="Tentang Kami">
+            <a href='/about-us' className='navbar-item' title='Tentang Kami'>
               {cw.navbar ? cw.navbar[9] : 'loading'}
             </a>
-            <div className="navbar-item">
+            <div className='navbar-item'>
               <LinkButton
-                href="https://store.avana.asia/"
-                target="__blank"
-                className="btn-secondary"
-                title="Masuk"
+                href='https://store.avana.asia/'
+                target='__blank'
+                className='btn-secondary'
+                title='Masuk'
               >
                 {cw.navbar ? cw.navbar[10] : 'loading'}
               </LinkButton>
               <LinkButton
-                href="https://store.avana.asia/"
-                target="__blank"
-                className="btn-primary"
-                title="Daftar"
+                href='https://store.avana.asia/'
+                target='__blank'
+                className='btn-primary'
+                title='Daftar'
               >
                 {cw.navbar ? cw.navbar[11] : 'loading'}
               </LinkButton>
@@ -243,30 +256,30 @@ export default function Navbar({ style }) {
         </div>
       </nav>
       <div className={`modal ${isModal ? 'is-active' : ''}`}>
-        <div className="modal-background" onClick={toggleModal} />
-        <div className="modal-content tutorial">
+        <div className='modal-background' onClick={toggleModal} />
+        <div className='modal-content tutorial'>
           <button
-            className="modal-close is-large"
+            className='modal-close is-large'
             onClick={toggleModal}
-            aria-label="close"
+            aria-label='close'
           >
             Close
           </button>
           <iframe
-            src="https://www.youtube.com/embed/xq5475VItVM"
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            src='https://www.youtube.com/embed/xq5475VItVM'
+            frameBorder='0'
+            allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
           />
-          <div className="tutorial-desc">
-            <h3 className="is-size-5 modalTittle">Gratis eBook Tutorial!</h3>
+          <div className='tutorial-desc'>
+            <h3 className='is-size-5 modalTittle'>Gratis eBook Tutorial!</h3>
             <p>
               Pelajari tahapan untuk mengembangkan Bisnismu menggunakan Fitur
               Canggih AVANA dengan klik tombol dibawah ini!
             </p>
             <LinkButton
-              href="/assets/files/tutorial.pdf"
-              className="btn-primary"
+              href='/assets/files/tutorial.pdf'
+              className='btn-primary'
               download
             >
               Download Gratis
