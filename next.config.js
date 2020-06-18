@@ -34,12 +34,12 @@ const nextConfig = {
     //   };
     // });
 
-    getEvents.map((event) => {
-      paths[`event/${event.id}`] = {
-        page: 'event/[id]',
-        query: { id: event.id },
-      };
-    });
+    // getEvents.map((event) => {
+    //   paths[`event/${event.id}`] = {
+    //     page: 'event/[id]',
+    //     query: { id: event.id },
+    //   };
+    // });
 
     return paths;
   },
