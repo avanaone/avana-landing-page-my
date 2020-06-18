@@ -252,7 +252,7 @@ const Home = () => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='http://nanya.online/tanya-ava-3'
+                  href='https://wa.me/60149774275'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -327,7 +327,7 @@ const Home = () => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='http://nanya.online/tanya-ava-3'
+                  href='https://wa.me/60149774275'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -456,7 +456,7 @@ const Home = () => {
               <ul />
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='http://nanya.online/tanya-ava-3'
+                  href='https://wa.me/60149774275'
                   target='__blank'
                   className='btn-primary'
                 >
