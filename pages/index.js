@@ -529,7 +529,7 @@ const Home = () => {
               <Slider
                 slides={events.map((event) => (
                   <>
-                    <Link href='/event/[code]' as={`/event/${event.id}/`}>
+                    <Link href='/event/[id]' as={`/event/${event.id}/`}>
                       <img srcSet={lang === 'en' ? event.image.en : event.image.bm} alt='' style={{ cursor: `pointer`}}/>
                     </Link>
                     <div
