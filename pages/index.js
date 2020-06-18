@@ -17,7 +17,7 @@ const getCw = import('../json/copywriting.json');
 const getEvents = import('../json/event.json');
 
 const Home = () => {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState('en');
   const [cw, setCw] = useState([]);
 
   const [state, setState] = useState({
@@ -38,16 +38,19 @@ const Home = () => {
   const { dashboard, avachat, reseller, webstore } = state;
 
   useEffect(() => {
-    if(localStorage.getItem("lang")) {
-      console.log(localStorage.getItem("lang"));
-      setLang(localStorage.getItem("lang"));
+    if (localStorage.getItem('lang')) {
+      console.log(localStorage.getItem('lang'));
+      setLang(localStorage.getItem('lang'));
       getCw.then((res) => {
         console.log(lang);
-        console.log(res.default[localStorage.getItem("lang")]); 
-        setCw(res.default[localStorage.getItem("lang")])
+        console.log(res.default[localStorage.getItem('lang')]);
+        setCw(res.default[localStorage.getItem('lang')]);
       });
     } else {
-      localStorage.setItem("lang", "en");
+      localStorage.setItem('lang', 'en');
+      getCw.then((res) => {
+        setCw(res.default[localStorage.getItem('lang')]);
+      });
     }
     window.addEventListener('scroll', handleNavbar);
 
@@ -121,17 +124,17 @@ const Home = () => {
         </Head>
         <Navbar style={{ backgroundColor: navbarBg }} />
         <header>
-          <h1 className='is-size-3'>
-            {cw.h1}
-          </h1>
+          <h1 className='is-size-3'>{cw.h1}</h1>
           <p>
-            {cw.features ? cw.features.map((feature, i) => {
-              if(cw.features.length === i + 1) {
-                return feature
-              } else {
-                return feature + " • "
-              }
-            }) : 'loading...'}
+            {cw.features
+              ? cw.features.map((feature, i) => {
+                  if (cw.features.length === i + 1) {
+                    return feature;
+                  } else {
+                    return feature + ' • ';
+                  }
+                })
+              : 'loading...'}
           </p>
           <LinkButton
             href='https://store.avana.asia/'
@@ -450,9 +453,7 @@ const Home = () => {
                 {/* {cw.fbshop ? cw.fbshop[0] : 'loading'} <span className='hl'>{cw.fbshop ? cw.fbshop[1] : 'loading'}</span> {cw.fbshop ? cw.fbshop[2] : 'loading'} */}
                 {cw.fbshop ? cw.fbshop[0] : 'loading'}
               </h2>
-              <p>
-                {cw.fbshop ? cw.fbshop[1] : 'loading'}
-              </p>
+              <p>{cw.fbshop ? cw.fbshop[1] : 'loading'}</p>
               <ul />
               <div className='ava-btn-group'>
                 <LinkButton
@@ -476,9 +477,7 @@ const Home = () => {
             </div>
           </section>
           <section id='support'>
-            <h2 className='is-size-4'>
-              {cw.support ? cw.support : 'loading'}
-            </h2>
+            <h2 className='is-size-4'>{cw.support ? cw.support : 'loading'}</h2>
             <div>
               <img
                 srcSet={
@@ -504,7 +503,9 @@ const Home = () => {
             <SliderTestimonial testimonials={getTestimonials} />
           </section>
           <section className='trial'>
-            <h2 className='is-size-4'>{cw.footerCta ? cw.footerCta[0] : 'loading'}</h2>
+            <h2 className='is-size-4'>
+              {cw.footerCta ? cw.footerCta[0] : 'loading'}
+            </h2>
             <LinkButton
               href='https://store.avana.asia/'
               target='__blank'
@@ -530,7 +531,11 @@ const Home = () => {
                 slides={events.map((event) => (
                   <>
                     <Link href='/event/[id]' as={`/event/${event.id}/`}>
-                      <img srcSet={lang === 'en' ? event.image.en : event.image.bm} alt='' style={{ cursor: `pointer`}}/>
+                      <img
+                        srcSet={lang === 'en' ? event.image.en : event.image.bm}
+                        alt=''
+                        style={{ cursor: `pointer` }}
+                      />
                     </Link>
                     <div
                       style={{
@@ -540,7 +545,9 @@ const Home = () => {
                         minWidth: `100%`,
                       }}
                     >
-                      <h3 className='name is-size-6'>{lang === 'en' ? event.title.en : event.title.bm}</h3>
+                      <h3 className='name is-size-6'>
+                        {lang === 'en' ? event.title.en : event.title.bm}
+                      </h3>
                     </div>
                   </>
                 ))}
