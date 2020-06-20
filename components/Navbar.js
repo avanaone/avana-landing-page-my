@@ -215,7 +215,8 @@ export default function Navbar({ style }) {
                       : 'http://bit.ly/avanabm'
                   }
                   className='navbar-item'
-                  title='Turtle'
+                  title='Tutorial'
+                  target='_blank'
                 >
                   {cw.navbar ? cw.navbar[6] : 'loading'}
                 </a>
@@ -223,6 +224,7 @@ export default function Navbar({ style }) {
                   href='https://blog.avana.asia/'
                   className='navbar-item'
                   title='Blog'
+                  target='_blank'
                 >
                   {cw.navbar ? cw.navbar[7] : 'loading'}
                 </a>
