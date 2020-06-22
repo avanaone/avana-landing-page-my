@@ -6,104 +6,130 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta charSet="UTF-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charSet='UTF-8' />
+        <meta httpEquiv='X-UA-Compatible' content='IE=edge,chrome=1' />
         {/* Primary Meta Tags */}
-        <title>AVANA - The best social commerce solution for your business</title>
+        <title>
+          AVANA - The best social commerce solution for your business
+        </title>
         <meta
-          name="title"
-          content="AVANA - The best social commerce solution for your business"
+          name='title'
+          content='AVANA - The best social commerce solution for your business'
         />
         <meta
-          name="description"
-          content="Our commerce platform helps automate your business so that you can make money with ease"
+          name='description'
+          content='Our commerce platform helps automate your business so that you can make money with ease'
         />
         {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://avana.id/" />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://avana.id/' />
         <meta
-          property="og:title"
-          content="AVANA - The best social commerce solution for your business"
+          property='og:title'
+          content='AVANA - The best social commerce solution for your business'
         />
         <meta
-          property="og:description"
-          content="Our commerce platform helps automate your business so that you can make money with ease"
+          property='og:description'
+          content='Our commerce platform helps automate your business so that you can make money with ease'
         />
-        <meta property="og:image" content="/assets/images/meta-image.png" />
+        <meta property='og:image' content='/assets/images/meta-image.png' />
         {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://avana.id/" />
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='https://avana.id/' />
         <meta
-          property="twitter:title"
-          content="AVANA - The best social commerce solution for your business"
-        />
-        <meta
-          property="twitter:description"
-          content="Our commerce platform helps automate your business so that you can make money with ease"
+          property='twitter:title'
+          content='AVANA - The best social commerce solution for your business'
         />
         <meta
-          property="twitter:image"
-          content="/assets/images/meta-image.png"
+          property='twitter:description'
+          content='Our commerce platform helps automate your business so that you can make money with ease'
         />
         <meta
-          property="twitter:image"
-          content="/assets/images/meta-image.png"
+          property='twitter:image'
+          content='/assets/images/meta-image.png'
         />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/assets/images/favicons/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/assets/images/favicons/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/assets/images/favicons/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/assets/images/favicons/manifest.json" />
-        <link
-          rel="mask-icon"
-          href="/assets/images/favicons/safari-pinned-tab.svg"
-          color="#5bbad5"
-        />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          property='twitter:image'
+          content='/assets/images/meta-image.png'
         />
-        <meta httpEquiv="cache-control" content="max-age=2592000" />
-        <meta httpEquiv="expires" content="0" />
-        <meta httpEquiv="pragma" content="no-cache" />
-        <meta httpEquiv="refresh" />
         <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css"
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='/assets/images/favicons/apple-touch-icon.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='/assets/images/favicons/favicon-32x32.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='16x16'
+          href='/assets/images/favicons/favicon-16x16.png'
+        />
+        <link rel='manifest' href='/assets/images/favicons/manifest.json' />
+        <link
+          rel='mask-icon'
+          href='/assets/images/favicons/safari-pinned-tab.svg'
+          color='#5bbad5'
+        />
+        <meta name='msapplication-TileColor' content='#da532c' />
+        <meta name='theme-color' content='#ffffff' />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1, shrink-to-fit=no'
+        />
+        <meta httpEquiv='cache-control' content='max-age=2592000' />
+        <meta httpEquiv='expires' content='0' />
+        <meta httpEquiv='pragma' content='no-cache' />
+        <meta httpEquiv='refresh' />
+        <link
+          rel='stylesheet'
+          href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css'
           async
         />
         <link
-          rel="preconnect"
-          href="https://www.google-analytics.com"
-          as="script"
-          crossOrigin="anonymous"
+          rel='preconnect'
+          href='https://www.google-analytics.com'
+          as='script'
+          crossOrigin='anonymous'
         />
         <link
-          rel="preconnect"
-          href="https://static.doubleclick.net"
-          as="script"
+          rel='preconnect'
+          href='https://static.doubleclick.net'
+          as='script'
         />
         <link
-          rel="preconnect"
-          href="https://googleads.g.doubleclick.net"
-          as="script"
-          crossOrigin="anonymous"
+          rel='preconnect'
+          href='https://googleads.g.doubleclick.net'
+          as='script'
+          crossOrigin='anonymous'
         />
+        <script
+          async=''
+          charset='utf-8'
+          src='https://cdn.zopim.com/?119GyjFZxz8YGSLmizOWVzpwS1HT3EEk'
+          type='text/javascript'
+        ></script>
+        <script
+          async=''
+          src='https://www.google-analytics.com/analytics.js'
+        ></script>
+        <script
+          type='text/javascript'
+          async=''
+          id='inspsync'
+          src='https://cdn.inspectlet.com/inspectlet.js'
+        ></script>
+        <script
+          src='https://connect.facebook.net/signals/config/1217836451583731?v=2.8.12&amp;r=stable'
+          async=''
+        ></script>
+        <script
+          async=''
+          src='https://connect.facebook.net/en_US/fbevents.js'
+        ></script>
       </Head>
       <Component {...pageProps} />
     </>
