@@ -1,66 +1,84 @@
 import { useState, useEffect } from 'react';
 
 export default function Footer() {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState('en');
 
   useEffect(() => {
-    if(localStorage.getItem("lang")) {
-      console.log(localStorage.getItem("lang"));
-      setLang(localStorage.getItem("lang"));
+    if (localStorage.getItem('lang')) {
+      console.log(localStorage.getItem('lang'));
+      setLang(localStorage.getItem('lang'));
     } else {
-      localStorage.setItem("lang", "en");
+      localStorage.setItem('lang', 'en');
     }
   }, []);
 
   return (
     <footer>
-      <div className="meta">
+      <div className='meta'>
         <picture>
-          <source srcSet="/assets/images/logo.webp" type="image/webp" alt="Avana logo"/> 
-          <img src="/assets/images/logo.png" alt="Avana logo" />
+          <source
+            srcSet='/assets/images/logo.webp'
+            type='image/webp'
+            alt='Avana logo'
+          />
+          <img src='/assets/images/logo.png' alt='Avana logo' />
         </picture>
         <p>
-          {lang === 'en' ? 
-          'AVANA is a social commerce platform to help online sales through websites and social media.' : 
-          'AVANA merupakan platform social commerce untuk membantu penjualan online melalui website dan sosial media.'}
+          {lang === 'en'
+            ? 'AVANA is a social commerce platform to help online sales through websites and social media.'
+            : 'AVANA merupakan platform social commerce untuk membantu penjualan online melalui website dan sosial media.'}
         </p>
         <span>
-          {lang === 'en' ? 'WhatsApp Customer Service:' : 'WhatsApp Khidmat Pelanggan:'}<br />
-          <a href="https://wa.me/60149774275" style={{color: `#3273dc`}} className="wa-footer"><img src="/assets/images/footer/whatsapp-contact.png" alt=""  />+60 14 977 4275</a>
+          {lang === 'en'
+            ? 'WhatsApp Customer Service:'
+            : 'WhatsApp Khidmat Pelanggan:'}
+          <br />
+          <a
+            href='https://wa.me/60149774275'
+            style={{ color: `#3273dc` }}
+            className='wa-footer'
+          >
+            <img src='/assets/images/footer/whatsapp-contact.png' alt='' />
+            +60 14 977 4275
+          </a>
         </span>
         <span>Indonesia • Singapore • Malaysia</span>
-        <div className="social-icons">
+        <div className='social-icons'>
           <a
-            href={lang === 'en' ? "https://www.facebook.com/avana.asia/" : "https://www.facebook.com/avanamalaysia"}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="AVANA Facebook Page"
+            href={
+              lang === 'en'
+                ? 'https://www.facebook.com/avana.asia/'
+                : 'https://www.facebook.com/avanamalaysia'
+            }
+            target='_blank'
+            rel='noreferrer noopener'
+            aria-label='AVANA Facebook Page'
           >
-            <img src="/assets/images/footer/facebook-f-brands.svg" alt="" />
+            <img src='/assets/images/footer/facebook-f-brands.svg' alt='' />
           </a>
           <a
-            href="https://twitter.com/avanaasia"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="AVANA Twitter"
+            href='https://twitter.com/avanaasia'
+            target='_blank'
+            rel='noreferrer noopener'
+            aria-label='AVANA Twitter'
           >
-            <img src="/assets/images/footer/twitter-brands.svg" alt="" />
+            <img src='/assets/images/footer/twitter-brands.svg' alt='' />
           </a>
           <a
-            href="https://www.instagram.com/avana.asia/"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="AVANA Instagram"
+            href='https://www.instagram.com/avana.asia/'
+            target='_blank'
+            rel='noreferrer noopener'
+            aria-label='AVANA Instagram'
           >
-            <img src="/assets/images/footer/instagram-brands.svg" alt="" />
+            <img src='/assets/images/footer/instagram-brands.svg' alt='' />
           </a>
           <a
-            href="https://www.youtube.com/channel/UCRtW-cCOi4B_-k0wAur2vOg"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="AVANA Youtube"
+            href='https://www.youtube.com/channel/UCRtW-cCOi4B_-k0wAur2vOg'
+            target='_blank'
+            rel='noreferrer noopener'
+            aria-label='AVANA Youtube'
           >
-            <img src="/assets/images/footer/youtube-brands.svg" alt="" />
+            <img src='/assets/images/footer/youtube-brands.svg' alt='' />
           </a>
         </div>
       </div>
@@ -68,13 +86,17 @@ export default function Footer() {
         <h6>Avana</h6>
         <ul>
           <li>
-            <a href="/about-us">{lang === 'en' ? 'About Us' : 'Tentang Kami'}</a>
+            <a href='/about-us'>
+              {lang === 'en' ? 'About Us' : 'Tentang Kami'}
+            </a>
           </li>
           {/* <li>
             <a href="https://academy.avana.id/">{lang === 'en' ? 'Academy' : 'Akademi'}</a>
           </li> */}
           <li>
-            <a href="https://blog.avana.asia/">{lang === 'en' ? 'Blog' : 'Blog'}</a>
+            <a href='https://blog.avana.asia/'>
+              {lang === 'en' ? 'Blog' : 'Blog'}
+            </a>
           </li>
           {/* <li>
             <a href="https://avana.asia/career/">{lang === 'en' ? 'Career' : 'Kerjaya'}</a>
@@ -85,11 +107,11 @@ export default function Footer() {
           <li>
             <a href="https://avana.asia/contact/">{lang === 'en' ? 'Contact Us' : 'Hubungi Kami'}</a>
           </li> */}
-          {/* <li>
-            <a href="https://avana.id/wp-content/uploads/2018/05/AVANA-Privacy-Policy.pdf">
-            {lang === 'en' ? 'Privacy Policy' : 'Dasar Privasi'}
+          <li>
+            <a href='/assets/files/AVANA-Privacy-Policy.pdf'>
+              {lang === 'en' ? 'Privacy Policy' : 'Dasar Privasi'}
             </a>
-          </li> */}
+          </li>
         </ul>
       </div>
       <div>
@@ -109,7 +131,7 @@ export default function Footer() {
             </a>
           </li> */}
           <li>
-            <a href="/webstore">Webstore</a>
+            <a href='/webstore'>Webstore</a>
           </li>
           {/* <li>
             <a>Reporting Tools</a>
@@ -118,13 +140,15 @@ export default function Footer() {
             <a>Facebook Ads</a>
           </li> */}
           <li>
-            <a href="/dashboard">Dashboard</a>
+            <a href='/dashboard'>Dashboard</a>
           </li>
           <li>
-            <a href="/avachat">Live Autoreply</a>
+            <a href='/avachat'>Live Autoreply</a>
           </li>
           <li>
-            <a href="/reseller">{lang === 'en' ? 'Reseller Management' : 'Pengurusan Reseller'}</a>
+            <a href='/reseller'>
+              {lang === 'en' ? 'Reseller Management' : 'Pengurusan Reseller'}
+            </a>
           </li>
         </ul>
       </div>
