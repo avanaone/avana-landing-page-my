@@ -154,7 +154,7 @@ export default function Navbar({ style }) {
               onClick={() => toggleDropdown('produk')}
             >
               <a className='navbar-link' title='Produk'>
-                {cw.navbar ? cw.navbar[0] : 'loading'}
+                {cw.navbar ? cw.navbar[0] : 'Product'}
               </a>
               <div className='navbar-dropdown'>
                 <a className='navbar-item' href='/dashboard' title='Dashboard'>
@@ -176,13 +176,13 @@ export default function Navbar({ style }) {
               </div>
             </div>
             <a className='navbar-item' href='/price' title='Harga'>
-              {cw.navbar ? cw.navbar[1] : 'loading'}
+              {cw.navbar ? cw.navbar[1] : 'Price'}
             </a>
             {/* <a href="/promo" className="navbar-item" title="Promo">
               <span className="dot">{cw.navbar ? cw.navbar[2] : 'loading'}</span>
             </a> */}
             <a href='/event' className='navbar-item' title='Event'>
-              {cw.navbar ? cw.navbar[3] : 'loading'}
+              {cw.navbar ? cw.navbar[3] : 'Events'}
             </a>
             <div
               className={`navbar-item has-dropdown ${
@@ -195,7 +195,7 @@ export default function Navbar({ style }) {
               onClick={() => toggleDropdown('pelajari')}
             >
               <a className='navbar-link' title='Pelajari'>
-                {cw.navbar ? cw.navbar[4] : 'loading'}
+                {cw.navbar ? cw.navbar[4] : 'Learn'}
               </a>
               <div className='navbar-dropdown'>
                 {/* <a
@@ -218,7 +218,7 @@ export default function Navbar({ style }) {
                   title='Tutorial'
                   target='_blank'
                 >
-                  {cw.navbar ? cw.navbar[6] : 'loading'}
+                  {cw.navbar ? cw.navbar[6] : 'Tutorial'}
                 </a>
                 <a
                   href='https://blog.avana.asia/'
@@ -226,15 +226,15 @@ export default function Navbar({ style }) {
                   title='Blog'
                   target='_blank'
                 >
-                  {cw.navbar ? cw.navbar[7] : 'loading'}
+                  {cw.navbar ? cw.navbar[7] : 'Blog'}
                 </a>
                 <a href='/ebook' className='navbar-item' title='eBook'>
-                  {cw.navbar ? cw.navbar[8] : 'loading'}
+                  {cw.navbar ? cw.navbar[8] : 'Ebook'}
                 </a>
               </div>
             </div>
             <a href='/about-us' className='navbar-item' title='Tentang Kami'>
-              {cw.navbar ? cw.navbar[9] : 'loading'}
+              {cw.navbar ? cw.navbar[9] : 'About Us'}
             </a>
             <div className='navbar-item'>
               <LinkButton
@@ -243,7 +243,7 @@ export default function Navbar({ style }) {
                 className='btn-secondary'
                 title='Masuk'
               >
-                {cw.navbar ? cw.navbar[10] : 'loading'}
+                {cw.navbar ? cw.navbar[10] : 'Log In'}
               </LinkButton>
               <LinkButton
                 href='https://store.avana.asia/'
@@ -251,7 +251,7 @@ export default function Navbar({ style }) {
                 className='btn-primary'
                 title='Daftar'
               >
-                {cw.navbar ? cw.navbar[11] : 'loading'}
+                {cw.navbar ? cw.navbar[11] : 'Sign Up'}
               </LinkButton>
             </div>
           </div>
