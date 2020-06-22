@@ -106,30 +106,6 @@ export default function App({ Component, pageProps }) {
           as='script'
           crossOrigin='anonymous'
         />
-        <script
-          async=''
-          charset='utf-8'
-          src='https://cdn.zopim.com/?119GyjFZxz8YGSLmizOWVzpwS1HT3EEk'
-          type='text/javascript'
-        ></script>
-        <script
-          async=''
-          src='https://www.google-analytics.com/analytics.js'
-        ></script>
-        <script
-          type='text/javascript'
-          async=''
-          id='inspsync'
-          src='https://cdn.inspectlet.com/inspectlet.js'
-        ></script>
-        <script
-          src='https://connect.facebook.net/signals/config/1217836451583731?v=2.8.12&amp;r=stable'
-          async=''
-        ></script>
-        <script
-          async=''
-          src='https://connect.facebook.net/en_US/fbevents.js'
-        ></script>
       </Head>
       <Component {...pageProps} />
     </>
