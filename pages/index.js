@@ -483,9 +483,7 @@ const Home = () => {
                 {/* <span className='hl'>{cw.webstore ? cw.webstore[0] : 'loading'}</span> {cw.webstore ? cw.webstore[1] : 'loading'} */}
                 {cw.avachatmy ? cw.avachatmy[0] : 'loading'}
               </h2>
-              <p>
-                {cw.avachatmy ? cw.avachatmy[1] : 'loading'}
-              </p>
+              <p>{cw.avachatmy ? cw.avachatmy[1] : 'loading'}</p>
               {/* <ul>
                 <li
                   className={webstore === 0 ? 'active' : ''}
