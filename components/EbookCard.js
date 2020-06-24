@@ -1,15 +1,15 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { LinkButton } from './Button';
 
 export default function EbookCard({ event }) {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState('en');
 
   useEffect(() => {
-    if(localStorage.getItem("lang")) {
-      setLang(localStorage.getItem("lang"));
+    if (localStorage.getItem('lang')) {
+      setLang(localStorage.getItem('lang'));
     } else {
-      localStorage.setItem("lang", "en");
+      localStorage.setItem('lang', 'en');
     }
   }, []);
 
@@ -28,7 +28,7 @@ export default function EbookCard({ event }) {
             className='name is-size-6'
             title={event.title}
           >{`${event.title.slice(0, 75)}${
-            event.title.length > 75 ? " ..." : ""
+            event.title.length > 75 ? ' ...' : ''
           }`}</h3>
         </div>
         <hr />
@@ -39,7 +39,9 @@ export default function EbookCard({ event }) {
             }`}</span>
           </div> */}
           <Link href={`/assets/files/${event.file}`}>
-            <a className='button ava-button btn-primary'>Download</a>
+            <a className='button ava-button btn-primary' target='_blank'>
+              Download
+            </a>
           </Link>
         </div>
       </div>
