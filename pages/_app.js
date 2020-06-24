@@ -1,8 +1,12 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 
 import './styles.scss';
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    localStorage.setItem('lang', localStorage.lang ? localStorage.lang : 'en');
+  }, []);
   return (
     <>
       <Head>

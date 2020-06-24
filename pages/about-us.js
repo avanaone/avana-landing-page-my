@@ -74,7 +74,7 @@ export default function AboutUs() {
                 title="Daftar"
                 rel="noopener noreferrer"
               >
-                {lang === 'en' ? 'Send us your CV' : 'Kirim CV kamu'}
+                {lang === 'en' ? 'Send us your CV' : 'Email CV Anda'}
               </LinkButton>
             </div>
             <img

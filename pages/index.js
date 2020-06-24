@@ -17,7 +17,7 @@ const getCw = import('../json/copywriting.json');
 const getEvents = import('../json/event.json');
 
 const Home = () => {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState('en');
   const [cw, setCw] = useState([]);
 
   const [state, setState] = useState({
@@ -25,6 +25,7 @@ const Home = () => {
     avachat: 0,
     reseller: 0,
     webstore: 0,
+    avachatmy: 0,
   });
   const [navbarBg, setNavbarBg] = useState('#f4f7f9');
   // const [promos, setPromos] = useState([]);
@@ -35,19 +36,22 @@ const Home = () => {
   const [isModal, setIsModal] = useState(true);
   const toggleModal = () => setIsModal(!isModal);
 
-  const { dashboard, avachat, reseller, webstore } = state;
+  const { dashboard, avachat, reseller, webstore, avachatmy } = state;
 
   useEffect(() => {
-    if(localStorage.getItem("lang")) {
-      console.log(localStorage.getItem("lang"));
-      setLang(localStorage.getItem("lang"));
+    if (localStorage.getItem('lang')) {
+      console.log(localStorage.getItem('lang'));
+      setLang(localStorage.getItem('lang'));
       getCw.then((res) => {
         console.log(lang);
-        console.log(res.default[localStorage.getItem("lang")]); 
-        setCw(res.default[localStorage.getItem("lang")])
+        console.log(res.default[localStorage.getItem('lang')]);
+        setCw(res.default[localStorage.getItem('lang')]);
       });
     } else {
-      localStorage.setItem("lang", "en");
+      localStorage.setItem('lang', 'en');
+      getCw.then((res) => {
+        setCw(res.default[localStorage.getItem('lang')]);
+      });
     }
     window.addEventListener('scroll', handleNavbar);
 
@@ -121,17 +125,17 @@ const Home = () => {
         </Head>
         <Navbar style={{ backgroundColor: navbarBg }} />
         <header>
-          <h1 className='is-size-3'>
-            {cw.h1}
-          </h1>
+          <h1 className='is-size-3'>{cw.h1}</h1>
           <p>
-            {cw.features ? cw.features.map((feature, i) => {
-              if(cw.features.length === i + 1) {
-                return feature
-              } else {
-                return feature + " • "
-              }
-            }) : 'loading...'}
+            {cw.features
+              ? cw.features.map((feature, i) => {
+                  if (cw.features.length === i + 1) {
+                    return feature;
+                  } else {
+                    return feature + ' • ';
+                  }
+                })
+              : 'loading...'}
           </p>
           <LinkButton
             href='https://store.avana.asia/'
@@ -252,7 +256,7 @@ const Home = () => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='http://nanya.online/tanya-ava-3'
+                  href='https://wa.me/60149774275'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -327,7 +331,7 @@ const Home = () => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='http://nanya.online/tanya-ava-3'
+                  href='https://wa.me/60149774275'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -450,13 +454,11 @@ const Home = () => {
                 {/* {cw.fbshop ? cw.fbshop[0] : 'loading'} <span className='hl'>{cw.fbshop ? cw.fbshop[1] : 'loading'}</span> {cw.fbshop ? cw.fbshop[2] : 'loading'} */}
                 {cw.fbshop ? cw.fbshop[0] : 'loading'}
               </h2>
-              <p>
-                {cw.fbshop ? cw.fbshop[1] : 'loading'}
-              </p>
+              <p>{cw.fbshop ? cw.fbshop[1] : 'loading'}</p>
               <ul />
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='http://nanya.online/tanya-ava-3'
+                  href='https://wa.me/60149774275'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -475,10 +477,101 @@ const Home = () => {
               />
             </div>
           </section>
+          <section className='feature'>
+            <div className='description'>
+              <h2 className='is-size-4'>
+                {/* <span className='hl'>{cw.webstore ? cw.webstore[0] : 'loading'}</span> {cw.webstore ? cw.webstore[1] : 'loading'} */}
+                {cw.avachatmy ? cw.avachatmy[0] : 'loading'}
+              </h2>
+              <p>{cw.avachatmy ? cw.avachatmy[1] : 'loading'}</p>
+              {/* <ul>
+                <li
+                  className={webstore === 0 ? 'active' : ''}
+                  onClick={() => handleSlider('webstore', 0)}
+                >
+                  {cw.webstore ? cw.webstore[1] : 'loading'}
+                </li>
+                <li
+                  className={webstore === 1 ? 'active' : ''}
+                  onClick={() => handleSlider('webstore', 1)}
+                >
+                  {cw.webstore ? cw.webstore[2] : 'loading'}
+                </li>
+                <li
+                  className={webstore === 2 ? 'active' : ''}
+                  onClick={() => handleSlider('webstore', 2)}
+                >
+                  {cw.webstore ? cw.webstore[3] : 'loading'}
+                </li>
+              </ul> */}
+              <div className='ava-btn-group'>
+                <LinkButton
+                  href='https://wa.me/60149774275'
+                  target='__blank'
+                  className='btn-primary'
+                >
+                  {cw.button ? cw.button[0] : 'loading'}
+                </LinkButton>
+                <LinkButton href='/' className='btn-secondary'>
+                  {cw.button ? cw.button[1] : 'loading'}
+                </LinkButton>
+              </div>
+            </div>
+            <div className='slider-container'>
+              <Slider
+                id='avachatmy'
+                slides={[
+                  <img
+                    srcSet={
+                      require('public/assets/images/avachatmy/1.png?resize?webp')
+                        .srcSet
+                    }
+                    alt=''
+                  />,
+                  <img
+                    srcSet={
+                      require('public/assets/images/avachatmy/2.png?resize?webp')
+                        .srcSet
+                    }
+                    alt=''
+                  />,
+                  <img
+                    srcSet={
+                      require('public/assets/images/avachatmy/3.png?resize?webp')
+                        .srcSet
+                    }
+                    alt=''
+                  />,
+                  <img
+                    srcSet={
+                      require('public/assets/images/avachatmy/4.png?resize?webp')
+                        .srcSet
+                    }
+                    alt=''
+                  />,
+                  <img
+                    srcSet={
+                      require('public/assets/images/avachatmy/5.png?resize?webp')
+                        .srcSet
+                    }
+                    alt=''
+                  />,
+                  <img
+                    srcSet={
+                      require('public/assets/images/avachatmy/6.png?resize?webp')
+                        .srcSet
+                    }
+                    alt=''
+                  />,
+                ]}
+                currentSlide={avachatmy}
+                hasDots
+                callback={callbackSlider}
+              />
+            </div>
+          </section>
           <section id='support'>
-            <h2 className='is-size-4'>
-              {cw.support ? cw.support : 'loading'}
-            </h2>
+            <h2 className='is-size-4'>{cw.support ? cw.support : 'loading'}</h2>
             <div>
               <img
                 srcSet={
@@ -504,7 +597,9 @@ const Home = () => {
             <SliderTestimonial testimonials={getTestimonials} />
           </section>
           <section className='trial'>
-            <h2 className='is-size-4'>{cw.footerCta ? cw.footerCta[0] : 'loading'}</h2>
+            <h2 className='is-size-4'>
+              {cw.footerCta ? cw.footerCta[0] : 'loading'}
+            </h2>
             <LinkButton
               href='https://store.avana.asia/'
               target='__blank'
@@ -530,7 +625,11 @@ const Home = () => {
                 slides={events.map((event) => (
                   <>
                     <Link href='/event/[id]' as={`/event/${event.id}/`}>
-                      <img srcSet={lang === 'en' ? event.image.en : event.image.bm} alt='' style={{ cursor: `pointer`}}/>
+                      <img
+                        srcSet={lang === 'en' ? event.image.en : event.image.bm}
+                        alt=''
+                        style={{ cursor: `pointer` }}
+                      />
                     </Link>
                     <div
                       style={{
@@ -540,7 +639,9 @@ const Home = () => {
                         minWidth: `100%`,
                       }}
                     >
-                      <h3 className='name is-size-6'>{lang === 'en' ? event.title.en : event.title.bm}</h3>
+                      <h3 className='name is-size-6'>
+                        {lang === 'en' ? event.title.en : event.title.bm}
+                      </h3>
                     </div>
                   </>
                 ))}
