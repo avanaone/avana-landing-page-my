@@ -512,9 +512,9 @@ const Home = () => {
                 >
                   {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton>
-                <LinkButton href='/' className='btn-secondary'>
+                {/* <LinkButton href='/' className='btn-secondary'>
                   {cw.button ? cw.button[1] : 'loading'}
-                </LinkButton>
+                </LinkButton> */}
               </div>
             </div>
             <div className='slider-container'>
