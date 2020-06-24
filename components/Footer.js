@@ -152,6 +152,10 @@ export default function Footer() {
           </li>
         </ul>
       </div>
+      <div className="meta" style={{minWidth: `150px`, width: `fit-content`, maxWidth: `250px` }}>
+        <h6 style={{marginBottom: `0`}}>The Future Commerce Sdn Bhd (1182523-T)</h6>
+        <p>Address: B-3-3A Pacific Place, 4, Jalan PJU 1a/4, Ara Damansara, 47301 Petaling Jaya, Selangor</p>
+      </div>
     </footer>
   );
 }
