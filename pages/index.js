@@ -33,7 +33,7 @@ const Home = () => {
 
   // getPromos.then((res) => setPromos(res.default));
   getEvents.then((res) => setEvents(res.default));
-  const [isModal, setIsModal] = useState(true);
+  const [isModal, setIsModal] = useState(false);
   const toggleModal = () => setIsModal(!isModal);
 
   const { dashboard, avachat, reseller, webstore, avachatmy } = state;
@@ -53,6 +53,10 @@ const Home = () => {
         setCw(res.default[localStorage.getItem('lang')]);
       });
     }
+
+    setTimeout(() => {
+      toggleModal();
+    }, 5000);
     window.addEventListener('scroll', handleNavbar);
 
     return () => {
@@ -615,7 +619,7 @@ const Home = () => {
               style={{ maxWidth: `500px` }}
             >
               <button
-                className='modal-close is-large'
+                className='modal-close is-large primary-close'
                 onClick={toggleModal}
                 aria-label='close'
               >
