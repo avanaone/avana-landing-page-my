@@ -21,7 +21,7 @@ const nextConfig = {
       '/dashboard': { page: '/dashboard' },
       '/avachat': { page: '/avachat' },
       '/webstore': { page: '/webstore' },
-      '/reseller': { page: '/reseller' },
+      // '/reseller': { page: '/reseller' },
     };
 
     const getPromos = await require('./json/promo.json');

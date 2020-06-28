@@ -341,12 +341,21 @@ const Home = () => {
                 >
                   {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton>
-                <LinkButton href='/reseller' className='btn-secondary'>
+                {/* <LinkButton href='/reseller' className='btn-secondary'>
                   {cw.button ? cw.button[1] : 'loading'}
-                </LinkButton>
+                </LinkButton> */}
               </div>
             </div>
-            <div className='slider-container'>
+            <div className='feature-img'>
+              <img
+                srcSet={
+                  require('public/assets/images/reseller/Affiliate-Dropship.png?resize?webp')
+                    .srcSet
+                }
+                alt=''
+              />
+            </div>
+            {/* <div className='slider-container'>
               <Slider
                 id='reseller'
                 slides={[
@@ -376,7 +385,7 @@ const Home = () => {
                 hasDots
                 callback={callbackSlider}
               />
-            </div>
+            </div> */}
           </section>
           <section className='feature'>
             <div className='description'>

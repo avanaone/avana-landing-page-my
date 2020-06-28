@@ -167,9 +167,9 @@ export default function Navbar({ style }) {
                 >
                   {lang === 'en' ? 'Live Autoreply' : 'Live Autoreply'}
                 </a>
-                <a className='navbar-item' href='/reseller' title='Reseller'>
+                {/* <a className='navbar-item' href='/reseller' title='Reseller'>
                   {lang === 'en' ? 'Reseller' : 'Sales Agent'}
-                </a>
+                </a> */}
                 <a className='navbar-item' href='/webstore' title='Webstore'>
                   {lang === 'en' ? 'Webstore' : 'Kedai Online'}
                 </a>
