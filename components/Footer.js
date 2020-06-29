@@ -108,7 +108,7 @@ export default function Footer() {
             <a href="https://avana.asia/contact/">{lang === 'en' ? 'Contact Us' : 'Hubungi Kami'}</a>
           </li> */}
           <li>
-            <a href='/assets/files/AVANA-Privacy-Policy.pdf'>
+            <a href='/assets/files/AVANA-Privacy-Policy.pdf' target='_blank'>
               {lang === 'en' ? 'Privacy Policy' : 'Dasar Privasi'}
             </a>
           </li>
