@@ -17,6 +17,15 @@ class MyDocument extends Document {
             type='text/javascript'
           ></script>
           <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              $zopim(function() {
+                $zopim.livechat.setLanguage('ms');
+                });
+              `,
+            }}
+          />
+          <script
             async=''
             src='https://www.google-analytics.com/analytics.js'
           ></script>
