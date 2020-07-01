@@ -21,6 +21,7 @@ const nextConfig = {
       '/ebook': { page: '/ebook' },
       '/dashboard': { page: '/dashboard' },
       '/avachat': { page: '/avachat' },
+      '/liveautoreply': { page: '/liveautoreply' },
       '/webstore': { page: '/webstore' },
       // '/reseller': { page: '/reseller' },
     };
