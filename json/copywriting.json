@@ -53,8 +53,12 @@
       "Manage all your messages efficiently on one dashboard",
       "Link AVANA to your WhatsApp, FB Messenger, Telegram, and LINE account. Replying messages has never been so convenient!"
     ],
+    "marketing": [
+      "Promote your products using built-in marketing tools",
+      "Use our Easy-to-use Facebook Marketing and Google Shopping features to promote your products to more online buyers"
+    ],
     "support": "We partner with these amazing companies",
-    "testimonial": "What our sellers said after joining AVANA?",
+    "testimonial": "We have empowered over 70,000 businesses to sell online",
     "footerCta": ["Try AVANA 14 days for FREE!", "Sign Up For Free"],
     "error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
     "error-without-status": "Auf dem Server ist ein Fehler aufgetreten"
@@ -112,6 +116,10 @@
     "avachatmy": [
       "Urus semua mesej anda dengan mudah dalam satu dashboard sahaja",
       "Sambungkan AVANA ke akaun WhatsApp, FB Messenger, Telegram, dan LINE anda. Berbanding sebelum ini, kini proses membalas mesej menjadi lebih mudah dan cepat !"
+    ],
+    "marketing": [
+      "Gunakan alat pemasaran 'built-in' untuk tujuan promosi produk anda",
+      "Gunakan 'Facebook Marketing' dan 'Google Shopping' yang mudah digunakan untuk mempromosikan produk anda kepada lebih ramai pelanggan secara online"
     ],
     "support": "Antara kerjasama AVANA bersama rakan niaga",
     "testimonial": "Apa kata mereka yang sudah menggunakan AVANA?",

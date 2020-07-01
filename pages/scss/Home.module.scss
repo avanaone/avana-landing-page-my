@@ -11,16 +11,21 @@
     flex-direction: column;
     align-items: center;
     background-color: #f4f7f9;
-    background-image: url('/assets/images/hero-background.png');
+    background-image: url('/assets/images/0-Header.png');
     background-size: cover;
     padding: 1.5em 0 2.5em;
     margin-bottom: 2.5em;
+    margin-top: -71.19px;
+    padding-top: calc(1.5em + 71.19px);
+    color: white;
+    height: calc(58.79vw);
+    justify-content: center;
 
     h1 {
       width: 25em;
       min-width: 300px;
       max-width: 80vw;
-      font-size: 1.85rem !important;
+      font-size: 3rem !important;
       margin-bottom: 0.25em;
       z-index: 1;
     }
@@ -29,6 +34,7 @@
       min-width: 250px;
       margin: 0 1em;
       z-index: 1;
+      font-size: 1.5rem;
     }
 
     .ava-button {
@@ -230,9 +236,14 @@
           margin: 1.5em 0;
 
           img {
-            width: 30vw;
+            // width: 30vw;
+            width: 50vw;
             min-width: 250px;
-            max-width: 400px;
+            max-width: 800px;
+
+            @media (max-width: 768px) {
+              width: calc(100vw - 40px);
+            }
           }
 
           .border {

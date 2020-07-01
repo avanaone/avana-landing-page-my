@@ -17,6 +17,7 @@ const nextConfig = {
       // '/event/:id': { page: '/event/[id]' },
       // '/promo': { page: '/promo' },
       // '/promo/:code': { page: '/promo/[code]' },
+      '/career': { page: '/career' },
       '/ebook': { page: '/ebook' },
       '/dashboard': { page: '/dashboard' },
       '/avachat': { page: '/avachat' },

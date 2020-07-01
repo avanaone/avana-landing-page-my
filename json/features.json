@@ -5,25 +5,29 @@
         "title": "Product Management",
         "description": "With AVANA, the product catalog on your website will automatically be connected to your social media channels like Facebook and Instagram. You won’t need to upload your product images one at a time.",
         "image": "dashboard/manajemen-produk.png",
-        "slug": "https://store.avana.asia/"
+        "slug": "https://store.avana.asia/",
+        "anchor": "Product-Management"
       },
       {
         "title": "Automated Reply to Messages & Comments",
         "description": "Automatically reply message & comment functionality to make it easier for you to carry on business activities. You can work more efficiently with this automated system.",
         "image": "dashboard/auto-reply.png",
-        "slug": "https://store.avana.asia/"
+        "slug": "https://store.avana.asia/",
+        "anchor": "Auto-Reply"
       },
       {
         "title": "Spread Messages in Bulk",
         "description": "To maximize promotion, AVANA has the feature to spread messages en masse.",
         "image": "dashboard/messenger-blast.png",
-        "slug": "https://store.avana.asia/"
+        "slug": "https://store.avana.asia/",
+        "anchor": "Bulk-Messages"
       },
       {
         "title": "Order Management",
         "description": "In AVANA dashboard, you can monitor all the orders that you receive from various social media channels.",
         "image": "dashboard/manajemen-order.png",
-        "slug": "https://store.avana.asia/"
+        "slug": "https://store.avana.asia/",
+        "anchor": "Order-Management"
       }
     ],
     "bm": [
@@ -53,24 +57,24 @@
       }
     ]
   },
-  "avachat": {
+  "liveautoreply": {
     "en": [
       {
         "title": "Set your own keyword(s)",
         "description": "Put the keyword(s) you want your customers to comment on to be replied automatically.",
-        "image": "avachat/multichannel-chat.png",
+        "image": "liveautoreply/multichannel-chat.png",
         "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
       },
       {
         "title": "Automated Comments Reply",
         "description": "Put in the reply you want your customers to receive once they use the keywords you have set.",
-        "image": "avachat/send-product-info.png",
+        "image": "liveautoreply/send-product-info.png",
         "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
       },
       {
         "title": "Automated Personal Message Reply",
         "description": "Put the Messenger's message you want your customers to receive after they used the keywords you have set.",
-        "image": "avachat/quick-reply.png",
+        "image": "liveautoreply/quick-reply.png",
         "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
       }
     ],
@@ -78,25 +82,25 @@
       {
         "title": "Set Keyword anda",
         "description": "Masukkan keyword yang anda mahukan pelanggan anda komen",
-        "image": "avachat/multichannel-chat.png",
+        "image": "liveautoreply/multichannel-chat.png",
         "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
       },
       {
         "title": "Setkan Keyword anda",
         "description": "Masukkan keyword yang anda mahukan pelanggan anda komen untuk balas komen secara automatik.",
-        "image": "avachat/send-product-info.png",
+        "image": "liveautoreply/send-product-info.png",
         "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
       },
       {
         "title": "Balas Komen Secara Automatik",
         "description": "Bila pelanggan anda hantar komen menggunakan ‘keyword’ yang telah disetkan, komen mereka akan dibalas serter-merta secara automatik.",
-        "image": "avachat/quick-reply.png",
+        "image": "liveautoreply/quick-reply.png",
         "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
       },
       {
         "title": "Hantar Mesej Secara Automatik",
         "description": "Setelah komen pelanggan anda dijawab akan dibalas serter-merta secara automatik,  pelanggan akan menerima mesej secara automatik untuk terus membeli produk anda.",
-        "image": "avachat/send-shipping-info.png",
+        "image": "liveautoreply/send-shipping-info.png",
         "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
       }
     ]
@@ -218,6 +222,84 @@
         "description": "AVANA mempunyai sistem kod kupon yang memudahkan anda membuat kod kupon untuk pelanggan baru & pelanggan setia anda.",
         "image": "webstore/coupon-system.png",
         "slug": "https://store.avana.asia/"
+      }
+    ]
+  },
+  "avachat": {
+    "en": [
+      {
+        "title": "Integration with various messaging platforms",
+        "description": "You can manage all messages from Facebook, WhatsApp, Instagram, Line and Telegram in one dashboard",
+        "image": "avachat/multichannel-chat.png",
+        "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+      },
+      {
+        "title": "Product info is ready to share",
+        "description": "Provide product catalogs to customers easily and quickly",
+        "image": "avachat/send-product-info.png",
+        "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+      },
+      {
+        "title": "Reply customers instantly",
+        "description": "Send messages using templates with just 1 click through the AVAChat dashboard",
+        "image": "avachat/quick-reply.png",
+        "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+      },
+      {
+        "title": "Share Shipping Status",
+        "description": "With AVAChat, you can provide customer with the progress of shipping in real time.",
+        "image": "avachat/send-shipping-info.png",
+        "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+      },
+      {
+        "title": "Send invoice easily",
+        "description": "Invoicing to customer is easy, just within a few clicks.",
+        "image": "avachat/send-invoice.png",
+        "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+      },
+      {
+        "title": "Place order during conversation",
+        "description": "No need to switch platforms to place an order. You can help customer place orders right away during the conversation!",
+        "image": "avachat/create-order.png",
+        "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+      }
+    ],
+    "bm": [
+      {
+        "title": "Integrasi dengan pelbagai platform bagi tujuan komunikasi mesej",
+        "description": "Anda boleh uruskan semua mesej anda di Facebook, WhatsApp, Instagram, Line dan Telegram dalam satu dashboard",
+        "image": "avachat/multichannel-chat.png",
+        "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+      },
+      {
+        "title": "Info produk sudah sedia untuk dikongsi",
+        "description": "Katalog produk boleh dikongsi kepada pelanggan dengan mudah dan cepat",
+        "image": "avachat/send-product-info.png",
+        "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+      },
+      {
+        "title": "Balas mesej pelanggan dengan cepat",
+        "description": "Hantar mesej menggunakan template hanya dengan 1 klik melalui dashboard AVAChat",
+        "image": "avachat/quick-reply.png",
+        "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+      },
+      {
+        "title": "Kongsi Status Penghantaran",
+        "description": "Dengan AVAChat, anda boleh menghantar info penghantaran barang berdasarkan status terkini",
+        "image": "avachat/send-shipping-info.png",
+        "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+      },
+      {
+        "title": "Hantar invois dengan mudah",
+        "description": "Dengan hanya beberapa klik sahaja, anda boleh menghantar invois kepada pelanggan dengan mudah dan cepat.",
+        "image": "avachat/send-invoice.png",
+        "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
+      },
+      {
+        "title": "Tempah pesanan ketika sedang dalam perbualan",
+        "description": "Tidak perlu menukar platform untuk membuat pesanan. Anda boleh membuat pesanan bagi pihak pelanggan semasa bersembang dengan pelanggan tersebut!",
+        "image": "avachat/create-order.png",
+        "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
       }
     ]
   }
