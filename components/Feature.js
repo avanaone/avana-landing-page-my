@@ -110,7 +110,13 @@ export default function Feature(props) {
             {/* { lang === 'en' ? 'Try AVANA 14 days for FREE!' : 'Cuba AVANA selama 14 hari secara PERCUMA!'} */}
           </h2>
           <LinkButton
-            href={CS ? link : 'https://store.avana.asia/'}
+            href={
+              CS
+                ? lang === 'en' && title === 'AVAChat'
+                  ? link[0]
+                  : link[1]
+                : 'https://store.avana.asia/'
+            }
             target='__blank'
             className='btn-primary'
           >

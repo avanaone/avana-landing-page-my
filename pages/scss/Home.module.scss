@@ -12,6 +12,9 @@
         color: white;
       }
     }
+    .navbar-burger {
+      color: white;
+    }
     .navbar-link:not(.is-arrowless)::after {
       border-color: white !important;
     }
@@ -37,6 +40,11 @@
     height: calc(58.79vw);
     justify-content: center;
 
+    @media (max-width: 768px) {
+      background-image: url('/assets/images/0-Header-Mobile.png');
+      height: 112.8vw;
+    }
+
     h1 {
       width: 25em;
       min-width: 300px;
@@ -44,6 +52,10 @@
       font-size: 3rem !important;
       margin-bottom: 0.25em;
       z-index: 1;
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem !important;
+      }
     }
 
     p {
@@ -51,6 +63,10 @@
       margin: 0 1em;
       z-index: 1;
       font-size: 1.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 1rem !important;
+      }
     }
 
     .ava-button {
@@ -352,6 +368,22 @@
             &.is-active {
               opacity: 1;
             }
+          }
+        }
+      }
+
+      &#milestone {
+        .milestone-group {
+          display: flex;
+          width: 800px;
+          justify-content: space-around;
+
+          @media (max-width: 521px) {
+            width: 100%;
+          }
+
+          img {
+            height: 80px;
           }
         }
       }

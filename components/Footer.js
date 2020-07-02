@@ -42,7 +42,7 @@ export default function Footer() {
             +60 14 977 4275
           </a>
         </span>
-        <span>Indonesia • Singapore • Malaysia</span>
+        <span>Malaysia • Indonesia • Singapore</span>
         <div className='social-icons'>
           <a
             href={
@@ -88,6 +88,11 @@ export default function Footer() {
           <li>
             <a href='/about-us'>
               {lang === 'en' ? 'About Us' : 'Tentang Kami'}
+            </a>
+          </li>
+          <li>
+            <a href='/about-us#Career'>
+              {lang === 'en' ? 'Career' : 'Kerjaya'}
             </a>
           </li>
           {/* <li>
@@ -147,10 +152,10 @@ export default function Footer() {
             <a href='/dashboard#Product-Management'>Inventory Management</a>
           </li>
           <li>
-            <a href='/'>Shipping & Logistics</a>
+            <a href='/dashboard'>Shipping & Logistics</a>
           </li>
           <li>
-            <a href='/'>Online Payment</a>
+            <a href='/dashboard'>Online Payment</a>
           </li>
           <li>
             <a href='/dashboard#Auto-Reply'>Comment & Message Auto Reply </a>
@@ -175,6 +180,9 @@ export default function Footer() {
           </li>
           <li>
             <a href='/avachat'>AVAChat</a>
+          </li>
+          <li>
+            <a href='/#Whatsapp'>WhatsApp Commerce</a>
           </li>
         </ul>
       </div>

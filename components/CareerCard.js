@@ -35,8 +35,12 @@ export default function CareerCard({ event }) {
         <div>
           <p>{`${
             lang === 'en'
-              ? event.title.en.slice(0, 75)
-              : event.title.bm.slice(0, 75)
+              ? 'We‘re looking for our ' +
+                event.title.en.slice(0, 75) +
+                ' to join our team'
+              : 'We‘re looking for our ' +
+                event.title.bm.slice(0, 75) +
+                ' to join our team'
           }${
             lang === 'en' && event.title.en.length > 75
               ? ' ...'

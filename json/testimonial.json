@@ -7,8 +7,8 @@
     "name": "Funthera",
     "subtext": "Afiq Ikhwan",
     "image": {
-      "en": "ZFSCARF-ENG.png",
-      "bm": "ZFSCARF-BM.png"
+      "en": "ZHSCARF-ENG.png",
+      "bm": "ZHSCARF-BM.png"
     }
   },
   {
@@ -19,8 +19,8 @@
     "name": "Key It Simple",
     "subtext": "Arnold Neo",
     "image": {
-      "en": "NFAS-ENG.png",
-      "bm": "NFAS-BM.png"
+      "en": "NAS-ENG.png",
+      "bm": "NAS-BM.png"
     }
   },
   {
@@ -31,8 +31,8 @@
     "name": "Nana Mahazan",
     "subtext": "Founder of Nana Mahazan Beauty",
     "image": {
-      "en": "Nana-ENG.png",
-      "bm": "Nana-BM.png"
+      "en": "nana-ENG.png",
+      "bm": "nana-BM.png"
     }
   }
 ]
