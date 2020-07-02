@@ -25,7 +25,7 @@ const Slider = (props) => {
 
   const [state, setState] = useState({
     activeSlide: currentSlide,
-    translate: 0,
+    translate: isCustom === 'milestone' ? -25 : 0,
     isContrast: true,
     hasOverlay: true,
   });
@@ -85,7 +85,7 @@ const Slider = (props) => {
   const jumpSlide = (idx) => {
     setState({
       ...state,
-      translate: idx * 80,
+      translate: isCustom === 'milestone' ? idx * 50 - 25 : idx * 100,
       activeSlide: idx,
     });
 
@@ -103,10 +103,16 @@ const Slider = (props) => {
 
     setState({
       ...state,
+      // translate:
+      //   translate >=
+      //   (slides.length - 100 / width.match(/\d+/)[0]) *
+      //     (isCustom === 'milestone' ? 50 : 100)
+      //     ? 0
+      //     : translate + (isCustom === 'milestone' ? 50 : 100),
       translate:
-        translate >= (slides.length - 100 / width.match(/\d+/)[0]) * 80
-          ? 0
-          : translate + 80,
+        slides.length === _activeSlide + 1
+          ? -25
+          : translate + (isCustom === 'milestone' ? 50 : 100),
       activeSlide: _activeSlide === slides.length - 1 ? 0 : _activeSlide + 1,
     });
 
@@ -121,10 +127,15 @@ const Slider = (props) => {
   const prevSlide = () =>
     setState({
       ...state,
+      // translate:
+      //   translate <= 0
+      //     ? Math.ceil(slides.length - 100 / width.match(/\d+/)[0]) *
+      //       (isCustom === 'milestone' ? 50 : 100)
+      //     : translate - (isCustom === 'milestone' ? 50 : 100),
       translate:
-        translate <= 0
-          ? Math.ceil(slides.length - 100 / width.match(/\d+/)[0]) * 80
-          : translate - 80,
+        activeSlide === 0
+          ? -25 + (slides.length - 1) * (isCustom === 'milestone' ? 50 : 100)
+          : translate - (isCustom === 'milestone' ? 50 : 100),
       activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1,
     });
 

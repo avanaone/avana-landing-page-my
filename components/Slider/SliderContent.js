@@ -1,11 +1,15 @@
-import React from "react";
+import React from 'react';
 
 const SliderContent = ({ children, width, translate, transition }) => (
   <div
-    className="slider-content"
+    className='slider-content'
     style={{
       width: width,
-      transform: `translateX(-${translate}%)`,
+      transform: `${
+        translate > 0
+          ? `translateX(-${translate}%)`
+          : `translateX(${Math.abs(translate)}%)`
+      }`,
       transition: `transform ${transition}s ease-out`,
     }}
   >

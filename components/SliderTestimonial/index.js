@@ -41,7 +41,6 @@ export default ({ testimonials, sliderName }) => {
         ))}
         currentSlide={currentSlide}
         callback={callbackSlider}
-        hasDots
         hasArrow
         isCustom={sliderName}
       />
