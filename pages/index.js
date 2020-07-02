@@ -514,12 +514,13 @@ const Home = () => {
             </div>
           </section>
           <section id='testimonial'>
-            <h2 className='is-size-4' style={{ marginBottom: `2rem` }}>
+            <h2 className='is-size-4'>
               {cw.testimonial ? cw.testimonial : 'loading'}
             </h2>
+            <p style={{ color: `#9a9a9a` }}>Be inspired and inspire others</p>
             <SliderTestimonial testimonials={getTestimonials} />
-            <h2>As featured on:</h2>
-            <div style={{ display: `flex` }}>
+            <h2 style={{ marginBottom: `1rem` }}>As featured on:</h2>
+            <div className='featuredon'>
               <img
                 srcSet={
                   require('../public/assets/images/featuredon/TheStar.png?resize?webp')
@@ -527,7 +528,6 @@ const Home = () => {
                 }
                 className='active'
                 alt=''
-                style={{ width: `60px` }}
               />
               <img
                 srcSet={
@@ -536,7 +536,6 @@ const Home = () => {
                 }
                 className='active'
                 alt=''
-                style={{ width: `60px` }}
               />
             </div>
           </section>

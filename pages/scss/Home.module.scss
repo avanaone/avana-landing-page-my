@@ -271,8 +271,21 @@
 
       &#testimonial {
         h2 {
-          width: 50vw;
+          width: 40vw;
           min-width: 275px;
+        }
+
+        p {
+          width: 40vw;
+        }
+
+        .featuredon {
+          display: flex;
+
+          img {
+            height: 30px;
+            margin: 0 30px;
+          }
         }
 
         .slider {

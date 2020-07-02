@@ -18,7 +18,7 @@ export default ({ testimonials }) => {
   }, []);
 
   return (
-    <>
+    <div style={{ margin: `2rem 0` }}>
       <Slider
         slides={testimonials.map((testimonial, idx) => (
           <>
@@ -58,6 +58,6 @@ export default ({ testimonials }) => {
           />
         ))}
       </div> */}
-    </>
+    </div>
   );
 };
