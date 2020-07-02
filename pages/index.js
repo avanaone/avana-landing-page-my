@@ -498,10 +498,10 @@ const Home = () => {
             <div>
               <img
                 srcSet={
-                  require('../public/assets/images/Partner-logos.png?resize&size=800?webp')
+                  require('../public/assets/images/Partner-logos.png?resize?webp')
                     .srcSet
                 }
-                alt='Logistics & e-payment'
+                alt='Partner Logos'
               />
               {/* <div className='border' />
               <img
