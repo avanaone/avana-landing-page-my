@@ -496,13 +496,13 @@ const Home = () => {
           <section id='support'>
             <h2 className='is-size-4'>{cw.support ? cw.support : 'loading'}</h2>
             <div>
-              <img
+              {/* <img
                 srcSet={
                   require('../public/assets/images/Partner-logos.png?resize?webp')
                     .srcSet
                 }
                 alt='Partner Logos'
-              />
+              /> */}
               {/* <div className='border' />
               <img
                 srcSet={
