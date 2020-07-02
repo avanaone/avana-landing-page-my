@@ -7,6 +7,10 @@
 
     .navbar-end > .navbar-item {
       color: white;
+
+      .navbar-link {
+        color: white;
+      }
     }
     .navbar-link:not(.is-arrowless)::after {
       border-color: white !important;
