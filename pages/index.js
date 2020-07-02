@@ -54,9 +54,9 @@ const Home = () => {
       });
     }
 
-    setTimeout(() => {
-      toggleModal();
-    }, 5000);
+    // setTimeout(() => {
+    //   toggleModal();
+    // }, 5000);
     window.addEventListener('scroll', handleNavbar);
 
     return () => {
@@ -621,7 +621,7 @@ const Home = () => {
               {cw.footerCta ? cw.footerCta[1] : 'loading'}
             </LinkButton>
           </section>
-          <div className={`modal ${isModal ? 'is-active' : ''}`}>
+          {/* <div className={`modal ${isModal ? 'is-active' : ''}`}>
             <div className='modal-background' onClick={toggleModal} />
             <div
               className='modal-content eventBanner'
@@ -660,7 +660,7 @@ const Home = () => {
                 ))}
               />
             </div>
-          </div>
+          </div> */}
         </main>
         <Footer />
       </div>

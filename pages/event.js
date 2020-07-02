@@ -11,13 +11,13 @@ import ContainerAnalytic from '../components/AnalyticContainer';
 
 import styles from './scss/Event.module.scss';
 
-const getEvents = import('../json/event.json');
+// const getEvents = import('../json/event.json');
 
 const Event = () => {
-  const [events, setEvents] = useState([]);
+  // const [events, setEvents] = useState([]);
 
-  getEvents.then((res) => setEvents(res.default));
-  console.log(events);
+  // getEvents.then((res) => setEvents(res.default));
+  // console.log(events);
   return (
     <ContainerAnalytic>
       <div className={styles.Event}>
@@ -38,11 +38,14 @@ const Event = () => {
           <section className="section-title">
             <h3>Past</h3>
           </section> */}
-          <section>
+          {/* <section>
             {events ? events.filter((x) => x.id < 11 && !x.isTraining).map((event) => (
               <EventCard key={event.id} event={event} />
             )): ''}
-          </section>
+          </section> */}
+          <div style={{ padding: `6rem 0`, textAlign: `center` }}>
+            <h3>Coming Soon</h3>
+          </div>
           {/* <section className="section-title">
             <h3>Training</h3>
           </section>
