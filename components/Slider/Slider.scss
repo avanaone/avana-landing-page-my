@@ -103,10 +103,28 @@
         margin: auto;
         width: 50%;
         max-width: 50%;
+
+        @media (max-width: 521px) {
+          padding: 0 !important;
+        }
       }
     }
 
     &.testimonial {
+      transform: scale(0.75);
+      transition: all 0.3s;
+
+      &.active {
+        transform: scale(1);
+      }
+
+      img {
+        // width: calc(700% / 12);
+
+        @media (max-width: 521px) {
+          padding: 0 !important;
+        }
+      }
     }
 
     img {
@@ -114,5 +132,10 @@
         padding: 1rem 2rem !important;
       }
     }
+  }
+
+  &.testimonial {
+    // max-width: calc(700% / 12);
+    max-width: 50%;
   }
 }

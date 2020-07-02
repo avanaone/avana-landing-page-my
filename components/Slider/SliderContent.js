@@ -1,8 +1,14 @@
 import React from 'react';
 
-const SliderContent = ({ children, width, translate, transition }) => (
+const SliderContent = ({
+  children,
+  width,
+  translate,
+  transition,
+  isCustom,
+}) => (
   <div
-    className='slider-content'
+    className={`slider-content ${isCustom ? isCustom : ''}`}
     style={{
       width: width,
       transform: `${

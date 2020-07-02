@@ -20,7 +20,7 @@ export default ({ testimonials, sliderName }) => {
   }, []);
 
   return (
-    <div className='slider-main'>
+    <div className={`slider-main ${sliderName}`}>
       <Slider
         slides={testimonials.map((testimonial, idx) => (
           <>

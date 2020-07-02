@@ -70,7 +70,7 @@ export default function Navbar({ style }) {
   return (
     <>
       <nav
-        className='navbar is-white is-fixed-top'
+        className='navbar is-transparent'
         role='navigation'
         aria-label='main navigation'
         style={style}

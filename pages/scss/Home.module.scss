@@ -3,7 +3,19 @@
 
   :global nav {
     text-align: left;
-    background-color: transparent;
+    background-color: transparent !important;
+
+    .navbar-end > .navbar-item {
+      color: white;
+    }
+    .navbar-link:not(.is-arrowless)::after {
+      border-color: white !important;
+    }
+    .navbar-dropdown {
+      .navbar-item {
+        color: #0a0a0a;
+      }
+    }
   }
 
   :global header {
@@ -277,6 +289,10 @@
 
         p {
           width: 40vw;
+
+          @media (max-width: 521px) {
+            width: 60vw;
+          }
         }
 
         .featuredon {

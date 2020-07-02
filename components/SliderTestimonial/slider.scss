@@ -1,4 +1,12 @@
 .slider-main {
   margin: 2rem 0;
   width: 800px;
+
+  &.testimonial {
+    width: calc(100vw - 240px);
+
+    @media (max-width: 521px) {
+      width: calc(100vw - 40px);
+    }
+  }
 }
