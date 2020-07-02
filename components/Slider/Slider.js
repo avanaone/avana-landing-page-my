@@ -17,6 +17,7 @@ const Slider = (props) => {
     onlyImage,
     hasArrow,
     hasDots,
+    isCustom,
     autoPlay = false,
     callback,
     eventBanner,
@@ -84,7 +85,7 @@ const Slider = (props) => {
   const jumpSlide = (idx) => {
     setState({
       ...state,
-      translate: idx * 100,
+      translate: idx * 80,
       activeSlide: idx,
     });
 
@@ -103,9 +104,9 @@ const Slider = (props) => {
     setState({
       ...state,
       translate:
-        translate >= (slides.length - 100 / width.match(/\d+/)[0]) * 100
+        translate >= (slides.length - 100 / width.match(/\d+/)[0]) * 80
           ? 0
-          : translate + 100,
+          : translate + 80,
       activeSlide: _activeSlide === slides.length - 1 ? 0 : _activeSlide + 1,
     });
 
@@ -122,13 +123,13 @@ const Slider = (props) => {
       ...state,
       translate:
         translate <= 0
-          ? Math.ceil(slides.length - 100 / width.match(/\d+/)[0]) * 100
-          : translate - 100,
+          ? Math.ceil(slides.length - 100 / width.match(/\d+/)[0]) * 80
+          : translate - 80,
       activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1,
     });
 
   return (
-    <div className="slider" autoPlay>
+    <div className='slider' autoPlay>
       <SliderContent
         width={width}
         translate={translate}
@@ -139,6 +140,7 @@ const Slider = (props) => {
             key={slides + Math.random(idx)}
             content={_slide}
             onlyImage={onlyImage}
+            isCustom={isCustom}
           />
         ))}
       </SliderContent>
@@ -146,13 +148,13 @@ const Slider = (props) => {
       {hasArrow && (
         <>
           <Arrow
-            direction="left"
+            direction='left'
             handleClick={prevSlide}
             isContrast={isContrast}
             hasOverlay={hasOverlay}
           />
           <Arrow
-            direction="right"
+            direction='right'
             handleClick={nextSlide}
             isContrast={isContrast}
             hasOverlay={hasOverlay}

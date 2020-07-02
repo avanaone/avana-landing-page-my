@@ -12,6 +12,7 @@ import SliderTestimonial from '../components/SliderTestimonial';
 import styles from './scss/Home.module.scss';
 
 import getTestimonials from '../json/testimonial.json';
+import getMilestones from '../json/milestone.json';
 const getCw = import('../json/copywriting.json');
 // const getPromos = import('../json/promo.json');
 const getEvents = import('../json/event.json');
@@ -518,7 +519,10 @@ const Home = () => {
               {cw.testimonial ? cw.testimonial : 'loading'}
             </h2>
             <p style={{ color: `#9a9a9a` }}>Be inspired and inspire others</p>
-            <SliderTestimonial testimonials={getTestimonials} />
+            <SliderTestimonial
+              testimonials={getTestimonials}
+              sliderName='testimonial'
+            />
             <h2 style={{ marginBottom: `1rem` }}>As featured on:</h2>
             <div className='featuredon'>
               <img
@@ -543,7 +547,10 @@ const Home = () => {
             <h2 className='is-size-4' style={{ marginBottom: `2rem` }}>
               Our Milestone
             </h2>
-            <SliderTestimonial testimonials={getTestimonials} />
+            <SliderTestimonial
+              testimonials={getMilestones}
+              sliderName='milestone'
+            />
           </section>
           <section className='trial'>
             <h2 className='is-size-4'>

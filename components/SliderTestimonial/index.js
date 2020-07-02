@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 import Slider from '../Slider';
 
-export default ({ testimonials }) => {
+import './slider.scss';
+
+export default ({ testimonials, sliderName }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const callbackSlider = ({ activeSlide }) => setCurrentSlide(activeSlide);
@@ -18,7 +20,7 @@ export default ({ testimonials }) => {
   }, []);
 
   return (
-    <div style={{ margin: `2rem 0` }}>
+    <div className='slider-main'>
       <Slider
         slides={testimonials.map((testimonial, idx) => (
           <>
@@ -29,18 +31,19 @@ export default ({ testimonials }) => {
               key={idx}
               alt=''
               srcSet={
-                require(`../../public/assets/images/testimonial/${
+                require(`../../public/assets/images/${sliderName}/${
                   lang === 'en' ? testimonial.image.en : testimonial.image.bm
                 }?resize&size=800?webp`).srcSet
               }
               className={`${currentSlide === idx ? 'is-active' : ''}`}
-              style={{ maxWidth: `800px`, margin: `auto` }}
             />
           </>
         ))}
         currentSlide={currentSlide}
         callback={callbackSlider}
         hasDots
+        hasArrow
+        isCustom={sliderName}
       />
       {/* <div className="images" style={{display: `flex`, alignItems: `center`}}>
         {testimonials.map((testimonial, idx) => (

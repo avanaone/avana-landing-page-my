@@ -93,6 +93,22 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    &.milestone {
+      min-width: 50%;
+      width: 50%;
+      align-items: center;
+      display: flex;
+
+      img {
+        margin: auto;
+        width: 50%;
+        max-width: 50%;
+      }
+    }
+
+    &.testimonial {
+    }
+
     img {
       @media (max-width: 521px) {
         padding: 1rem 2rem !important;

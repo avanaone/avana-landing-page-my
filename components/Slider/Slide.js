@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-const Slide = ({ content, onlyImage }) => (
+const Slide = ({ content, onlyImage, isCustom }) => (
   <div
-    className="slide"
+    className={`slide ${isCustom ? isCustom : ''}`}
     style={{
       backgroundImage: `url(${content})`,
     }}
