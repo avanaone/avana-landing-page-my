@@ -7,6 +7,20 @@
 
     @media (max-width: 521px) {
       width: calc(100vw - 40px);
+      transform: scale(1.5);
+      margin: 4rem 0;
+    }
+
+    .slider {
+      .arrow {
+        &.left {
+          left: calc(20vw + 15px);
+        }
+
+        &.right {
+          right: calc(20vw + 15px);
+        }
+      }
     }
   }
 }

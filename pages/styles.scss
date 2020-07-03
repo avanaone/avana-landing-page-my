@@ -601,6 +601,10 @@ footer {
 
   h2 {
     margin-bottom: 1em;
+
+    @media (max-width: 521px) {
+      padding: 0 1rem;
+    }
   }
 
   .ava-button {
