@@ -59,6 +59,7 @@
     @media (max-width: 768px) {
       background-image: url('/assets/images/0-Header-Mobile.png');
       height: 112.8vw;
+      margin-bottom: 0;
     }
 
     h1 {
@@ -190,13 +191,15 @@
 
               &::before {
                 font-family: 'Material Icons';
-                content: '\e5c8';
+                // content: '\e5c8';
+                content: '\e876';
                 position: absolute;
                 left: -25px;
               }
 
               &.active {
-                color: #1252ba;
+                // color: #1252ba;
+                color: #4a4a4a;
                 background: none;
               }
             }
@@ -318,6 +321,9 @@
       }
 
       &#testimonial {
+        @media (max-width: 521px) {
+          padding-bottom: 3.5rem;
+        }
         h2 {
           width: 40vw;
           min-width: 275px;
@@ -397,6 +403,14 @@
       }
 
       &#milestone {
+        @media (max-width: 521px) {
+          padding-top: 0;
+        }
+        h2 {
+          @media (max-width: 521px) {
+            padding: 0 2rem;
+          }
+        }
         .milestone-group {
           display: flex;
           width: 800px;
@@ -404,7 +418,7 @@
 
           @media (max-width: 521px) {
             width: 100%;
-            flex-direction: column;
+            // flex-direction: column;
             align-items: center;
           }
 
@@ -412,8 +426,8 @@
             height: 80px;
 
             @media (max-width: 521px) {
-              height: unset;
-              width: 160px;
+              height: 44px;
+              // width: 160px;
               margin: 0.5rem 0;
             }
           }

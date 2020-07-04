@@ -195,7 +195,7 @@ export default function Footer() {
         </h6>
         <p>
           Address: B-3-3A Pacific Place, 4, Jalan PJU 1a/4, Ara Damansara, 47301
-          Petaling Jaya, Selangor
+          Petaling Jaya, Selangor, Malaysia
         </p>
       </div>
     </footer>

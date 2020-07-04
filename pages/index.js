@@ -555,27 +555,78 @@ const Home = () => {
             />
             <h2 style={{ marginBottom: `1rem` }}>As featured on:</h2>
             <div className='featuredon'>
+              <a
+                href='https://www.bfm.my/podcast/enterprise/tech-talk/tech-talk-avana-luqman-adris-yien-yee-soh'
+                target='_blank'
+              >
+                <img
+                  srcSet={
+                    require('../public/assets/images/featuredon/BFM.png?resize?webp')
+                      .srcSet
+                  }
+                  alt='BFM'
+                />
+              </a>
+              <a
+                href='https://www.digitalnewsasia.com/startups/avana-empowers-local-micro-merchants-through-social-commerce'
+                target='_blank'
+              >
+                <img
+                  srcSet={
+                    require('../public/assets/images/featuredon/DNA.png?resize?webp')
+                      .srcSet
+                  }
+                  alt='DNA'
+                />
+              </a>
               <img
                 srcSet={
-                  require('../public/assets/images/featuredon/TheStar.png?resize?webp')
+                  require('../public/assets/images/featuredon/Techinasia.png?resize?webp')
                     .srcSet
                 }
-                className='active'
-                alt=''
+                alt='Tech In Asia'
               />
-              <img
-                srcSet={
-                  require('../public/assets/images/featuredon/Vulcan.png?resize?webp')
-                    .srcSet
-                }
-                className='active'
-                alt=''
-              />
+              <a
+                href='https://e27.co/malaysian-social-commerce-startup-avana-raises-1m-gobi-cradle-th-capital-20180322/'
+                target='_blank'
+              >
+                <img
+                  srcSet={
+                    require('../public/assets/images/featuredon/E27.png?resize?webp')
+                      .srcSet
+                  }
+                  alt='E27'
+                />
+              </a>
+              <a
+                href='https://www.thestar.com.my/metro/community/2017/02/22/empowering-women-to-be-independent-sellers-at-bazaar-help-raise-funds-for-autism-society/'
+                target='_blank'
+              >
+                <img
+                  srcSet={
+                    require('../public/assets/images/featuredon/TheStar.png?resize?webp')
+                      .srcSet
+                  }
+                  alt='TheStar'
+                />
+              </a>
+              <a
+                href='https://vulcanpost.com/589140/avana-ecommerce-platform-malaysia-startup/'
+                target='_blank'
+              >
+                <img
+                  srcSet={
+                    require('../public/assets/images/featuredon/Vulcan.png?resize?webp')
+                      .srcSet
+                  }
+                  alt='Vulcan'
+                />
+              </a>
             </div>
           </section>
           <section id='milestone'>
             <h2 className='is-size-4' style={{ marginBottom: `2rem` }}>
-              Our Milestone
+              We’re the top Ecommerce Service Provider recognized by SITEC
             </h2>
             <div className='milestone-group'>
               <img
