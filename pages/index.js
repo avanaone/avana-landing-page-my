@@ -553,7 +553,9 @@ const Home = () => {
               testimonials={getTestimonials}
               sliderName='testimonial'
             />
-            <h2 style={{ marginBottom: `1rem` }}>As featured on:</h2>
+            <h2 style={{ marginBottom: `1rem`, marginTop: `2rem` }}>
+              As featured on:
+            </h2>
             <div className='featuredon'>
               <a
                 href='https://www.bfm.my/podcast/enterprise/tech-talk/tech-talk-avana-luqman-adris-yien-yee-soh'
