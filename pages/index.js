@@ -177,8 +177,8 @@ const Home = () => {
                 <LinkButton
                   href={
                     lang === 'en'
-                      ? 'http://ws.avana.asia/+60124037044/Hi+AVANA+I+wanna+know+more+about+Dashboard+feature'
-                      : 'http://ws.avana.asia/+60124037044/Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Dashboard'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+Dashboard+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Dashboard'
                   }
                   target='__blank'
                   className='btn-primary'
@@ -233,8 +233,8 @@ const Home = () => {
                 <LinkButton
                   href={
                     lang === 'en'
-                      ? 'http://ws.avana.asia/+60124037044/Hi+AVANA+I+wanna+know+more+about+AutoReply+feature'
-                      : 'http://ws.avana.asia/+60124037044/Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+AutoReply'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+AutoReply+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+AutoReply'
                   }
                   target='__blank'
                   className='btn-primary'
@@ -290,8 +290,8 @@ const Home = () => {
                 <LinkButton
                   href={
                     lang === 'en'
-                      ? 'http://ws.avana.asia/+60124037044/Hi+AVANA+I+wanna+know+more+about+Reseller+feature'
-                      : 'http://ws.avana.asia/+60124037044/Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Reseller'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+Reseller+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Reseller'
                   }
                   target='__blank'
                   className='btn-primary'
@@ -346,8 +346,8 @@ const Home = () => {
                 <LinkButton
                   href={
                     lang === 'en'
-                      ? 'http://ws.avana.asia/+60124037044/Hi+AVANA+I+wanna+know+more+about+Webstore+feature'
-                      : 'http://ws.avana.asia/+60124037044/Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Webstore'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+Webstore+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Webstore'
                   }
                   target='__blank'
                   className='btn-primary'
@@ -382,8 +382,8 @@ const Home = () => {
                 <LinkButton
                   href={
                     lang === 'en'
-                      ? 'http://ws.avana.asia/+60124037044/Hi+AVANA+I+wanna+know+more+about+FBStore+feature'
-                      : 'http://ws.avana.asia/+60124037044/Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+FBStore'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+FBStore+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+FBStore'
                   }
                   target='__blank'
                   className='btn-primary'
@@ -434,8 +434,8 @@ const Home = () => {
                 <LinkButton
                   href={
                     lang === 'en'
-                      ? 'http://ws.avana.asia/+60124037044/Hi+AVANA+I+wanna+know+more+about+AVAChat+feature'
-                      : 'http://ws.avana.asia/+60124037044/Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+AVAChat'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+AVAChat+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+AVAChat'
                   }
                   target='__blank'
                   className='btn-primary'
@@ -470,8 +470,8 @@ const Home = () => {
                 <LinkButton
                   href={
                     lang === 'en'
-                      ? 'http://ws.avana.asia/+60124037044/Hi+AVANA+I+wanna+know+more+about+Marketing+tools+feature'
-                      : 'http://ws.avana.asia/+60124037044/Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Marketing+tools+feature'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+Marketing+tools+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Marketing+tools+feature'
                   }
                   target='__blank'
                   className='btn-primary'
@@ -503,8 +503,8 @@ const Home = () => {
                 <LinkButton
                   href={
                     lang === 'en'
-                      ? 'http://ws.avana.asia/+60124037044/Hi+AVANA+I+wanna+know+more+about+WhatsApp+Commerce+feature'
-                      : 'http://ws.avana.asia/+60124037044/Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+WhatsApp+Commerce'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+WhatsApp+Commerce+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+WhatsApp+Commerce'
                   }
                   target='__blank'
                   className='btn-primary'
