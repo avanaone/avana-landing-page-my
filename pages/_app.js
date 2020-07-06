@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
         />
         {/* Open Graph / Facebook */}
         <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://avana.id/' />
+        <meta property='og:url' content='https://avana.asia/' />
         <meta
           property='og:title'
           content='AVANA - The best social commerce solution for your business'
@@ -38,7 +38,7 @@ export default function App({ Component, pageProps }) {
         <meta property='og:image' content='/assets/images/meta-image.png' />
         {/* Twitter */}
         <meta property='twitter:card' content='summary_large_image' />
-        <meta property='twitter:url' content='https://avana.id/' />
+        <meta property='twitter:url' content='https://avana.asia/' />
         <meta
           property='twitter:title'
           content='AVANA - The best social commerce solution for your business'

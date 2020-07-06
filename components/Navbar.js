@@ -70,7 +70,7 @@ export default function Navbar({ style }) {
   return (
     <>
       <nav
-        className='navbar is-white is-fixed-top'
+        className='navbar is-transparent'
         role='navigation'
         aria-label='main navigation'
         style={style}
@@ -162,7 +162,7 @@ export default function Navbar({ style }) {
                 </a>
                 <a
                   className='navbar-item'
-                  href='/avachat'
+                  href='/liveautoreply'
                   title='Live autoreply'
                 >
                   {lang === 'en' ? 'Live Autoreply' : 'Live Autoreply'}
@@ -172,6 +172,9 @@ export default function Navbar({ style }) {
                 </a> */}
                 <a className='navbar-item' href='/webstore' title='Webstore'>
                   {lang === 'en' ? 'Webstore' : 'Kedai Online'}
+                </a>
+                <a className='navbar-item' href='/avachat' title='AVAChat'>
+                  {lang === 'en' ? 'AVAChat' : 'AVAChat'}
                 </a>
               </div>
             </div>

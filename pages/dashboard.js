@@ -4,7 +4,12 @@ import ContainerAnalytic from '../components/AnalyticContainer';
 
 const Dashboard = () => (
   <ContainerAnalytic>
-    <Feature id="dashboard" title="Dashboard" className="flex-d-row-reverse" />
+    <Feature
+      id='dashboard'
+      title='Dashboard'
+      className='flex-d-row-reverse'
+      isAnchor
+    />
   </ContainerAnalytic>
 );
 

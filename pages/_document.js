@@ -17,6 +17,19 @@ class MyDocument extends Document {
             type='text/javascript'
           ></script>
           <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              $zopim(function() {
+                if(localStorage.getItem("lang") === 'en') {
+                $zopim.livechat.setLanguage('en');
+                } else {
+                $zopim.livechat.setLanguage('ms');
+                }
+                });
+              `,
+            }}
+          />
+          <script
             async=''
             src='https://www.google-analytics.com/analytics.js'
           ></script>
@@ -34,20 +47,6 @@ class MyDocument extends Document {
             async=''
             src='https://connect.facebook.net/en_US/fbevents.js'
           ></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              (function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:972310,hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-              `,
-            }}
-          />
         </Head>
         <body>
           <Main />

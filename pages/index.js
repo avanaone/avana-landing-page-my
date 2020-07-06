@@ -12,6 +12,7 @@ import SliderTestimonial from '../components/SliderTestimonial';
 import styles from './scss/Home.module.scss';
 
 import getTestimonials from '../json/testimonial.json';
+import getMilestones from '../json/milestone.json';
 const getCw = import('../json/copywriting.json');
 // const getPromos = import('../json/promo.json');
 const getEvents = import('../json/event.json');
@@ -141,18 +142,6 @@ const Home = () => {
                 })
               : 'loading...'}
           </p>
-          <LinkButton
-            href='https://store.avana.asia/'
-            target='__blank'
-            className='ava-btn btn-primary'
-          >
-            {lang === 'en' ? 'Try for free' : 'Percuma 14 Hari'}
-          </LinkButton>
-          <div className='channels' />
-          <img
-            srcSet={require('public/assets/images/hero.png?resize?webp').srcSet}
-            alt=''
-          />
         </header>
         <main>
           <section className='feature'>
@@ -186,7 +175,11 @@ const Home = () => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='https://store.avana.asia/'
+                  href={
+                    lang === 'en'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+Dashboard+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Dashboard'
+                  }
                   target='__blank'
                   className='btn-primary'
                 >
@@ -197,35 +190,13 @@ const Home = () => {
                 </LinkButton>
               </div>
             </div>
-            <div className='slider-container'>
-              <Slider
-                id='dashboard'
-                slides={[
-                  <img
-                    srcSet={
-                      require('public/assets/images/dashboard/manajemen-order.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/dashboard/manajemen-produk.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/dashboard/auto-reply.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                ]}
-                currentSlide={dashboard}
-                hasDots
-                callback={callbackSlider}
+            <div className='feature-img'>
+              <img
+                srcSet={
+                  require('public/assets/images/1-Dashboard.png?resize?webp')
+                    .srcSet
+                }
+                alt=''
               />
             </div>
           </section>
@@ -260,7 +231,11 @@ const Home = () => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='https://wa.me/60149774275'
+                  href={
+                    lang === 'en'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+AutoReply+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+AutoReply'
+                  }
                   target='__blank'
                   className='btn-primary'
                 >
@@ -271,35 +246,13 @@ const Home = () => {
                 </LinkButton>
               </div>
             </div>
-            <div className='slider-container'>
-              <Slider
-                id='avachat'
-                slides={[
-                  <img
-                    srcSet={
-                      require('public/assets/images/avachat/send-product-info.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/avachat/quick-reply.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                  // <img
-                  //   srcSet={
-                  //     require('public/assets/images/avachat/send-shipping-info.png?resize?webp')
-                  //       .srcSet
-                  //   }
-                  //   alt=''
-                  // />,
-                ]}
-                currentSlide={avachat}
-                hasDots
-                callback={callbackSlider}
+            <div className='feature-img'>
+              <img
+                srcSet={
+                  require('public/assets/images/2-Auto-Reply.png?resize?webp')
+                    .srcSet
+                }
+                alt=''
               />
             </div>
           </section>
@@ -335,7 +288,11 @@ const Home = () => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='https://wa.me/60149774275'
+                  href={
+                    lang === 'en'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+Reseller+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Reseller'
+                  }
                   target='__blank'
                   className='btn-primary'
                 >
@@ -349,43 +306,12 @@ const Home = () => {
             <div className='feature-img'>
               <img
                 srcSet={
-                  require('public/assets/images/reseller/Affiliate-Dropship.png?resize?webp')
+                  require('public/assets/images/3-Affiliate-Dropship.png?resize?webp')
                     .srcSet
                 }
                 alt=''
               />
             </div>
-            {/* <div className='slider-container'>
-              <Slider
-                id='reseller'
-                slides={[
-                  <img
-                    srcSet={
-                      require('public/assets/images/reseller/manajemen-database-reseller.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/reseller/lihat-performa-reseller.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/reseller/atur-komisi-reseller.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                ]}
-                currentSlide={reseller}
-                hasDots
-                callback={callbackSlider}
-              />
-            </div> */}
           </section>
           <section className='feature'>
             <div className='description'>
@@ -418,7 +344,11 @@ const Home = () => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='https://store.avana.asia/'
+                  href={
+                    lang === 'en'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+Webstore+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Webstore'
+                  }
                   target='__blank'
                   className='btn-primary'
                 >
@@ -429,39 +359,18 @@ const Home = () => {
                 </LinkButton>
               </div>
             </div>
-            <div className='slider-container'>
-              <Slider
-                id='webstore'
-                slides={[
-                  <img
-                    srcSet={
-                      require('public/assets/images/webstore/theme.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/webstore/payment-gateway.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/webstore/order-via-whatsapp.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                ]}
-                currentSlide={webstore}
-                hasDots
-                callback={callbackSlider}
+            <div className='feature-img'>
+              <img
+                srcSet={
+                  require('../public/assets/images/4-Webstore.png?resize?webp')
+                    .srcSet
+                }
+                className='active'
+                alt=''
               />
             </div>
           </section>
-          <section className='feature'>
+          <section className='feature' id='Fb-Store'>
             <div className='description'>
               <h2 className='is-size-4'>
                 {/* {cw.fbshop ? cw.fbshop[0] : 'loading'} <span className='hl'>{cw.fbshop ? cw.fbshop[1] : 'loading'}</span> {cw.fbshop ? cw.fbshop[2] : 'loading'} */}
@@ -471,7 +380,11 @@ const Home = () => {
               <ul />
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='https://wa.me/60149774275'
+                  href={
+                    lang === 'en'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+FBStore+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+FBStore'
+                  }
                   target='__blank'
                   className='btn-primary'
                 >
@@ -482,7 +395,7 @@ const Home = () => {
             <div className='feature-img'>
               <img
                 srcSet={
-                  require('../public/assets/images/facebook-store.png?resize?webp')
+                  require('../public/assets/images/5-Sell-Across-SOCMED.png?resize?webp')
                     .srcSet
                 }
                 className='active'
@@ -519,7 +432,11 @@ const Home = () => {
               </ul> */}
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='https://wa.me/60149774275'
+                  href={
+                    lang === 'en'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+AVAChat+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+AVAChat'
+                  }
                   target='__blank'
                   className='btn-primary'
                 >
@@ -530,56 +447,80 @@ const Home = () => {
                 </LinkButton> */}
               </div>
             </div>
-            <div className='slider-container'>
-              <Slider
-                id='avachatmy'
-                slides={[
-                  <img
-                    srcSet={
-                      require('public/assets/images/avachatmy/1.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/avachatmy/2.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/avachatmy/3.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/avachatmy/4.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/avachatmy/5.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                  <img
-                    srcSet={
-                      require('public/assets/images/avachatmy/6.png?resize?webp')
-                        .srcSet
-                    }
-                    alt=''
-                  />,
-                ]}
-                currentSlide={avachatmy}
-                hasDots
-                callback={callbackSlider}
+            <div className='feature-img'>
+              <img
+                srcSet={
+                  require('../public/assets/images/6-AVAchat.png?resize?webp')
+                    .srcSet
+                }
+                className='active'
+                alt=''
+              />
+            </div>
+          </section>
+          <section className='feature' id='Marketing'>
+            <div className='description'>
+              <h2 className='is-size-4'>
+                {/* {cw.fbshop ? cw.fbshop[0] : 'loading'} <span className='hl'>{cw.fbshop ? cw.fbshop[1] : 'loading'}</span> {cw.fbshop ? cw.fbshop[2] : 'loading'} */}
+                {cw.marketing ? cw.marketing[0] : 'loading'}
+              </h2>
+              <p>{cw.marketing ? cw.marketing[1] : 'loading'}</p>
+              <ul />
+              <div className='ava-btn-group'>
+                <LinkButton
+                  href={
+                    lang === 'en'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+Marketing+tools+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Marketing+tools+feature'
+                  }
+                  target='__blank'
+                  className='btn-primary'
+                >
+                  {cw.button ? cw.button[0] : 'loading'}
+                </LinkButton>
+              </div>
+            </div>
+            <div className='feature-img'>
+              <img
+                srcSet={
+                  require('../public/assets/images/7-MKTG-Build-in.png?resize?webp')
+                    .srcSet
+                }
+                className='active'
+                alt=''
+              />
+            </div>
+          </section>
+          <section className='feature' id='Whatsapp'>
+            <div className='description'>
+              <h2 className='is-size-4'>
+                {/* {cw.fbshop ? cw.fbshop[0] : 'loading'} <span className='hl'>{cw.fbshop ? cw.fbshop[1] : 'loading'}</span> {cw.fbshop ? cw.fbshop[2] : 'loading'} */}
+                {cw.whatsapp ? cw.whatsapp[0] : 'loading'}
+              </h2>
+              <p>{cw.whatsapp ? cw.whatsapp[1] : 'loading'}</p>
+              <ul />
+              <div className='ava-btn-group'>
+                <LinkButton
+                  href={
+                    lang === 'en'
+                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+WhatsApp+Commerce+feature'
+                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+WhatsApp+Commerce'
+                  }
+                  target='__blank'
+                  className='btn-primary'
+                >
+                  {cw.button ? cw.button[0] : 'loading'}
+                </LinkButton>
+              </div>
+            </div>
+            <div className='feature-img'>
+              <img
+                srcSet={
+                  require('../public/assets/images/8-Whatsapp-commerce.png?resize?webp')
+                    .srcSet
+                }
+                className='active'
+                alt=''
               />
             </div>
           </section>
@@ -588,26 +529,139 @@ const Home = () => {
             <div>
               <img
                 srcSet={
-                  require('../public/assets/images/logisticandepayment.png?resize&size=400?webp')
+                  require('../public/assets/images/Partner-Logos.png?resize?webp')
                     .srcSet
                 }
-                alt='Logistics & e-payment'
+                alt='Partner Logos'
               />
-              <div className='border' />
+              {/* <div className='border' />
               <img
                 srcSet={
                   require('../public/assets/images/bank.png?resize&size=400?webp')
                     .srcSet
                 }
                 alt='Bank'
-              />
+              /> */}
             </div>
           </section>
           <section id='testimonial'>
             <h2 className='is-size-4'>
               {cw.testimonial ? cw.testimonial : 'loading'}
             </h2>
-            <SliderTestimonial testimonials={getTestimonials} />
+            <p style={{ color: `#9a9a9a` }}>Be inspired and inspire others</p>
+            <SliderTestimonial
+              testimonials={getTestimonials}
+              sliderName='testimonial'
+            />
+            <h2
+              className='is-size-4'
+              style={{ marginBottom: `1rem`, marginTop: `2rem` }}
+            >
+              As featured on:
+            </h2>
+            <div className='featuredon'>
+              <a
+                href='https://www.bfm.my/podcast/enterprise/tech-talk/tech-talk-avana-luqman-adris-yien-yee-soh'
+                target='_blank'
+              >
+                <img
+                  srcSet={
+                    require('../public/assets/images/featuredon/BFM.png?resize?webp')
+                      .srcSet
+                  }
+                  alt='BFM'
+                />
+              </a>
+              <a
+                href='https://www.digitalnewsasia.com/startups/avana-empowers-local-micro-merchants-through-social-commerce'
+                target='_blank'
+              >
+                <img
+                  srcSet={
+                    require('../public/assets/images/featuredon/DNA.png?resize?webp')
+                      .srcSet
+                  }
+                  alt='DNA'
+                />
+              </a>
+              <img
+                srcSet={
+                  require('../public/assets/images/featuredon/Techinasia.png?resize?webp')
+                    .srcSet
+                }
+                alt='Tech In Asia'
+              />
+              <a
+                href='https://e27.co/malaysian-social-commerce-startup-avana-raises-1m-gobi-cradle-th-capital-20180322/'
+                target='_blank'
+              >
+                <img
+                  srcSet={
+                    require('../public/assets/images/featuredon/E27.png?resize?webp')
+                      .srcSet
+                  }
+                  alt='E27'
+                />
+              </a>
+              <a
+                href='https://www.thestar.com.my/metro/community/2017/02/22/empowering-women-to-be-independent-sellers-at-bazaar-help-raise-funds-for-autism-society/'
+                target='_blank'
+              >
+                <img
+                  srcSet={
+                    require('../public/assets/images/featuredon/TheStar.png?resize?webp')
+                      .srcSet
+                  }
+                  alt='TheStar'
+                />
+              </a>
+              <a
+                href='https://vulcanpost.com/589140/avana-ecommerce-platform-malaysia-startup/'
+                target='_blank'
+              >
+                <img
+                  srcSet={
+                    require('../public/assets/images/featuredon/Vulcan.png?resize?webp')
+                      .srcSet
+                  }
+                  alt='Vulcan'
+                />
+              </a>
+            </div>
+          </section>
+          <section id='milestone'>
+            <h2 className='is-size-4' style={{ marginBottom: `2rem` }}>
+              {lang === 'en'
+                ? 'We’re the top Ecommerce Service Provider recognized by SITEC'
+                : 'Diiktiraf sebagai Penyelesai E-Dagang Terulung oleh SITEC'}
+            </h2>
+            <div className='milestone-group'>
+              <img
+                srcSet={
+                  require('../public/assets/images/milestone/Google-Partner.png?resize?webp')
+                    .srcSet
+                }
+                alt=''
+              />
+              <img
+                srcSet={
+                  require('../public/assets/images/milestone/SITEC.png?resize?webp')
+                    .srcSet
+                }
+                alt=''
+              />
+              <img
+                srcSet={
+                  require('../public/assets/images/milestone/FB-Partner.png?resize?webp')
+                    .srcSet
+                }
+                alt=''
+              />
+            </div>
+            {/* <SliderTestimonial
+              testimonials={getMilestones}
+              sliderName='milestone'
+            /> */}
           </section>
           <section className='trial'>
             <h2 className='is-size-4'>

@@ -3,7 +3,50 @@
 
   :global nav {
     text-align: left;
-    background-color: transparent;
+    background-color: transparent !important;
+
+    .navbar-brand {
+      margin-left: 1.75vw;
+
+      @media (max-width: 768px) {
+        margin-left: 0;
+      }
+    }
+
+    .navbar-end > .navbar-item {
+      color: white;
+
+      @media (max-width: 768px) {
+        color: #4a4a4a;
+      }
+
+      .navbar-link {
+        color: white;
+
+        @media (max-width: 768px) {
+          color: #4a4a4a;
+        }
+      }
+    }
+    .navbar-burger {
+      color: white;
+
+      &.is-active {
+        color: #4a4a4a;
+      }
+    }
+    .navbar-link:not(.is-arrowless)::after {
+      border-color: white !important;
+
+      @media (max-width: 768px) {
+        border-color: #4a4a4a !important;
+      }
+    }
+    .navbar-dropdown {
+      .navbar-item {
+        color: #0a0a0a;
+      }
+    }
   }
 
   :global header {
@@ -11,24 +54,44 @@
     flex-direction: column;
     align-items: center;
     background-color: #f4f7f9;
-    background-image: url('/assets/images/hero-background.png');
+    background-image: url('/assets/images/0-Header.png');
     background-size: cover;
     padding: 1.5em 0 2.5em;
-    margin-bottom: 2.5em;
+    // margin-bottom: 2.5em;
+    margin-top: -71.19px;
+    padding-top: calc(1.5em + 71.19px);
+    color: white;
+    height: 56.25vw;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      background-image: url('/assets/images/0-Header-Mobile.png');
+      height: 128.26vw;
+      margin-top: -42.25px;
+    }
 
     h1 {
       width: 25em;
       min-width: 300px;
       max-width: 80vw;
-      font-size: 1.85rem !important;
+      font-size: 3rem !important;
       margin-bottom: 0.25em;
       z-index: 1;
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem !important;
+      }
     }
 
     p {
       min-width: 250px;
       margin: 0 1em;
       z-index: 1;
+      font-size: 1.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 1rem !important;
+      }
     }
 
     .ava-button {
@@ -117,6 +180,10 @@
         padding: 1em 5vw;
         max-width: 100%;
 
+        @media (max-width: 768px) {
+          padding: 2em 5vw;
+        }
+
         .description {
           min-width: 250px;
 
@@ -136,13 +203,15 @@
 
               &::before {
                 font-family: 'Material Icons';
-                content: '\e5c8';
+                // content: '\e5c8';
+                content: '\e876';
                 position: absolute;
                 left: -25px;
               }
 
               &.active {
-                color: #1252ba;
+                // color: #1252ba;
+                color: #4a4a4a;
                 background: none;
               }
             }
@@ -230,9 +299,14 @@
           margin: 1.5em 0;
 
           img {
-            width: 30vw;
+            // width: 30vw;
+            width: 50vw;
             min-width: 250px;
-            max-width: 400px;
+            max-width: 800px;
+
+            @media (max-width: 768px) {
+              width: calc(100vw - 40px);
+            }
           }
 
           .border {
@@ -259,9 +333,40 @@
       }
 
       &#testimonial {
+        padding-bottom: 0;
+
+        @media (max-width: 521px) {
+          padding-bottom: 3.5rem;
+        }
         h2 {
-          width: 50vw;
+          width: 40vw;
           min-width: 275px;
+        }
+
+        p {
+          width: 40vw;
+
+          @media (max-width: 521px) {
+            width: 60vw;
+          }
+        }
+
+        .featuredon {
+          display: flex;
+
+          @media (max-width: 521px) {
+            // flex-direction: column;
+            display: unset;
+          }
+
+          img {
+            height: 30px;
+            margin: 0 30px;
+
+            @media (max-width: 521px) {
+              margin: 10px;
+            }
+          }
         }
 
         .slider {
@@ -307,6 +412,38 @@
 
             &.is-active {
               opacity: 1;
+            }
+          }
+        }
+      }
+
+      &#milestone {
+        @media (max-width: 521px) {
+          padding-top: 0;
+        }
+        h2 {
+          @media (max-width: 521px) {
+            padding: 0 2rem;
+          }
+        }
+        .milestone-group {
+          display: flex;
+          width: 800px;
+          justify-content: space-around;
+
+          @media (max-width: 521px) {
+            width: 100%;
+            // flex-direction: column;
+            align-items: center;
+          }
+
+          img {
+            height: 80px;
+
+            @media (max-width: 521px) {
+              height: 44px;
+              // width: 160px;
+              margin: 0.5rem 0;
             }
           }
         }
