@@ -628,7 +628,9 @@ const Home = () => {
           </section>
           <section id='milestone'>
             <h2 className='is-size-4' style={{ marginBottom: `2rem` }}>
-              We’re the top Ecommerce Service Provider recognized by SITEC
+              {lang === 'en'
+                ? 'We’re the top Ecommerce Service Provider recognized by SITEC'
+                : 'Diiktiraf sebagai Penyelesai E-Dagang Terulung oleh SITEC'}
             </h2>
             <div className='milestone-group'>
               <img

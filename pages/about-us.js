@@ -101,7 +101,7 @@ export default function AboutUs() {
           </section>
           <section id='Career'>
             <h2 className='is-size-4' style={{ textAlign: `center` }}>
-              We're Hiring
+              We're hiring!
             </h2>
             <div className='career-group'>
               {careers

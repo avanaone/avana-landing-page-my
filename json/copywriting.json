@@ -1,6 +1,6 @@
 {
   "en": {
-    "button": ["I'm interested", "More Info"],
+    "button": ["I'm Interested", "More Info"],
     "navbar": [
       "Product",
       "Price",
@@ -15,7 +15,7 @@
       "Log In",
       "Sign Up"
     ],
-    "h1": "All-in-One Dashboard to manage all your sales across social media and webstore.",
+    "h1": "All in one solution for your online business.",
     "features": [
       "Online Store",
       "Social Media Chat Integration",
@@ -68,7 +68,7 @@
     "error-without-status": "Auf dem Server ist ein Fehler aufgetreten"
   },
   "bm": {
-    "button": ["Saya berminat", "Info Lanjut"],
+    "button": ["Saya Berminat", "Info Lanjut"],
     "navbar": [
       "Produk",
       "Harga",
@@ -83,7 +83,7 @@
       "Log Masuk",
       "Daftar"
     ],
-    "h1": "Uruskan jualan dari media sosial dan webstore anda dalam satu dashboard.",
+    "h1": "Penyelesaian semua dalam satu bagi bisnes online anda.",
     "features": [
       "Kedai Online",
       "Integrasi 'Chat' di Media Sosial",
