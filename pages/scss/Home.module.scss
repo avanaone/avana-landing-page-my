@@ -61,12 +61,12 @@
     margin-top: -71.19px;
     padding-top: calc(1.5em + 71.19px);
     color: white;
-    height: calc(58.79vw);
+    height: 56.25vw;
     justify-content: center;
 
     @media (max-width: 768px) {
       background-image: url('/assets/images/0-Header-Mobile.png');
-      height: 142.77vw;
+      height: 128.26vw;
       margin-top: -42.25px;
     }
 
@@ -333,7 +333,7 @@
       }
 
       &#testimonial {
-        padding-bottom: 2em;
+        padding-bottom: 0;
 
         @media (max-width: 521px) {
           padding-bottom: 3.5rem;
@@ -355,7 +355,8 @@
           display: flex;
 
           @media (max-width: 521px) {
-            flex-direction: column;
+            // flex-direction: column;
+            display: unset;
           }
 
           img {
@@ -363,7 +364,7 @@
             margin: 0 30px;
 
             @media (max-width: 521px) {
-              margin: 10px 0;
+              margin: 10px;
             }
           }
         }

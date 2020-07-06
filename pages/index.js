@@ -553,7 +553,10 @@ const Home = () => {
               testimonials={getTestimonials}
               sliderName='testimonial'
             />
-            <h2 style={{ marginBottom: `1rem`, marginTop: `2rem` }}>
+            <h2
+              className='is-size-4'
+              style={{ marginBottom: `1rem`, marginTop: `2rem` }}
+            >
               As featured on:
             </h2>
             <div className='featuredon'>
