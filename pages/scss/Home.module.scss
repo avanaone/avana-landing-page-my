@@ -5,6 +5,14 @@
     text-align: left;
     background-color: transparent !important;
 
+    .navbar-brand {
+      margin-left: 1.75vw;
+
+      @media (max-width: 768px) {
+        margin-left: 0;
+      }
+    }
+
     .navbar-end > .navbar-item {
       color: white;
 
@@ -49,7 +57,7 @@
     background-image: url('/assets/images/0-Header.png');
     background-size: cover;
     padding: 1.5em 0 2.5em;
-    margin-bottom: 2.5em;
+    // margin-bottom: 2.5em;
     margin-top: -71.19px;
     padding-top: calc(1.5em + 71.19px);
     color: white;
@@ -59,7 +67,7 @@
     @media (max-width: 768px) {
       background-image: url('/assets/images/0-Header-Mobile.png');
       height: 142.77vw;
-      margin-bottom: 0;
+      margin-top: -42.25px;
     }
 
     h1 {
@@ -325,6 +333,8 @@
       }
 
       &#testimonial {
+        padding-bottom: 2em;
+
         @media (max-width: 521px) {
           padding-bottom: 3.5rem;
         }
