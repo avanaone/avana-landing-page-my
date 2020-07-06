@@ -20,12 +20,7 @@ class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `
               $zopim(function() {
-                if(localStorage.getItem("lang") === 'en') {
                 $zopim.livechat.setLanguage('en');
-                } else {
-                $zopim.livechat.setLanguage('ms');
-                }
-                });
               `,
             }}
           />
