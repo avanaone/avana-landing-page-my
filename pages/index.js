@@ -431,7 +431,7 @@ const Home = () => {
                 </li>
               </ul> */}
               <div className='ava-btn-group'>
-                <LinkButton
+                {/* <LinkButton
                   href={
                     lang === 'en'
                       ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+AVAChat+feature'
@@ -441,6 +441,9 @@ const Home = () => {
                   className='btn-primary'
                 >
                   {cw.button ? cw.button[0] : 'loading'}
+                </LinkButton> */}
+                <LinkButton className='btn-primary'>
+                  {lang === 'en' ? 'Coming Soon' : 'Akan Datang'}
                 </LinkButton>
                 {/* <LinkButton href='/' className='btn-secondary'>
                   {cw.button ? cw.button[1] : 'loading'}
