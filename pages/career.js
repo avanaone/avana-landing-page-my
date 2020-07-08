@@ -17,7 +17,7 @@ const Career = () => {
   const [events, setEvents] = useState([]);
 
   getEvents.then((res) => setEvents(res.default));
-  console.log(events);
+  // console.log(events);
   return (
     <ContainerAnalytic>
       <div className={styles.Career}>

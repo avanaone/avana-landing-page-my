@@ -41,11 +41,11 @@ const Home = () => {
 
   useEffect(() => {
     if (localStorage.getItem('lang')) {
-      console.log(localStorage.getItem('lang'));
+      // console.log(localStorage.getItem('lang'));
       setLang(localStorage.getItem('lang'));
       getCw.then((res) => {
-        console.log(lang);
-        console.log(res.default[localStorage.getItem('lang')]);
+        // console.log(lang);
+        // console.log(res.default[localStorage.getItem('lang')]);
         setCw(res.default[localStorage.getItem('lang')]);
       });
     } else {
@@ -442,7 +442,11 @@ const Home = () => {
                 >
                   {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton> */}
-                <LinkButton className='btn-primary'>
+                <LinkButton
+                  href={'https://forms.gle/uNDvYYLs2diJmr3WA'}
+                  target='_blank'
+                  className='btn-primary'
+                >
                   {lang === 'en' ? 'Coming Soon' : 'Akan Datang'}
                 </LinkButton>
                 {/* <LinkButton href='/' className='btn-secondary'>
@@ -503,7 +507,7 @@ const Home = () => {
               <p>{cw.whatsapp ? cw.whatsapp[1] : 'loading'}</p>
               <ul />
               <div className='ava-btn-group'>
-                <LinkButton
+                {/* <LinkButton
                   href={
                     lang === 'en'
                       ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+WhatsApp+Commerce+feature'
@@ -513,6 +517,13 @@ const Home = () => {
                   className='btn-primary'
                 >
                   {cw.button ? cw.button[0] : 'loading'}
+                </LinkButton> */}
+                <LinkButton
+                  href={'https://forms.gle/uNDvYYLs2diJmr3WA'}
+                  target='_blank'
+                  className='btn-primary'
+                >
+                  {lang === 'en' ? 'Coming Soon' : 'Akan Datang'}
                 </LinkButton>
               </div>
             </div>

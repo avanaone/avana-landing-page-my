@@ -19,8 +19,19 @@ class MyDocument extends Document {
           <script
             dangerouslySetInnerHTML={{
               __html: `
-              $zopim(function() {
-                $zopim.livechat.setLanguage('en');
+              var waitForZopim = setInterval(function () {
+                if (window.$zopim === undefined || window.$zopim.livechat === undefined) {
+                    return;
+                }
+                $zopim(function() {
+                  if(localStorage.getItem("lang") === 'en') {
+                    $zopim.livechat.setLanguage('en');
+                  } else {
+                    $zopim.livechat.setLanguage('ms');
+                  }
+                });
+                clearInterval(waitForZopim);
+              }, 100);
               `,
             }}
           />

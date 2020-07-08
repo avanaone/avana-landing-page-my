@@ -35,7 +35,7 @@ export default function Navbar({ style }) {
 
   useEffect(() => {
     if (localStorage.getItem('lang')) {
-      console.log(localStorage.getItem('lang'));
+      // console.log(localStorage.getItem('lang'));
       setLang(localStorage.getItem('lang'));
       getCw.then((res) => {
         setCw(res.default[localStorage.getItem('lang')]);

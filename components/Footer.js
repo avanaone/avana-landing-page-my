@@ -5,7 +5,7 @@ export default function Footer() {
 
   useEffect(() => {
     if (localStorage.getItem('lang')) {
-      console.log(localStorage.getItem('lang'));
+      // console.log(localStorage.getItem('lang'));
       setLang(localStorage.getItem('lang'));
     } else {
       localStorage.setItem('lang', 'en');

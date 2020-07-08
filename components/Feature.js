@@ -16,7 +16,7 @@ export default function Feature(props) {
 
   useEffect(() => {
     if (localStorage.getItem('lang')) {
-      console.log('start', localStorage.getItem('lang'));
+      // console.log('start', localStorage.getItem('lang'));
       setLang(localStorage.getItem('lang'));
     } else {
       localStorage.setItem('lang', 'en');
@@ -25,7 +25,7 @@ export default function Feature(props) {
 
   useEffect(() => {
     Features.then((res) => {
-      console.log('lang is', lang);
+      // console.log('lang is', lang);
       setFeatures(res.default[id][lang]);
     });
   }, [lang]);
@@ -109,26 +109,36 @@ export default function Feature(props) {
               : 'Cuba AVANA selama 14 hari secara PERCUMA!'}
             {/* { lang === 'en' ? 'Try AVANA 14 days for FREE!' : 'Cuba AVANA selama 14 hari secara PERCUMA!'} */}
           </h2>
-          <LinkButton
-            href={
-              CS
-                ? lang === 'en' && title === 'AVAChat'
-                  ? link[0]
-                  : link[1]
-                : 'https://store.avana.asia/'
-            }
-            target='__blank'
-            className='btn-primary'
-          >
-            {CS
-              ? lang === 'en'
-                ? 'Contact Us'
-                : 'Hubungi Kami'
-              : lang === 'en'
-              ? 'Try for FREE'
-              : 'Coba Gratis'}
-            {/* {lang === 'en' ? 'Sign Up For Free' : 'DAFTAR SEKARANG'} */}
-          </LinkButton>
+          {title === 'AVAChat' ? (
+            <LinkButton
+              href={'https://forms.gle/uNDvYYLs2diJmr3WA'}
+              target='_blank'
+              className='btn-primary'
+            >
+              {lang === 'en' ? 'Coming Soon' : 'Akan Datang'}
+            </LinkButton>
+          ) : (
+            <LinkButton
+              href={
+                CS
+                  ? lang === 'en' && title === 'AVAChat'
+                    ? link[0]
+                    : link[1]
+                  : 'https://store.avana.asia/'
+              }
+              target='__blank'
+              className='btn-primary'
+            >
+              {CS
+                ? lang === 'en'
+                  ? 'Contact Us'
+                  : 'Hubungi Kami'
+                : lang === 'en'
+                ? 'Try for FREE'
+                : 'Coba Gratis'}
+              {/* {lang === 'en' ? 'Sign Up For Free' : 'DAFTAR SEKARANG'} */}
+            </LinkButton>
+          )}
         </section>
       </main>
       <Footer />
