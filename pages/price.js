@@ -22,13 +22,13 @@ const Price = () => {
   const [hideBusiness, setHideBusiness] = useState(false);
   const [hideVIP, setHideVIP] = useState(false);
 
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState('en');
 
   useEffect(() => {
-    if(localStorage.getItem("lang")) {
-      setLang(localStorage.getItem("lang"));
+    if (localStorage.getItem('lang')) {
+      setLang(localStorage.getItem('lang'));
     } else {
-      localStorage.setItem("lang", "en");
+      localStorage.setItem('lang', 'en');
     }
   }, []);
 
@@ -54,14 +54,16 @@ const Price = () => {
     <ContainerAnalytic>
       <div className={styles.Price}>
         <Head>
-          <title>Harga Paket • AVANA</title>
+          <title>
+            {lang === 'en' ? 'Package Price' : 'Harga Pakej'} • AVANA
+          </title>
         </Head>
         <Navbar />
-        <Header title={`${ lang === 'en' ? 'Package Price' : 'Harga Pakej'}`} />
+        <Header title={`${lang === 'en' ? 'Package Price' : 'Harga Pakej'}`} />
         <main>
           <section>
-            <div className="tabs-container">
-              <ul className="ava-tabs">
+            <div className='tabs-container'>
+              <ul className='ava-tabs'>
                 {/* <li
                   className={period === 'monthly' ? 'active' : ''}
                   onClick={() => handleFilterPeriod('monthly')}
@@ -88,7 +90,7 @@ const Price = () => {
                 </li>
               </ul>
             </div>
-            <div className="packages">
+            <div className='packages'>
               {packages
                 .filter((pck) => pck.period === period)
                 .map((pkg) => (
@@ -98,9 +100,9 @@ const Price = () => {
                       pkg.is_discount ? 'discounted' : ''
                     } ${pkg.name === 'Basic' ? 'basic' : ''}`}
                   >
-                    <div className="package-info">
-                      <span className="name is-size-5">{pkg.name}</span>
-                      <span className="price is-size-4">
+                    <div className='package-info'>
+                      <span className='name is-size-5'>{pkg.name}</span>
+                      <span className='price is-size-4'>
                         {formatCurrency(pkg.price, pkg.currency)}
                       </span>
                       {/* {pkg.price === pkg.discounted_price ? (
@@ -120,15 +122,13 @@ const Price = () => {
                     </div>
                     <div>
                       <ul>
-                        {lang === 'en' ? pkg.highlight_feature.en.map((feature, idx) => (
-                          <li key={idx}>
-                            {feature}
-                          </li>
-                        )) : pkg.highlight_feature.bm.map((feature, idx) => (
-                          <li key={idx}>
-                            {feature}
-                          </li>
-                        ))}
+                        {lang === 'en'
+                          ? pkg.highlight_feature.en.map((feature, idx) => (
+                              <li key={idx}>{feature}</li>
+                            ))
+                          : pkg.highlight_feature.bm.map((feature, idx) => (
+                              <li key={idx}>{feature}</li>
+                            ))}
                         <div
                           className={`more-features 
                         more-${pkg.name}
@@ -141,54 +141,70 @@ const Price = () => {
                         ${
                           pkg.name === 'Advance' && hideAdvance ? 'toggled' : ''
                         }
-                        ${pkg.name === 'Beginner' && hideBasic ? 'toggled' : ''}`}
+                        ${
+                          pkg.name === 'Beginner' && hideBasic ? 'toggled' : ''
+                        }`}
                         >
-                          <li className="has-text-weight-light">
+                          <li className='has-text-weight-light'>
                             Manual Payment from Customer
                           </li>
-                          <li className="has-text-weight-light">
+                          <li className='has-text-weight-light'>
                             Multiple Store Admin
                           </li>
-                          <li className="has-text-weight-light">
+                          <li className='has-text-weight-light'>
                             Blogspot Integration
                           </li>
-                          <li className="has-text-weight-light">
+                          <li className='has-text-weight-light'>
                             Instagram Integration
                           </li>
-                          <li className="has-text-weight-light">
+                          <li className='has-text-weight-light'>
                             Live Chat and Whatsapp Support
                           </li>
                         </div>
                       </ul>
                     </div>
-                    <div className="package-info">
-                        <a
-                          onClick={() => toggle(`${pkg.name}`)}
-                          className="price-more"
-                        >
-                          {pkg.name === 'Agent' && hideVIP
-                            ? lang === 'en' ? 'Hide Features' : 'Sembunyikan Fitur'
-                            : pkg.name === 'Business' && hideBusiness
-                            ? lang === 'en' ? 'Hide Features' : 'Sembunyikan Fitur'
-                            : pkg.name === 'Advance' && hideAdvance
-                            ? lang === 'en' ? 'Hide Features' : 'Sembunyikan Fitur'
-                            : pkg.name === 'Beginner' && hideBasic
-                            ? lang === 'en' ? 'Hide Features' : 'Sembunyikan Fitur'
-                            : lang === 'en'
-                            ? 'View Full Features' : 'Lihat Ciri Selengkapnya'}
-                        </a>
+                    <div className='package-info'>
+                      <a
+                        onClick={() => toggle(`${pkg.name}`)}
+                        className='price-more'
+                      >
+                        {pkg.name === 'Agent' && hideVIP
+                          ? lang === 'en'
+                            ? 'Hide Features'
+                            : 'Sembunyikan Fitur'
+                          : pkg.name === 'Business' && hideBusiness
+                          ? lang === 'en'
+                            ? 'Hide Features'
+                            : 'Sembunyikan Fitur'
+                          : pkg.name === 'Advance' && hideAdvance
+                          ? lang === 'en'
+                            ? 'Hide Features'
+                            : 'Sembunyikan Fitur'
+                          : pkg.name === 'Beginner' && hideBasic
+                          ? lang === 'en'
+                            ? 'Hide Features'
+                            : 'Sembunyikan Fitur'
+                          : lang === 'en'
+                          ? 'View Full Features'
+                          : 'Lihat Ciri Selengkapnya'}
+                      </a>
                       <LinkButton
                         href={`https://payment.avana.asia/pay?plan=${pkg.slug}`}
-                        target="__blank"
-                        className="btn-primary"
+                        target='__blank'
+                        className='btn-primary'
                       >
                         {`${
-                          pkg.name === 'Beginner' && lang === 'en' ? 'Choose Beginner Plan' : 
-                          pkg.name === 'Business' && lang === 'en' ? 'Choose Business Plan' :
-                          pkg.name === 'Agent' && lang === 'en' ? 'Choose Agent Plan' :
-                          pkg.name === 'Beginner' && lang === 'bm' ? 'Daftar Plan Beginner' : 
-                          pkg.name === 'Business' && lang === 'bm' ? 'Daftar Plan Business' :
-                          'Daftar Plan Agent'
+                          pkg.name === 'Beginner' && lang === 'en'
+                            ? 'Choose Beginner Plan'
+                            : pkg.name === 'Business' && lang === 'en'
+                            ? 'Choose Business Plan'
+                            : pkg.name === 'Agent' && lang === 'en'
+                            ? 'Choose Agent Plan'
+                            : pkg.name === 'Beginner' && lang === 'bm'
+                            ? 'Daftar Plan Beginner'
+                            : pkg.name === 'Business' && lang === 'bm'
+                            ? 'Daftar Plan Business'
+                            : 'Daftar Plan Agent'
                         }`}
                       </LinkButton>
                     </div>
