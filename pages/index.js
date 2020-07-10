@@ -86,27 +86,27 @@ const Home = () => {
         <Head>
           {/* Primary Meta Tags */}
           <title>
-            AVANA | #1 Leading Social Commerce Platform in Indonesia
+            AVANA | The best social commerce platform for your online business
           </title>
-          <link rel='canonical' href='https://avana.id' />
+          <link rel='canonical' href='https://avana.asia' />
           <meta
             name='title'
-            content='#1 Leading Social Commerce Platform in Indonesia'
+            content='The best social commerce platform for your online business '
           />
           <meta
             name='description'
-            content='AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp'
+            content='Our end-to-end commerce platform helps automate your business so that you can sell online with ease'
           />
           {/* Open Graph / Facebook */}
           <meta property='og:type' content='website' />
-          <meta property='og:url' content='https://avana.id/' />
+          <meta property='og:url' content='https://avana.asia/' />
           <meta
             property='og:title'
-            content='#1 Leading Social Commerce Platform in Indonesia'
+            content='The best social commerce platform for your online business'
           />
           <meta
             property='og:description'
-            content='AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp'
+            content='Our end-to-end commerce platform helps automate your business so that you can sell online with ease'
           />
           <meta
             property='og:image'
@@ -114,14 +114,14 @@ const Home = () => {
           />
           {/* Twitter */}
           <meta property='twitter:card' content='summary_large_image' />
-          <meta property='twitter:url' content='https://avana.id/' />
+          <meta property='twitter:url' content='https://avana.asia/' />
           <meta
             property='twitter:title'
-            content='#1 Leading Social Commerce Platform in Indonesia'
+            content='The best social commerce platform for your online business'
           />
           <meta
             property='twitter:description'
-            content='AVANA adalah platform social commerce untuk mendukung para pelaku bisnis dengan mengoptimalkan penjualan melalui website, facebook, instagram, dan whatsapp'
+            content='Our end-to-end commerce platform helps automate your business so that you can sell online with ease'
           />
           <meta
             property='twitter:image'
