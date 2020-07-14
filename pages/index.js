@@ -144,6 +144,17 @@ const Home = () => {
           </p>
         </header>
         <main>
+          <section className='feature is-mobile'>
+            <LinkButton
+              href='https://store.avana.asia/'
+              target='__blank'
+              className='btn-primary'
+            >
+              {lang === 'en'
+                ? 'Try AVANA for Free'
+                : 'Cubalah AVANA secara Percuma'}
+            </LinkButton>
+          </section>
           <section className='feature'>
             <div className='description'>
               <h2 className='is-size-4'>
@@ -175,11 +186,7 @@ const Home = () => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href={
-                    lang === 'en'
-                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+Dashboard+feature'
-                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Dashboard'
-                  }
+                  href='https://store.avana.asia/'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -231,11 +238,7 @@ const Home = () => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href={
-                    lang === 'en'
-                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+AutoReply+feature'
-                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+AutoReply'
-                  }
+                  href='https://store.avana.asia/'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -288,11 +291,7 @@ const Home = () => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href={
-                    lang === 'en'
-                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+Reseller+feature'
-                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Reseller'
-                  }
+                  href='https://store.avana.asia/'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -344,11 +343,7 @@ const Home = () => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href={
-                    lang === 'en'
-                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+Webstore+feature'
-                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Webstore'
-                  }
+                  href='https://store.avana.asia/'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -380,11 +375,7 @@ const Home = () => {
               <ul />
               <div className='ava-btn-group'>
                 <LinkButton
-                  href={
-                    lang === 'en'
-                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+FBStore+feature'
-                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+FBStore'
-                  }
+                  href='https://store.avana.asia/'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -475,11 +466,7 @@ const Home = () => {
               <ul />
               <div className='ava-btn-group'>
                 <LinkButton
-                  href={
-                    lang === 'en'
-                      ? 'https://api.whatsapp.com/send?phone=60124037044&text=Hi+AVANA+I+wanna+know+more+about+Marketing+tools+feature'
-                      : 'https://api.whatsapp.com/send?phone=60124037044&text=Hai+AVANA+saya+berminat+nak+tau+lebih+lanjut+mengenai+Marketing+tools+feature'
-                  }
+                  href='https://store.avana.asia/'
                   target='__blank'
                   className='btn-primary'
                 >

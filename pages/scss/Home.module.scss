@@ -184,6 +184,16 @@
           padding: 2em 5vw;
         }
 
+        &.is-mobile {
+          display: none;
+
+          @media (max-width: 768px) {
+            display: flex;
+            padding-bottom: 0;
+            margin-bottom: -30px;
+          }
+        }
+
         .description {
           min-width: 250px;
 
