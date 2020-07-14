@@ -219,6 +219,17 @@ footer {
     color: #0d1529;
   }
 
+  &.is-bigger {
+    padding: 1.25em 1.75em;
+    font-size: 1.15rem;
+  }
+
+  &.is-not-mobile {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
   &.btn-primary {
     background-color: #fdb816;
 

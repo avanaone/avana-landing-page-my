@@ -142,13 +142,22 @@ const Home = () => {
                 })
               : 'loading...'}
           </p>
+          <LinkButton
+            href='https://store.avana.asia/'
+            target='__blank'
+            className='btn-primary is-not-mobile'
+          >
+            {lang === 'en'
+              ? 'Try AVANA for Free'
+              : 'Cubalah AVANA secara Percuma'}
+          </LinkButton>
         </header>
         <main>
           <section className='feature is-mobile'>
             <LinkButton
               href='https://store.avana.asia/'
               target='__blank'
-              className='btn-primary'
+              className='btn-primary is-bigger'
             >
               {lang === 'en'
                 ? 'Try AVANA for Free'
