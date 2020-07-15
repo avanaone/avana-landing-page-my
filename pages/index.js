@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import fetch from 'isomorphic-unfetch';
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Toaster from '../components/Toaster';
 import ContainerAnalytic from '../components/AnalyticContainer';
 import { LinkButton } from '../components/Button';
 import Slider from '../components/Slider';
@@ -17,7 +19,7 @@ const getCw = import('../json/copywriting.json');
 // const getPromos = import('../json/promo.json');
 const getEvents = import('../json/event.json');
 
-const Home = () => {
+const Home = ({ subscribers }) => {
   const [lang, setLang] = useState('en');
   const [cw, setCw] = useState([]);
 
@@ -726,10 +728,29 @@ const Home = () => {
             </div>
           </div> */}
         </main>
+        <Toaster subscribers={subscribers} />
         <Footer />
       </div>
     </ContainerAnalytic>
   );
 };
+
+export async function getStaticProps() {
+  // Call an external API endpoint to get latest subscribers.
+  // You can use any data fetching library
+  const res = await fetch(
+    'https://api.avana.asia/recentSignUps?days=1&limit=5'
+  );
+  const subscribers = await res.json();
+  console.log('stan', subscribers);
+
+  // By returning { props: subscribers }, the Home component
+  // will receive `subscribers` as a prop at build time
+  return {
+    props: {
+      subscribers,
+    },
+  };
+}
 
 export default Home;
