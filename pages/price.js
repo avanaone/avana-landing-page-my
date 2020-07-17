@@ -210,6 +210,51 @@ const Price = () => {
                     </div>
                   </div>
                 ))}
+              {period === 'yearly' ? (
+                <div className={`package`}>
+                  <div className='package-info'>
+                    <span className='name is-size-5'>Enterprise</span>
+                    <p style={{ lineHeight: `1.5em`, margin: `.75em 0` }}>
+                      {lang === 'en'
+                        ? 'End-to-end social commerce solutions tailored for your business.'
+                        : 'Solusi perdagangan sosial menyeluruh yang bersesuaian untuk perniagaan anda.'}
+                    </p>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        {lang === 'en'
+                          ? 'Ecommerce shop set up & management'
+                          : 'Membina & menguruskan kedai eCommerce'}
+                      </li>
+                      <li>
+                        {lang === 'en'
+                          ? 'Extended customization & integrations that suits your need'
+                          : 'Integrasi & fungsi pengubahsuaian yang sesuai dengan keperluan anda'}
+                      </li>
+                      <li>
+                        {lang === 'en'
+                          ? 'Marketing consultation & campaign management'
+                          : 'Konsultasi pemasaran & pengurusan kempen'}
+                      </li>
+                      <li>
+                        {lang === 'en'
+                          ? 'Dedicated account manager'
+                          : 'Pengurus khas untuk akaun anda'}
+                      </li>
+                    </ul>
+                  </div>
+                  <LinkButton
+                    href={`https://forms.gle/N9inWJpo7bBAJXfs5`}
+                    target='__blank'
+                    className='btn-primary'
+                  >
+                    {`${lang === 'en' ? 'Contact Us' : 'Hubungi Kami'}`}
+                  </LinkButton>
+                </div>
+              ) : (
+                ''
+              )}
             </div>
             {/* <a href="/packages-detail">Lihat Perbandingan</a> */}
           </section>

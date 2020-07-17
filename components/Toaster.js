@@ -31,15 +31,15 @@ export default function Toaster({ subscribers }) {
           <div
             className={`toaster ${i === activeToaster ? 'active' : 'inactive'}`}
           >
-            {/* <div className='icon-ava'>
+            <div className='icon-ava'>
               <img
                 srcSet={
-                  require('public/assets/images/ava-cashier.png?resize&size=120?webp')
+                  require('public/assets/images/Toaster-icon.png?resize?webp')
                     .srcSet
                 }
-                alt='AVA Cashier'
+                alt='AVA Hi'
               />
-            </div> */}
+            </div>
             <div className='user'>
               <p>
                 <span className='name'>

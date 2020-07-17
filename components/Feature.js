@@ -109,7 +109,11 @@ export default function Feature(props) {
               : 'Cuba AVANA selama 14 hari secara PERCUMA!'}
             {/* { lang === 'en' ? 'Try AVANA 14 days for FREE!' : 'Cuba AVANA selama 14 hari secara PERCUMA!'} */}
           </h2>
-          {title === 'AVAChat' ? (
+          {title === 'Whatsapp Commerce' ? (
+            <LinkButton className='btn-primary'>
+              {lang === 'en' ? 'Coming Soon' : 'Akan Datang'}
+            </LinkButton>
+          ) : title === 'AVAChat' ? (
             <LinkButton
               href={'https://forms.gle/uNDvYYLs2diJmr3WA'}
               target='_blank'

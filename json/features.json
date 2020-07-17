@@ -302,5 +302,47 @@
         "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
       }
     ]
+  },
+  "wacommerce": {
+    "en": [
+      {
+        "title": "Showcase your product catalogue easily.",
+        "description": "Seamless customer shopping experience with AVANA WhatsApp Commerce. Let customer browse through your product and place order via WhatsApp.",
+        "image": "wacommerce/AVANA-Mobile-Dashboard.png",
+        "slug": "https://store.avana.asia/"
+      },
+      {
+        "title": "Automate your order taking process",
+        "description": "You can collect customer shipping information and collect online payment with in-page check out feature",
+        "image": "wacommerce/Customer-detail-and-payment.png",
+        "slug": "https://store.avana.asia/"
+      },
+      {
+        "title": "Manage all WhatsApp orders easily on AVANA Dashboard.",
+        "description": "Sync your stock real time and manage all orders easily with AVANA on-for-all dashboard.",
+        "image": "wacommerce/Product-Showcase.png",
+        "slug": "https://store.avana.asia/"
+      }
+    ],
+    "bm": [
+      {
+        "title": "Pamerkan produk katalog dengan mudah.",
+        "description": "Kini pelanggan anda dapat melihat produk dan terus membeli melalui WhatsApp. Rasai pengalaman ini dengan WhatsApp Commerce.",
+        "image": "wacommerce/AVANA-Mobile-Dashboard.png",
+        "slug": "https://store.avana.asia/"
+      },
+      {
+        "title": "Automatikkan proses mengambil order anda.",
+        "description": "Anda boleh kumpulkan info penghantaran dan pembayaran online pelanggan di dalam halaman yang sama. Lihat fungsi ini.",
+        "image": "wacommerce/Customer-detail-and-payment.png",
+        "slug": "https://store.avana.asia/"
+      },
+      {
+        "title": "Uruskan semua order yang anda terima di WhatsApp melalui AVANA Dashboard",
+        "description": "Selaraskan stok dalam masa nyata dan uruskan order anda dengan mudah melalui AVANA dashboard.",
+        "image": "wacommerce/Product-Showcase.png",
+        "slug": "https://store.avana.asia/"
+      }
+    ]
   }
 }

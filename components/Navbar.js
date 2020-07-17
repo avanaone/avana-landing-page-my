@@ -176,6 +176,13 @@ export default function Navbar({ style }) {
                 <a className='navbar-item' href='/avachat' title='AVAChat'>
                   {lang === 'en' ? 'AVAChat' : 'AVAChat'}
                 </a>
+                <a
+                  className='navbar-item'
+                  href='/whatsapp-commerce'
+                  title='AVAChat'
+                >
+                  {lang === 'en' ? 'WhatsApp Commerce' : 'WhatsApp Commerce'}
+                </a>
               </div>
             </div>
             <a className='navbar-item' href='/price' title='Harga'>

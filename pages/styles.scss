@@ -653,7 +653,7 @@ footer {
   padding: 1em 1.5em;
   background-color: white;
   border-radius: 0.5em;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.125);
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.36);
   width: fit-content;
   position: fixed;
   left: 30px;
@@ -700,7 +700,7 @@ footer {
       }
     }
     img {
-      width: 120px;
+      width: 54px;
       height: auto;
 
       &.flag {
