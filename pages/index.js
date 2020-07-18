@@ -742,7 +742,7 @@ export async function getStaticProps() {
     'https://api.avana.asia/recentSignUps?days=1&limit=5'
   );
   const subscribers = await res.json();
-  console.log('stan', subscribers);
+  // console.log('stan', subscribers);
 
   // By returning { props: subscribers }, the Home component
   // will receive `subscribers` as a prop at build time
