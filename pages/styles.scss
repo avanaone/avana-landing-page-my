@@ -650,7 +650,7 @@ footer {
 }
 
 .toaster {
-  padding: 1em 1.5em;
+  padding: 0.5em 0.75em;
   background-color: rgb(255, 244, 206);
   border-radius: 0.5em;
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.36);
@@ -689,13 +689,31 @@ footer {
     }
     &.user {
       text-align: left;
+
+      p {
+        @media (max-width: 768px) {
+          line-height: 1.5;
+          margin-bottom: 0.5em;
+        }
+        &.details {
+          font-size: 0.75em;
+
+          @media (max-width: 768px) {
+            margin-bottom: 0;
+          }
+        }
+      }
     }
 
     p {
       span {
         &.name {
-          font-size: 1.125em;
+          font-size: 1em;
           font-weight: bold;
+        }
+
+        &.text {
+          font-size: 0.875em;
         }
       }
     }
@@ -707,6 +725,11 @@ footer {
         width: 30px;
         height: 30px;
         margin-bottom: -8px;
+
+        @media (max-width: 768px) {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
   }

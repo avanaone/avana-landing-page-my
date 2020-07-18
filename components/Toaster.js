@@ -45,7 +45,7 @@ export default function Toaster({ subscribers }) {
                 <span className='name'>
                   {subscriber.first_name} {subscriber.last_name}
                 </span>
-                <span>
+                <span className='text'>
                   {' '}
                   from{' '}
                   {subscriber.country === 'Indonesia' ||
