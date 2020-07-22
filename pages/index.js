@@ -739,7 +739,7 @@ export async function getStaticProps() {
   // Call an external API endpoint to get latest subscribers.
   // You can use any data fetching library
   const res = await fetch(
-    'https://api.avana.asia/recentSignUps?days=1&limit=5'
+    'https://api.avana.asia/recentSignUps?days=30&limit=5&country=Malaysia'
   );
   const subscribers = await res.json();
   // console.log('stan', subscribers);
