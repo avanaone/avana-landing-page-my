@@ -133,12 +133,12 @@ const Home = ({ subscribers }) => {
         <section
           style={{
             padding: `1rem 2rem`,
-            backgroundColor: `#d2a75999`,
-            color: `white`,
+            backgroundColor: `#feb612`,
+            color: `#222`,
           }}
         >
           <a href='/price'>
-            8.8 Flash Sales! 30% off Yearly Business Plan and RM88 AVACredit.
+            8.8 FLASH SALES! 30% off Yearly Business Plan and RM88 AVACredit.
             Use code <strong style={{ color: `red` }}>AVANA88</strong>
           </a>
         </section>
