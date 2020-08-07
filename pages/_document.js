@@ -55,6 +55,23 @@ class MyDocument extends Document {
           ></script>
         </Head>
         <body>
+          <section
+            style={{
+              padding: `1rem 2rem`,
+              backgroundColor: `#feb612`,
+              color: `#222`,
+              textAlign: `center`,
+              position: `sticky`,
+              top: `0`,
+              zIndex: `999`,
+            }}
+          >
+            <a href='/price'>
+              8.8 FLASH SALES! 30% off Yearly Business Plan and RM88 AVACredit.
+              Use code <strong style={{ color: `red` }}>AVANA88</strong>. Only
+              available on Aug 08.
+            </a>
+          </section>
           <Main />
           <NextScript />
         </body>

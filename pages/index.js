@@ -130,18 +130,6 @@ const Home = ({ subscribers }) => {
             content='/assets/images/meta-image.png?resize?webp'
           />
         </Head>
-        <section
-          style={{
-            padding: `1rem 2rem`,
-            backgroundColor: `#feb612`,
-            color: `#222`,
-          }}
-        >
-          <a href='/price'>
-            8.8 FLASH SALES! 30% off Yearly Business Plan and RM88 AVACredit.
-            Use code <strong style={{ color: `red` }}>AVANA88</strong>
-          </a>
-        </section>
         <Navbar style={{ backgroundColor: navbarBg }} />
         <header>
           <h1 className='is-size-3'>{cw.h1}</h1>
