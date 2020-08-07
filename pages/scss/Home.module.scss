@@ -175,6 +175,12 @@
         }
       }
 
+      &.promo-banner {
+        padding: 1rem 2rem;
+        background-color: rgba(48, 120, 234, 0.2);
+        color: white;
+      }
+
       &.feature {
         flex-wrap: wrap-reverse;
         padding: 1em 5vw;

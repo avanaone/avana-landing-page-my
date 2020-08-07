@@ -102,23 +102,31 @@ const Price = () => {
                   >
                     <div className='package-info'>
                       <span className='name is-size-5'>{pkg.name}</span>
-                      <span className='price is-size-4'>
+                      {/* <span className='price is-size-4'>
                         {formatCurrency(pkg.price, pkg.currency)}
-                      </span>
-                      {/* {pkg.price === pkg.discounted_price ? (
-                        <span className="price is-size-4">
+                      </span> */}
+                      {pkg.price === pkg.discounted_price &&
+                      pkg.discounted_price !== null ? (
+                        <span className='price is-size-4'>
                           {formatCurrency(pkg.price, pkg.currency)}
                         </span>
                       ) : (
                         <div>
-                          <strike className="is-size-6">
+                          <strike className='is-size-6'>
                             {formatCurrency(pkg.price, pkg.currency)}
                           </strike>
-                          <div className="price is-size-4">
+                          <div className='price is-size-4'>
                             {formatCurrency(pkg.discounted_price, pkg.currency)}
                           </div>
                         </div>
-                      )} */}
+                      )}
+                      {pkg.is_discount ? (
+                        <span style={{ color: 'red', fontWeight: 600 }}>
+                          Use code AVANA88
+                        </span>
+                      ) : (
+                        ''
+                      )}
                     </div>
                     <div>
                       <ul>

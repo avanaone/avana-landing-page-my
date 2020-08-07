@@ -57,9 +57,9 @@ const Home = ({ subscribers }) => {
       });
     }
 
-    // setTimeout(() => {
-    //   toggleModal();
-    // }, 5000);
+    setTimeout(() => {
+      toggleModal();
+    }, 3000);
     window.addEventListener('scroll', handleNavbar);
 
     return () => {
@@ -130,6 +130,18 @@ const Home = ({ subscribers }) => {
             content='/assets/images/meta-image.png?resize?webp'
           />
         </Head>
+        <section
+          style={{
+            padding: `1rem 2rem`,
+            backgroundColor: `#d2a75999`,
+            color: `white`,
+          }}
+        >
+          <a href='/price'>
+            8.8 Flash Sales! 30% off Yearly Business Plan and RM88 AVACredit.
+            Use code <strong style={{ color: `red` }}>AVANA88</strong>
+          </a>
+        </section>
         <Navbar style={{ backgroundColor: navbarBg }} />
         <header>
           <h1 className='is-size-3'>{cw.h1}</h1>
@@ -687,7 +699,7 @@ const Home = ({ subscribers }) => {
               {cw.footerCta ? cw.footerCta[1] : 'loading'}
             </LinkButton>
           </section>
-          {/* <div className={`modal ${isModal ? 'is-active' : ''}`}>
+          <div className={`modal ${isModal ? 'is-active' : ''}`}>
             <div className='modal-background' onClick={toggleModal} />
             <div
               className='modal-content eventBanner'
@@ -700,33 +712,18 @@ const Home = ({ subscribers }) => {
               >
                 Close
               </button>
-              <Slider
-                slides={events.map((event) => (
-                  <>
-                    <Link href='/event/[id]' as={`/event/${event.id}/`}>
-                      <img
-                        srcSet={lang === 'en' ? event.image.en : event.image.bm}
-                        alt=''
-                        style={{ cursor: `pointer` }}
-                      />
-                    </Link>
-                    <div
-                      style={{
-                        padding: `1rem`,
-                        marginBottom: `1rem`,
-                        width: `100%`,
-                        minWidth: `100%`,
-                      }}
-                    >
-                      <h3 className='name is-size-6'>
-                        {lang === 'en' ? event.title.en : event.title.bm}
-                      </h3>
-                    </div>
-                  </>
-                ))}
-              />
+              <a href='/price'>
+                <img
+                  srcSet={
+                    require('../public/assets/images/popup/88-promo.png?resize?webp')
+                      .srcSet
+                  }
+                  alt='Promo 8.8'
+                  style={{ cursor: `pointer` }}
+                />
+              </a>
             </div>
-          </div> */}
+          </div>
         </main>
         <Toaster subscribers={subscribers} />
         <Footer />
