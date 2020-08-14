@@ -6,7 +6,7 @@ const path = require('path');
 
 const nextConfig = {
   optimizeImagesInDev: true,
-  exportTrailingSlash: true,
+  trailingSlash: true,
   exportPathMap: async function () {
     const paths = {
       '/': { page: '/' },
