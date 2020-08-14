@@ -654,6 +654,7 @@ const Home = ({ subscribers }) => {
                     .srcSet
                 }
                 alt=''
+                style={{ padding: `1rem` }}
               />
               <img
                 srcSet={

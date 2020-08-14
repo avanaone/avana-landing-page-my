@@ -62,19 +62,19 @@
       {
         "title": "Set your own keyword(s)",
         "description": "Put the keyword(s) you want your customers to comment on to be replied automatically.",
-        "image": "liveautoreply/multichannel-chat.png",
+        "image": "liveautoreply/send-product-info.png",
         "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
       },
       {
         "title": "Automated Comments Reply",
         "description": "Put in the reply you want your customers to receive once they use the keywords you have set.",
-        "image": "liveautoreply/send-product-info.png",
+        "image": "liveautoreply/quick-reply.png",
         "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
       },
       {
         "title": "Automated Personal Message Reply",
         "description": "Put the Messenger's message you want your customers to receive after they used the keywords you have set.",
-        "image": "liveautoreply/quick-reply.png",
+        "image": "liveautoreply/Live-Auto-Reply-PM.png",
         "slug": "https://wa.me/6288211047841?text=Halo, saya tertarik menggunakan produk AVAChat"
       }
     ],
