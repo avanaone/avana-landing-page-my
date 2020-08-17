@@ -73,13 +73,13 @@ class MyDocument extends Document {
           ></script>
         </Head>
         <body>
-          {/* <section id='banner-promo'>
+          <section id='banner-promo'>
             <a href='/price'>
-              8.8 FLASH SALES! 30% off Yearly Business Plan and RM88 AVACredit.
-              Use code <strong style={{ color: `red` }}>AVANA88</strong>. Only
-              on 8 Aug.
+              [MERDEKA PROMO] Save 33% on Yearly Business Plan. Use code{' '}
+              <strong style={{ color: `red` }}>MERDEKA33</strong>. Valid from
+              Aug 15 -31.
             </a>
-          </section> */}
+          </section>
           <Main />
           <NextScript />
         </body>

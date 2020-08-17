@@ -57,9 +57,9 @@ const Home = ({ subscribers }) => {
       });
     }
 
-    // setTimeout(() => {
-    //   toggleModal();
-    // }, 3000);
+    setTimeout(() => {
+      toggleModal();
+    }, 5000);
     window.addEventListener('scroll', handleNavbar);
 
     return () => {
@@ -688,7 +688,7 @@ const Home = ({ subscribers }) => {
               {cw.footerCta ? cw.footerCta[1] : 'loading'}
             </LinkButton>
           </section>
-          {/* <div className={`modal ${isModal ? 'is-active' : ''}`}>
+          <div className={`modal ${isModal ? 'is-active' : ''}`}>
             <div className='modal-background' onClick={toggleModal} />
             <div
               className='modal-content eventBanner'
@@ -704,15 +704,15 @@ const Home = ({ subscribers }) => {
               <a href='/price'>
                 <img
                   srcSet={
-                    require('../public/assets/images/popup/88-promo.png?resize?webp')
+                    require('../public/assets/images/popup/merdeka-promo.png?resize?webp')
                       .srcSet
                   }
-                  alt='Promo 8.8'
+                  alt='Merdeka Promo'
                   style={{ cursor: `pointer` }}
                 />
               </a>
             </div>
-          </div> */}
+          </div>
         </main>
         <Toaster subscribers={subscribers} />
         <Footer />
