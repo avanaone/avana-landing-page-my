@@ -7,6 +7,7 @@ const getWidth = () => (typeof window !== 'undefined' ? window.innerWidth : '');
 
 export default function Navbar({ style }) {
   const [lang, setLang] = useState('en');
+  const [isUtm, setIsUtm] = useState(false);
   const [cw, setCw] = useState([]);
 
   const [isModal, setIsModal] = useState(false);
@@ -45,6 +46,11 @@ export default function Navbar({ style }) {
       getCw.then((res) => {
         setCw(res.default[localStorage.getItem('lang')]);
       });
+    }
+    if (localStorage.getItem('utm_avana')) {
+      setIsUtm(true);
+    } else {
+      setIsUtm(false);
     }
     const onResize = window.addEventListener('resize', () =>
       resizeRef.current()
@@ -248,7 +254,13 @@ export default function Navbar({ style }) {
             </a>
             <div className='navbar-item'>
               <LinkButton
-                href='https://store.avana.asia/'
+                href={
+                  isUtm
+                    ? `https://store.avana.asia/start/manage/${localStorage.getItem(
+                        'utm_avana'
+                      )}`
+                    : 'https://store.avana.asia/'
+                }
                 target='__blank'
                 className='btn-secondary'
                 title='Masuk'
@@ -256,7 +268,13 @@ export default function Navbar({ style }) {
                 {cw.navbar ? cw.navbar[10] : 'Log In'}
               </LinkButton>
               <LinkButton
-                href='https://store.avana.asia/'
+                href={
+                  isUtm
+                    ? `https://store.avana.asia/start/manage/${localStorage.getItem(
+                        'utm_avana'
+                      )}`
+                    : 'https://store.avana.asia/'
+                }
                 target='__blank'
                 className='btn-primary'
                 title='Daftar'

@@ -32,6 +32,10 @@ class MyDocument extends Document {
                 });
                 clearInterval(waitForZopim);
               }, 100);
+
+              if( window.location.search.indexOf("utm_source") > 0 && window.location.search.indexOf("utm_campaign") > 0 ) { 
+                localStorage.setItem("utm_avana", window.location.search); 
+              }
               `,
             }}
           />
