@@ -517,11 +517,12 @@ const Home = ({ subscribers }) => {
                   {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton> */}
                 <LinkButton
-                  href={'https://forms.gle/uNDvYYLs2diJmr3WA'}
-                  target='_blank'
+                  href={'https://app.avana.asia/'}
                   className='btn-primary'
                 >
-                  {lang === 'en' ? 'Coming Soon' : 'Akan Datang'}
+                  {lang === 'en'
+                    ? 'Sign Up Trial Account'
+                    : 'Daftar Akaun Percubaan'}
                 </LinkButton>
               </div>
             </div>
