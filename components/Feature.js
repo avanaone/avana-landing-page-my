@@ -13,6 +13,7 @@ export default function Feature(props) {
   const { id, title, link, CS, className, showVideo, isAnchor } = props;
   const [lang, setLang] = useState('en');
   const [features, setFeatures] = useState([]);
+  const [isUtm, setIsUtm] = useState(false);
 
   useEffect(() => {
     if (localStorage.getItem('lang')) {
@@ -20,6 +21,11 @@ export default function Feature(props) {
       setLang(localStorage.getItem('lang'));
     } else {
       localStorage.setItem('lang', 'en');
+    }
+    if (localStorage.getItem('utm_avana')) {
+      setIsUtm(true);
+    } else {
+      setIsUtm(false);
     }
   }, []);
 
@@ -111,7 +117,13 @@ export default function Feature(props) {
           </h2>
           {title === 'Whatsapp Commerce' ? (
             <LinkButton
-              href={'https://app.avana.asia/'}
+              href={
+                isUtm
+                  ? `https://app.avana.asia/${localStorage.getItem(
+                      'utm_avana'
+                    )}`
+                  : 'https://app.avana.asia/'
+              }
               className='btn-primary'
             >
               {lang === 'en'
@@ -120,19 +132,26 @@ export default function Feature(props) {
             </LinkButton>
           ) : title === 'AVAChat' ? (
             <LinkButton
-              href={'https://app.avana.asia/'}
+              href={
+                isUtm
+                  ? `https://app.avana.asia/${localStorage.getItem(
+                      'utm_avana'
+                    )}`
+                  : 'https://app.avana.asia/'
+              }
               className='btn-primary'
             >
               {lang === 'en'
                 ? 'Sign Up Trial Account'
                 : 'Daftar Akaun Percubaan'}
+            </LinkButton>
           ) : (
             <LinkButton
               href={
-                CS
-                  ? lang === 'en' && title === 'AVAChat'
-                    ? link[0]
-                    : link[1]
+                isUtm
+                  ? `https://app.avana.asia/${localStorage.getItem(
+                      'utm_avana'
+                    )}`
                   : 'https://app.avana.asia/'
               }
               target='__blank'
