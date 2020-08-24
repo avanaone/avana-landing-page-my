@@ -120,12 +120,12 @@ export default function Feature(props) {
             </LinkButton>
           ) : title === 'AVAChat' ? (
             <LinkButton
-              href={'https://forms.gle/uNDvYYLs2diJmr3WA'}
-              target='_blank'
+              href={'https://app.avana.asia/'}
               className='btn-primary'
             >
-              {lang === 'en' ? 'Coming Soon' : 'Akan Datang'}
-            </LinkButton>
+              {lang === 'en'
+                ? 'Sign Up Trial Account'
+                : 'Daftar Akaun Percubaan'}
           ) : (
             <LinkButton
               href={
