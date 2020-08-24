@@ -145,7 +145,7 @@ const Home = ({ subscribers }) => {
               : 'loading...'}
           </p>
           <LinkButton
-            href='https://store.avana.asia/'
+            href='https://app.avana.asia/'
             target='__blank'
             className='btn-primary is-not-mobile'
           >
@@ -157,7 +157,7 @@ const Home = ({ subscribers }) => {
         <main>
           <section className='feature is-mobile'>
             <LinkButton
-              href='https://store.avana.asia/'
+              href='https://app.avana.asia/'
               target='__blank'
               className='btn-primary is-bigger'
             >
@@ -197,7 +197,7 @@ const Home = ({ subscribers }) => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='https://store.avana.asia/'
+                  href='https://app.avana.asia/'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -249,7 +249,7 @@ const Home = ({ subscribers }) => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='https://store.avana.asia/'
+                  href='https://app.avana.asia/'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -302,7 +302,7 @@ const Home = ({ subscribers }) => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='https://store.avana.asia/'
+                  href='https://app.avana.asia/'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -354,7 +354,7 @@ const Home = ({ subscribers }) => {
               </ul>
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='https://store.avana.asia/'
+                  href='https://app.avana.asia/'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -386,7 +386,7 @@ const Home = ({ subscribers }) => {
               <ul />
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='https://store.avana.asia/'
+                  href='https://app.avana.asia/'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -477,7 +477,7 @@ const Home = ({ subscribers }) => {
               <ul />
               <div className='ava-btn-group'>
                 <LinkButton
-                  href='https://store.avana.asia/'
+                  href='https://app.avana.asia/'
                   target='__blank'
                   className='btn-primary'
                 >
@@ -681,7 +681,7 @@ const Home = ({ subscribers }) => {
               {cw.footerCta ? cw.footerCta[0] : 'loading'}
             </h2>
             <LinkButton
-              href='https://store.avana.asia/'
+              href='https://app.avana.asia/'
               target='__blank'
               className='ava-btn btn-primary'
             >

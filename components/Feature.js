@@ -128,7 +128,7 @@ export default function Feature(props) {
                   ? lang === 'en' && title === 'AVAChat'
                     ? link[0]
                     : link[1]
-                  : 'https://store.avana.asia/'
+                  : 'https://app.avana.asia/'
               }
               target='__blank'
               className='btn-primary'
