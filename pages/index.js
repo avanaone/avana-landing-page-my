@@ -37,8 +37,8 @@ const Home = ({ subscribers }) => {
 
   // getPromos.then((res) => setPromos(res.default));
   getEvents.then((res) => setEvents(res.default));
-  const [isModal, setIsModal] = useState(false);
-  const toggleModal = () => setIsModal(!isModal);
+  // const [isModal, setIsModal] = useState(false);
+  // const toggleModal = () => setIsModal(!isModal);
 
   const { dashboard, avachat, reseller, webstore, avachatmy } = state;
 
@@ -63,9 +63,9 @@ const Home = ({ subscribers }) => {
       setIsUtm(false);
     }
 
-    setTimeout(() => {
-      toggleModal();
-    }, 5000);
+    // setTimeout(() => {
+    //   toggleModal();
+    // }, 5000);
     window.addEventListener('scroll', handleNavbar);
 
     return () => {
@@ -748,7 +748,7 @@ const Home = ({ subscribers }) => {
               {cw.footerCta ? cw.footerCta[1] : 'loading'}
             </LinkButton>
           </section>
-          <div className={`modal ${isModal ? 'is-active' : ''}`}>
+          {/* <div className={`modal ${isModal ? 'is-active' : ''}`}>
             <div className='modal-background' onClick={toggleModal} />
             <div
               className='modal-content eventBanner'
@@ -772,7 +772,7 @@ const Home = ({ subscribers }) => {
                 />
               </a>
             </div>
-          </div>
+          </div> */}
         </main>
         <Toaster subscribers={subscribers} />
         <Footer />
