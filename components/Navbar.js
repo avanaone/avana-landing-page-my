@@ -210,7 +210,10 @@ export default function Navbar({ style }) {
               }`}
               onClick={() => toggleDropdown('pelajari')}
             >
-              <a className='navbar-link' title='Pelajari'>
+              <a
+                className='navbar-link'
+                title={cw.navbar ? cw.navbar[4] : 'Learn'}
+              >
                 {cw.navbar ? cw.navbar[4] : 'Learn'}
               </a>
               <div className='navbar-dropdown'>
@@ -249,7 +252,11 @@ export default function Navbar({ style }) {
                 </a>
               </div>
             </div>
-            <a href='/about-us' className='navbar-item' title='Tentang Kami'>
+            <a
+              href='/about-us'
+              className='navbar-item'
+              title={cw.navbar ? cw.navbar[9] : 'About Us'}
+            >
               {cw.navbar ? cw.navbar[9] : 'About Us'}
             </a>
             <div className='navbar-item'>

@@ -31,7 +31,7 @@ export default function AboutUs() {
     <ContainerAnalytic>
       <div className={styles.AboutUs}>
         <Head>
-          <title>Tentang Kami • AVANA</title>
+          <title>{lang === 'en' ? 'About Us' : 'Tentang Kami'} • AVANA</title>
         </Head>
         <Navbar />
         <main>
