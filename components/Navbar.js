@@ -10,8 +10,8 @@ export default function Navbar({ style }) {
   const [isUtm, setIsUtm] = useState(false);
   const [cw, setCw] = useState([]);
 
-  const [isModal, setIsModal] = useState(false);
-  const toggleModal = () => setIsModal(!isModal);
+  // const [isModal, setIsModal] = useState(false);
+  // const toggleModal = () => setIsModal(!isModal);
   const toggleLang = (language) => {
     localStorage.setItem('lang', language);
     setLang(language);
@@ -285,7 +285,7 @@ export default function Navbar({ style }) {
           </div>
         </div>
       </nav>
-      <div className={`modal ${isModal ? 'is-active' : ''}`}>
+      {/* <div className={`modal ${isModal ? 'is-active' : ''}`}>
         <div className='modal-background' onClick={toggleModal} />
         <div className='modal-content tutorial'>
           <button
@@ -316,8 +316,8 @@ export default function Navbar({ style }) {
             </LinkButton>
           </div>
         </div>
-      </div>
-      <style jsx>{`
+      </div> */}
+      {/* <style jsx>{`
         .modal-content {
           display: flex;
           flex-direction: row;
@@ -378,7 +378,7 @@ export default function Navbar({ style }) {
         .modal-content > div .ava-btn {
           margin: 1em 0;
         }
-      `}</style>
+      `}</style> */}
     </>
   );
 }
