@@ -14,6 +14,7 @@ import SliderTestimonial from '../components/SliderTestimonial';
 import styles from './scss/Home.module.scss';
 
 import getTestimonials from '../json/testimonial.json';
+import Picture from '../components/Picture';
 import getMilestones from '../json/milestone.json';
 const getCw = import('../json/copywriting.json');
 // const getPromos = import('../json/promo.json');
@@ -231,12 +232,9 @@ const Home = ({ subscribers }) => {
               </div>
             </div>
             <div className='feature-img'>
-              <img
-                srcSet={
-                  require('public/assets/images/1-Dashboard.png?resize?webp')
-                    .srcSet
-                }
-                alt=''
+              <Picture
+                srcWebp={require('public/assets/images/1-Dashboard.webp?')}
+                src={require('public/assets/images/1-Dashboard.png?resize?webp')}
               />
             </div>
           </section>
@@ -289,12 +287,9 @@ const Home = ({ subscribers }) => {
               </div>
             </div>
             <div className='feature-img'>
-              <img
-                srcSet={
-                  require('public/assets/images/2-Auto-Reply.png?resize?webp')
-                    .srcSet
-                }
-                alt=''
+              <Picture
+                srcWebp={require('public/assets/images/2-Auto-Reply.webp?')}
+                src={require('public/assets/images/2-Auto-Reply.png?resize?webp')}
               />
             </div>
           </section>
@@ -348,12 +343,9 @@ const Home = ({ subscribers }) => {
               </div>
             </div>
             <div className='feature-img'>
-              <img
-                srcSet={
-                  require('public/assets/images/3-Affiliate-Dropship.png?resize?webp')
-                    .srcSet
-                }
-                alt=''
+              <Picture
+                srcWebp={require('public/assets/images/3-Affiliate-Dropship.webp?')}
+                src={require('public/assets/images/3-Affiliate-Dropship.png?resize?webp')}
               />
             </div>
           </section>
@@ -406,13 +398,9 @@ const Home = ({ subscribers }) => {
               </div>
             </div>
             <div className='feature-img'>
-              <img
-                srcSet={
-                  require('../public/assets/images/4-Webstore.png?resize?webp')
-                    .srcSet
-                }
-                className='active'
-                alt=''
+              <Picture
+                srcWebp={require('public/assets/images/4-Webstore.webp?')}
+                src={require('public/assets/images/4-Webstore.png?resize?webp')}
               />
             </div>
           </section>
@@ -441,13 +429,9 @@ const Home = ({ subscribers }) => {
               </div>
             </div>
             <div className='feature-img'>
-              <img
-                srcSet={
-                  require('../public/assets/images/5-Sell-Across-SOCMED.png?resize?webp')
-                    .srcSet
-                }
-                className='active'
-                alt=''
+              <Picture
+                srcWebp={require('public/assets/images/5-Sell-Across-SOCMED.webp?')}
+                src={require('public/assets/images/5-Sell-Across-SOCMED.png?resize?webp')}
               />
             </div>
           </section>
@@ -504,13 +488,9 @@ const Home = ({ subscribers }) => {
               </div>
             </div>
             <div className='feature-img'>
-              <img
-                srcSet={
-                  require('../public/assets/images/6-AVAchat.png?resize?webp')
-                    .srcSet
-                }
-                className='active'
-                alt=''
+              <Picture
+                srcWebp={require('public/assets/images/6-AVAchat.webp?')}
+                src={require('public/assets/images/6-AVAchat.png?resize?webp')}
               />
             </div>
           </section>
@@ -539,13 +519,9 @@ const Home = ({ subscribers }) => {
               </div>
             </div>
             <div className='feature-img'>
-              <img
-                srcSet={
-                  require('../public/assets/images/7-MKTG-Build-in.png?resize?webp')
-                    .srcSet
-                }
-                className='active'
-                alt=''
+              <Picture
+                srcWebp={require('public/assets/images/7-MKTG-Build-in.webp?')}
+                src={require('public/assets/images/7-MKTG-Build-in.png?resize?webp')}
               />
             </div>
           </section>
@@ -580,13 +556,9 @@ const Home = ({ subscribers }) => {
               </div>
             </div>
             <div className='feature-img'>
-              <img
-                srcSet={
-                  require('../public/assets/images/8-Whatsapp-commerce.png?resize?webp')
-                    .srcSet
-                }
-                className='active'
-                alt=''
+              <Picture
+                srcWebp={require('public/assets/images/8-Whatsapp-commerce.webp?')}
+                src={require('public/assets/images/8-Whatsapp-commerce.png?resize?webp')}
               />
             </div>
           </section>
