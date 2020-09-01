@@ -120,13 +120,13 @@ const Price = () => {
                           </div>
                         </div>
                       )}
-                      {pkg.is_discount ? (
+                      {/* {pkg.is_discount ? (
                         <span style={{ color: 'red', fontWeight: 600 }}>
                           Use code MERDEKA33
                         </span>
                       ) : (
                         ''
-                      )}
+                      )} */}
                     </div>
                     <div>
                       <ul>
