@@ -263,10 +263,10 @@ export default function Navbar({ style }) {
               <LinkButton
                 href={
                   isUtm
-                    ? `https://app.avana.asia/${localStorage.getItem(
+                    ? `https://store.avana.asia/start/manage/${localStorage.getItem(
                         'utm_avana'
                       )}`
-                    : 'https://app.avana.asia/'
+                    : 'https://store.avana.asia/start/manage/'
                 }
                 target='__blank'
                 className='btn-secondary'
@@ -277,10 +277,10 @@ export default function Navbar({ style }) {
               <LinkButton
                 href={
                   isUtm
-                    ? `https://app.avana.asia/${localStorage.getItem(
+                    ? `https://store.avana.asia/start/manage/${localStorage.getItem(
                         'utm_avana'
                       )}`
-                    : 'https://app.avana.asia/'
+                    : 'https://store.avana.asia/start/manage/'
                 }
                 target='__blank'
                 className='btn-primary'

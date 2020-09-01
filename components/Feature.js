@@ -119,10 +119,10 @@ export default function Feature(props) {
             <LinkButton
               href={
                 isUtm
-                  ? `https://app.avana.asia/${localStorage.getItem(
+                  ? `https://store.avana.asia/start/manage/${localStorage.getItem(
                       'utm_avana'
                     )}`
-                  : 'https://app.avana.asia/'
+                  : 'https://store.avana.asia/start/manage/'
               }
               className='btn-primary'
             >
@@ -134,10 +134,10 @@ export default function Feature(props) {
             <LinkButton
               href={
                 isUtm
-                  ? `https://app.avana.asia/${localStorage.getItem(
+                  ? `https://store.avana.asia/start/manage/${localStorage.getItem(
                       'utm_avana'
                     )}`
-                  : 'https://app.avana.asia/'
+                  : 'https://store.avana.asia/start/manage/'
               }
               className='btn-primary'
             >
@@ -149,10 +149,10 @@ export default function Feature(props) {
             <LinkButton
               href={
                 isUtm
-                  ? `https://app.avana.asia/${localStorage.getItem(
+                  ? `https://store.avana.asia/start/manage/${localStorage.getItem(
                       'utm_avana'
                     )}`
-                  : 'https://app.avana.asia/'
+                  : 'https://store.avana.asia/start/manage/'
               }
               target='__blank'
               className='btn-primary'
