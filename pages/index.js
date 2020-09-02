@@ -154,10 +154,8 @@ const Home = ({ subscribers }) => {
           <LinkButton
             href={
               isUtm
-                ? `https://store.avana.asia/start/manage/${localStorage.getItem(
-                    'utm_avana'
-                  )}`
-                : 'https://store.avana.asia/start/manage/'
+                ? `https://app.avana.asia/${localStorage.getItem('utm_avana')}`
+                : 'https://app.avana.asia/'
             }
             target='__blank'
             className='btn-primary is-not-mobile'
@@ -172,10 +170,10 @@ const Home = ({ subscribers }) => {
             <LinkButton
               href={
                 isUtm
-                  ? `https://store.avana.asia/start/manage/${localStorage.getItem(
+                  ? `https://app.avana.asia/${localStorage.getItem(
                       'utm_avana'
                     )}`
-                  : 'https://store.avana.asia/start/manage/'
+                  : 'https://app.avana.asia/'
               }
               target='__blank'
               className='btn-primary is-bigger'
@@ -218,10 +216,10 @@ const Home = ({ subscribers }) => {
                 <LinkButton
                   href={
                     isUtm
-                      ? `https://store.avana.asia/start/manage/${localStorage.getItem(
+                      ? `https://app.avana.asia/${localStorage.getItem(
                           'utm_avana'
                         )}`
-                      : 'https://store.avana.asia/start/manage/'
+                      : 'https://app.avana.asia/'
                   }
                   target='__blank'
                   className='btn-primary'
@@ -273,10 +271,10 @@ const Home = ({ subscribers }) => {
                 <LinkButton
                   href={
                     isUtm
-                      ? `https://store.avana.asia/start/manage/${localStorage.getItem(
+                      ? `https://app.avana.asia/${localStorage.getItem(
                           'utm_avana'
                         )}`
-                      : 'https://store.avana.asia/start/manage/'
+                      : 'https://app.avana.asia/'
                   }
                   target='__blank'
                   className='btn-primary'
@@ -329,10 +327,10 @@ const Home = ({ subscribers }) => {
                 <LinkButton
                   href={
                     isUtm
-                      ? `https://store.avana.asia/start/manage/${localStorage.getItem(
+                      ? `https://app.avana.asia/${localStorage.getItem(
                           'utm_avana'
                         )}`
-                      : 'https://store.avana.asia/start/manage/'
+                      : 'https://app.avana.asia/'
                   }
                   target='__blank'
                   className='btn-primary'
@@ -384,10 +382,10 @@ const Home = ({ subscribers }) => {
                 <LinkButton
                   href={
                     isUtm
-                      ? `https://store.avana.asia/start/manage/${localStorage.getItem(
+                      ? `https://app.avana.asia/${localStorage.getItem(
                           'utm_avana'
                         )}`
-                      : 'https://store.avana.asia/start/manage/'
+                      : 'https://app.avana.asia/'
                   }
                   target='__blank'
                   className='btn-primary'
@@ -418,10 +416,10 @@ const Home = ({ subscribers }) => {
                 <LinkButton
                   href={
                     isUtm
-                      ? `https://store.avana.asia/start/manage/${localStorage.getItem(
+                      ? `https://app.avana.asia/${localStorage.getItem(
                           'utm_avana'
                         )}`
-                      : 'https://store.avana.asia/start/manage/'
+                      : 'https://app.avana.asia/'
                   }
                   target='__blank'
                   className='btn-primary'
@@ -477,7 +475,7 @@ const Home = ({ subscribers }) => {
                   {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton> */}
                 <LinkButton
-                  href={'https://store.avana.asia/start/manage/'}
+                  href={'https://app.avana.asia/'}
                   className='btn-primary'
                 >
                   {lang === 'en'
@@ -508,10 +506,10 @@ const Home = ({ subscribers }) => {
                 <LinkButton
                   href={
                     isUtm
-                      ? `https://store.avana.asia/start/manage/${localStorage.getItem(
+                      ? `https://app.avana.asia/${localStorage.getItem(
                           'utm_avana'
                         )}`
-                      : 'https://store.avana.asia/start/manage/'
+                      : 'https://app.avana.asia/'
                   }
                   target='__blank'
                   className='btn-primary'
@@ -548,7 +546,7 @@ const Home = ({ subscribers }) => {
                   {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton> */}
                 <LinkButton
-                  href={'https://store.avana.asia/start/manage/'}
+                  href={'https://app.avana.asia/'}
                   className='btn-primary'
                 >
                   {lang === 'en'
@@ -711,10 +709,10 @@ const Home = ({ subscribers }) => {
             <LinkButton
               href={
                 isUtm
-                  ? `https://store.avana.asia/start/manage/${localStorage.getItem(
+                  ? `https://app.avana.asia/${localStorage.getItem(
                       'utm_avana'
                     )}`
-                  : 'https://store.avana.asia/start/manage/'
+                  : 'https://app.avana.asia/'
               }
               target='__blank'
               className='ava-btn btn-primary'
