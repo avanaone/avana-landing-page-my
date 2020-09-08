@@ -89,13 +89,13 @@ class MyDocument extends Document {
               __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T54DKZ6" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`,
             }}
           />
-          {/* <section id='banner-promo'>
+          <section id='banner-promo'>
             <a href='/price'>
-              [MERDEKA PROMO] Save 33% on Yearly Business Plan. Use code{' '}
-              <strong style={{ color: `red` }}>MERDEKA33</strong>. Valid from
-              Aug 15 -31.
+              [9.9 PROMO] Save 17% on Yearly Agent Plan. Use code{' '}
+              <strong style={{ color: `red` }}>SAVESEPT</strong>. Valid from
+              Sept 9th - 30th.
             </a>
-          </section> */}
+          </section>
           <Main />
           <NextScript />
         </body>
