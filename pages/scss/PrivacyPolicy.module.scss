@@ -1,0 +1,51 @@
+.PrivacyPolicy {
+  :global main {
+    section {
+      &#section-1 {
+        dl {
+          display: flex;
+          dt {
+            width: 200px;
+          }
+          dd {
+            width: 500px;
+          }
+        }
+
+        ul {
+          li {
+            margin-left: 1rem;
+            padding-left: 1rem;
+            list-style: circle;
+          }
+        }
+
+        padding: 2.5em 10vw;
+
+        > div {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap-reverse;
+
+          div {
+            flex: 1;
+            max-width: 750px;
+            min-width: 250px;
+            margin: 2.5em 2.5vw;
+
+            p {
+              margin: 1em 0;
+            }
+          }
+        }
+
+        img {
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
