@@ -24,7 +24,7 @@ export default function AboutUs() {
       <div className={styles.PrivacyPolicy}>
         <Head>
           <title>
-            {lang === "en" ? "Privacy Policy" : "Kebijakan Privasi"} • AVANA
+            {lang === "en" ? "Privacy Policy" : "Dasar Privasi"} • AVANA
           </title>
         </Head>
         <Navbar />
