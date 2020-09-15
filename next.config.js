@@ -1,34 +1,35 @@
-require('next/dynamic');
-const withPlugins = require('next-compose-plugins');
-const withStyles = require('@webdeb/next-styles');
-const optimizedImages = require('next-optimized-images');
-const path = require('path');
+require("next/dynamic");
+const withPlugins = require("next-compose-plugins");
+const withStyles = require("@webdeb/next-styles");
+const optimizedImages = require("next-optimized-images");
+const path = require("path");
 
 const nextConfig = {
   optimizeImagesInDev: true,
   trailingSlash: true,
   exportPathMap: async function () {
     const paths = {
-      '/': { page: '/' },
-      '/about-us': { page: '/about-us' },
-      '/price': { page: '/price' },
+      "/": { page: "/" },
+      "/about-us": { page: "/about-us" },
+      "/privacy-policy": { page: "/privacy-policy" },
+      "/price": { page: "/price" },
       // '/packages-detail': { page: '/packages-detail' },
-      '/event': { page: '/event' },
+      "/event": { page: "/event" },
       // '/event/:id': { page: '/event/[id]' },
       // '/promo': { page: '/promo' },
       // '/promo/:code': { page: '/promo/[code]' },
-      '/career': { page: '/career' },
-      '/ebook': { page: '/ebook' },
-      '/dashboard': { page: '/dashboard' },
-      '/avachat': { page: '/avachat' },
-      '/whatsapp-commerce': { page: '/whatsapp-commerce' },
-      '/liveautoreply': { page: '/liveautoreply' },
-      '/webstore': { page: '/webstore' },
+      "/career": { page: "/career" },
+      "/ebook": { page: "/ebook" },
+      "/dashboard": { page: "/dashboard" },
+      "/avachat": { page: "/avachat" },
+      "/whatsapp-commerce": { page: "/whatsapp-commerce" },
+      "/liveautoreply": { page: "/liveautoreply" },
+      "/webstore": { page: "/webstore" },
       // '/reseller': { page: '/reseller' },
     };
 
-    const getPromos = await require('./json/promo.json');
-    const getEvents = await require('./json/event.json');
+    const getPromos = await require("./json/promo.json");
+    const getEvents = await require("./json/event.json");
 
     // getPromos.map((promo) => {
     //   paths[`promo/${promo.code}`] = {
@@ -47,14 +48,14 @@ const nextConfig = {
     return paths;
   },
   webpack: (config, options) => {
-    config.resolve.alias['public'] = path.join(__dirname, 'public');
+    config.resolve.alias["public"] = path.join(__dirname, "public");
     config.module.rules.push({
       test: /\.(jpe?g|png)$/i,
       use: [
         {
-          loader: 'responsive-loader',
+          loader: "responsive-loader",
           options: {
-            adapter: require('responsive-loader/sharp'),
+            adapter: require("responsive-loader/sharp"),
             sizes: [300, 500],
           },
         },
