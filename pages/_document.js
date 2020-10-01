@@ -90,10 +90,8 @@ class MyDocument extends Document {
             }}
           />
           <section id='banner-promo'>
-            <a href='/price'>
-              [9.9 PROMO] Get RM250 off Yearly Agent Plan. Use code{' '}
-              <strong style={{ color: `red` }}>SAVESEPT</strong>. Valid from
-              Sept 9th - 30th.
+            <a href='http://bit.ly/IBOM' target="_blank">
+            Sell directly from your Instagram post and story. Coming soon. <strong style={{ color: `red` }}>Be the first one to know.</strong>
             </a>
           </section>
           <Main />

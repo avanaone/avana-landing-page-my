@@ -128,9 +128,9 @@
         "period": "yearly",
         "currency": "MYR",
         "price": 1399,
-        "discounted_price": 1149,
+        "discounted_price": 1399,
         "is_popular": false,
-        "is_discount": true,
+        "is_discount": false,
         "highlight_feature": {
           "en": [
             "Check the performance of your agents on your dashboard",

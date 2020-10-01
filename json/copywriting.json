@@ -1,6 +1,7 @@
 {
   "en": {
     "button": ["Try for Free", "More Info"],
+    "igbutton": ["BE THE FIRST ONE TO KNOW"],
     "navbar": [
       "Product",
       "Price",
@@ -21,6 +22,12 @@
       "Social Media Chat Integration",
       "Auto Reply",
       "Reseller Management"
+    ],
+    "igshop": [
+      "Sell directly from your Instagram feed and story",
+      "Get more sales from your Instagram feed and story posting",
+      "Showcase your brand and products story",
+      "Engage with your potential customers"
     ],
     "dashboard": [
       "One Dashboard for all sales activities",
@@ -69,6 +76,7 @@
   },
   "bm": {
     "button": ["Cuba Dengan Percuma", "Info Lanjut"],
+    "igbutton": ["JADI ORANG PERTAMA YANG TAHU"],
     "navbar": [
       "Produk",
       "Harga",
@@ -89,6 +97,12 @@
       "Integrasi 'Chat' di Media Sosial",
       "Auto Reply",
       "Pengurusan Sales Agent"
+    ],
+    "igshop": [
+      "Jual terus dari post dan story Instagram anda",
+      "Dapatkan jualan dari Instagram feed dan story posting",
+      "Kongsikan kisah jenama dan produk anda",
+      "Berinteraksi dengan bakal pelanggan anda"
     ],
     "dashboard": [
       "Semua aktiviti jualan dalam satu dashboard",

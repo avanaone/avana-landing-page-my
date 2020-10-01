@@ -196,8 +196,12 @@
           @media (max-width: 768px) {
             display: flex;
             padding-bottom: 0;
-            margin-bottom: -30px;
+            // margin-bottom: -30px;
           }
+        }
+
+        &.p-200 {
+          padding-top: 4rem;
         }
 
         .description {

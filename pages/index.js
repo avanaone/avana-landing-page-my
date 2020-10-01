@@ -183,6 +183,53 @@ const Home = ({ subscribers }) => {
                 : 'Cubalah AVANA secara Percuma'}
             </LinkButton>
           </section>
+          <section className='feature p-200'>
+            <div className='description'>
+              <h2 className='is-size-4'>
+                {cw.igshop ? cw.igshop[0] : 'loading'}
+              </h2>
+              <ul>
+                <li
+                  className={dashboard === 0 ? 'active' : ''}
+                  onClick={() => handleSlider('dashboard', 0)}
+                >
+                  {cw.igshop ? cw.igshop[1] : 'loading'}
+                </li>
+                <li
+                  className={dashboard === 1 ? 'active' : ''}
+                  onClick={() => handleSlider('dashboard', 1)}
+                >
+                  {cw.igshop ? cw.igshop[2] : 'loading'}
+                </li>
+                <li
+                  className={dashboard === 2 ? 'active' : ''}
+                  onClick={() => handleSlider('dashboard', 2)}
+                >
+                  {cw.igshop ? cw.igshop[3] : 'loading'}
+                </li>
+              </ul>
+              <div className='ava-btn-group'>
+                <LinkButton
+                  href={
+                    'http://bit.ly/IBOM'
+                  }
+                  target='__blank'
+                  className='btn-primary'
+                >
+                  {cw.igbutton ? cw.igbutton[0] : 'loading'}
+                </LinkButton>
+                {/* <LinkButton href='/dashboard' className='btn-secondary'>
+                  {cw.button ? cw.button[1] : 'loading'}
+                </LinkButton> */}
+              </div>
+            </div>
+            <div className='feature-img'>
+              <Picture
+                srcWebp={require('public/assets/images/9-IG-Shopping.webp?')}
+                src={require('public/assets/images/9-IG-Shopping.png?resize?webp')}
+              />
+            </div>
+          </section>
           <section className='feature'>
             <div className='description'>
               <h2 className='is-size-4'>
