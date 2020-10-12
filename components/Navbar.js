@@ -263,10 +263,10 @@ export default function Navbar({ style }) {
               <LinkButton
                 href={
                   isUtm
-                    ? `https://store.avana.asia/start/manage/${localStorage.getItem(
+                    ? `https://app.avana.asia/${localStorage.getItem(
                         'utm_avana'
                       )}`
-                    : 'https://store.avana.asia/start/manage/'
+                    : 'https://app.avana.asia/'
                 }
                 target='__blank'
                 className='btn-secondary'
