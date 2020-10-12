@@ -29,7 +29,7 @@ export default function Toaster({ subscribers }) {
       {subscribers.map((subscriber, i) => {
         return (
           <div
-            className={`toaster ${i === activeToaster ? 'active' : 'inactive'}`}
+            className={`toaster ${i === activeToaster ? 'active' : 'inactive'}`} key={i}
           >
             <div className='icon-ava'>
               <img

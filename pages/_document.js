@@ -23,7 +23,7 @@ class MyDocument extends Document {
           />
           <script
             async=''
-            charset='utf-8'
+            charSet='utf-8'
             src='https://cdn.zopim.com/?119GyjFZxz8YGSLmizOWVzpwS1HT3EEk'
             type='text/javascript'
           ></script>
