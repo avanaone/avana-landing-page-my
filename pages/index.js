@@ -45,11 +45,9 @@ const Home = ({ subscribers }) => {
 
   useEffect(() => {
     if (localStorage.getItem('lang')) {
-      // console.log(localStorage.getItem('lang'));
+      
       setLang(localStorage.getItem('lang'));
       getCw.then((res) => {
-        // console.log(lang);
-        // console.log(res.default[localStorage.getItem('lang')]);
         setCw(res.default[localStorage.getItem('lang')]);
       });
     } else {
