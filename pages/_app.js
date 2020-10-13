@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 
-import './styles.scss';
+import './scss/styles.scss';
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
