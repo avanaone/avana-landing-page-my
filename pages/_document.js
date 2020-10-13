@@ -10,6 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang='id'>
         <Head>
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:700,800|Nunito:400,700,800|Material+Icons&display=swap" rel="stylesheet" />
           <script
             dangerouslySetInnerHTML={{
               __html: `
