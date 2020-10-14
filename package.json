@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@webdeb/next-styles": "^1.0.8",
+    "bulma-scss": "^0.8.2",
     "dayjs": "^1.8.24",
     "html-react-parser": "^0.10.3",
     "imagemin-optipng": "^7.1.0",

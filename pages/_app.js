@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 
+import 'bulma-scss/bulma.scss'
 import './scss/styles.scss';
 
 export default function App({ Component, pageProps }) {
@@ -88,11 +89,11 @@ export default function App({ Component, pageProps }) {
         <meta httpEquiv='expires' content='0' />
         <meta httpEquiv='pragma' content='no-cache' />
         <meta httpEquiv='refresh' />
-        <link
+        {/* <link
           rel='stylesheet'
           href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css'
           async
-        />
+        /> */}
         <link
           rel='preconnect'
           href='https://www.google-analytics.com'
