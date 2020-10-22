@@ -5,28 +5,28 @@
         "title": "Product Management",
         "description": "With AVANA, the product catalog on your website will automatically be connected to your social media channels like Facebook and Instagram. You won’t need to upload your product images one at a time.",
         "image": "dashboard/manajemen-produk.png",
-        "slug": "https://app.avana.asia/",
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web",
         "anchor": "Product-Management"
       },
       {
         "title": "Automated Reply to Messages & Comments",
         "description": "Automatically reply message & comment functionality to make it easier for you to carry on business activities. You can work more efficiently with this automated system.",
         "image": "dashboard/auto-reply.png",
-        "slug": "https://app.avana.asia/",
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web",
         "anchor": "Auto-Reply"
       },
       {
         "title": "Spread Messages in Bulk",
         "description": "To maximize promotion, AVANA has the feature to spread messages en masse.",
         "image": "dashboard/messenger-blast.png",
-        "slug": "https://app.avana.asia/",
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web",
         "anchor": "Bulk-Messages"
       },
       {
         "title": "Order Management",
         "description": "In AVANA dashboard, you can monitor all the orders that you receive from various social media channels.",
         "image": "dashboard/manajemen-order.png",
-        "slug": "https://app.avana.asia/",
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web",
         "anchor": "Order-Management"
       }
     ],
@@ -35,25 +35,25 @@
         "title": "Pengurusan Produk",
         "description": "Dengan AVANA, katalog produk di website anda sudah bersambung dengan saluran sosial media anda seperti Facebook dan Instagram. Anda tidak perlu lagi upload gambar produk anda satu per satu lagi.",
         "image": "dashboard/manajemen-produk.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       },
       {
         "title": "Balas Mesej & Komen Secara Automatik",
         "description": "Fungsi balas mesej & komen secara automatik dapat memudahkan anda menjalankan aktiviti bisnes. Anda dapat berkerja dengan lebih efisyen dengan sistem automatik ini.",
         "image": "dashboard/auto-reply.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       },
       {
         "title": "Sebar Mesej Sekali Banyak",
         "description": "AVANA mempunyai fungsi untuk menyebarkan mesej sekali banyak untuk memastikan semua tidak terlepas mesej anda.",
         "image": "dashboard/messenger-blast.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       },
       {
         "title": "Pengurusan Order",
         "description": "Dalam satu dashboard AVANA, anda boleh pantau semua order yang anda terima dari pelbagai saluran media sosial.",
         "image": "dashboard/manajemen-order.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       }
     ]
   },
@@ -177,25 +177,25 @@
         "title": "Various webstore themes",
         "description": "AVANA provides various webstore themes that are responsive and work on every device.",
         "image": "webstore/theme.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       },
       {
         "title": "Payment Gateway Integration",
         "description": "AVANA provides various payment gateway options for your customers to make transactions on your webstore.",
         "image": "webstore/payment-gateway.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       },
       {
         "title": "Logistics Cooperation",
         "description": "AVANA also collaborates with various logistics parties to provide various shipping options for your customers.",
         "image": "webstore/shipping-provider.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       },
       {
         "title": "Coupon Code Support System",
         "description": "AVANA has a coupon code system that makes it easy for you to create coupon codes for new customers & your loyal customers.",
         "image": "webstore/coupon-system.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       }
     ],
     "bm": [
@@ -203,25 +203,25 @@
         "title": "Pelbagai tema webstore",
         "description": "AVANA menyediakan pelbagai tema webstore yang responsif dan berfungsi pada setiap device.",
         "image": "webstore/theme.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       },
       {
         "title": "Integrasi Payment Gateway",
         "description": "AVANA menyediakan pelbagai pilihan pembayaran untuk pelanggan anda membuat transaksi pada webstore anda.",
         "image": "webstore/payment-gateway.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       },
       {
         "title": "Kerjasama Dengan Pihak Logistik",
         "description": "AVANA juga berkerjasama dengan pelbagai pihak logistik untuk menyediakan pelbagai pilihan pengeposan buat pelanggan anda.",
         "image": "webstore/shipping-provider.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       },
       {
         "title": "Sokongan Sistem Kod Kupon",
         "description": "AVANA mempunyai sistem kod kupon yang memudahkan anda membuat kod kupon untuk pelanggan baru & pelanggan setia anda.",
         "image": "webstore/coupon-system.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       }
     ]
   },
@@ -309,19 +309,19 @@
         "title": "Showcase your product catalogue easily.",
         "description": "Seamless customer shopping experience with AVANA WhatsApp Commerce. Let customer browse through your product and place order via WhatsApp.",
         "image": "wacommerce/AVANA-Mobile-Dashboard.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       },
       {
         "title": "Automate your order taking process",
         "description": "You can collect customer shipping information and collect online payment with in-page check out feature",
         "image": "wacommerce/Customer-detail-and-payment.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       },
       {
         "title": "Manage all WhatsApp orders easily on AVANA Dashboard.",
         "description": "Sync your stock real time and manage all orders easily with AVANA on-for-all dashboard.",
         "image": "wacommerce/Product-Showcase.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       }
     ],
     "bm": [
@@ -329,19 +329,19 @@
         "title": "Pamerkan produk katalog dengan mudah.",
         "description": "Kini pelanggan anda dapat melihat produk dan terus membeli melalui WhatsApp. Rasai pengalaman ini dengan WhatsApp Commerce.",
         "image": "wacommerce/AVANA-Mobile-Dashboard.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       },
       {
         "title": "Automatikkan proses mengambil order anda.",
         "description": "Anda boleh kumpulkan info penghantaran dan pembayaran online pelanggan di dalam halaman yang sama. Lihat fungsi ini.",
         "image": "wacommerce/Customer-detail-and-payment.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       },
       {
         "title": "Uruskan semua order yang anda terima di WhatsApp melalui AVANA Dashboard",
         "description": "Selaraskan stok dalam masa nyata dan uruskan order anda dengan mudah melalui AVANA dashboard.",
         "image": "wacommerce/Product-Showcase.png",
-        "slug": "https://app.avana.asia/"
+        "slug":  "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
       }
     ]
   }
