@@ -34,12 +34,12 @@ export default function Footer() {
             : "WhatsApp Khidmat Pelanggan:"}
           <br />
           <a
-            href="https://wa.me/601548771037"
+            href="https://wa.me/60149774275"
             style={{ color: `#3273dc` }}
             className="wa-footer"
           >
             <img src="/assets/images/footer/whatsapp-contact.png" alt="" />
-            +60 15 4877 1037
+            +60 14 977 4275
           </a>
         </span>
         <span>Malaysia • Indonesia • Singapore</span>
