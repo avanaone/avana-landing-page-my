@@ -92,7 +92,7 @@ class MyDocument extends Document {
           />
           <section id='banner-promo'>
             <a href='http://app.avana.asia/?utm_source=websitebanner&utm_medium=website&utm_campaign=womenempowerment' target="_blank">  
-            Celebrating all female entrepreneurs this month. Discount 10% OFF AVANA Yearly Business Plan. Subscribe Today. Promo Code: <strong style={{ color: `red` }}>LADYBOSS</strong>
+            Celebrating all female entrepreneurs this month. <strong>Discount 10% OFF</strong> AVANA Yearly Business Plan. <strong>Subscribe Today. Promo Code:</strong> <strong style={{ color: `red` }}>LADYBOSS</strong>
             </a>
           </section>
           <Main />
