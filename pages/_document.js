@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -8,9 +8,12 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang='id'>
+      <Html lang="id">
         <Head>
-          <link href="https://fonts.googleapis.com/css?family=Montserrat:700,800|Nunito:400,700,800|Material+Icons&display=swap" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:700,800|Nunito:400,700,800|Material+Icons&display=swap"
+            rel="stylesheet"
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -23,10 +26,10 @@ class MyDocument extends Document {
             }}
           />
           <script
-            async=''
-            charSet='utf-8'
-            src='https://cdn.zopim.com/?119GyjFZxz8YGSLmizOWVzpwS1HT3EEk'
-            type='text/javascript'
+            async=""
+            charSet="utf-8"
+            src="https://cdn.zopim.com/?119GyjFZxz8YGSLmizOWVzpwS1HT3EEk"
+            type="text/javascript"
           ></script>
           <script
             dangerouslySetInnerHTML={{
@@ -66,22 +69,22 @@ class MyDocument extends Document {
             }}
           />
           <script
-            async=''
-            src='https://www.google-analytics.com/analytics.js'
+            async=""
+            src="https://www.google-analytics.com/analytics.js"
           ></script>
           <script
-            type='text/javascript'
-            async=''
-            id='inspsync'
-            src='https://cdn.inspectlet.com/inspectlet.js'
+            type="text/javascript"
+            async=""
+            id="inspsync"
+            src="https://cdn.inspectlet.com/inspectlet.js"
           ></script>
           <script
-            src='https://connect.facebook.net/signals/config/1217836451583731?v=2.8.12&amp;r=stable'
-            async=''
+            src="https://connect.facebook.net/signals/config/1217836451583731?v=2.8.12&amp;r=stable"
+            async=""
           ></script>
           <script
-            async=''
-            src='https://connect.facebook.net/en_US/fbevents.js'
+            async=""
+            src="https://connect.facebook.net/en_US/fbevents.js"
           ></script>
         </Head>
         <body>
@@ -90,11 +93,17 @@ class MyDocument extends Document {
               __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T54DKZ6" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`,
             }}
           />
-          <section id='banner-promo'>
-            <a href='http://app.avana.asia/?utm_source=websitebanner&utm_medium=website&utm_campaign=womenempowerment' target="_blank">  
-            Celebrating all female entrepreneurs this month. <strong>Discount 10% OFF</strong> AVANA Yearly Business Plan. <strong>Subscribe Today. Promo Code:</strong> <strong style={{ color: `red` }}>LADYBOSS</strong>
+          {/* <section id="banner-promo">
+            <a
+              href="http://app.avana.asia/?utm_source=websitebanner&utm_medium=website&utm_campaign=womenempowerment"
+              target="_blank"
+            >
+              Celebrating all female entrepreneurs this month.{" "}
+              <strong>Discount 10% OFF</strong> AVANA Yearly Business Plan.{" "}
+              <strong>Subscribe Today. Promo Code:</strong>{" "}
+              <strong style={{ color: `red` }}>LADYBOSS</strong>
             </a>
-          </section>
+          </section> */}
           <Main />
           <NextScript />
         </body>

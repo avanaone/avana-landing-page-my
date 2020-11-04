@@ -74,9 +74,9 @@
         "period": "yearly",
         "currency": "MYR",
         "price": 749,
-        "discounted_price": 674,
+        "discounted_price": 749,
         "is_popular": true,
-        "is_discount": true,
+        "is_discount": false,
         "highlight_feature": {
           "en": [
             "All Beginner plan features",
