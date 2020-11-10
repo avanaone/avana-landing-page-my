@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { format } from 'timeago.js';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { format } from "timeago.js";
 
 export default function Toaster({ subscribers }) {
   const [activeToaster, setActiveToaster] = useState(0);
@@ -25,55 +25,56 @@ export default function Toaster({ subscribers }) {
   });
 
   return (
-    <div className='subscribers'>
+    <div className="subscribers">
       {subscribers.map((subscriber, i) => {
         return (
           <div
-            className={`toaster ${i === activeToaster ? 'active' : 'inactive'}`} key={i}
+            className={`toaster ${i === activeToaster ? "active" : "inactive"}`}
+            key={i}
           >
-            <div className='icon-ava'>
+            <div className="icon-ava">
               <img
                 srcSet={
-                  require('public/assets/images/Toaster-icon.png?resize?webp')
+                  require("../public/assets/images/Toaster-icon.png?resize?webp")
                     .srcSet
                 }
-                alt='AVA Hi'
+                alt="AVA Hi"
               />
             </div>
-            <div className='user'>
+            <div className="user">
               <p>
-                <span className='name'>
+                <span className="name">
                   {subscriber.first_name} {subscriber.last_name}
                 </span>
-                <span className='text'>
-                  {' '}
-                  from{' '}
-                  {subscriber.country === 'Indonesia' ||
-                  subscriber.country === 'Malaysia' ||
-                  subscriber.country === 'Singapore' ? (
+                <span className="text">
+                  {" "}
+                  from{" "}
+                  {subscriber.country === "Indonesia" ||
+                  subscriber.country === "Malaysia" ||
+                  subscriber.country === "Singapore" ? (
                     <img
-                      className='flag'
+                      className="flag"
                       srcSet={
-                        require(`public/assets/images/country/country-${
-                          subscriber.country === 'Indonesia'
-                            ? 'ID'
-                            : subscriber.country === 'Malaysia'
-                            ? 'MY'
-                            : subscriber.country === 'Singapore'
-                            ? 'SG'
+                        require(`../public/assets/images/country/country-${
+                          subscriber.country === "Indonesia"
+                            ? "ID"
+                            : subscriber.country === "Malaysia"
+                            ? "MY"
+                            : subscriber.country === "Singapore"
+                            ? "SG"
                             : subscriber.country
                         }.png?resize&size=50?webp`).srcSet
                       }
-                      alt='AVA Cashier'
+                      alt="AVA Cashier"
                     />
                   ) : (
                     subscriber.country
-                  )}{' '}
+                  )}{" "}
                   has powered up their business with AVANA!
                 </span>
               </p>
-              <p className='details'>
-                {format(new Date(subscriber.join_date + ' UTC'))}
+              <p className="details">
+                {format(new Date(subscriber.join_date + " UTC"))}
               </p>
             </div>
           </div>

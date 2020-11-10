@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import Slider from '../Slider';
-
-import './slider.scss';
+import Slider from "../Slider";
 
 export default ({ testimonials, sliderName }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const callbackSlider = ({ activeSlide }) => setCurrentSlide(activeSlide);
 
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState("en");
 
   useEffect(() => {
-    if (localStorage.getItem('lang')) {
-      setLang(localStorage.getItem('lang'));
+    if (localStorage.getItem("lang")) {
+      setLang(localStorage.getItem("lang"));
     } else {
-      localStorage.setItem('lang', 'en');
+      localStorage.setItem("lang", "en");
     }
   }, []);
 
@@ -29,13 +27,13 @@ export default ({ testimonials, sliderName }) => {
             <p style={{fontSize: `.875rem`}}>{testimonial.subtext}</p> */}
             <img
               key={idx}
-              alt=''
+              alt=""
               srcSet={
                 require(`../../public/assets/images/${sliderName}/${
-                  lang === 'en' ? testimonial.image.en : testimonial.image.bm
+                  lang === "en" ? testimonial.image.en : testimonial.image.bm
                 }?resize&size=800?webp`).srcSet
               }
-              className={`${currentSlide === idx ? 'is-active' : ''}`}
+              className={`${currentSlide === idx ? "is-active" : ""}`}
             />
           </>
         ))}

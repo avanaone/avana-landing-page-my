@@ -1,19 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import SliderContent from './SliderContent';
-import Slide from './Slide';
-import Arrow from './Arrow';
-import Dots from './Dots';
-
-import './Slider.scss';
+import SliderContent from "./SliderContent";
+import Slide from "./Slide";
+import Arrow from "./Arrow";
+import Dots from "./Dots";
 
 const Slider = (props) => {
   const {
     id,
     slides,
     currentSlide = 0,
-    width = '100%',
-    transition = '.3',
+    width = "100%",
+    transition = ".3",
     onlyImage,
     hasArrow,
     hasDots,
@@ -25,7 +23,7 @@ const Slider = (props) => {
 
   const [state, setState] = useState({
     activeSlide: currentSlide,
-    translate: isCustom === 'milestone' ? -25 : 0,
+    translate: isCustom === "milestone" ? -25 : 0,
     isContrast: true,
     hasOverlay: true,
   });
@@ -86,9 +84,9 @@ const Slider = (props) => {
     setState({
       ...state,
       translate:
-        isCustom === 'milestone'
+        isCustom === "milestone"
           ? idx * 50 - 25
-          : isCustom === 'testimonial'
+          : isCustom === "testimonial"
           ? idx * 50 - 50
           : idx * 100,
       activeSlide: idx,
@@ -104,7 +102,7 @@ const Slider = (props) => {
 
   const nextSlide = (currentSlide) => {
     let _activeSlide =
-      typeof currentSlide === 'number' ? currentSlide : activeSlide;
+      typeof currentSlide === "number" ? currentSlide : activeSlide;
 
     setState({
       ...state,
@@ -116,12 +114,12 @@ const Slider = (props) => {
       //     : translate + (isCustom === 'milestone' ? 50 : 100),
       translate:
         slides.length === _activeSlide + 1
-          ? isCustom === 'milestone'
+          ? isCustom === "milestone"
             ? -25
-            : isCustom === 'testimonial'
+            : isCustom === "testimonial"
             ? -50
             : 0
-          : translate + (isCustom === 'milestone' ? 50 : 100),
+          : translate + (isCustom === "milestone" ? 50 : 100),
       activeSlide: _activeSlide === slides.length - 1 ? 0 : _activeSlide + 1,
     });
 
@@ -143,18 +141,18 @@ const Slider = (props) => {
       //     : translate - (isCustom === 'milestone' ? 50 : 100),
       translate:
         activeSlide === 0
-          ? (isCustom === 'milestone'
+          ? (isCustom === "milestone"
               ? -25
-              : isCustom === 'testimonial'
+              : isCustom === "testimonial"
               ? -50
               : 0) +
-            (slides.length - 1) * (isCustom === 'milestone' ? 50 : 100)
-          : translate - (isCustom === 'milestone' ? 50 : 100),
+            (slides.length - 1) * (isCustom === "milestone" ? 50 : 100)
+          : translate - (isCustom === "milestone" ? 50 : 100),
       activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1,
     });
 
   return (
-    <div className='slider' autoPlay>
+    <div className="slider" autoPlay>
       <SliderContent
         width={width}
         translate={translate}
@@ -176,13 +174,13 @@ const Slider = (props) => {
       {hasArrow && (
         <>
           <Arrow
-            direction='left'
+            direction="left"
             handleClick={prevSlide}
             isContrast={isContrast}
             hasOverlay={hasOverlay}
           />
           <Arrow
-            direction='right'
+            direction="right"
             handleClick={nextSlide}
             isContrast={isContrast}
             hasOverlay={hasOverlay}

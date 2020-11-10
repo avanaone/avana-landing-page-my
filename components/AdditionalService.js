@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Button, LinkButton } from '../components/Button';
+import React, { useState } from "react";
+import { Button, LinkButton } from "../components/Button";
 
-const getPackages = import('../json/packages.json');
+const getPackages = import("../json/packages.json");
 
 export default function AdditionalService() {
   const [additionalService, setAdditionalServices] = useState([]);
@@ -15,17 +15,17 @@ export default function AdditionalService() {
 
   return (
     <>
-      <Button type='button' className='btn-primary' onClick={toggleModal}>
+      <Button type="button" className="btn-primary" onClick={toggleModal}>
         Layanan Tambahan
       </Button>
-      <div className={`modal ${isModal ? 'is-active' : ''}`}>
-        <div className='modal-background' onClick={toggleModal} />
-        <div className='modal-content hf-sticky'>
-          <div className='modal-header-sticky'>
+      <div className={`modal ${isModal ? "is-active" : ""}`}>
+        <div className="modal-background" onClick={toggleModal} />
+        <div className="modal-content hf-sticky">
+          <div className="modal-header-sticky">
             <h2>Layanan Tambahan</h2>
             <button
-              className='modal-close is-large'
-              aria-label='close'
+              className="modal-close is-large"
+              aria-label="close"
               onClick={toggleModal}
             >
               Close
@@ -34,7 +34,7 @@ export default function AdditionalService() {
           <table>
             <tbody>
               {additionalService.map((service, idx) => (
-                <tr key={idx} className='addon'>
+                <tr key={idx} className="addon">
                   <td>{service.name}</td>
                   <td>
                     <ul>
@@ -64,23 +64,23 @@ export default function AdditionalService() {
           </table>
           {/* <img
             srcSet={
-              require('../public/assets/images/price/Brosur Layanan Tambahan-03.jpg?resize?webp')
+              require('public/assets/images/price/Brosur Layanan Tambahan-03.jpg?resize?webp')
                 .srcSet
             }
             alt=""
           />
           <img
             srcSet={
-              require('../public/assets/images/price/Brosur Layanan Tambahan-04.jpg?resize?webp')
+              require('public/assets/images/price/Brosur Layanan Tambahan-04.jpg?resize?webp')
                 .srcSet
             }
             alt=""
           /> */}
-          <div className='modal-footer-sticky'>
+          <div className="modal-footer-sticky">
             <LinkButton
-              href='http://nanya.online/tanya-ava-3'
-              target='__blank'
-              className='btn-primary btn-middle'
+              href="http://nanya.online/tanya-ava-3"
+              target="__blank"
+              className="btn-primary btn-middle"
             >
               Hubungi Kami
             </LinkButton>

@@ -1,5 +1,6 @@
 require("next/dynamic");
 const withPlugins = require("next-compose-plugins");
+const withSass = require("@zeit/next-sass");
 const withStyles = require("@webdeb/next-styles");
 const optimizedImages = require("next-optimized-images");
 const path = require("path");
@@ -48,7 +49,7 @@ const nextConfig = {
     return paths;
   },
   webpack: (config, options) => {
-    config.resolve.alias["public"] = path.join(__dirname, "public");
+    config.resolve.alias["public"] = path.join(__dirname, "../public");
     config.module.rules.push({
       test: /\.(jpe?g|png)$/i,
       use: [
@@ -67,15 +68,10 @@ const nextConfig = {
 };
 
 module.exports = withPlugins(
-  [
-    [optimizedImages],
-    [
-      withStyles,
-      {
-        sass: true,
-        modules: true,
-      },
-    ],
-  ],
+  [[optimizedImages]],
+  withStyles,
+  withSass({
+    cssModules: true,
+  }),
   nextConfig
 );
