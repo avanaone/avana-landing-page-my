@@ -5,7 +5,7 @@ import Slide from "./Slide";
 import Arrow from "./Arrow";
 import Dots from "./Dots";
 
-import "./Slider.module.scss";
+// import "./Slider.module.scss";
 
 const Slider = (props) => {
   const {

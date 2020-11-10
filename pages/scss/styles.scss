@@ -4,7 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
 }
 
@@ -34,7 +34,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   line-height: 1.5em;
 }
 
@@ -318,7 +318,7 @@ footer {
       position: relative;
 
       &::after {
-        content: '•';
+        content: "•";
         position: absolute;
         top: -5px;
         right: -10px;
@@ -405,11 +405,11 @@ footer {
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 100%;
       left: 10vw;
-      background-image: url('/assets/images/channels.png');
+      background-image: url("/assets/images/channels.png");
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -749,5 +749,212 @@ footer {
         }
       }
     }
+  }
+}
+
+.accordion_wrapper {
+  /* Style the accordion section */
+  .accordion__section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  /* Style the buttons that are used to open and close the accordion panel */
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: background-color 0.6s ease;
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .accordion:hover,
+  .active {
+    // background-color: #ccc;
+  }
+
+  /* Style the accordion content title */
+  .accordion__title {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  /* Style the accordion chevron icon */
+  .accordion__icon {
+    margin-left: auto;
+    transition: transform 0.6s ease;
+  }
+
+  /* Style to rotate icon when state is active */
+  .rotate {
+    transform: rotate(90deg);
+  }
+
+  /* Style the accordion content panel. Note: hidden by default */
+  .accordion__content {
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+  }
+
+  /* Style the accordion content text */
+  .accordion__text {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 18px;
+
+    ul {
+      list-style-type: disc;
+      padding-left: 15px;
+    }
+  }
+}
+
+.slider {
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  overflow: hidden;
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    height: 1.75em;
+    width: 1.75em;
+    transition: transform ease-in 0.15s;
+    filter: invert(1);
+    cursor: pointer;
+
+    &.hasOverlay {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+
+      img {
+        max-width: calc(100% - 10px);
+      }
+
+      &.left {
+        left: 10px;
+      }
+
+      &.right {
+        right: 10px;
+      }
+    }
+
+    &.left {
+      left: 0;
+    }
+
+    &.right {
+      right: 0;
+    }
+
+    &:hover {
+      transform: scale(1.25);
+    }
+
+    .contrast {
+      filter: invert(1);
+    }
+  }
+
+  .dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 2.5vw;
+    width: 100%;
+
+    .dot {
+      height: 1em;
+      width: 1em;
+      background-color: rgba(255, 255, 255, 0.75);
+      margin: 0.25em;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &.eventBanner {
+        background-color: #dbdbdb;
+      }
+
+      &.active {
+        background-color: #fff;
+      }
+
+      &.active-contrast {
+        background-color: #000;
+      }
+    }
+  }
+}
+
+.slider-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s ease-out;
+
+  .slide {
+    min-width: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.milestone {
+      min-width: 50%;
+      width: 50%;
+      align-items: center;
+      display: flex;
+
+      img {
+        margin: auto;
+        width: 50%;
+        max-width: 50%;
+
+        @media (max-width: 521px) {
+          padding: 0 !important;
+        }
+      }
+    }
+
+    &.testimonial {
+      transform: scale(0.75);
+      transition: all 0.3s;
+
+      &.active {
+        transform: scale(1);
+      }
+
+      img {
+        // width: calc(700% / 12);
+
+        @media (max-width: 521px) {
+          padding: 0 !important;
+        }
+      }
+    }
+
+    img {
+      @media (max-width: 521px) {
+        padding: 1rem 2rem !important;
+      }
+    }
+  }
+
+  &.testimonial {
+    // max-width: calc(700% / 12);
+    max-width: 50%;
   }
 }

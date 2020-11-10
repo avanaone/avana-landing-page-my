@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import "bulma-scss/bulma.scss";
 import "./scss/styles.scss";
+// import "../components/Slider/Slider.scss";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {

@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
+import React, { useState } from "react";
+import Head from "next/head";
 
-import Navbar from '../components/Navbar';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-import Accordion from '../components/Accordion/Accordion';
+import Accordion from "../components/Accordion/Accordion";
 
-import ContainerAnalytic from '../components/AnalyticContainer';
+import ContainerAnalytic from "../components/AnalyticContainer";
 
-import styles from './scss/Promo.module.scss';
+import styles from "./scss/Promo.module.scss";
 
-const getFAQs = import('../json/faq.json');
+const getFAQs = import("../json/faq.json");
 
 const Promo = () => {
   const [faqs, setFaqs] = useState([]);
@@ -25,11 +25,17 @@ const Promo = () => {
           <title>FAQ • AVANA</title>
         </Head>
         <Navbar />
-        <Header title='FAQ' />
+        <Header title="FAQ" />
         <main>
-          <section className="faq-section">
+          <section
+            style={{ display: "flex !important", flexDirection: "column" }}
+          >
             {faqs.map((faq) => (
-                <Accordion key={faq.code} title={faq.title} content={faq.description} />
+              <Accordion
+                key={faq.code}
+                title={faq.title}
+                content={faq.description}
+              />
             ))}
           </section>
         </main>
