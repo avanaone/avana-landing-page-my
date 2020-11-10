@@ -64,14 +64,14 @@ export default function AdditionalService() {
           </table>
           {/* <img
             srcSet={
-              require('public/assets/images/price/Brosur Layanan Tambahan-03.jpg?resize?webp')
+              require('../public/assets/images/price/Brosur Layanan Tambahan-03.jpg?resize?webp')
                 .srcSet
             }
             alt=""
           />
           <img
             srcSet={
-              require('public/assets/images/price/Brosur Layanan Tambahan-04.jpg?resize?webp')
+              require('../public/assets/images/price/Brosur Layanan Tambahan-04.jpg?resize?webp')
                 .srcSet
             }
             alt=""
