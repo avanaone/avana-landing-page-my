@@ -69,12 +69,12 @@ const nextConfig = {
 
 module.exports = withPlugins(
   [[optimizedImages]],
+  nextConfig,
   withStyles,
   withSass({
     cssModules: true,
     cssLoaderOptions: {
       importLoaders: 2,
     },
-  }),
-  nextConfig
+  })
 );
