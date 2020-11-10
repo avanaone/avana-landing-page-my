@@ -11,7 +11,6 @@
   "dependencies": {
     "@webdeb/next-styles": "^1.0.8",
     "bulma-scss": "^0.8.2",
-    "css-loader": "^3.5.2",
     "dayjs": "^1.8.24",
     "html-react-parser": "^0.10.3",
     "imagemin-optipng": "^7.1.0",
@@ -28,7 +27,6 @@
     "webp-loader": "^0.6.0"
   },
   "devDependencies": {
-    "css-loader": "^5.0.1",
     "responsive-loader": "^1.2.0",
     "sharp": "^0.25.2"
   }
