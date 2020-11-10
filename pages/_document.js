@@ -93,17 +93,18 @@ class MyDocument extends Document {
               __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T54DKZ6" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`,
             }}
           />
-          {/* <section id="banner-promo">
+          <section id="banner-promo">
             <a
               href="http://app.avana.asia/?utm_source=websitebanner&utm_medium=website&utm_campaign=womenempowerment"
               target="_blank"
             >
-              Celebrating all female entrepreneurs this month.{" "}
+              Subscribe or renew Yearly Business Plan/Yearly Agent Plan. Get RM111 Shipping Credit. Use promo code <strong style={{ color: `red` }}>SUPERNOV</strong>. From 11.11 - 30.11.
+              {/* Celebrating all female entrepreneurs this month.{" "}
               <strong>Discount 10% OFF</strong> AVANA Yearly Business Plan.{" "}
               <strong>Subscribe Today. Promo Code:</strong>{" "}
-              <strong style={{ color: `red` }}>LADYBOSS</strong>
+              <strong style={{ color: `red` }}>LADYBOSS</strong> */}
             </a>
-          </section> */}
+          </section>
           <Main />
           <NextScript />
         </body>
