@@ -1,7 +1,7 @@
-import React, {useState, useRef} from "react";
+import React, { useState, useRef } from "react";
 import Chevron from "./Chevron";
 
-import "./accordion.scss";
+import "./accordion.module.scss";
 
 function Accordion(props) {
   const [setActive, setActiveState] = useState("");
@@ -26,7 +26,11 @@ function Accordion(props) {
         <p className="accordion__title">{props.title}</p>
         <Chevron className={`${setRotate}`} width={10} fill={"#777"} />
       </button>
-      <div ref={content} style={{ maxHeight: `${setHeight}` }} className="accordion__content">
+      <div
+        ref={content}
+        style={{ maxHeight: `${setHeight}` }}
+        className="accordion__content"
+      >
         <div
           className="accordion__text"
           dangerouslySetInnerHTML={{ __html: props.content }}

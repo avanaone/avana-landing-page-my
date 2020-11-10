@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import Slider from "../Slider";
 
+import "./slider.module.scss";
+
 export default ({ testimonials, sliderName }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
