@@ -122,7 +122,7 @@ const Price = () => {
                       )}
                       {pkg.is_discount ? (
                         <span style={{ color: 'red', fontWeight: 600 }}>
-                          Use code LADYBOSS
+                          Use code SUPERNOV
                         </span>
                       ) : (
                         ''
