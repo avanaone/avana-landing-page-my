@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import parser from "html-react-parser";
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import parser from 'html-react-parser';
 
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
-import EventCard from "../../components/EventCard";
+import EventCard from '../../components/EventCard';
 
-import ContainerAnalytic from "../../components/AnalyticContainer";
+import ContainerAnalytic from '../../components/AnalyticContainer';
 
-import "./CareerDetail.module.scss";
+import '../event/EventDetail.module.scss';
 
 export default function Event({ data }) {
   const router = useRouter();
   const [events, setEvents] = useState(data);
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState('en');
 
   useEffect(() => {
-    if (localStorage.getItem("lang")) {
-      setLang(localStorage.getItem("lang"));
+    if (localStorage.getItem('lang')) {
+      setLang(localStorage.getItem('lang'));
     } else {
-      localStorage.setItem("lang", "en");
+      localStorage.setItem('lang', 'en');
     }
   }, []);
 
@@ -31,11 +31,11 @@ export default function Event({ data }) {
     .slice(0, 5);
 
   return (
-    <div className="EventDetail">
+    <div className='CareerDetail'>
       {event && (
         <ContainerAnalytic>
           <Navbar />
-          <Header title="Career" />
+          <Header title='Career' />
           <main>
             <section>
               <div>
@@ -43,10 +43,10 @@ export default function Event({ data }) {
                   src={lang === 'en' ? event.image.en : event.image.bm}
                   alt=''
                 /> */}
-                <h3 className="is-size-4">
-                  {lang === "en" ? event.title.en : event.title.bm}
+                <h3 className='is-size-4'>
+                  {lang === 'en' ? event.title.en : event.title.bm}
                 </h3>
-                {lang === "en"
+                {lang === 'en'
                   ? parser(event.description.en)
                   : parser(event.description.bm)}
               </div>
@@ -70,7 +70,7 @@ export default function Event({ data }) {
 }
 
 Event.getInitialProps = async () => {
-  const res = await import("../../json/career.json");
+  const res = await import('../../json/career.json');
   const data = res.default;
 
   return { data };
