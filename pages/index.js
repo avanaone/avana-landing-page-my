@@ -1,27 +1,27 @@
-import React, { useState, useEffect, useCallback } from "react";
-import Head from "next/head";
+import React, { useState, useEffect, useCallback } from 'react';
+import Head from 'next/head';
 // import Link from "next/link";
-import fetch from "isomorphic-unfetch";
+import fetch from 'isomorphic-unfetch';
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Toaster from "../components/Toaster";
-import ContainerAnalytic from "../components/AnalyticContainer";
-import { LinkButton } from "../components/Button";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import Toaster from '../components/Toaster';
+import ContainerAnalytic from '../components/AnalyticContainer';
+import { LinkButton } from '../components/Button';
 // import Slider from "../components/Slider";
-import SliderTestimonial from "../components/SliderTestimonial";
+import SliderTestimonial from '../components/SliderTestimonial';
 
-import styles from "./scss/Home.module.scss";
+import styles from './scss/Home.module.scss';
 
-import getTestimonials from "../json/testimonial.json";
-import Picture from "../components/Picture";
+import getTestimonials from '../json/testimonial.json';
+import Picture from '../components/Picture';
 // import getMilestones from "../json/milestone.json";
-const getCw = import("../json/copywriting.json");
+const getCw = import('../json/copywriting.json');
 // const getPromos = import('../json/promo.json');
-const getEvents = import("../json/event.json");
+const getEvents = import('../json/event.json');
 
 const Home = ({ subscribers }) => {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState('en');
   const [cw, setCw] = useState([]);
   const [isUtm, setIsUtm] = useState(false);
 
@@ -32,42 +32,42 @@ const Home = ({ subscribers }) => {
     webstore: 0,
     avachatmy: 0,
   });
-  const [navbarBg, setNavbarBg] = useState("#f4f7f9");
+  const [navbarBg, setNavbarBg] = useState('#f4f7f9');
   // const [promos, setPromos] = useState([]);
   const [events, setEvents] = useState([]);
 
   // getPromos.then((res) => setPromos(res.default));
   getEvents.then((res) => setEvents(res.default));
-  // const [isModal, setIsModal] = useState(false);
-  // const toggleModal = () => setIsModal(!isModal);
+  const [isModal, setIsModal] = useState(false);
+  const toggleModal = () => setIsModal(!isModal);
 
   const { dashboard, avachat, reseller, webstore, avachatmy } = state;
 
   useEffect(() => {
-    if (localStorage.getItem("lang")) {
-      setLang(localStorage.getItem("lang"));
+    if (localStorage.getItem('lang')) {
+      setLang(localStorage.getItem('lang'));
       getCw.then((res) => {
-        setCw(res.default[localStorage.getItem("lang")]);
+        setCw(res.default[localStorage.getItem('lang')]);
       });
     } else {
-      localStorage.setItem("lang", "en");
+      localStorage.setItem('lang', 'en');
       getCw.then((res) => {
-        setCw(res.default[localStorage.getItem("lang")]);
+        setCw(res.default[localStorage.getItem('lang')]);
       });
     }
-    if (localStorage.getItem("utm_avana")) {
+    if (localStorage.getItem('utm_avana')) {
       setIsUtm(true);
     } else {
       setIsUtm(false);
     }
 
-    // setTimeout(() => {
-    //   toggleModal();
-    // }, 5000);
-    window.addEventListener("scroll", handleNavbar);
+    setTimeout(() => {
+      toggleModal();
+    }, 3000);
+    window.addEventListener('scroll', handleNavbar);
 
     return () => {
-      window.removeEventListener("scroll", handleNavbar);
+      window.removeEventListener('scroll', handleNavbar);
     };
   }, []);
 
@@ -83,7 +83,7 @@ const Home = ({ subscribers }) => {
   };
 
   const handleNavbar = (e) => {
-    window.scrollY > 10 ? setNavbarBg("#fff") : setNavbarBg("#f4f7f9");
+    window.scrollY > 10 ? setNavbarBg('#fff') : setNavbarBg('#f4f7f9');
   };
 
   return (
@@ -94,213 +94,213 @@ const Home = ({ subscribers }) => {
           <title>
             AVANA | The best social commerce platform for your online business
           </title>
-          <link rel="canonical" href="https://avana.asia" />
+          <link rel='canonical' href='https://avana.asia' />
           <meta
-            name="title"
-            content="The best social commerce platform for your online business "
+            name='title'
+            content='The best social commerce platform for your online business '
           />
           <meta
-            name="description"
-            content="Our end-to-end commerce platform helps automate your business so that you can sell online with ease"
+            name='description'
+            content='Our end-to-end commerce platform helps automate your business so that you can sell online with ease'
           />
           {/* Open Graph / Facebook */}
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://avana.asia/" />
+          <meta property='og:type' content='website' />
+          <meta property='og:url' content='https://avana.asia/' />
           <meta
-            property="og:title"
-            content="The best social commerce platform for your online business"
+            property='og:title'
+            content='The best social commerce platform for your online business'
           />
           <meta
-            property="og:description"
-            content="Our end-to-end commerce platform helps automate your business so that you can sell online with ease"
+            property='og:description'
+            content='Our end-to-end commerce platform helps automate your business so that you can sell online with ease'
           />
           <meta
-            property="og:image"
-            content="/assets/images/meta-image.png?resize?webp"
+            property='og:image'
+            content='/assets/images/meta-image.png?resize?webp'
           />
           {/* Twitter */}
-          <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://avana.asia/" />
+          <meta property='twitter:card' content='summary_large_image' />
+          <meta property='twitter:url' content='https://avana.asia/' />
           <meta
-            property="twitter:title"
-            content="The best social commerce platform for your online business"
+            property='twitter:title'
+            content='The best social commerce platform for your online business'
           />
           <meta
-            property="twitter:description"
-            content="Our end-to-end commerce platform helps automate your business so that you can sell online with ease"
+            property='twitter:description'
+            content='Our end-to-end commerce platform helps automate your business so that you can sell online with ease'
           />
           <meta
-            property="twitter:image"
-            content="/assets/images/meta-image.png?resize?webp"
+            property='twitter:image'
+            content='/assets/images/meta-image.png?resize?webp'
           />
         </Head>
         <Navbar style={{ backgroundColor: navbarBg }} />
         <header>
-          <h1 className="is-size-3">{cw.h1}</h1>
+          <h1 className='is-size-3'>{cw.h1}</h1>
           <p>
             {cw.features
               ? cw.features.map((feature, i) => {
                   if (cw.features.length === i + 1) {
                     return feature;
                   } else {
-                    return feature + " • ";
+                    return feature + ' • ';
                   }
                 })
-              : "loading..."}
+              : 'loading...'}
           </p>
           <LinkButton
             href={
               isUtm
-                ? `https://app.avana.asia/${localStorage.getItem("utm_avana")}`
-                : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
+                ? `https://app.avana.asia/${localStorage.getItem('utm_avana')}`
+                : 'https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web'
             }
-            target="__blank"
-            className="btn-primary is-not-mobile"
+            target='__blank'
+            className='btn-primary is-not-mobile'
           >
-            {lang === "en"
-              ? "Try AVANA for Free"
-              : "Cubalah AVANA secara Percuma"}
+            {lang === 'en'
+              ? 'Try AVANA for Free'
+              : 'Cubalah AVANA secara Percuma'}
           </LinkButton>
         </header>
         <main>
-          <section className="feature is-mobile">
+          <section className='feature is-mobile'>
             <LinkButton
               href={
                 isUtm
                   ? `https://app.avana.asia/${localStorage.getItem(
-                      "utm_avana"
+                      'utm_avana'
                     )}`
-                  : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
+                  : 'https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web'
               }
-              target="__blank"
-              className="btn-primary is-bigger"
+              target='__blank'
+              className='btn-primary is-bigger'
             >
-              {lang === "en"
-                ? "Try AVANA for Free"
-                : "Cubalah AVANA secara Percuma"}
+              {lang === 'en'
+                ? 'Try AVANA for Free'
+                : 'Cubalah AVANA secara Percuma'}
             </LinkButton>
           </section>
-          <section className="feature p-200">
-            <div className="description">
-              <h2 className="is-size-4">
-                {cw.igshop ? cw.igshop[0] : "loading"}
+          <section className='feature p-200'>
+            <div className='description'>
+              <h2 className='is-size-4'>
+                {cw.igshop ? cw.igshop[0] : 'loading'}
               </h2>
               <ul>
                 <li
-                  className={dashboard === 0 ? "active" : ""}
-                  onClick={() => handleSlider("dashboard", 0)}
+                  className={dashboard === 0 ? 'active' : ''}
+                  onClick={() => handleSlider('dashboard', 0)}
                 >
-                  {cw.igshop ? cw.igshop[1] : "loading"}
+                  {cw.igshop ? cw.igshop[1] : 'loading'}
                 </li>
                 <li
-                  className={dashboard === 1 ? "active" : ""}
-                  onClick={() => handleSlider("dashboard", 1)}
+                  className={dashboard === 1 ? 'active' : ''}
+                  onClick={() => handleSlider('dashboard', 1)}
                 >
-                  {cw.igshop ? cw.igshop[2] : "loading"}
+                  {cw.igshop ? cw.igshop[2] : 'loading'}
                 </li>
                 <li
-                  className={dashboard === 2 ? "active" : ""}
-                  onClick={() => handleSlider("dashboard", 2)}
+                  className={dashboard === 2 ? 'active' : ''}
+                  onClick={() => handleSlider('dashboard', 2)}
                 >
-                  {cw.igshop ? cw.igshop[3] : "loading"}
+                  {cw.igshop ? cw.igshop[3] : 'loading'}
                 </li>
               </ul>
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 <LinkButton
-                  href={"http://bit.ly/IBOM"}
-                  target="__blank"
-                  className="btn-primary"
+                  href={'http://bit.ly/IBOM'}
+                  target='__blank'
+                  className='btn-primary'
                 >
-                  {cw.igbutton ? cw.igbutton[0] : "loading"}
+                  {cw.igbutton ? cw.igbutton[0] : 'loading'}
                 </LinkButton>
                 {/* <LinkButton href='/dashboard' className='btn-secondary'>
                   {cw.button ? cw.button[1] : 'loading'}
                 </LinkButton> */}
               </div>
             </div>
-            <div className="feature-img">
+            <div className='feature-img'>
               <Picture
-                srcWebp={require("../public/assets/images/9-IG-Shopping.webp?")}
-                src={require("../public/assets/images/9-IG-Shopping.png?resize?webp")}
+                srcWebp={require('../public/assets/images/9-IG-Shopping.webp?')}
+                src={require('../public/assets/images/9-IG-Shopping.png?resize?webp')}
               />
             </div>
           </section>
-          <section className="feature">
-            <div className="description">
-              <h2 className="is-size-4">
+          <section className='feature'>
+            <div className='description'>
+              <h2 className='is-size-4'>
                 {/* <span className='hl'>{cw.dashboard ? cw.dashboard[0] : 'loading'}</span> {cw.dashboard ? cw.dashboard[1] : 'loading'} */}
-                {cw.dashboard ? cw.dashboard[0] : "loading"}
+                {cw.dashboard ? cw.dashboard[0] : 'loading'}
               </h2>
               {/* <p>
                 {cw.dashboard ? cw.dashboard[2] : 'loading'}
               </p> */}
               <ul>
                 <li
-                  className={dashboard === 0 ? "active" : ""}
-                  onClick={() => handleSlider("dashboard", 0)}
+                  className={dashboard === 0 ? 'active' : ''}
+                  onClick={() => handleSlider('dashboard', 0)}
                 >
-                  {cw.dashboard ? cw.dashboard[1] : "loading"}
+                  {cw.dashboard ? cw.dashboard[1] : 'loading'}
                 </li>
                 <li
-                  className={dashboard === 1 ? "active" : ""}
-                  onClick={() => handleSlider("dashboard", 1)}
+                  className={dashboard === 1 ? 'active' : ''}
+                  onClick={() => handleSlider('dashboard', 1)}
                 >
-                  {cw.dashboard ? cw.dashboard[2] : "loading"}
+                  {cw.dashboard ? cw.dashboard[2] : 'loading'}
                 </li>
                 <li
-                  className={dashboard === 2 ? "active" : ""}
-                  onClick={() => handleSlider("dashboard", 2)}
+                  className={dashboard === 2 ? 'active' : ''}
+                  onClick={() => handleSlider('dashboard', 2)}
                 >
-                  {cw.dashboard ? cw.dashboard[3] : "loading"}
+                  {cw.dashboard ? cw.dashboard[3] : 'loading'}
                 </li>
               </ul>
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 <LinkButton
                   href={
                     isUtm
                       ? `https://app.avana.asia/${localStorage.getItem(
-                          "utm_avana"
+                          'utm_avana'
                         )}`
-                      : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
+                      : 'https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web'
                   }
-                  target="__blank"
-                  className="btn-primary"
+                  target='__blank'
+                  className='btn-primary'
                 >
-                  {cw.button ? cw.button[0] : "loading"}
+                  {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton>
-                <LinkButton href="/dashboard" className="btn-secondary">
-                  {cw.button ? cw.button[1] : "loading"}
+                <LinkButton href='/dashboard' className='btn-secondary'>
+                  {cw.button ? cw.button[1] : 'loading'}
                 </LinkButton>
               </div>
             </div>
-            <div className="feature-img">
+            <div className='feature-img'>
               <Picture
-                srcWebp={require("../public/assets/images/1-Dashboard.webp?")}
-                src={require("../public/assets/images/1-Dashboard.png?resize?webp")}
+                srcWebp={require('../public/assets/images/1-Dashboard.webp?')}
+                src={require('../public/assets/images/1-Dashboard.png?resize?webp')}
               />
             </div>
           </section>
-          <section className="feature">
-            <div className="description">
-              <h2 className="is-size-4">
+          <section className='feature'>
+            <div className='description'>
+              <h2 className='is-size-4'>
                 {/* <span className='hl'>{cw.avachat ? cw.avachat[0] : 'loading'}</span> {cw.avachat ? cw.avachat[1] : 'loading'} */}
-                {cw.avachat ? cw.avachat[0] : "loading"}
+                {cw.avachat ? cw.avachat[0] : 'loading'}
               </h2>
               {/* <p>
                 {cw.avachat ? cw.avachat[2] : 'loading'}
               </p> */}
               <ul>
                 <li
-                  className={avachat === 0 ? "active" : ""}
-                  onClick={() => handleSlider("avachat", 0)}
+                  className={avachat === 0 ? 'active' : ''}
+                  onClick={() => handleSlider('avachat', 0)}
                 >
-                  {cw.avachat ? cw.avachat[1] : "loading"}
+                  {cw.avachat ? cw.avachat[1] : 'loading'}
                 </li>
                 <li
-                  className={avachat === 1 ? "active" : ""}
-                  onClick={() => handleSlider("avachat", 1)}
+                  className={avachat === 1 ? 'active' : ''}
+                  onClick={() => handleSlider('avachat', 1)}
                 >
-                  {cw.avachat ? cw.avachat[2] : "loading"}
+                  {cw.avachat ? cw.avachat[2] : 'loading'}
                 </li>
                 {/* <li
                   className={avachat === 2 ? 'active' : ''}
@@ -309,181 +309,181 @@ const Home = ({ subscribers }) => {
                   {cw.avachat ? cw.avachat[5] : 'loading'}
                 </li> */}
               </ul>
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 <LinkButton
                   href={
                     isUtm
                       ? `https://app.avana.asia/${localStorage.getItem(
-                          "utm_avana"
+                          'utm_avana'
                         )}`
-                      : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
+                      : 'https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web'
                   }
-                  target="__blank"
-                  className="btn-primary"
+                  target='__blank'
+                  className='btn-primary'
                 >
-                  {cw.button ? cw.button[0] : "loading"}
+                  {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton>
-                <LinkButton href="/avachat" className="btn-secondary">
-                  {cw.button ? cw.button[1] : "loading"}
+                <LinkButton href='/avachat' className='btn-secondary'>
+                  {cw.button ? cw.button[1] : 'loading'}
                 </LinkButton>
               </div>
             </div>
-            <div className="feature-img">
+            <div className='feature-img'>
               <Picture
-                srcWebp={require("../public/assets/images/2-Auto-Reply.webp?")}
-                src={require("../public/assets/images/2-Auto-Reply.png?resize?webp")}
+                srcWebp={require('../public/assets/images/2-Auto-Reply.webp?')}
+                src={require('../public/assets/images/2-Auto-Reply.png?resize?webp')}
               />
             </div>
           </section>
-          <section className="feature">
-            <div className="description">
-              <h2 className="is-size-4">
+          <section className='feature'>
+            <div className='description'>
+              <h2 className='is-size-4'>
                 {/* {cw.reseller ? cw.reseller[0] : 'loading'}&nbsp;
                 <span className='hl'>{cw.reseller ? cw.reseller[1] : 'loading'}</span> {cw.reseller ? cw.reseller[2] : 'loading'} */}
-                {cw.reseller ? cw.reseller[0] : "loading"}
+                {cw.reseller ? cw.reseller[0] : 'loading'}
               </h2>
               {/* <p>
                 {cw.reseller ? cw.reseller[3] : 'loading'}
               </p> */}
               <ul>
                 <li
-                  className={reseller === 0 ? "active" : ""}
-                  onClick={() => handleSlider("reseller", 0)}
+                  className={reseller === 0 ? 'active' : ''}
+                  onClick={() => handleSlider('reseller', 0)}
                 >
-                  {cw.reseller ? cw.reseller[1] : "loading"}
+                  {cw.reseller ? cw.reseller[1] : 'loading'}
                 </li>
                 <li
-                  className={reseller === 1 ? "active" : ""}
-                  onClick={() => handleSlider("reseller", 1)}
+                  className={reseller === 1 ? 'active' : ''}
+                  onClick={() => handleSlider('reseller', 1)}
                 >
-                  {cw.reseller ? cw.reseller[2] : "loading"}
+                  {cw.reseller ? cw.reseller[2] : 'loading'}
                 </li>
                 <li
-                  className={reseller === 2 ? "active" : ""}
-                  onClick={() => handleSlider("reseller", 2)}
+                  className={reseller === 2 ? 'active' : ''}
+                  onClick={() => handleSlider('reseller', 2)}
                 >
-                  {cw.reseller ? cw.reseller[3] : "loading"}
+                  {cw.reseller ? cw.reseller[3] : 'loading'}
                 </li>
               </ul>
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 <LinkButton
                   href={
                     isUtm
                       ? `https://app.avana.asia/${localStorage.getItem(
-                          "utm_avana"
+                          'utm_avana'
                         )}`
-                      : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
+                      : 'https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web'
                   }
-                  target="__blank"
-                  className="btn-primary"
+                  target='__blank'
+                  className='btn-primary'
                 >
-                  {cw.button ? cw.button[0] : "loading"}
+                  {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton>
                 {/* <LinkButton href='/reseller' className='btn-secondary'>
                   {cw.button ? cw.button[1] : 'loading'}
                 </LinkButton> */}
               </div>
             </div>
-            <div className="feature-img">
+            <div className='feature-img'>
               <Picture
-                srcWebp={require("../public/assets/images/3-Affiliate-Dropship.webp?")}
-                src={require("../public/assets/images/3-Affiliate-Dropship.png?resize?webp")}
+                srcWebp={require('../public/assets/images/3-Affiliate-Dropship.webp?')}
+                src={require('../public/assets/images/3-Affiliate-Dropship.png?resize?webp')}
               />
             </div>
           </section>
-          <section className="feature">
-            <div className="description">
-              <h2 className="is-size-4">
+          <section className='feature'>
+            <div className='description'>
+              <h2 className='is-size-4'>
                 {/* <span className='hl'>{cw.webstore ? cw.webstore[0] : 'loading'}</span> {cw.webstore ? cw.webstore[1] : 'loading'} */}
-                {cw.webstore ? cw.webstore[0] : "loading"}
+                {cw.webstore ? cw.webstore[0] : 'loading'}
               </h2>
               {/* <p>
                 {cw.webstore ? cw.webstore[2] : 'loading'}
               </p> */}
               <ul>
                 <li
-                  className={webstore === 0 ? "active" : ""}
-                  onClick={() => handleSlider("webstore", 0)}
+                  className={webstore === 0 ? 'active' : ''}
+                  onClick={() => handleSlider('webstore', 0)}
                 >
-                  {cw.webstore ? cw.webstore[1] : "loading"}
+                  {cw.webstore ? cw.webstore[1] : 'loading'}
                 </li>
                 <li
-                  className={webstore === 1 ? "active" : ""}
-                  onClick={() => handleSlider("webstore", 1)}
+                  className={webstore === 1 ? 'active' : ''}
+                  onClick={() => handleSlider('webstore', 1)}
                 >
-                  {cw.webstore ? cw.webstore[2] : "loading"}
+                  {cw.webstore ? cw.webstore[2] : 'loading'}
                 </li>
                 <li
-                  className={webstore === 2 ? "active" : ""}
-                  onClick={() => handleSlider("webstore", 2)}
+                  className={webstore === 2 ? 'active' : ''}
+                  onClick={() => handleSlider('webstore', 2)}
                 >
-                  {cw.webstore ? cw.webstore[3] : "loading"}
+                  {cw.webstore ? cw.webstore[3] : 'loading'}
                 </li>
               </ul>
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 <LinkButton
                   href={
                     isUtm
                       ? `https://app.avana.asia/${localStorage.getItem(
-                          "utm_avana"
+                          'utm_avana'
                         )}`
-                      : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
+                      : 'https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web'
                   }
-                  target="__blank"
-                  className="btn-primary"
+                  target='__blank'
+                  className='btn-primary'
                 >
-                  {cw.button ? cw.button[0] : "loading"}
+                  {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton>
-                <LinkButton href="/webstore" className="btn-secondary">
-                  {cw.button ? cw.button[1] : "loading"}
+                <LinkButton href='/webstore' className='btn-secondary'>
+                  {cw.button ? cw.button[1] : 'loading'}
                 </LinkButton>
               </div>
             </div>
-            <div className="feature-img">
+            <div className='feature-img'>
               <Picture
-                srcWebp={require("../public/assets/images/4-Webstore.webp?")}
-                src={require("../public/assets/images/4-Webstore.png?resize?webp")}
+                srcWebp={require('../public/assets/images/4-Webstore.webp?')}
+                src={require('../public/assets/images/4-Webstore.png?resize?webp')}
               />
             </div>
           </section>
-          <section className="feature" id="Fb-Store">
-            <div className="description">
-              <h2 className="is-size-4">
+          <section className='feature' id='Fb-Store'>
+            <div className='description'>
+              <h2 className='is-size-4'>
                 {/* {cw.fbshop ? cw.fbshop[0] : 'loading'} <span className='hl'>{cw.fbshop ? cw.fbshop[1] : 'loading'}</span> {cw.fbshop ? cw.fbshop[2] : 'loading'} */}
-                {cw.fbshop ? cw.fbshop[0] : "loading"}
+                {cw.fbshop ? cw.fbshop[0] : 'loading'}
               </h2>
-              <p>{cw.fbshop ? cw.fbshop[1] : "loading"}</p>
+              <p>{cw.fbshop ? cw.fbshop[1] : 'loading'}</p>
               <ul />
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 <LinkButton
                   href={
                     isUtm
                       ? `https://app.avana.asia/${localStorage.getItem(
-                          "utm_avana"
+                          'utm_avana'
                         )}`
-                      : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
+                      : 'https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web'
                   }
-                  target="__blank"
-                  className="btn-primary"
+                  target='__blank'
+                  className='btn-primary'
                 >
-                  {cw.button ? cw.button[0] : "loading"}
+                  {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton>
               </div>
             </div>
-            <div className="feature-img">
+            <div className='feature-img'>
               <Picture
-                srcWebp={require("../public/assets/images/5-Sell-Across-SOCMED.webp?")}
-                src={require("../public/assets/images/5-Sell-Across-SOCMED.png?resize?webp")}
+                srcWebp={require('../public/assets/images/5-Sell-Across-SOCMED.webp?')}
+                src={require('../public/assets/images/5-Sell-Across-SOCMED.png?resize?webp')}
               />
             </div>
           </section>
-          <section className="feature">
-            <div className="description">
-              <h2 className="is-size-4">
+          <section className='feature'>
+            <div className='description'>
+              <h2 className='is-size-4'>
                 {/* <span className='hl'>{cw.webstore ? cw.webstore[0] : 'loading'}</span> {cw.webstore ? cw.webstore[1] : 'loading'} */}
-                {cw.avachatmy ? cw.avachatmy[0] : "loading"}
+                {cw.avachatmy ? cw.avachatmy[0] : 'loading'}
               </h2>
-              <p>{cw.avachatmy ? cw.avachatmy[1] : "loading"}</p>
+              <p>{cw.avachatmy ? cw.avachatmy[1] : 'loading'}</p>
               {/* <ul>
                 <li
                   className={webstore === 0 ? 'active' : ''}
@@ -504,7 +504,7 @@ const Home = ({ subscribers }) => {
                   {cw.webstore ? cw.webstore[3] : 'loading'}
                 </li>
               </ul> */}
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 {/* <LinkButton
                   href={
                     lang === 'en'
@@ -518,66 +518,66 @@ const Home = ({ subscribers }) => {
                 </LinkButton> */}
                 <LinkButton
                   href={
-                    "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
+                    'https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web'
                   }
-                  className="btn-primary"
+                  className='btn-primary'
                 >
-                  {lang === "en"
-                    ? "Sign Up Trial Account"
-                    : "Daftar Akaun Percubaan"}
+                  {lang === 'en'
+                    ? 'Sign Up Trial Account'
+                    : 'Daftar Akaun Percubaan'}
                 </LinkButton>
                 {/* <LinkButton href='/' className='btn-secondary'>
                   {cw.button ? cw.button[1] : 'loading'}
                 </LinkButton> */}
               </div>
             </div>
-            <div className="feature-img">
+            <div className='feature-img'>
               <Picture
-                srcWebp={require("../public/assets/images/6-AVAchat.webp?")}
-                src={require("../public/assets/images/6-AVAchat.png?resize?webp")}
+                srcWebp={require('../public/assets/images/6-AVAchat.webp?')}
+                src={require('../public/assets/images/6-AVAchat.png?resize?webp')}
               />
             </div>
           </section>
-          <section className="feature" id="Marketing">
-            <div className="description">
-              <h2 className="is-size-4">
+          <section className='feature' id='Marketing'>
+            <div className='description'>
+              <h2 className='is-size-4'>
                 {/* {cw.fbshop ? cw.fbshop[0] : 'loading'} <span className='hl'>{cw.fbshop ? cw.fbshop[1] : 'loading'}</span> {cw.fbshop ? cw.fbshop[2] : 'loading'} */}
-                {cw.marketing ? cw.marketing[0] : "loading"}
+                {cw.marketing ? cw.marketing[0] : 'loading'}
               </h2>
-              <p>{cw.marketing ? cw.marketing[1] : "loading"}</p>
+              <p>{cw.marketing ? cw.marketing[1] : 'loading'}</p>
               <ul />
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 <LinkButton
                   href={
                     isUtm
                       ? `https://app.avana.asia/${localStorage.getItem(
-                          "utm_avana"
+                          'utm_avana'
                         )}`
-                      : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
+                      : 'https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web'
                   }
-                  target="__blank"
-                  className="btn-primary"
+                  target='__blank'
+                  className='btn-primary'
                 >
-                  {cw.button ? cw.button[0] : "loading"}
+                  {cw.button ? cw.button[0] : 'loading'}
                 </LinkButton>
               </div>
             </div>
-            <div className="feature-img">
+            <div className='feature-img'>
               <Picture
-                srcWebp={require("../public/assets/images/7-MKTG-Build-in.webp?")}
-                src={require("../public/assets/images/7-MKTG-Build-in.png?resize?webp")}
+                srcWebp={require('../public/assets/images/7-MKTG-Build-in.webp?')}
+                src={require('../public/assets/images/7-MKTG-Build-in.png?resize?webp')}
               />
             </div>
           </section>
-          <section className="feature" id="Whatsapp">
-            <div className="description">
-              <h2 className="is-size-4">
+          <section className='feature' id='Whatsapp'>
+            <div className='description'>
+              <h2 className='is-size-4'>
                 {/* {cw.fbshop ? cw.fbshop[0] : 'loading'} <span className='hl'>{cw.fbshop ? cw.fbshop[1] : 'loading'}</span> {cw.fbshop ? cw.fbshop[2] : 'loading'} */}
-                {cw.whatsapp ? cw.whatsapp[0] : "loading"}
+                {cw.whatsapp ? cw.whatsapp[0] : 'loading'}
               </h2>
-              <p>{cw.whatsapp ? cw.whatsapp[1] : "loading"}</p>
+              <p>{cw.whatsapp ? cw.whatsapp[1] : 'loading'}</p>
               <ul />
-              <div className="ava-btn-group">
+              <div className='ava-btn-group'>
                 {/* <LinkButton
                   href={
                     lang === 'en'
@@ -591,32 +591,32 @@ const Home = ({ subscribers }) => {
                 </LinkButton> */}
                 <LinkButton
                   href={
-                    "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
+                    'https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web'
                   }
-                  className="btn-primary"
+                  className='btn-primary'
                 >
-                  {lang === "en"
-                    ? "Sign Up Trial Account"
-                    : "Daftar Akaun Percubaan"}
+                  {lang === 'en'
+                    ? 'Sign Up Trial Account'
+                    : 'Daftar Akaun Percubaan'}
                 </LinkButton>
               </div>
             </div>
-            <div className="feature-img">
+            <div className='feature-img'>
               <Picture
-                srcWebp={require("../public/assets/images/8-Whatsapp-commerce.webp?")}
-                src={require("../public/assets/images/8-Whatsapp-commerce.png?resize?webp")}
+                srcWebp={require('../public/assets/images/8-Whatsapp-commerce.webp?')}
+                src={require('../public/assets/images/8-Whatsapp-commerce.png?resize?webp')}
               />
             </div>
           </section>
-          <section id="support">
-            <h2 className="is-size-4">{cw.support ? cw.support : "loading"}</h2>
+          <section id='support'>
+            <h2 className='is-size-4'>{cw.support ? cw.support : 'loading'}</h2>
             <div>
               <img
                 srcSet={
-                  require("../public/assets/images/Partner-Logos.png?resize?webp")
+                  require('../public/assets/images/Partner-Logos.png?resize?webp')
                     .srcSet
                 }
-                alt="Partner Logos"
+                alt='Partner Logos'
               />
               {/* <div className='border' />
               <img
@@ -628,119 +628,119 @@ const Home = ({ subscribers }) => {
               /> */}
             </div>
           </section>
-          <section id="testimonial">
-            <h2 className="is-size-4">
-              {cw.testimonial ? cw.testimonial : "loading"}
+          <section id='testimonial'>
+            <h2 className='is-size-4'>
+              {cw.testimonial ? cw.testimonial : 'loading'}
             </h2>
             <p style={{ color: `#9a9a9a` }}>Be inspired and inspire others</p>
             <SliderTestimonial
               testimonials={getTestimonials}
-              sliderName="testimonial"
+              sliderName='testimonial'
             />
             <h2
-              className="is-size-4"
+              className='is-size-4'
               style={{ marginBottom: `1rem`, marginTop: `2rem` }}
             >
               As featured on:
             </h2>
-            <div className="featuredon">
+            <div className='featuredon'>
               <a
-                href="https://www.bfm.my/podcast/enterprise/tech-talk/tech-talk-avana-luqman-adris-yien-yee-soh"
-                target="_blank"
+                href='https://www.bfm.my/podcast/enterprise/tech-talk/tech-talk-avana-luqman-adris-yien-yee-soh'
+                target='_blank'
               >
                 <img
                   srcSet={
-                    require("../public/assets/images/featuredon/BFM.png?resize?webp")
+                    require('../public/assets/images/featuredon/BFM.png?resize?webp')
                       .srcSet
                   }
-                  alt="BFM"
+                  alt='BFM'
                 />
               </a>
               <a
-                href="https://www.digitalnewsasia.com/startups/avana-empowers-local-micro-merchants-through-social-commerce"
-                target="_blank"
+                href='https://www.digitalnewsasia.com/startups/avana-empowers-local-micro-merchants-through-social-commerce'
+                target='_blank'
               >
                 <img
                   srcSet={
-                    require("../public/assets/images/featuredon/DNA.png?resize?webp")
+                    require('../public/assets/images/featuredon/DNA.png?resize?webp')
                       .srcSet
                   }
-                  alt="DNA"
+                  alt='DNA'
                 />
               </a>
               <img
                 srcSet={
-                  require("../public/assets/images/featuredon/Techinasia.png?resize?webp")
+                  require('../public/assets/images/featuredon/Techinasia.png?resize?webp')
                     .srcSet
                 }
-                alt="Tech In Asia"
+                alt='Tech In Asia'
               />
               <a
-                href="https://e27.co/malaysian-social-commerce-startup-avana-raises-1m-gobi-cradle-th-capital-20180322/"
-                target="_blank"
+                href='https://e27.co/malaysian-social-commerce-startup-avana-raises-1m-gobi-cradle-th-capital-20180322/'
+                target='_blank'
               >
                 <img
                   srcSet={
-                    require("../public/assets/images/featuredon/E27.png?resize?webp")
+                    require('../public/assets/images/featuredon/E27.png?resize?webp')
                       .srcSet
                   }
-                  alt="E27"
+                  alt='E27'
                 />
               </a>
               <a
-                href="https://www.thestar.com.my/metro/community/2017/02/22/empowering-women-to-be-independent-sellers-at-bazaar-help-raise-funds-for-autism-society/"
-                target="_blank"
+                href='https://www.thestar.com.my/metro/community/2017/02/22/empowering-women-to-be-independent-sellers-at-bazaar-help-raise-funds-for-autism-society/'
+                target='_blank'
               >
                 <img
                   srcSet={
-                    require("../public/assets/images/featuredon/TheStar.png?resize?webp")
+                    require('../public/assets/images/featuredon/TheStar.png?resize?webp')
                       .srcSet
                   }
-                  alt="TheStar"
+                  alt='TheStar'
                 />
               </a>
               <a
-                href="https://vulcanpost.com/589140/avana-ecommerce-platform-malaysia-startup/"
-                target="_blank"
+                href='https://vulcanpost.com/589140/avana-ecommerce-platform-malaysia-startup/'
+                target='_blank'
               >
                 <img
                   srcSet={
-                    require("../public/assets/images/featuredon/Vulcan.png?resize?webp")
+                    require('../public/assets/images/featuredon/Vulcan.png?resize?webp')
                       .srcSet
                   }
-                  alt="Vulcan"
+                  alt='Vulcan'
                 />
               </a>
             </div>
           </section>
-          <section id="milestone">
-            <h2 className="is-size-4" style={{ marginBottom: `2rem` }}>
-              {lang === "en"
-                ? "We’re the top Ecommerce Service Provider recognized by SITEC"
-                : "Diiktiraf sebagai Penyelesai E-Dagang Terulung oleh SITEC"}
+          <section id='milestone'>
+            <h2 className='is-size-4' style={{ marginBottom: `2rem` }}>
+              {lang === 'en'
+                ? 'We’re the top Ecommerce Service Provider recognized by SITEC'
+                : 'Diiktiraf sebagai Penyelesai E-Dagang Terulung oleh SITEC'}
             </h2>
-            <div className="milestone-group">
+            <div className='milestone-group'>
               <img
                 srcSet={
-                  require("../public/assets/images/milestone/Google-Partner.png?resize?webp")
+                  require('../public/assets/images/milestone/Google-Partner.png?resize?webp')
                     .srcSet
                 }
-                alt=""
+                alt=''
                 style={{ padding: `1rem` }}
               />
               <img
                 srcSet={
-                  require("../public/assets/images/milestone/SITEC.png?resize?webp")
+                  require('../public/assets/images/milestone/SITEC.png?resize?webp')
                     .srcSet
                 }
-                alt=""
+                alt=''
               />
               <img
                 srcSet={
-                  require("../public/assets/images/milestone/FB-Partner.png?resize?webp")
+                  require('../public/assets/images/milestone/FB-Partner.png?resize?webp')
                     .srcSet
                 }
-                alt=""
+                alt=''
               />
             </div>
             {/* <SliderTestimonial
@@ -748,25 +748,25 @@ const Home = ({ subscribers }) => {
               sliderName='milestone'
             /> */}
           </section>
-          <section className="trial">
-            <h2 className="is-size-4">
-              {cw.footerCta ? cw.footerCta[0] : "loading"}
+          <section className='trial'>
+            <h2 className='is-size-4'>
+              {cw.footerCta ? cw.footerCta[0] : 'loading'}
             </h2>
             <LinkButton
               href={
                 isUtm
                   ? `https://app.avana.asia/${localStorage.getItem(
-                      "utm_avana"
+                      'utm_avana'
                     )}`
-                  : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
+                  : 'https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web'
               }
-              target="__blank"
-              className="ava-btn btn-primary"
+              target='__blank'
+              className='ava-btn btn-primary'
             >
-              {cw.footerCta ? cw.footerCta[1] : "loading"}
+              {cw.footerCta ? cw.footerCta[1] : 'loading'}
             </LinkButton>
           </section>
-          {/* <div className={`modal ${isModal ? 'is-active' : ''}`}>
+          <div className={`modal ${isModal ? 'is-active' : ''}`}>
             <div className='modal-background' onClick={toggleModal} />
             <div
               className='modal-content eventBanner'
@@ -782,15 +782,15 @@ const Home = ({ subscribers }) => {
               <a href='/price'>
                 <img
                   srcSet={
-                    require('../public/assets/images/popup/merdeka-promo.png?resize?webp')
+                    require(`../public/assets/images/promo/1212-${lang}.png?resize?webp`)
                       .srcSet
                   }
-                  alt='Merdeka Promo'
+                  alt='12.12 Promo'
                   style={{ cursor: `pointer` }}
                 />
               </a>
             </div>
-          </div> */}
+          </div>
         </main>
         <Toaster subscribers={subscribers} />
         <Footer />
@@ -803,7 +803,7 @@ export async function getStaticProps() {
   // Call an external API endpoint to get latest subscribers.
   // You can use any data fetching library
   const res = await fetch(
-    "https://api.avana.asia/recentSignUps?days=30&limit=5&country=Malaysia"
+    'https://api.avana.asia/recentSignUps?days=30&limit=5&country=Malaysia'
   );
   const subscribers = await res.json();
   // console.log('stan', subscribers);
