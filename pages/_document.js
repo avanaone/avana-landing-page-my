@@ -51,6 +51,15 @@ class MyDocument extends Document {
               if( window.location.search.indexOf("utm_source") > 0 && window.location.search.indexOf("utm_campaign") > 0 ) { 
                 localStorage.setItem("utm_avana", window.location.search); 
               }
+              document.addEventListener("DOMContentLoaded", function(event) { 
+                //do work
+                if(localStorage.getItem("lang") === 'bm') {
+                  document.getElementById("banner-content").innerHTML = "Langgan atau perbaharui Yearly Business Plan/Yearly Agent Plan. Dapatkan RM100 Shipping Credit PERCUMA! Gunakan kod promo";
+                } else {
+                    document.getElementById("banner-content").innerHTML = "Subscribe or renew Yearly Business Plan/Yearly Agent Plan. Get FREE RM100 Shipping Credit! Use promo code";
+                }
+              });
+              
               `,
             }}
           />
