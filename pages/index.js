@@ -770,7 +770,7 @@ const Home = ({ subscribers }) => {
             <div className='modal-background' onClick={toggleModal} />
             <div
               className='modal-content eventBanner'
-              style={{ maxWidth: `500px` }}
+              style={{ maxWidth: `500px`, width: `calc(100vh - 136px)` }}
             >
               <button
                 className='modal-close is-large primary-close'

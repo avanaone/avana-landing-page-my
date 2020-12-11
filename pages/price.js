@@ -122,7 +122,8 @@ const Price = () => {
                       )}
                       {pkg.is_discount ? (
                         <span style={{ color: 'red', fontWeight: 600 }}>
-                          Use code FREESHIPCREDIT
+                          {lang === 'en' ? 'Use code' : 'Guna kod'}{' '}
+                          FREESHIPCREDIT
                         </span>
                       ) : (
                         ''
