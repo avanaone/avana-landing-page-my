@@ -1,19 +1,19 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
-import { LinkButton } from "./Button";
+import { LinkButton } from './Button';
 
-const getCw = import("../json/copywriting.json");
-const getWidth = () => (typeof window !== "undefined" ? window.innerWidth : "");
+const getCw = import('../json/copywriting.json');
+const getWidth = () => (typeof window !== 'undefined' ? window.innerWidth : '');
 
 export default function Navbar({ style }) {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState('en');
   const [isUtm, setIsUtm] = useState(false);
   const [cw, setCw] = useState([]);
 
   // const [isModal, setIsModal] = useState(false);
   // const toggleModal = () => setIsModal(!isModal);
   const toggleLang = (language) => {
-    localStorage.setItem("lang", language);
+    localStorage.setItem('lang', language);
     setLang(language);
     location.reload();
   };
@@ -35,29 +35,29 @@ export default function Navbar({ style }) {
   });
 
   useEffect(() => {
-    if (localStorage.getItem("lang")) {
+    if (localStorage.getItem('lang')) {
       // console.log(localStorage.getItem('lang'));
-      setLang(localStorage.getItem("lang"));
+      setLang(localStorage.getItem('lang'));
       getCw.then((res) => {
-        setCw(res.default[localStorage.getItem("lang")]);
+        setCw(res.default[localStorage.getItem('lang')]);
       });
     } else {
-      localStorage.setItem("lang", "en");
+      localStorage.setItem('lang', 'en');
       getCw.then((res) => {
-        setCw(res.default[localStorage.getItem("lang")]);
+        setCw(res.default[localStorage.getItem('lang')]);
       });
     }
-    if (localStorage.getItem("utm_avana")) {
+    if (localStorage.getItem('utm_avana')) {
       setIsUtm(true);
     } else {
       setIsUtm(false);
     }
-    const onResize = window.addEventListener("resize", () =>
+    const onResize = window.addEventListener('resize', () =>
       resizeRef.current()
     );
 
     return () => {
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener('resize', onResize);
     };
   }, []);
 
@@ -76,30 +76,30 @@ export default function Navbar({ style }) {
   return (
     <>
       <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main navigation"
+        className='navbar is-transparent'
+        role='navigation'
+        aria-label='main navigation'
         style={style}
       >
-        <div className="navbar-brand">
-          <a className="navbar-item" href="/" title="BERANDA &middot; Avana">
+        <div className='navbar-brand'>
+          <a className='navbar-item' href='/' title='BERANDA &middot; Avana'>
             <picture style={{ display: `flex`, alignItems: `center` }}>
-              <source srcSet="/assets/images/logo.webp" type="image/webp" />
-              <img src="/assets/images/logo.png" alt="Avana logo" />
+              <source srcSet='/assets/images/logo.webp' type='image/webp' />
+              <img src='/assets/images/logo.png' alt='Avana logo' />
             </picture>
           </a>
-          <div className="navbar-lang">
+          <div className='navbar-lang'>
             <a
-              role="button"
-              onClick={() => toggleLang("en")}
-              className={`lang-switcher ${lang === "en" ? "active" : ""}`}
+              role='button'
+              onClick={() => toggleLang('en')}
+              className={`lang-switcher ${lang === 'en' ? 'active' : ''}`}
             >
               ENG
             </a>
             <a
-              role="button"
-              onClick={() => toggleLang("bm")}
-              className={`lang-switcher ${lang === "en" ? "" : "active"}`}
+              role='button'
+              onClick={() => toggleLang('bm')}
+              className={`lang-switcher ${lang === 'en' ? '' : 'active'}`}
             >
               BM
             </a>
@@ -136,87 +136,94 @@ export default function Navbar({ style }) {
             </div> */}
 
           <a
-            role="button"
-            className={`navbar-burger ${isActive ? "is-active" : ""}`}
-            data-target="navMenu"
-            aria-label="menu"
-            aria-expanded="false"
+            role='button'
+            className={`navbar-burger ${isActive ? 'is-active' : ''}`}
+            data-target='navMenu'
+            aria-label='menu'
+            aria-expanded='false'
             onClick={toggleNavbar}
           >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+            <span aria-hidden='true'></span>
+            <span aria-hidden='true'></span>
+            <span aria-hidden='true'></span>
           </a>
         </div>
 
-        <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
-          <div className="navbar-end">
+        <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
+          <div className='navbar-end'>
             <div
               className={`navbar-item has-dropdown 
-              ${innerWidth >= 1023 ? "is-hoverable" : ""}
+              ${innerWidth >= 1023 ? 'is-hoverable' : ''}
               ${
-                dropdownActive["produk"] && innerWidth < 1023 ? "is-active" : ""
+                dropdownActive['produk'] && innerWidth < 1023 ? 'is-active' : ''
               }`}
-              onClick={() => toggleDropdown("produk")}
+              onClick={() => toggleDropdown('produk')}
             >
-              <a className="navbar-link" title="Produk">
-                {cw.navbar ? cw.navbar[0] : "Product"}
+              <a className='navbar-link' title='Produk'>
+                {cw.navbar ? cw.navbar[0] : 'Product'}
               </a>
-              <div className="navbar-dropdown">
-                <a className="navbar-item" href="/dashboard" title="Dashboard">
-                  {lang === "en" ? "Dashboard" : "Dashboard"}
+              <div className='navbar-dropdown'>
+                <a className='navbar-item' href='/dashboard' title='Dashboard'>
+                  {lang === 'en' ? 'Dashboard' : 'Dashboard'}
                 </a>
                 <a
-                  className="navbar-item"
-                  href="/liveautoreply"
-                  title="Live autoreply"
+                  className='navbar-item'
+                  href='/liveautoreply'
+                  title='Live autoreply'
                 >
-                  {lang === "en" ? "Live Autoreply" : "Live Autoreply"}
+                  {lang === 'en' ? 'Live Autoreply' : 'Live Autoreply'}
                 </a>
                 {/* <a className='navbar-item' href='/reseller' title='Reseller'>
                   {lang === 'en' ? 'Reseller' : 'Sales Agent'}
                 </a> */}
-                <a className="navbar-item" href="/webstore" title="Webstore">
-                  {lang === "en" ? "Webstore" : "Kedai Online"}
+                <a className='navbar-item' href='/webstore' title='Webstore'>
+                  {lang === 'en' ? 'Webstore' : 'Kedai Online'}
                 </a>
-                <a className="navbar-item" href="/avachat" title="AVAChat">
-                  {lang === "en" ? "AVAChat" : "AVAChat"}
+                <a className='navbar-item' href='/avachat' title='AVAChat'>
+                  {lang === 'en' ? 'AVAChat' : 'AVAChat'}
                 </a>
                 <a
-                  className="navbar-item"
-                  href="/whatsapp-commerce"
-                  title="AVAChat"
+                  className='navbar-item'
+                  href='/whatsapp-commerce'
+                  title='AVAChat'
                 >
-                  {lang === "en" ? "WhatsApp Commerce" : "WhatsApp Commerce"}
+                  {lang === 'en' ? 'WhatsApp Commerce' : 'WhatsApp Commerce'}
                 </a>
               </div>
             </div>
-            <a className="navbar-item" href="/price" title="Harga">
-              {cw.navbar ? cw.navbar[1] : "Price"}
+            <a
+              className='navbar-item'
+              href='https://promo.avana.asia/'
+              title='Promo'
+            >
+              Promo
+            </a>
+            <a className='navbar-item' href='/price' title='Harga'>
+              {cw.navbar ? cw.navbar[1] : 'Price'}
             </a>
             {/* <a href="/promo" className="navbar-item" title="Promo">
               <span className="dot">{cw.navbar ? cw.navbar[2] : 'loading'}</span>
             </a> */}
-            <a href="/event" className="navbar-item" title="Event">
-              {cw.navbar ? cw.navbar[3] : "Events"}
+            <a href='/event' className='navbar-item' title='Event'>
+              {cw.navbar ? cw.navbar[3] : 'Events'}
             </a>
             <div
               className={`navbar-item has-dropdown ${
-                innerWidth >= 1023 ? "is-hoverable" : ""
+                innerWidth >= 1023 ? 'is-hoverable' : ''
               } ${
-                dropdownActive["pelajari"] && innerWidth < 1023
-                  ? "is-active"
-                  : ""
+                dropdownActive['pelajari'] && innerWidth < 1023
+                  ? 'is-active'
+                  : ''
               }`}
-              onClick={() => toggleDropdown("pelajari")}
+              onClick={() => toggleDropdown('pelajari')}
             >
               <a
-                className="navbar-link"
-                title={cw.navbar ? cw.navbar[4] : "Learn"}
+                className='navbar-link'
+                title={cw.navbar ? cw.navbar[4] : 'Learn'}
               >
-                {cw.navbar ? cw.navbar[4] : "Learn"}
+                {cw.navbar ? cw.navbar[4] : 'Learn'}
               </a>
-              <div className="navbar-dropdown">
+              <div className='navbar-dropdown'>
                 {/* <a
                   className="navbar-item"
                   title="Tutorial"
@@ -229,64 +236,64 @@ export default function Navbar({ style }) {
                 </a> */}
                 <a
                   href={
-                    lang === "en"
-                      ? "http://bit.ly/avanaeng"
-                      : "http://bit.ly/avanabm"
+                    lang === 'en'
+                      ? 'http://bit.ly/avanaeng'
+                      : 'http://bit.ly/avanabm'
                   }
-                  className="navbar-item"
-                  title="Tutorial"
-                  target="_blank"
+                  className='navbar-item'
+                  title='Tutorial'
+                  target='_blank'
                 >
-                  {cw.navbar ? cw.navbar[6] : "Tutorial"}
+                  {cw.navbar ? cw.navbar[6] : 'Tutorial'}
                 </a>
                 <a
-                  href="https://blog.avana.asia/"
-                  className="navbar-item"
-                  title="Blog"
-                  target="_blank"
+                  href='https://blog.avana.asia/'
+                  className='navbar-item'
+                  title='Blog'
+                  target='_blank'
                 >
-                  {cw.navbar ? cw.navbar[7] : "Blog"}
+                  {cw.navbar ? cw.navbar[7] : 'Blog'}
                 </a>
-                <a href="/ebook" className="navbar-item" title="eBook">
-                  {cw.navbar ? cw.navbar[8] : "Ebook"}
+                <a href='/ebook' className='navbar-item' title='eBook'>
+                  {cw.navbar ? cw.navbar[8] : 'Ebook'}
                 </a>
               </div>
             </div>
             <a
-              href="/about-us"
-              className="navbar-item"
-              title={cw.navbar ? cw.navbar[9] : "About Us"}
+              href='/about-us'
+              className='navbar-item'
+              title={cw.navbar ? cw.navbar[9] : 'About Us'}
             >
-              {cw.navbar ? cw.navbar[9] : "About Us"}
+              {cw.navbar ? cw.navbar[9] : 'About Us'}
             </a>
-            <div className="navbar-item">
+            <div className='navbar-item'>
               <LinkButton
                 href={
                   isUtm
                     ? `https://app.avana.asia/${localStorage.getItem(
-                        "utm_avana"
+                        'utm_avana'
                       )}`
-                    : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
+                    : 'https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web'
                 }
-                target="__blank"
-                className="btn-secondary"
-                title="Masuk"
+                target='__blank'
+                className='btn-secondary'
+                title='Masuk'
               >
-                {cw.navbar ? cw.navbar[10] : "Log In"}
+                {cw.navbar ? cw.navbar[10] : 'Log In'}
               </LinkButton>
               <LinkButton
                 href={
                   isUtm
                     ? `https://app.avana.asia/${localStorage.getItem(
-                        "utm_avana"
+                        'utm_avana'
                       )}`
-                    : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
+                    : 'https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web'
                 }
-                target="__blank"
-                className="btn-primary"
-                title="Daftar"
+                target='__blank'
+                className='btn-primary'
+                title='Daftar'
               >
-                {cw.navbar ? cw.navbar[11] : "Sign Up"}
+                {cw.navbar ? cw.navbar[11] : 'Sign Up'}
               </LinkButton>
             </div>
           </div>
