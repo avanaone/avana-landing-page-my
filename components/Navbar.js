@@ -196,7 +196,7 @@ export default function Navbar({ style }) {
               href='https://promo.avana.asia/'
               title='Promo'
             >
-              Promo
+              <span className='dot'>Promo</span>
             </a>
             <a className='navbar-item' href='/price' title='Harga'>
               {cw.navbar ? cw.navbar[1] : 'Price'}
