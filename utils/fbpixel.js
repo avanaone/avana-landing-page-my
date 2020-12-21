@@ -6,7 +6,7 @@ const options = {
 };
 
 export const initFP = () => {
-  ReactPixel.init('434287979923319', options);
+  ReactPixel.init('1217836451583731', options);
 };
 
 export const fbPageView = () => {
