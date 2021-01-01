@@ -766,7 +766,7 @@ const Home = ({ subscribers }) => {
               {cw.footerCta ? cw.footerCta[1] : 'loading'}
             </LinkButton>
           </section>
-          <div className={`modal ${isModal ? 'is-active' : ''}`}>
+          <div className={`modal ${isModal ? '' : ''}`}>
             <div className='modal-background' onClick={toggleModal} />
             <div
               className='modal-content eventBanner'

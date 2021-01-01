@@ -51,13 +51,13 @@ class MyDocument extends Document {
               if( window.location.search.indexOf("utm_source") > 0 && window.location.search.indexOf("utm_campaign") > 0 ) { 
                 localStorage.setItem("utm_avana", window.location.search); 
               }
-              document.addEventListener("DOMContentLoaded", function(event) { 
-                //do work
-                if(localStorage.getItem("lang") === 'bm') {
-                  document.getElementById("banner-content").innerHTML = "Langgan atau perbaharui Yearly Business Plan/Yearly Agent Plan. Dapatkan RM100 Shipping Credit PERCUMA! Gunakan kod promo";
-                } else {
-                    document.getElementById("banner-content").innerHTML = "Subscribe or renew Yearly Business Plan/Yearly Agent Plan. Get FREE RM100 Shipping Credit! Use promo code";
-                }
+              // document.addEventListener("DOMContentLoaded", function(event) { 
+              //   //do work
+              //   if(localStorage.getItem("lang") === 'bm') {
+              //     document.getElementById("banner-content").innerHTML = "Langgan atau perbaharui Yearly Business Plan/Yearly Agent Plan. Dapatkan RM100 Shipping Credit PERCUMA! Gunakan kod promo";
+              //   } else {
+              //       document.getElementById("banner-content").innerHTML = "Subscribe or renew Yearly Business Plan/Yearly Agent Plan. Get FREE RM100 Shipping Credit! Use promo code";
+              //   }
               });
               
               `,
@@ -102,7 +102,7 @@ class MyDocument extends Document {
               __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T54DKZ6" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`,
             }}
           />
-          <section id='banner-promo'>
+          {/* <section id='banner-promo'>
             <a href='/price'>
               <span id='banner-content'>
                 Subscribe or renew Yearly Business Plan/Yearly Agent Plan. Get
@@ -110,7 +110,7 @@ class MyDocument extends Document {
               </span>{' '}
               <strong style={{ color: `red` }}>FREESHIPCREDIT</strong>.
             </a>
-          </section>
+          </section> */}
           <Main />
           <NextScript />
         </body>
