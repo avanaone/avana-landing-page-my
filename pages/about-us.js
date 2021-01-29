@@ -50,8 +50,8 @@ export default function AboutUs() {
                 </p>
                 <p>
                   {lang === "en"
-                    ? "By using the latest technological innovations and systems integrated with social media, AVANA has been helping over 70,000 businesses optimize their brands and automate their business capabilities online."
-                    : "Dengan menggunakan inovasi teknologi terkini dan sistem yang diintegrasikan dengan media sosial, AVANA telah membantu lebih daripada 70,000 bisnes yang ingin mengoptimumkan jenama mereka dan mengautomasikan keupayaan bisnes mereka secara online."}
+                    ? "By using the latest technological innovations and systems integrated with social media, AVANA has been helping over 100,000 businesses optimize their brands and automate their business capabilities online."
+                    : "Dengan menggunakan inovasi teknologi terkini dan sistem yang diintegrasikan dengan media sosial, AVANA telah membantu lebih daripada 100,000 bisnes yang ingin mengoptimumkan jenama mereka dan mengautomasikan keupayaan bisnes mereka secara online."}
                 </p>
               </div>
               <iframe
