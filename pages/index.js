@@ -86,7 +86,6 @@ const Home = ({ subscribers }) => {
     window.scrollY > 10 ? setNavbarBg("#fff") : setNavbarBg("#f4f7f9");
   };
 
-  console.log(cw, "rafiki");
   return (
     <ContainerAnalytic>
       <div className={styles.Home} onScroll={handleNavbar}>
@@ -373,7 +372,7 @@ const Home = ({ subscribers }) => {
                       ? `https://app.avana.asia/${localStorage.getItem(
                           "utm_avana"
                         )}`
-                      : "https://api.whatsapp.com/send?phone=60149774275&text=Hi%2C%20Avana.%0AI%20wanna%20know%20more%20about%20Trial%20Agent%20Plan%20and%20Affiliate%20and%20Dropship%20Feature"
+                      : "https://api.whatsapp.com/send?phone=60149774275&text=Hi%2C%20Avana.%20I%20wanna%20know%20more%20about%20Agent%20Plan%20Trial%20and%20Reseller%20Features."
                   }
                   target="__blank"
                   className="btn-primary"
