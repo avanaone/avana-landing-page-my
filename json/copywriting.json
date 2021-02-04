@@ -1,6 +1,6 @@
 {
   "en": {
-    "button": ["Try for Free", "More Info"],
+    "button": ["Try for Free", "More Info", "Contact Us Now"],
     "igbutton": ["BE THE FIRST ONE TO KNOW"],
     "navbar": [
       "Product",
@@ -75,7 +75,7 @@
     "error-without-status": "Auf dem Server ist ein Fehler aufgetreten"
   },
   "bm": {
-    "button": ["Cuba Dengan Percuma", "Info Lanjut"],
+    "button": ["Cuba Dengan Percuma", "Info Lanjut", "Hubungi Kami"],
     "igbutton": ["JADI ORANG PERTAMA YANG TAHU"],
     "navbar": [
       "Produk",
