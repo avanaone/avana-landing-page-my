@@ -26,7 +26,7 @@ const nextConfig = {
       "/whatsapp-commerce": { page: "/whatsapp-commerce" },
       "/liveautoreply": { page: "/liveautoreply" },
       "/webstore": { page: "/webstore" },
-      // '/reseller': { page: '/reseller' },
+      "/reseller": { page: "/reseller" },
     };
 
     const getPromos = await require("./json/promo.json");
