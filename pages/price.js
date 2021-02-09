@@ -90,16 +90,37 @@ const Price = () => {
                 </li>
               </ul>
             </div>
+
             <div className='packages'>
               {packages
                 .filter((pck) => pck.period === period)
                 .map((pkg) => (
+
+                  <div className="package-container">
+
+{pkg.is_discount ? (
+                        <div className="discount-corner-top">                          
+                             
+                     <img
+                        src={lang === "en" ? pkg.image.en : pkg.image.bm}
+                        alt=""
+                      />
+                
+                        </div>
+                      ) : (
+                        ''
+                      )}
+
+                      
                   <div
                     key={pkg.code}
                     className={`package ${pkg.is_popular ? 'popular' : ''} ${
                       pkg.is_discount ? 'discounted' : ''
                     } ${pkg.name === 'Basic' ? 'basic' : ''}`}
                   >
+
+                    
+                      
                     <div className='package-info'>
                       <span className='name is-size-5'>{pkg.name}</span>
                       {/* <span className='price is-size-4'>
@@ -120,14 +141,14 @@ const Price = () => {
                           </div>
                         </div>
                       )}
-                      {pkg.is_discount ? (
+                      {/* {pkg.is_discount ? (
                         <span style={{ color: 'red', fontWeight: 600 }}>
                           {lang === 'en' ? 'Use code' : 'Guna kod'}{' '}
                           FREESHIPCREDIT
                         </span>
                       ) : (
                         ''
-                      )}
+                      )} */}
                     </div>
                     <div>
                       <ul>
@@ -217,6 +238,7 @@ const Price = () => {
                         }`}
                       </LinkButton>
                     </div>
+                  </div>
                   </div>
                 ))}
               {period === 'yearly' ? (

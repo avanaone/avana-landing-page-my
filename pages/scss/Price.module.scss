@@ -36,6 +36,17 @@
         flex-wrap: wrap;
         text-align: center;
 
+        .package-container {
+          position: relative;
+      }
+      .discount-corner-top {
+        position: absolute;
+        z-index: 10;
+        width: 120px;
+        top: 10px;
+    }
+        
+
         .package {
           display: flex;
           flex-direction: column;
@@ -79,19 +90,19 @@
             border: 0.125em solid #fdb816;
             overflow: hidden;
 
-            &::before {
-              content: 'RM100 Shipping Credit';
-              position: absolute;
-              top: 0;
-              left: 0;
-              color: #fff;
-              background-color: #ea4a4a;
-              padding: 0.5em 0.75em;
-              font-size: 0.75rem;
-              font-weight: 700;
-              border-radius: 0 0 0.75em 0;
-              text-transform: uppercase;
-            }
+            // &::before {
+            //   content: 'RM100 Shipping Credit';
+            //   position: absolute;
+            //   top: 0;
+            //   left: 0;
+            //   color: #fff;
+            //   background-color: #ea4a4a;
+            //   padding: 0.5em 0.75em;
+            //   font-size: 0.75rem;
+            //   font-weight: 700;
+            //   border-radius: 0 0 0.75em 0;
+            //   text-transform: uppercase;
+            // }
           }
 
           .package-info {
@@ -108,6 +119,8 @@
               margin: 0.25em 0;
             }
           }
+
+        
 
           ul {
             list-style: unset;
