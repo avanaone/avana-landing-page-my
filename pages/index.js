@@ -139,12 +139,12 @@ const Home = () => {
           <p>
             {cw.features
               ? cw.features.map((feature, i) => {
-                  if (cw.features.length === i + 1) {
-                    return feature;
-                  } else {
-                    return feature + " • ";
-                  }
-                })
+                if (cw.features.length === i + 1) {
+                  return feature;
+                } else {
+                  return feature + " • ";
+                }
+              })
               : "loading..."}
           </p>
           <LinkButton
@@ -167,8 +167,8 @@ const Home = () => {
               href={
                 isUtm
                   ? `https://app.avana.asia/${localStorage.getItem(
-                      "utm_avana"
-                    )}`
+                    "utm_avana"
+                  )}`
                   : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
               }
               target="__blank"
@@ -258,8 +258,8 @@ const Home = () => {
                   href={
                     isUtm
                       ? `https://app.avana.asia/${localStorage.getItem(
-                          "utm_avana"
-                        )}`
+                        "utm_avana"
+                      )}`
                       : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
                   }
                   target="__blank"
@@ -313,8 +313,8 @@ const Home = () => {
                   href={
                     isUtm
                       ? `https://app.avana.asia/${localStorage.getItem(
-                          "utm_avana"
-                        )}`
+                        "utm_avana"
+                      )}`
                       : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
                   }
                   target="__blank"
@@ -369,9 +369,9 @@ const Home = () => {
                   href={
                     isUtm
                       ? `https://app.avana.asia/${localStorage.getItem(
-                          "utm_avana"
-                        )}`
-                      : "https://api.whatsapp.com/send?phone=60149774275&text=Hi%2C%20Avana.%20I%20wanna%20know%20more%20about%20Agent%20Plan%20Trial%20and%20Reseller%20Features."
+                        "utm_avana"
+                      )}`
+                      : "https://api.whatsapp.com/send?phone=60149774275&text=Hi%2C%20Avana.%20I%20wanna%20know%20more%20about%20Agent%20Plan%20and%20Reseller%20Features."
                   }
                   target="__blank"
                   className="btn-primary"
@@ -424,8 +424,8 @@ const Home = () => {
                   href={
                     isUtm
                       ? `https://app.avana.asia/${localStorage.getItem(
-                          "utm_avana"
-                        )}`
+                        "utm_avana"
+                      )}`
                       : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
                   }
                   target="__blank"
@@ -458,8 +458,8 @@ const Home = () => {
                   href={
                     isUtm
                       ? `https://app.avana.asia/${localStorage.getItem(
-                          "utm_avana"
-                        )}`
+                        "utm_avana"
+                      )}`
                       : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
                   }
                   target="__blank"
@@ -550,8 +550,8 @@ const Home = () => {
                   href={
                     isUtm
                       ? `https://app.avana.asia/${localStorage.getItem(
-                          "utm_avana"
-                        )}`
+                        "utm_avana"
+                      )}`
                       : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
                   }
                   target="__blank"
@@ -755,8 +755,8 @@ const Home = () => {
               href={
                 isUtm
                   ? `https://app.avana.asia/${localStorage.getItem(
-                      "utm_avana"
-                    )}`
+                    "utm_avana"
+                  )}`
                   : "https://app.avana.asia/?utm_source=website&utm_medium=button&utm_campaign=trial_web"
               }
               target="__blank"
