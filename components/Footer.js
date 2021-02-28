@@ -34,12 +34,12 @@ export default function Footer() {
             : "WhatsApp Khidmat Pelanggan:"}
           <br />
           <a
-            href="https://wa.me/60149774275"
+            href="https://wa.me/60189699815"
             style={{ color: `#3273dc` }}
             className="wa-footer"
           >
             <img src="/assets/images/footer/whatsapp-contact.png" alt="" />
-            +60 14 977 4275
+            +60 18 969 9815
           </a>
         </span>
         <span>Malaysia • Indonesia • Singapore</span>
