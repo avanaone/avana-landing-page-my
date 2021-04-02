@@ -106,7 +106,7 @@ export default function AboutUs() {
             <div className="career-group">
               {careers
                 ? careers
-                    .filter((x) => x.id < 11 && !x.isTraining)
+                    .filter((x) => x.id < 20 && !x.isTraining)
                     .map((career) => (
                       <CareerCard key={career.id} event={career} />
                     ))
